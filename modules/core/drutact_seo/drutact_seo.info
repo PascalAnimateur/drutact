@@ -1,0 +1,13 @@
+name = DruTACT SEO
+description = Search Engine Optimization for DruTACT installation profile.
+core = 7.x
+package = DruTACT Core
+version = 7.x-1.3-alpha2
+dependencies[] = ctools
+dependencies[] = path
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = clean_url
+features_banish[variable][] = path_alias_whitelist
+project path = profiles/drutact/modules/core

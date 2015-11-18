@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DruTACT SEO feature.
+ */
+
+include_once 'drutact_seo.features.inc';
