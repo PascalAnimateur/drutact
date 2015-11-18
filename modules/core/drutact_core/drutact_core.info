@@ -3,7 +3,6 @@ description = Core components of DruTACT installation profile.
 core = 7.x
 package = DruTACT Core
 version = 7.x-1.0-alpha2
-dependencies[] = block
 dependencies[] = ctools
 dependencies[] = dblog
 dependencies[] = diff
