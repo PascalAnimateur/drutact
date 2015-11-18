@@ -1,0 +1,36 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for DruTACT User.
+ */
+
+/**
+ * Default module permissions (user).
+ */
+function drutact_user_update_7300() {
+  _drutact_default_module_permissions(array(
+    DRUPAL_ANONYMOUS_RID => array(),
+    DRUPAL_AUTHENTICATED_RID => array(
+      // User
+      'access user profiles',
+      'cancel account',
+    ),
+    DRUTACT_EDITOR_RID => array(
+      // User
+      'access user profiles',
+      'administer users',
+      'cancel account',
+      'change own username',
+      'select account cancellation method',
+    ),
+    DRUTACT_ADMINISTRATOR_RID => array(
+      // User
+      'access user profiles',
+      'administer permissions',
+      'administer users',
+      'cancel account',
+      'change own username',
+      'select account cancellation method',
+    ),
+  ));
+}

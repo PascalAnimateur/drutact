@@ -1,0 +1,20 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for DruTACT Media.
+ */
+
+/**
+ * Default module permissions (image).
+ */
+function drutact_media_update_7300() {
+  _drutact_default_module_permissions(array(
+    DRUPAL_ANONYMOUS_RID => array(),
+    DRUPAL_AUTHENTICATED_RID => array(),
+    DRUTACT_EDITOR_RID => array(),
+    DRUTACT_ADMINISTRATOR_RID => array(
+      // Image
+      'administer image styles',
+    ),
+  ));
+}

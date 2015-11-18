@@ -1,0 +1,25 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for DruTACT SEO.
+ */
+
+/**
+ * Default module permissions (path).
+ */
+function drutact_seo_update_7300() {
+  _drutact_default_module_permissions(array(
+    DRUPAL_ANONYMOUS_RID => array(),
+    DRUPAL_AUTHENTICATED_RID => array(),
+    DRUTACT_EDITOR_RID => array(
+      // Path
+      'administer url aliases',
+      'create url aliases',
+    ),
+    DRUTACT_ADMINISTRATOR_RID => array(
+      // Path
+      'administer url aliases',
+      'create url aliases',
+    ),
+  ));
+}

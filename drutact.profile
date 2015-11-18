@@ -26,3 +26,25 @@ function drutact_update_projects_alter(&$projects)
   unset($projects['drutact_user']);
   unset($projects['drutact_wysiwyg']);
 }
+
+/**
+ * Helper function to set default module permissions.
+ *
+ * @param $rid_permissions
+ * Array containing permissions per-role, for example:
+ *   array(
+ *     DRUPAL_AUTHENTICATED_RID => array(
+ *         'permission system name',
+ *       ),
+ *     DRUTACT_EDITOR_RID => array(
+ *         'permission system name',
+ *       ),
+ *   )
+ */
+function _drutact_default_module_permissions($rid_permissions) {
+  foreach ($rid_permissions as $rid => $permissions) {
+    if (!empty($permissions) && user_role_load($rid)) {
+      user_role_change_permissions($rid, array_fill_keys($permissions, TRUE));
+    }
+  }
+}

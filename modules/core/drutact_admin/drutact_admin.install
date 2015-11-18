@@ -1,0 +1,65 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for DruTACT Administration.
+ */
+
+/**
+ * Default module permissions (admin_menu, block, contextual, menu, module_filter and system).
+ */
+function drutact_admin_update_7300() {
+  _drutact_default_module_permissions(array(
+    DRUPAL_ANONYMOUS_RID => array(
+      // System
+      'view the administration theme',
+    ),
+    DRUPAL_AUTHENTICATED_RID => array(
+      // Administration menu
+      'access administration menu',
+      // Contextual links
+      'access contextual links',
+      // System
+      'view the administration theme',
+    ),
+    DRUTACT_EDITOR_RID => array(
+      // Administration menu
+      'access administration menu',
+      'flush caches',
+      // Block
+      'administer blocks',
+      // Contextual links
+      'access contextual links',
+      // Menu
+      'administer menu',
+      // System
+      'access administration pages',
+      'access site reports',
+      'block IP addresses',
+      'view the administration theme',
+    ),
+    DRUTACT_ADMINISTRATOR_RID => array(
+      // Administration menu
+      'access administration menu',
+      'flush caches',
+      // Block
+      'administer blocks',
+      // Contextual links
+      'access contextual links',
+      // Menu
+      'administer menu',
+      // Module filter
+      'administer module filter',
+      // System
+      'access administration pages',
+      'access site in maintenance mode',
+      'access site reports',
+      'administer actions',
+      'administer modules',
+      'administer site configuration',
+      'administer software updates',
+      'administer themes',
+      'block IP addresses',
+      'view the administration theme',
+    ),
+  ));
+}
