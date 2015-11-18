@@ -8,6 +8,7 @@ dependencies[] = adminimal_admin_menu
 dependencies[] = block
 dependencies[] = ctools
 dependencies[] = dblog
+dependencies[] = drutact_core
 dependencies[] = menu
 dependencies[] = module_filter
 dependencies[] = strongarm
