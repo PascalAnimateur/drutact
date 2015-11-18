@@ -117,13 +117,6 @@ function drutact_admin_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'module_filter_recent_modules';
-  $strongarm->value = array();
-  $export['module_filter_recent_modules'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'module_filter_remember_active_tab';
   $strongarm->value = 1;
   $export['module_filter_remember_active_tab'] = $strongarm;
