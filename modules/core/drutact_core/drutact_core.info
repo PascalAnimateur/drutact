@@ -49,6 +49,7 @@ features[variable][] = features_default_export_path
 features[variable][] = features_lock_mode
 features[variable][] = features_rebuild_on_flush
 features[variable][] = install_profile
+features[variable][] = user_admin_role
 features_banish[variable][] = ctools_last_cron
 features_banish[variable][] = drupal_http_request_fails
 features_banish[variable][] = features_codecache
