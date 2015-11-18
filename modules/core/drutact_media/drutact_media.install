@@ -5,9 +5,10 @@
  */
 
 /**
- * Default module permissions (image).
+ * Implements hook_install().
  */
-function drutact_media_update_7300() {
+function drutact_media_install() {
+  // Default module permissions (image).
   _drutact_default_module_permissions(array(
     DRUPAL_ANONYMOUS_RID => array(),
     DRUPAL_AUTHENTICATED_RID => array(),

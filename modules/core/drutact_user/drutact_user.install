@@ -5,9 +5,10 @@
  */
 
 /**
- * Default module permissions (user).
+ * Implements hook_install().
  */
-function drutact_user_update_7300() {
+function drutact_user_install() {
+  // Default module permissions (user).
   _drutact_default_module_permissions(array(
     DRUPAL_ANONYMOUS_RID => array(),
     DRUPAL_AUTHENTICATED_RID => array(

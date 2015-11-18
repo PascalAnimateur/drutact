@@ -5,9 +5,10 @@
  */
 
 /**
- * Default module permissions (node).
+ * Implements hook_install().
  */
-function drutact_node_update_7300() {
+function drutact_node_install() {
+  // Default module permissions (node).
   _drutact_default_module_permissions(array(
     DRUPAL_ANONYMOUS_RID => array(
       // Node
