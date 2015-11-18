@@ -9,6 +9,7 @@ dependencies[] = block
 dependencies[] = ctools
 dependencies[] = dblog
 dependencies[] = drutact_core
+dependencies[] = fpa
 dependencies[] = menu
 dependencies[] = module_filter
 dependencies[] = strongarm

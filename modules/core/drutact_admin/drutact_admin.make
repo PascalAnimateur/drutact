@@ -5,6 +5,9 @@ core = 7.x
 projects[adminimal_admin_menu][type] = module
 projects[admin_menu][type] = module
 
+; Fast Permissions Administration
+projects[fpa][type] = module
+
 ; Module filter
 projects[module_filter][type] = module
 
