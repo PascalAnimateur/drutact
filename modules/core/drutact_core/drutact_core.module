@@ -5,3 +5,26 @@
  */
 
 include_once 'drutact_core.features.inc';
+
+/**
+ * Implements hook_post_features_rebuild().
+ */
+function drutact_core_post_features_rebuild($component) {
+  if ($component == 'user_role') {
+    // Default module permissions (ctools, features).
+    _drutact_default_module_permissions(array(
+      DRUPAL_ANONYMOUS_RID => array(),
+      DRUPAL_AUTHENTICATED_RID => array(),
+      DRUTACT_EDITOR_RID => array(),
+      DRUTACT_ADMINISTRATOR_RID => array(
+        // CTools
+        'use ctools import',
+        // Features
+        'administer features',
+        'generate features',
+        'manage features',
+        'rename features',
+      ),
+    ));
+  }
+}

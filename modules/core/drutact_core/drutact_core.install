@@ -4,23 +4,4 @@
  * Install, update and uninstall functions for DruTACT Core.
  */
 
-/**
- * Implements hook_install().
- */
-function drutact_core_install() {
-  // Default module permissions (ctools, features).
-  _drutact_default_module_permissions(array(
-    DRUPAL_ANONYMOUS_RID => array(),
-    DRUPAL_AUTHENTICATED_RID => array(),
-    DRUTACT_EDITOR_RID => array(),
-    DRUTACT_ADMINISTRATOR_RID => array(
-      // CTools
-      'use ctools import',
-      // Features
-      'administer features',
-      'generate features',
-      'manage features',
-      'rename features',
-    ),
-  ));
-}
+// Default module permissions need to be set in hook_post_features_rebuild().
