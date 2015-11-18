@@ -1,0 +1,1 @@
+# DruTACT installation profile
