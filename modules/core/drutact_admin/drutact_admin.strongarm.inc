@@ -96,6 +96,13 @@ function drutact_admin_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'dblog_row_limit';
+  $strongarm->value = '1000';
+  $export['dblog_row_limit'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'module_filter_count_enabled';
   $strongarm->value = 1;
   $export['module_filter_count_enabled'] = $strongarm;

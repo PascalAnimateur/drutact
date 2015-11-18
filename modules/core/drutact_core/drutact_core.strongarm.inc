@@ -20,13 +20,6 @@ function drutact_core_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'dblog_row_limit';
-  $strongarm->value = '1000';
-  $export['dblog_row_limit'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'diff_admin_path_node';
   $strongarm->value = 1;
   $export['diff_admin_path_node'] = $strongarm;
