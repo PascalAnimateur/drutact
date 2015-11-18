@@ -1,0 +1,44 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for DruTACT Node.
+ */
+
+/**
+ * Default module permissions (node).
+ */
+function drutact_node_update_7300() {
+  _drutact_default_module_permissions(array(
+    DRUPAL_ANONYMOUS_RID => array(
+      // Node
+      'access content',
+    ),
+    DRUPAL_AUTHENTICATED_RID => array(
+      // Node
+      'access content',
+    ),
+    DRUTACT_EDITOR_RID => array(
+      // Node
+      'access content',
+      'access content overview',
+      'administer nodes',
+      'bypass node access',
+      'delete revisions',
+      'revert revisions',
+      'view own unpublished content',
+      'view revisions',
+    ),
+    DRUTACT_ADMINISTRATOR_RID => array(
+      // Node
+      'access content',
+      'access content overview',
+      'administer content types',
+      'administer nodes',
+      'bypass node access',
+      'delete revisions',
+      'revert revisions',
+      'view own unpublished content',
+      'view revisions',
+    ),
+  ));
+}

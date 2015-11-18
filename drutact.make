@@ -8,6 +8,7 @@ defaults[projects][subdir] = "contrib"
 includes[] = modules/core/drutact_admin/drutact_admin.make
 includes[] = modules/core/drutact_core/drutact_core.make
 includes[] = modules/core/drutact_media/drutact_media.make
+includes[] = modules/core/drutact_node/drutact_node.make
 includes[] = modules/core/drutact_seo/drutact_seo.make
 includes[] = modules/core/drutact_user/drutact_user.make
 includes[] = modules/core/drutact_wysiwyg/drutact_wysiwyg.make
