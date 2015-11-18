@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DruTACT WYSIWYG feature.
+ */
+
+include_once 'drutact_wysiwyg.features.inc';
