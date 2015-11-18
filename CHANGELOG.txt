@@ -1,0 +1,3 @@
+drutact 7.x-1.3-alpha1 (2015-11-18)
+===================================
+Basic installation profile with adminimal_admin_menu.
