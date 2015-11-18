@@ -6,5 +6,6 @@ core = 7.x
 ; DruTACT
 dependencies[] = drutact_admin
 dependencies[] = drutact_core
+dependencies[] = drutact_media
 dependencies[] = drutact_seo
 dependencies[] = drutact_wysiwyg
