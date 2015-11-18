@@ -44,4 +44,5 @@ features[variable][] = update_notification_threshold
 features_banish[variable][] = menu_masks
 features_banish[variable][] = module_filter_recent_modules
 features_banish[variable][] = update_last_check
+features_banish[variable][] = update_last_email_notification
 project path = profiles/drutact/modules/core
