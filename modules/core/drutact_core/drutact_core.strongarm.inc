@@ -76,17 +76,6 @@ function drutact_core_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'features_codecache';
-  $strongarm->value = array(
-    'drutact_core' => array(
-      'dependencies' => '6a72066a26473696a151e875eb2b6ac4',
-    ),
-  );
-  $export['features_codecache'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'features_component_locked_dependencies';
   $strongarm->value = 0;
   $export['features_component_locked_dependencies'] = $strongarm;
