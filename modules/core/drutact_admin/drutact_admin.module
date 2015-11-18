@@ -1,0 +1,23 @@
+<?php
+/**
+ * @file
+ * Code for the DruTACT Administration feature.
+ */
+
+include_once 'drutact_admin.features.inc';
+
+/**
+ * Implements hook_features_banish_alter().
+ */
+function drutact_admin_features_banish_alter(&$banished) {
+  global $conf;
+  $keys = array_keys($conf);
+  $banished['variable'] = is_array($banished['variable']) ? $banished['variable'] : array();
+
+  foreach ($keys as $key) {
+    // Banish most of the annoying __active_tab variables.
+    if (strpos($key, '__active_tab') !== FALSE) {
+      $banished['variable'][] = $key;
+    }
+  }
+}
