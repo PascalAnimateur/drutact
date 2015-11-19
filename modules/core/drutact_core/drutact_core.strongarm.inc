@@ -500,7 +500,7 @@ function drutact_core_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'views_ui_always_live_preview';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['views_ui_always_live_preview'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -563,7 +563,7 @@ function drutact_core_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'views_ui_show_sql_query_where';
-  $strongarm->value = 'below';
+  $strongarm->value = 'above';
   $export['views_ui_show_sql_query_where'] = $strongarm;
 
   return $export;
