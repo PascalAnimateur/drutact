@@ -19,12 +19,12 @@ define('DRUTACT_ADMINISTRATOR_RID', 30037204);
  */
 function drutact_update_projects_alter(&$projects)
 {
-  unset($projects['drutact_admin']);
-  unset($projects['drutact_core']);
-  unset($projects['drutact_media']);
-  unset($projects['drutact_seo']);
-  unset($projects['drutact_user']);
-  unset($projects['drutact_wysiwyg']);
+  // Disable checking for updates on all DruTACT modules.
+  foreach ($projects as $name => $project) {
+    if (strpos($name, 'drutact_') !== FALSE) {
+      unset($projects[$name]);
+    }
+  }
 }
 
 /**
