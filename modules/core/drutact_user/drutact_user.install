@@ -54,7 +54,7 @@ function drutact_user_install() {
   // Account creation by administrators only.
   variable_set('user_register', USER_REGISTER_ADMINISTRATORS_ONLY);
   // Default realname pattern from full name.
-  variable_set('realname_pattern', '[user:name-field-full-name:component-given] [user:name-field-full-name:component-family]');
+  variable_set('realname_pattern', '[user:name-field-full-name]');
 
   // Default display settings on user profile components (summary / timezone).
   $field_bundle_setting = variable_get('field_bundle_settings_user__user', array());

@@ -55,7 +55,7 @@ function drutact_user_field_default_field_bases() {
         'generational' => 0,
         'given' => 'given',
         'middle' => 0,
-        'title' => 'title',
+        'title' => '0',
       ),
       'generational_options' => '-- --
 Jr.
