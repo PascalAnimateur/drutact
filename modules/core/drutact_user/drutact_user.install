@@ -17,6 +17,11 @@ function drutact_user_install() {
       'cancel account',
     ),
     DRUTACT_EDITOR_RID => array(
+      // Profile2
+      'administer profiles',
+      // Role delegation
+      'assign all roles',
+      'assign Editor role',
       // User
       'access user profiles',
       'administer users',
@@ -25,6 +30,16 @@ function drutact_user_install() {
       'select account cancellation method',
     ),
     DRUTACT_ADMINISTRATOR_RID => array(
+      // Profile2
+      'administer profile types',
+      'administer profiles',
+      // Realname
+      'administer realname',
+      // Realname registration
+      'administer realname registration',
+      // Role delegation
+      'assign all roles',
+      'assign Editor role',
       // User
       'access user profiles',
       'administer permissions',
@@ -34,4 +49,17 @@ function drutact_user_install() {
       'select account cancellation method',
     ),
   ));
+
+  // Default variables.
+  // Account creation by administrators only.
+  variable_set('user_register', USER_REGISTER_ADMINISTRATORS_ONLY);
+  // Default realname pattern from full name.
+  variable_set('realname_pattern', '[user:name-field-full-name:component-given] [user:name-field-full-name:component-family]');
+
+  // Default display settings on user profile components (summary / timezone).
+  $field_bundle_setting = variable_get('field_bundle_settings_user__user', array());
+  $field_bundle_setting['extra_fields']['display']['summary']['default']['visible'] = TRUE;
+  $field_bundle_setting['extra_fields']['display']['summary']['default']['weight'] = 30;
+  $field_bundle_setting['extra_fields']['form']['timezone']['weight'] = 30;
+  variable_set('field_bundle_settings_user__user', $field_bundle_setting);
 }
