@@ -12,3 +12,7 @@ includes[] = modules/core/drutact_node/drutact_node.make
 includes[] = modules/core/drutact_seo/drutact_seo.make
 includes[] = modules/core/drutact_user/drutact_user.make
 includes[] = modules/core/drutact_wysiwyg/drutact_wysiwyg.make
+
+; DruTACT Environments
+includes[] = modules/environments/drutact_dev/drutact_dev.make
+;includes[] = modules/environments/drutact_prod/drutact_prod.make

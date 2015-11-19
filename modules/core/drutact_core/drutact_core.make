@@ -11,3 +11,6 @@ projects[features_banish][type] = module
 projects[role_export][type] = module
 projects[strongarm][type] = module
 projects[strongarm][patch][1850618] = https://www.drupal.org/files/issues/variable-1850618-13.patch
+
+; Tadaa
+projects[tadaa][type] = module
