@@ -48,3 +48,14 @@ function _drutact_default_module_permissions($rid_permissions) {
     }
   }
 }
+
+/**
+ * Helper function to set a module's default weight.
+ */
+function _drutact_default_module_weight($module, $weight) {
+  db_update('system')
+    ->fields(array('weight' => $weight))
+    ->condition('type', 'module')
+    ->condition('name', $module)
+    ->execute();
+}

@@ -1,5 +1,38 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the DruTACT Email feature.
  */
+
+include_once 'drutact_email.features.inc';
+
+/**
+ * Implements hook_form_user_profile_form_alter().
+ */
+function drutact_email_form_user_profile_form_alter(&$form, &$form_state) {
+  // Hide Mime Mail settings from user profile form.
+  $form['mimemail']['#access'] = FALSE;
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function drutact_email_form_alter(&$form, &$form_state, $form_id) {
+  global $user;
+  if (isset($form_state['values']['operation']) && $form_state['values']['operation'] == 'action::mimemail_send_email_action') {
+    if (isset($form_state['step']) && $form_state['step'] == 'views_bulk_operations_config_form') {
+      // Pre-populate send email action form.
+      $form['key']['#value'] = 'drutact_email';
+      $form['key']['#access'] = false;
+      $form['to']['#value'] = '[user:mail]';
+      $form['to']['#access'] = false;
+      $form['cc']['#access'] = false;
+      $form['bcc']['#access'] = false;
+      $form['reply-to']['#access'] = (isset($user->mail)) ? false : true;
+      $form['body']['#format'] = (isset($user->mail)) ? 'html' : 'plain_text';
+      $form['plaintext']['#access'] = false;
+      $form['attachments']['#access'] = false;
+      $form['actions']['submit']['#value'] = t('Send');
+    }
+  }
+}
