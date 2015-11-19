@@ -270,6 +270,66 @@ function drutact_core_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'tadaa_dev_modules';
+  $strongarm->value = array(
+    'devel' => 1,
+    'drutact_dev' => 1,
+    'drutact_prod' => 0,
+  );
+  $export['tadaa_dev_modules'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'tadaa_dev_variables';
+  $strongarm->value = array(
+    'error_level' => '2',
+    'cache' => 0,
+    'block_cache' => 0,
+    'page_compression' => 0,
+    'preprocess_js' => 0,
+    'preprocess_css' => 0,
+  );
+  $export['tadaa_dev_variables'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'tadaa_environments';
+  $strongarm->value = array(
+    'dev' => 'Development',
+    'prod' => 'Production',
+  );
+  $export['tadaa_environments'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'tadaa_prod_modules';
+  $strongarm->value = array(
+    'devel' => 0,
+    'drutact_dev' => 0,
+    'drutact_prod' => 1,
+  );
+  $export['tadaa_prod_modules'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'tadaa_prod_variables';
+  $strongarm->value = array(
+    'error_level' => '0',
+    'cache' => 1,
+    'block_cache' => 1,
+    'page_compression' => 1,
+    'preprocess_js' => 1,
+    'preprocess_css' => 1,
+  );
+  $export['tadaa_prod_variables'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'user_admin_role';
   $strongarm->value = '30037204';
   $export['user_admin_role'] = $strongarm;
