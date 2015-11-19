@@ -55,7 +55,7 @@ function drutact_user_field_default_field_bases() {
         'generational' => 0,
         'given' => 'given',
         'middle' => 0,
-        'title' => '0',
+        'title' => 0,
       ),
       'generational_options' => '-- --
 Jr.
@@ -92,15 +92,20 @@ X',
         'generational' => 0,
         'given' => 'given',
         'middle' => 0,
-        'title' => 'title',
+        'title' => 0,
       ),
       'profile2_private' => FALSE,
       'sort_options' => array(
         'generational' => 0,
         'title' => 'title',
       ),
-      'title_options' => 'Mr.
-Mrs.',
+      'title_options' => '-- --
+Mr.
+Mrs.
+Miss
+Ms.
+Dr.
+Prof.',
     ),
     'translatable' => 0,
     'type' => 'name',
