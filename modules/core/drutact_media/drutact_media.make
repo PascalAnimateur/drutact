@@ -8,6 +8,7 @@ projects[file_entity][patch][2345741] = https://www.drupal.org/files/issues/file
 projects[file_entity][patch][2590227] = https://www.drupal.org/files/issues/file_entity-archive_replace_existing_files-2590227-4.patch
 projects[file_entity][patch][2264145] = https://www.drupal.org/files/issues/2264145-create-dir-before-moving-files-13.patch
 projects[file_entity][patch][2537982] = https://www.drupal.org/files/issues/2537982-fix-changing-file-scheme.patch
+projects[file_entity][patch][2112491] = https://www.drupal.org/files/issues/file_entity-optionnally_keep_original_filename-2112491-15.patch
 
 ; ImageMagick
 projects[imagemagick][type] = module
