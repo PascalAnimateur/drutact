@@ -24,6 +24,13 @@ function drutact_core_post_features_rebuild($component) {
         'generate features',
         'manage features',
         'rename features',
+        // Rules
+        'administer rules',
+        'bypass rules access',
+        'access rules debug',
+        // Views
+        'administer views',
+        'access all views',
       ),
     ));
   }
