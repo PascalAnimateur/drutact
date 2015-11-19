@@ -1,0 +1,13 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for DruTACT Development.
+ */
+
+/**
+ * Implements hook_disable().
+ */
+function drutact_dev_disable() {
+  // Uninstall development modules.
+  drupal_uninstall_modules(array('devel', 'drutact_dev'));
+}

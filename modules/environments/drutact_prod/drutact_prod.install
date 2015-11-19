@@ -1,0 +1,13 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for DruTACT Production.
+ */
+
+/**
+ * Implements hook_disable().
+ */
+function drutact_prod_disable() {
+  // Uninstall production modules.
+  drupal_uninstall_modules(array('drutact_prod'));
+}
