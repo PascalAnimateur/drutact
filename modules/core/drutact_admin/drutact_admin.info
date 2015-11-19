@@ -44,6 +44,7 @@ features[variable][] = node_admin_theme
 features[variable][] = update_check_disabled
 features[variable][] = update_check_frequency
 features[variable][] = update_notification_threshold
+features_banish[variable][] = menu_default_active_menus
 features_banish[variable][] = menu_masks
 features_banish[variable][] = module_filter_recent_modules
 features_banish[variable][] = update_last_check
