@@ -28,6 +28,9 @@ function drutact_core_post_features_rebuild($component) {
         'administer rules',
         'bypass rules access',
         'access rules debug',
+        // Tadaa
+        'access tadaa toolbar',
+        'use tadaa',
         // Views
         'administer views',
         'access all views',
