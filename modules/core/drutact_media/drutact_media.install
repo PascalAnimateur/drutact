@@ -10,12 +10,110 @@
 function drutact_media_install() {
   // Default module permissions (image).
   _drutact_default_module_permissions(array(
-    DRUPAL_ANONYMOUS_RID => array(),
-    DRUPAL_AUTHENTICATED_RID => array(),
-    DRUTACT_EDITOR_RID => array(),
+    DRUPAL_ANONYMOUS_RID => array(
+      // File entity
+      'view files',
+    ),
+    DRUPAL_AUTHENTICATED_RID => array(
+      // File entity
+      'create files',
+      'delete own audio files',
+      'delete own document files',
+      'delete own image files',
+      'delete own video files',
+      'download own audio files',
+      'download own document files',
+      'download own image files',
+      'download own video files',
+      'edit own audio files',
+      'edit own document files',
+      'edit own image files',
+      'edit own video files',
+      'view files',
+      'view own files',
+      'view own private files',
+      // Media
+      'access media browser',
+    ),
+    DRUTACT_EDITOR_RID => array(
+      // File entity
+      'administer files',
+      'bypass file access',
+      'create files',
+      'delete any audio files',
+      'delete any document files',
+      'delete any image files',
+      'delete any video files',
+      'delete own audio files',
+      'delete own document files',
+      'delete own image files',
+      'delete own video files',
+      'download any audio files',
+      'download any document files',
+      'download any image files',
+      'download any video files',
+      'download own audio files',
+      'download own document files',
+      'download own image files',
+      'download own video files',
+      'edit any audio files',
+      'edit any document files',
+      'edit any image files',
+      'edit any video files',
+      'edit own audio files',
+      'edit own document files',
+      'edit own image files',
+      'edit own video files',
+      'view files',
+      'view own files',
+      'view own private files',
+      'view private files',
+      // Media
+      'access media browser',
+    ),
     DRUTACT_ADMINISTRATOR_RID => array(
+      // File entity
+      'administer file types',
+      'administer files',
+      'bypass file access',
+      'create files',
+      'delete any audio files',
+      'delete any document files',
+      'delete any image files',
+      'delete any video files',
+      'delete own audio files',
+      'delete own document files',
+      'delete own image files',
+      'delete own video files',
+      'download any audio files',
+      'download any document files',
+      'download any image files',
+      'download any video files',
+      'download own audio files',
+      'download own document files',
+      'download own image files',
+      'download own video files',
+      'edit any audio files',
+      'edit any document files',
+      'edit any image files',
+      'edit any video files',
+      'edit own audio files',
+      'edit own document files',
+      'edit own image files',
+      'edit own video files',
+      'view files',
+      'view own files',
+      'view own private files',
+      'view private files',
       // Image
       'administer image styles',
+      // Media
+      'access media browser',
+      'administer media browser',
     ),
   ));
+
+  // Create missing directories.
+  $pdfpreview_dir = "public://pdfpreview";
+  file_prepare_directory($pdfpreview_dir, FILE_CREATE_DIRECTORY|FILE_MODIFY_PERMISSIONS);
 }

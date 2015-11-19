@@ -5,3 +5,35 @@
  */
 
 include_once 'drutact_media.features.inc';
+
+/**
+ * Implements hook_post_features_rebuild().
+ */
+function drutact_media_post_features_rebuild($component) {
+  if ($component == 'file_display') {
+    // Revert file entity display settings.
+    features_revert(array('drutact_media' => array('file_display')));
+  }
+}
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function drutact_media_theme_registry_alter(&$theme_registry) {
+  // Default file entity template (remove links).
+  $module_path = drupal_get_path('module', 'drutact_media');
+  $theme_registry['file_entity']['theme_path'] = $module_path;
+  $theme_registry['file_entity']['template'] = $module_path . '/templates/file_entity';
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function drutact_media_form_file_entity_add_upload_alter(&$form, &$form_state, $form_id) {
+  // Custom descriptions of file access options.
+  if ($form['#step'] == 3) {
+    $form['scheme']['#options']['public'] = t('Public files');
+    $form['scheme']['#options']['private'] = t('Private files');
+    $form['scheme']['#description'] = t('Public files are accessible to everyone, while access to private files must be explicitly granted (i.e. through group access).');
+  }
+}
