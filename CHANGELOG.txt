@@ -1,6 +1,10 @@
+drutact 7.x-1.3-alpha6 (2015-11-19)
+===================================
+Email sending and theming
+
 drutact 7.x-1.3-alpha5 (2015-11-19)
 ===================================
-Basic contrib modules (entity, libraries, jquery update, rules, token, views).
+Basic contrib modules (entity, libraries, jquery update, rules, token, views)
 
 drutact 7.x-1.3-alpha4 (2015-11-19)
 ===================================
