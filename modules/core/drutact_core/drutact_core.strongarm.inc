@@ -13,6 +13,13 @@ function drutact_core_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'cache_lifetime';
+  $strongarm->value = '0';
+  $export['cache_lifetime'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'cron_safe_threshold';
   $strongarm->value = '3600';
   $export['cron_safe_threshold'] = $strongarm;
@@ -270,12 +277,23 @@ function drutact_core_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'page_cache_maximum_age';
+  $strongarm->value = '0';
+  $export['page_cache_maximum_age'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'tadaa_dev_modules';
   $strongarm->value = array(
     'devel' => 1,
     'search_krumo' => 1,
     'drutact_dev' => 1,
     'drutact_prod' => 0,
+    'flood_control' => 0,
+    'flood_unblock' => 0,
+    'captcha' => 0,
+    'hidden_captcha' => 0,
   );
   $export['tadaa_dev_modules'] = $strongarm;
 
@@ -312,6 +330,10 @@ function drutact_core_strongarm() {
     'search_krumo' => 0,
     'drutact_dev' => 0,
     'drutact_prod' => 1,
+    'flood_control' => 1,
+    'flood_unblock' => 1,
+    'captcha' => 1,
+    'hidden_captcha' => 1,
   );
   $export['tadaa_prod_modules'] = $strongarm;
 
