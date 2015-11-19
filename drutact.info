@@ -6,6 +6,7 @@ core = 7.x
 ; DruTACT
 dependencies[] = drutact_admin
 dependencies[] = drutact_core
+dependencies[] = drutact_email
 dependencies[] = drutact_media
 dependencies[] = drutact_node
 dependencies[] = drutact_seo

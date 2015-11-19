@@ -1,0 +1,18 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for DruTACT Email.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function drutact_email_install() {
+  // Default module permissions (mailsystem, mimemail).
+  _drutact_default_module_permissions(array(
+    DRUPAL_ANONYMOUS_RID => array(),
+    DRUPAL_AUTHENTICATED_RID => array(),
+    DRUTACT_EDITOR_RID => array(),
+    DRUTACT_ADMINISTRATOR_RID => array(),
+  ));
+}
