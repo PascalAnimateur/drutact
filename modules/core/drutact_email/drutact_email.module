@@ -36,3 +36,20 @@ function drutact_email_form_alter(&$form, &$form_state, $form_id) {
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_mimemail_message().
+ */
+function drutact_email_preprocess_mimemail_message(&$variables) {
+  // Expose base_url variable to Mime Mail message template.
+  global $base_url;
+  $variables['base_url'] = $base_url;
+}
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function drutact_email_theme_registry_alter(&$theme_registry) {
+  // Look for Mime Mail message template in drutact_email/templates folder.
+  $theme_registry['mimemail_message']['path'] = drupal_get_path('module', 'drutact_email') . '/templates';
+}
