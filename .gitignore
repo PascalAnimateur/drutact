@@ -1,2 +1,5 @@
-# Ignore contrib modules, themes & libraries.
+# Ignore contrib modules & themes
 */contrib
+
+# Ignore libraries
+libraries
