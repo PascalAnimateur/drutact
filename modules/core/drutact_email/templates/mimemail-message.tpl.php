@@ -19,13 +19,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <?php if ($css): ?>
     <style type="text/css">
-      <!--
-      <?php print $css ?>
-      -->
+      #main {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      p {
+        margin: 0px 0px 1.2em;
+      }
     </style>
-  <?php endif; ?>
   </head>
   <body id="mimemail-body" <?php if ($module && $key): print 'class="'. $module .'-'. $key .'"'; endif; ?>>
     <div id="center">
