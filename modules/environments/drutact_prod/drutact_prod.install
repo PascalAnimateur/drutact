@@ -43,6 +43,7 @@ function drutact_prod_disable() {
     'flood_unblock',
     'drutact_prod',
   ));
+
   // Delete production variables.
   $variables = array(
     'captcha_add_captcha_description',
