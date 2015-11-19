@@ -9,5 +9,35 @@
  */
 function drutact_prod_disable() {
   // Uninstall production modules.
-  drupal_uninstall_modules(array('drutact_prod'));
+  drupal_uninstall_modules(array(
+    'captcha',
+    'hidden_captcha',
+    'flood_control',
+    'flood_unblock',
+    'drutact_prod',
+  ));
+  // Delete production variables.
+  $variables = array(
+    'captcha_add_captcha_description',
+    'captcha_administration_mode',
+    'captcha_allow_on_admin_pages',
+    'captcha_default_challenge',
+    'captcha_default_challenge_on_nonlisted_forms',
+    'captcha_default_validation',
+    'captcha_description',
+    'captcha_enable_stats',
+    'captcha_log_wrong_responses',
+    'captcha_persistence',
+    'captcha_placement_map_cache',
+    'contact_threshold_limit',
+    'contact_threshold_window',
+    'hidden_captcha_label',
+    'user_failed_login_ip_limit',
+    'user_failed_login_ip_window',
+    'user_failed_login_user_limit',
+    'user_failed_login_user_window',
+  );
+  foreach ($variables as $variable) {
+    variable_del($variable);
+  }
 }
