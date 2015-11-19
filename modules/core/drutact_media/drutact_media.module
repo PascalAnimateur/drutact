@@ -30,10 +30,21 @@ function drutact_media_theme_registry_alter(&$theme_registry) {
  * Implements hook_form_FORM_ID_alter().
  */
 function drutact_media_form_file_entity_add_upload_alter(&$form, &$form_state, $form_id) {
-  // Custom descriptions of file access options.
+  // Custom display of file destination options.
   if ($form['#step'] == 3) {
     $form['scheme']['#options']['public'] = t('Public files');
     $form['scheme']['#options']['private'] = t('Private files');
     $form['scheme']['#description'] = t('Public files are accessible to everyone, while access to private files must be explicitly granted (i.e. through group access).');
   }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function drutact_media_form_file_entity_edit_alter(&$form, &$form_state, $form_id) {
+  // Custom display of file destination options.
+  $form['destination']['#type'] = 'container';
+  $form['destination']['scheme']['#description'] = t('Public files are accessible to everyone, while access to private files must be explicitly granted (i.e. through group access).');
+  $form['destination']['#weight'] = -5;
+  unset($form['destination']['#group']);
 }
