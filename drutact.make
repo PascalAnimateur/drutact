@@ -15,4 +15,4 @@ includes[] = modules/core/drutact_wysiwyg/drutact_wysiwyg.make
 
 ; DruTACT Environments
 includes[] = modules/environments/drutact_dev/drutact_dev.make
-;includes[] = modules/environments/drutact_prod/drutact_prod.make
+includes[] = modules/environments/drutact_prod/drutact_prod.make
