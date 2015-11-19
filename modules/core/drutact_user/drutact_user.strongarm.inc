@@ -132,6 +132,18 @@ function drutact_user_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'name_settings';
+  $strongarm->value = array(
+    'default_format' => '((((t+ig)+im)+if)+is)+jc',
+    'sep1' => ' ',
+    'sep2' => ', ',
+    'sep3' => '',
+  );
+  $export['name_settings'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'realname_registration_firstname_field';
   $strongarm->value = 'field_full_name';
   $export['realname_registration_firstname_field'] = $strongarm;
