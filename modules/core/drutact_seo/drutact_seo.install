@@ -23,4 +23,6 @@ function drutact_seo_install() {
       'create url aliases',
     ),
   ));
+  // Prevent overridden clean_url variable.
+  variable_set('clean_url', 1);
 }
