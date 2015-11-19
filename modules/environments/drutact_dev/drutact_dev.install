@@ -5,6 +5,24 @@
  */
 
 /**
+ * Implements hook_enable().
+ */
+function drutact_dev_enable() {
+  // Default module permissions (devel).
+  _drutact_default_module_permissions(array(
+    DRUPAL_ANONYMOUS_RID => array(),
+    DRUPAL_AUTHENTICATED_RID => array(),
+    DRUTACT_EDITOR_RID => array(),
+    DRUTACT_ADMINISTRATOR_RID => array(
+      // Devel
+      'access devel information',
+      'execute php code',
+      'switch users',
+    ),
+  ));
+}
+
+/**
  * Implements hook_disable().
  */
 function drutact_dev_disable() {

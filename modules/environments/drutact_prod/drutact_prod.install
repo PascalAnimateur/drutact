@@ -5,6 +5,33 @@
  */
 
 /**
+ * Implements hook_enable().
+ */
+function drutact_prod_enable() {
+  // Default module permissions (captcha, flood_control, flood_unblock).
+  _drutact_default_module_permissions(array(
+    DRUPAL_ANONYMOUS_RID => array(),
+    DRUPAL_AUTHENTICATED_RID => array(
+      // CAPTCHA
+      'skip CAPTCHA',
+    ),
+    DRUTACT_EDITOR_RID => array(
+      // CAPTCHA
+      'skip CAPTCHA',
+      // Flood unblock
+      'access flood unblock',
+    ),
+    DRUTACT_ADMINISTRATOR_RID => array(
+      // CAPTCHA
+      'administer CAPTCHA settings',
+      'skip CAPTCHA',
+      // Flood unblock
+      'access flood unblock',
+    ),
+  ));
+}
+
+/**
  * Implements hook_disable().
  */
 function drutact_prod_disable() {
