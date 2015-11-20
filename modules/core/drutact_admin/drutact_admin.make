@@ -5,11 +5,34 @@ core = 7.x
 projects[adminimal_admin_menu][type] = module
 projects[admin_menu][type] = module
 
+; Administration views
+projects[admin_views][type] = module
+
+; Date popup authored
+projects[date_popup_authored][type] = module
+projects[date_popup_authored][patch][2557425] = https://www.drupal.org/files/issues/date_popup_authored-default_date_format.patch
+
 ; Fast Permissions Administration
 projects[fpa][type] = module
 
+; Menu
+projects[menu_attributes][version] = 1.x-dev
+projects[menu_expanded][type] = module
+projects[menu_select][version] = 1.x-dev
+projects[menu_select][patch][2557241] = https://www.drupal.org/files/issues/menu_select-allow_disabling_search.patch
+projects[menu_select][patch][2557283] = https://www.drupal.org/files/issues/menu_select-fix_actions_weight_with_relation_to_menu_attributes-2557283-2.patch
+projects[simplified_menu_admin][type] = module
+
 ; Module filter
 projects[module_filter][type] = module
+
+; Select2 Field Widget
+projects[select2widget][type] = module
+projects[select2widget][patch][2575587] = https://www.drupal.org/files/issues/select2widget-hardcode_placeholder_text-2575587-3.patch
+projects[select2widget][patch][2576387] = https://www.drupal.org/files/issues/select2widget-taxonomy_width_option-2576387-2.patch
+projects[select2widget][patch][2597562] = https://www.drupal.org/files/issues/select2widget-make_file_example-2597562-4.patch
+libraries[select2][download][type] = file
+libraries[select2][download][url] = https://github.com/select2/select2/archive/3.5.4.zip
 
 ; Shiny administration theme
 projects[shiny][type] = theme
@@ -17,3 +40,23 @@ projects[shiny][patch][2362771] = https://www.drupal.org/files/issues/shiny-edit
 projects[shiny][patch][2505485] = https://www.drupal.org/files/issues/shiny-fix_input_form_submit_padding-2505485-2.patch
 projects[shiny][patch][2555575] = https://www.drupal.org/files/issues/shiny-fix_ckeditor_border_right-2555575-1.patch
 projects[shiny][patch][2568239] = https://www.drupal.org/files/issues/shiny-date_repeat_radio_button-2568239-6.patch
+
+; Sticky edit actions
+projects[sticky_edit_actions][type] = module
+projects[sticky_edit_actions][patch][2320309] = https://www.drupal.org/files/issues/2320309-Fix_shiny_admin_theme.patch
+
+; Taxonomy
+projects[hierarchical_term_formatter][type] = module
+projects[taxonomy_access_fix][type] = module
+projects[taxonomy_delete_link][type] = module
+projects[taxonomy_menu][type] = module
+projects[taxonomy_menu][patch][2580607] = https://www.drupal.org/files/issues/taxonomy_menu-fieldset_initially_collapsed-2580607-2.patch
+projects[term_reference_tree][type] = module
+
+; Top description
+projects[top_description][type] = module
+projects[top_description][download][type] = git
+projects[top_description][download][url] = http://git.drupal.org/sandbox/jrb/top_description.git
+
+; Vertical tabs
+projects[vertical_tabs_responsive][type] = module
