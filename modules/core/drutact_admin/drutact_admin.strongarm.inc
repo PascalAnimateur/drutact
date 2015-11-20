@@ -205,5 +205,68 @@ function drutact_admin_strongarm() {
   $strongarm->value = 'all';
   $export['update_notification_threshold'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'vertical_tabs_responsive_break';
+  $strongarm->value = '768';
+  $export['vertical_tabs_responsive_break'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'vertical_tabs_responsive_button';
+  $strongarm->value = 0;
+  $export['vertical_tabs_responsive_button'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'vertical_tabs_responsive_collapsed';
+  $strongarm->value = 1;
+  $export['vertical_tabs_responsive_collapsed'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'vertical_tabs_responsive_enabled_on';
+  $strongarm->value = '0';
+  $export['vertical_tabs_responsive_enabled_on'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'vertical_tabs_responsive_left';
+  $strongarm->value = '0';
+  $export['vertical_tabs_responsive_left'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'vertical_tabs_responsive_path_blacklist';
+  $strongarm->value = 'admin*';
+  $export['vertical_tabs_responsive_path_blacklist'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'vertical_tabs_responsive_path_whitelist';
+  $strongarm->value = 'admin/structure/taxonomy/*/add';
+  $export['vertical_tabs_responsive_path_whitelist'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'vertical_tabs_responsive_per_role';
+  $strongarm->value = array();
+  $export['vertical_tabs_responsive_per_role'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'vertical_tabs_responsive_vt_width';
+  $strongarm->value = '30';
+  $export['vertical_tabs_responsive_vt_width'] = $strongarm;
+
   return $export;
 }
