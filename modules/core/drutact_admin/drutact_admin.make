@@ -8,9 +8,18 @@ projects[admin_menu][type] = module
 ; Administration views
 projects[admin_views][type] = module
 
-; Date popup authored
+; Date
+projects[date][type] = module
+projects[date][patch][2186191] = https://www.drupal.org/files/issues/date-fieldset-help-texts-2186191-20.patch
+projects[date][patch][2453397] = https://www.drupal.org/files/issues/date-add_hook_variable_info-2453397-3.patch
+projects[date][patch][2455629] = https://www.drupal.org/files/issues/date-remove_date_migrate_example.patch
+projects[date][patch][2570239] = https://www.drupal.org/files/issues/date-display_range_as_span.patch
 projects[date_popup_authored][type] = module
 projects[date_popup_authored][patch][2557425] = https://www.drupal.org/files/issues/date_popup_authored-default_date_format.patch
+projects[smart_dates][type] = module
+projects[smart_dates][patch][1954666] = https://www.drupal.org/files/smart_dates_undefined_index-1954666-1.patch
+libraries[wvega-timepicker][download][type] = file
+libraries[wvega-timepicker][download][url] = https://github.com/wvega/timepicker/archive/master.zip
 
 ; Fast Permissions Administration
 projects[fpa][type] = module
