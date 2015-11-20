@@ -16,6 +16,8 @@ function drutact_wysiwyg_install() {
     DRUTACT_ADMINISTRATOR_RID => array(
       // Filter
       'administer filters',
+      // Linkit
+      'administer linkit',
     ),
   ));
 }

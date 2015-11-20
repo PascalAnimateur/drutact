@@ -5,3 +5,123 @@
  */
 
 include_once 'drutact_wysiwyg.features.inc';
+
+/**
+ * Implements hook_post_features_rebuild().
+ */
+function drutact_wysiwyg_post_features_rebuild($component) {
+  if ($component == 'wysiwyg') {
+    // Default text format permissions.
+    _drutact_default_module_permissions(array(
+      DRUPAL_ANONYMOUS_RID => array(),
+      DRUPAL_AUTHENTICATED_RID => array(
+        'use text format html',
+      ),
+      DRUTACT_EDITOR_RID => array(
+        'use text format html',
+      ),
+      DRUTACT_ADMINISTRATOR_RID => array(
+        'use text format html',
+      ),
+    ));
+  }
+}
+
+/**
+ * Implements hook_wysiwyg_editor_settings_alter().
+ */
+function drutact_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
+  // Default CKEditor settings.
+  if ($context['profile']->editor == 'ckeditor') {
+
+    // Set current language as default.
+    global $language;
+    $settings['language'] = $language->language;
+
+    // Enable extra plugins (image2).
+    if (!isset($settings['extraPlugins'])) {
+      $settings['extraPlugins'] = 'image2';
+    }
+    else {
+      $settings['extraPlugins'] .= ',image2';
+    }
+
+    // Disable unused tabs.
+    $settings['removeDialogTabs'] = 'link:advanced;link:target;link:upload';
+
+    // Media ACF content rules
+    $settings['extraAllowedContent'] = array(
+      'img[src,alt,height,width,data-cke-saved-src,data-fid,data-media-element]{width,height,float}(media-element,file-*,wysiwyg-break)',
+      'audio[controls,data-fid,data-media-element](media-element,file-*)',
+      'video[controls,height,width,data-fid,data-media-element](media-element,file-*)',
+      'source[src,type,data-cke-saved-src]',
+      'iframe[allowfullscreen,mozallowfullscreen,webkitallowfullscreen,src,data-src,data-media-element,data-fid,frameborder,width,height](pdf,media-element)',
+    );
+
+    // Extra CKEditor config.
+    $settings['customConfig'] = '../../../../' . drupal_get_path('module', 'drutact_wysiwyg') . '/js/ckeditor.config.js';
+  }
+}
+
+/**
+ * Implements hook_media_wysiwyg_token_to_markup_alter().
+ */
+function drutact_wysiwyg_media_wysiwyg_token_to_markup_alter(&$element, $tag_info, $settings) {
+  // Replace media container <div> with <span> so images can be centered.
+  if (!isset($settings['wysiwyg'])) {
+    $element['content']['#type'] = 'markup';
+    $attributes = isset($element['content']['#attributes']) ? drupal_attributes($element['content']['#attributes']) : '';
+    $element['content']['#prefix'] = '<span ' . $attributes . '>';
+    $element['content']['#suffix'] = '</span>';
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Customize media_wysiwyg embed form to emulate media_wysiwyg_view_mode.
+ */
+function drutact_wysiwyg_form_media_wysiwyg_format_form_alter(&$form, $form_state, $form_id)  {
+  // Disable fields on view mode selection form.
+  $form['options']['#title'] = t('Display options');
+  $form['options']['fields']['#access'] = FALSE;
+  // Disable preview view mode.
+  unset($form['options']['format']['#options']['preview']);
+  // Check to see if a view mode ("format") has already been specified for
+  // this media item. First, check for a standard form-submitted value.
+  if (!empty($form_state['values']['format'])) {
+    $view_mode = $form_state['values']['format'];
+  }
+  // Second, check the request for a JSON-encoded value.
+  elseif (isset($_GET['fields'])) {
+    $query_fields = drupal_json_decode($_GET['fields']);
+    if (isset($query_fields['format'])) {
+      $view_mode = $query_fields['format'];
+    }
+  }
+  // If we were unable to determine a view mode, use the default view mode.
+  if (!isset($view_mode) || !array_key_exists($view_mode, $form['options']['format']['#options'])) {
+    $view_mode = 'full';
+  }
+  // Insert preview of the file with selected view mode.
+  $form['preview'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Preview'),
+    '#weight' => 50,
+  );
+  $file = $form_state['file'];
+  $form['preview']['file'] = file_view_file($file, $view_mode);
+  $form['preview']['file']['#prefix'] = '<div id="preview" >';
+  $form['preview']['file']['#suffix'] = '</div>';
+  $form['options']['format']['#ajax'] = array(
+    'callback' => '_drutact_wysiwyg_media_format_form_preview',
+    'wrapper' => 'preview',
+  );
+}
+
+/**
+ * AJAX callback used to update the media preview.
+ */
+function _drutact_wysiwyg_media_format_form_preview($form, $form_state) {
+  return $form['preview']['file'];
+}
