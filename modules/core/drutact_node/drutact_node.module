@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the DruTACT Node feature.
  */
+
+include_once 'drutact_node.features.inc';
