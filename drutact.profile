@@ -59,3 +59,17 @@ function _drutact_default_module_weight($module, $weight) {
     ->condition('name', $module)
     ->execute();
 }
+
+/**
+ * Helper function to disable an array of views.
+ *
+ * @param $views
+ * Array containing names of views to disable.
+ */
+function _drutact_disable_views($views) {
+  $status = variable_get('views_defaults', array());
+  foreach ($views as $view) {
+    $status[$view] = TRUE;
+  }
+  variable_set('views_defaults', $status);
+}

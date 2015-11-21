@@ -63,4 +63,11 @@ function drutact_admin_install() {
       'view the administration theme',
     ),
   ));
+
+  // Disable overridden views.
+  _drutact_disable_views(array(
+    'admin_views_file',
+    'admin_views_node',
+    'admin_views_user',
+  ));
 }
