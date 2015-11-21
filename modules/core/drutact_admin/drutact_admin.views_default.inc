@@ -442,14 +442,6 @@ function drutact_admin_views_default_views() {
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
   $handler->display->display_options['relationships']['uid']['table'] = 'node';
   $handler->display->display_options['relationships']['uid']['field'] = 'uid';
-  /* Relationship: Content: Taxonomy terms on node */
-  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
-  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
-  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
-  $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
-    'forums' => 0,
-    'tags' => 0,
-  );
   /* Field: Bulk operations: Content */
   $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
   $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'node';
@@ -505,7 +497,7 @@ function drutact_admin_views_default_views() {
       'label' => 'Unpublish',
     ),
   );
-  /* Field: Content: Title */
+  /* Field: Field: Title */
   $handler->display->display_options['fields']['title_field']['id'] = 'title_field';
   $handler->display->display_options['fields']['title_field']['table'] = 'field_data_title_field';
   $handler->display->display_options['fields']['title_field']['field'] = 'title_field';
@@ -548,7 +540,7 @@ function drutact_admin_views_default_views() {
   $handler->display->display_options['fields']['delete_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['delete_node']['field'] = 'delete_node';
   $handler->display->display_options['fields']['delete_node']['label'] = '';
-  /* Filter criterion: Content: Title (title_field) */
+  /* Filter criterion: Field: Title (title_field) */
   $handler->display->display_options['filters']['title_field_value']['id'] = 'title_field_value';
   $handler->display->display_options['filters']['title_field_value']['table'] = 'field_data_title_field';
   $handler->display->display_options['filters']['title_field_value']['field'] = 'title_field_value';
@@ -629,16 +621,11 @@ function drutact_admin_views_default_views() {
     t('last »'),
     t('No content available.'),
     t('author'),
-    t('term'),
     t('- Choose an operation -'),
     t('Change author'),
     t('Delete'),
-    t('Stick'),
-    t('Unstick'),
     t('Change value'),
-    t('Promote to front page'),
     t('Publish'),
-    t('Demote from front page'),
     t('Unpublish'),
     t('Title'),
     t('Type'),
@@ -937,7 +924,6 @@ function drutact_admin_views_default_views() {
     t('No users available.'),
     t('- Choose an operation -'),
     t('Cancel account'),
-    t('Delete'),
     t('Change value'),
     t('Change roles'),
     t('Contact via email'),
