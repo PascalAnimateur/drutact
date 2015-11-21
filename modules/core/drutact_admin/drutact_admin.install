@@ -70,7 +70,4 @@ function drutact_admin_install() {
     'admin_views_node',
     'admin_views_user',
   ));
-
-  // Revert file entity display settings.
-  features_revert(array('drutact_media' => array('file_display')));
 }

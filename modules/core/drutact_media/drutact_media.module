@@ -7,16 +7,6 @@
 include_once 'drutact_media.features.inc';
 
 /**
- * Implements hook_post_features_rebuild().
- */
-function drutact_media_post_features_rebuild($component) {
-  if ($component == 'file_display') {
-    // Revert file entity display settings.
-    features_revert(array('drutact_media' => array('file_display')));
-  }
-}
-
-/**
  * Implements hook_theme_registry_alter().
  */
 function drutact_media_theme_registry_alter(&$theme_registry) {
