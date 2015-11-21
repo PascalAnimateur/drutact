@@ -19,6 +19,7 @@ dependencies[] = date_repeat_field
 dependencies[] = date_views
 dependencies[] = dblog
 dependencies[] = drutact_core
+dependencies[] = drutact_media
 dependencies[] = field_ui
 dependencies[] = fpa
 dependencies[] = hierarchical_term_formatter
