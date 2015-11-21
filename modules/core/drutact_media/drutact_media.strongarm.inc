@@ -17,7 +17,11 @@ function drutact_media_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(),
     'extra_fields' => array(
-      'form' => array(),
+      'form' => array(
+        'preview' => array(
+          'weight' => '-5',
+        ),
+      ),
       'display' => array(
         'file' => array(
           'teaser' => array(
@@ -57,7 +61,11 @@ function drutact_media_strongarm() {
       ),
     ),
     'extra_fields' => array(
-      'form' => array(),
+      'form' => array(
+        'preview' => array(
+          'weight' => '-5',
+        ),
+      ),
       'display' => array(
         'file' => array(
           'default' => array(
@@ -152,7 +160,11 @@ function drutact_media_strongarm() {
       ),
     ),
     'extra_fields' => array(
-      'form' => array(),
+      'form' => array(
+        'preview' => array(
+          'weight' => '-5',
+        ),
+      ),
       'display' => array(
         'file' => array(
           'default' => array(
