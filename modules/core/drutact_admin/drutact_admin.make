@@ -62,6 +62,9 @@ projects[taxonomy_menu][type] = module
 projects[taxonomy_menu][patch][2580607] = https://www.drupal.org/files/issues/taxonomy_menu-fieldset_initially_collapsed-2580607-2.patch
 projects[term_reference_tree][type] = module
 
+; Title
+projects[title][version] = 1.x-dev
+
 ; Top description
 projects[top_description][type] = module
 projects[top_description][download][type] = git
