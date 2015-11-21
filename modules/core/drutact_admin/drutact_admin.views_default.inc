@@ -783,7 +783,7 @@ function drutact_admin_views_default_views() {
     'action::mimemail_send_email_action' => array(
       'selected' => 1,
       'postpone_processing' => 0,
-      'skip_confirmation' => 0,
+      'skip_confirmation' => 1,
       'override_label' => 1,
       'label' => 'Contact via email',
     ),
