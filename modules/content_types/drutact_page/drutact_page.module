@@ -5,3 +5,13 @@
  */
 
 include_once 'drutact_page.features.inc';
+
+/**
+ * Implements hook_post_features_rebuild().
+ */
+function drutact_page_post_features_rebuild($component) {
+  if ($component == 'ctools') {
+    // Default content type permissions (page).
+    _drutact_default_content_type_permissions('page');
+  }
+}

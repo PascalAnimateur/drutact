@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for DruTACT Page.
+ */
+
+// Default content type permissions need to be set in hook_post_features_rebuild().
