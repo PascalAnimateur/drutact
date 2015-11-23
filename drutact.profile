@@ -31,6 +31,11 @@ function drutact_update_projects_alter(&$projects)
  * Helper function to set default content type permissions.
  */
 function _drutact_default_content_type_permissions($content_type) {
+  // Content type permissions for authenticated user.
+  user_role_change_permissions(DRUPAL_AUTHENTICATED_RID, array(
+    "delete own $content_type content" => TRUE,
+    "edit own $content_type content" => TRUE,
+  ));
   // Content type permissions for Editor.
   user_role_change_permissions(DRUTACT_EDITOR_RID, array(
     "create $content_type content" => TRUE,
