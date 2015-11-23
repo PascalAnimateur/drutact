@@ -15,7 +15,7 @@ function drutact_page_field_default_field_instances() {
     'bundle' => 'page',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The body of this page. Use the \'Edit summary\' link above to set a shorter, text-only version that will be used to describe the page when it\'s displayed as a teaser (i.e. in a list on the front page).',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -65,7 +65,7 @@ function drutact_page_field_default_field_instances() {
     'bundle' => 'page',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The title of this page.',
     'display' => array(
       'default' => array(
         'label' => 'above',
