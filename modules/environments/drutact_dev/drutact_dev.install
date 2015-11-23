@@ -27,7 +27,7 @@ function drutact_dev_enable() {
  */
 function drutact_dev_disable() {
   // Uninstall development modules.
-  drupal_uninstall_modules(array('devel', 'drutact_dev', 'search_krumo'));
+  drupal_uninstall_modules(array('devel', 'drutact_dev', 'search_krumo', 'l10n_client', 'potx'));
 
   // Delete development variables.
   $variables = array(
@@ -49,6 +49,9 @@ function drutact_dev_disable() {
     'devel_xhprof_directory',
     'devel_xhprof_enabled',
     'devel_xhprof_url',
+    'l10n_client_disabled_paths',
+    'l10n_client_server',
+    '10n_client_use_server',
   );
   foreach ($variables as $variable) {
     variable_del($variable);

@@ -138,5 +138,26 @@ function drutact_dev_strongarm() {
   $strongarm->value = 0;
   $export['dev_timer'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'l10n_client_disabled_paths';
+  $strongarm->value = '';
+  $export['l10n_client_disabled_paths'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'l10n_client_server';
+  $strongarm->value = 'http://localize.drupal.org';
+  $export['l10n_client_server'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'l10n_client_use_server';
+  $strongarm->value = 1;
+  $export['l10n_client_use_server'] = $strongarm;
+
   return $export;
 }
