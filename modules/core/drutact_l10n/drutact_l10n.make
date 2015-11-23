@@ -20,6 +20,7 @@ projects[multilingual_taxonomy][download][branch] = 7.x-1.x
 
 ; Localization
 projects[l10n_client][type] = module
+projects[l10n_client][patch][2191771] = https://www.drupal.org/files/issues/l10n_client-browser_is-2191771-17.patch
 projects[l10n_update][version] = 1.1
 projects[potx][type] = module
 projects[potx][patch][2175955] = https://www.drupal.org/files/issues/potx-drush_language-2175955-2.patch
