@@ -12,6 +12,7 @@ dependencies[] = text
 features[ctools][] = field_library:bundle_default:1
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
+features[field_base][] = body
 features[field_base][] = title_field
 features[field_instance][] = field_library-node_title-title_field
 features[field_library_bundle][] = node_title
