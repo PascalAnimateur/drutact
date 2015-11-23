@@ -1,0 +1,35 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for DruTACT Localization.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function drutact_l10n_install() {
+  // Default module permissions ().
+  _drutact_default_module_permissions(array(
+    DRUPAL_ANONYMOUS_RID => array(),
+    DRUPAL_AUTHENTICATED_RID => array(),
+    DRUTACT_EDITOR_RID => array(
+      // Locale
+      'translate interface',
+    ),
+    DRUTACT_ADMINISTRATOR_RID => array(
+      // Locale
+      'administer languages',
+      'translate interface',
+    ),
+  ));
+
+  // Default module weight (drutact_l10n).
+  _drutact_default_module_weight('drutact_l10n', 20);
+
+  // Create missing directories (translations).
+  $translations_dir = "public://translations";
+  file_prepare_directory($translations_dir, FILE_CREATE_DIRECTORY | FILE_MODIFY_PERMISSIONS);
+
+  // Default translations directory.
+  variable_set('l10n_update_download_store', conf_path() . '/files/translations');
+}

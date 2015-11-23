@@ -8,9 +8,6 @@
  * Implements hook_install().
  */
 function drutact_email_install() {
-  // Default module weight (drutact_email).
-  _drutact_default_module_weight('drutact_email', 11);
-
   // Default module permissions (mailsystem, mimemail).
   _drutact_default_module_permissions(array(
     DRUPAL_ANONYMOUS_RID => array(),
@@ -30,6 +27,9 @@ function drutact_email_install() {
       'send arbitrary files',
     ),
   ));
+
+  // Default module weight (drutact_email).
+  _drutact_default_module_weight('drutact_email', 20);
 
   // Hide Mime Mail settings from user profile.
   $field_bundle_setting = variable_get('field_bundle_settings_user__user', array());

@@ -113,7 +113,7 @@ function drutact_media_install() {
     ),
   ));
 
-  // Create missing directories.
+  // Create missing directories (pdfpreview).
   $pdfpreview_dir = "public://pdfpreview";
   file_prepare_directory($pdfpreview_dir, FILE_CREATE_DIRECTORY|FILE_MODIFY_PERMISSIONS);
 }
