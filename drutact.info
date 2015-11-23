@@ -3,7 +3,7 @@ description = DruTACT installation profile.
 version = 7.x-1.3-alpha10
 core = 7.x
 
-; DruTACT
+; DruTACT Core
 dependencies[] = drutact_admin
 dependencies[] = drutact_core
 dependencies[] = drutact_email
@@ -12,3 +12,6 @@ dependencies[] = drutact_node
 dependencies[] = drutact_seo
 dependencies[] = drutact_user
 dependencies[] = drutact_wysiwyg
+
+; DruTACT Content types
+dependencies[] = drutact_page
