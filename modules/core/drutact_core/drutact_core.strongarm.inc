@@ -79,12 +79,11 @@ function drutact_core_strongarm() {
   $strongarm->name = 'features_admin_menu_links_menus';
   $strongarm->value = array(
     'main-menu' => 'main-menu',
-    'management' => 'management',
-    'navigation' => 'navigation',
-    'user-menu' => 'user-menu',
     'devel' => 0,
     'features' => 0,
-    'menu-testing' => 0,
+    'management' => 0,
+    'navigation' => 0,
+    'user-menu' => 0,
   );
   $export['features_admin_menu_links_menus'] = $strongarm;
 
@@ -126,6 +125,27 @@ function drutact_core_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'features_admin_show_component_field_library_bundle';
+  $strongarm->value = 1;
+  $export['features_admin_show_component_field_library_bundle'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_admin_show_component_file_display';
+  $strongarm->value = 1;
+  $export['features_admin_show_component_file_display'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_admin_show_component_file_type';
+  $strongarm->value = 1;
+  $export['features_admin_show_component_file_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'features_admin_show_component_filter';
   $strongarm->value = 1;
   $export['features_admin_show_component_filter'] = $strongarm;
@@ -136,6 +156,20 @@ function drutact_core_strongarm() {
   $strongarm->name = 'features_admin_show_component_image';
   $strongarm->value = 1;
   $export['features_admin_show_component_image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_admin_show_component_language';
+  $strongarm->value = 1;
+  $export['features_admin_show_component_language'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_admin_show_component_linkit_profiles';
+  $strongarm->value = 1;
+  $export['features_admin_show_component_linkit_profiles'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -154,9 +188,51 @@ function drutact_core_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'features_admin_show_component_namefield';
+  $strongarm->value = 1;
+  $export['features_admin_show_component_namefield'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'features_admin_show_component_node';
   $strongarm->value = 1;
   $export['features_admin_show_component_node'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_admin_show_component_profile2_type';
+  $strongarm->value = 1;
+  $export['features_admin_show_component_profile2_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_admin_show_component_rules_config';
+  $strongarm->value = 1;
+  $export['features_admin_show_component_rules_config'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_admin_show_component_taxonomy';
+  $strongarm->value = 1;
+  $export['features_admin_show_component_taxonomy'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_admin_show_component_translations';
+  $strongarm->value = 1;
+  $export['features_admin_show_component_translations'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_admin_show_component_translations_en';
+  $strongarm->value = 1;
+  $export['features_admin_show_component_translations_en'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -178,6 +254,27 @@ function drutact_core_strongarm() {
   $strongarm->name = 'features_admin_show_component_variable';
   $strongarm->value = 1;
   $export['features_admin_show_component_variable'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_admin_show_component_variable_realm';
+  $strongarm->value = 1;
+  $export['features_admin_show_component_variable_realm'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_admin_show_component_views_view';
+  $strongarm->value = 1;
+  $export['features_admin_show_component_views_view'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_admin_show_component_wysiwyg';
+  $strongarm->value = 1;
+  $export['features_admin_show_component_wysiwyg'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -210,6 +307,27 @@ function drutact_core_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'features_component_locked_field_library_bundle';
+  $strongarm->value = 0;
+  $export['features_component_locked_field_library_bundle'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_component_locked_file_display';
+  $strongarm->value = 0;
+  $export['features_component_locked_file_display'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_component_locked_file_type';
+  $strongarm->value = 0;
+  $export['features_component_locked_file_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'features_component_locked_filter';
   $strongarm->value = 0;
   $export['features_component_locked_filter'] = $strongarm;
@@ -220,6 +338,20 @@ function drutact_core_strongarm() {
   $strongarm->name = 'features_component_locked_image';
   $strongarm->value = 0;
   $export['features_component_locked_image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_component_locked_language';
+  $strongarm->value = 0;
+  $export['features_component_locked_language'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_component_locked_linkit_profiles';
+  $strongarm->value = 0;
+  $export['features_component_locked_linkit_profiles'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -245,6 +377,41 @@ function drutact_core_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'features_component_locked_profile2_type';
+  $strongarm->value = 0;
+  $export['features_component_locked_profile2_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_component_locked_rules_config';
+  $strongarm->value = 0;
+  $export['features_component_locked_rules_config'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_component_locked_taxonomy';
+  $strongarm->value = 0;
+  $export['features_component_locked_taxonomy'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_component_locked_translations';
+  $strongarm->value = 0;
+  $export['features_component_locked_translations'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_component_locked_translations_en';
+  $strongarm->value = 0;
+  $export['features_component_locked_translations_en'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'features_component_locked_user_permission';
   $strongarm->value = 0;
   $export['features_component_locked_user_permission'] = $strongarm;
@@ -266,6 +433,27 @@ function drutact_core_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'features_component_locked_variable_realm';
+  $strongarm->value = 0;
+  $export['features_component_locked_variable_realm'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_component_locked_views_view';
+  $strongarm->value = 0;
+  $export['features_component_locked_views_view'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_component_locked_wysiwyg';
+  $strongarm->value = 0;
+  $export['features_component_locked_wysiwyg'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'features_default_export_path';
   $strongarm->value = 'sites/all/modules';
   $export['features_default_export_path'] = $strongarm;
@@ -281,7 +469,7 @@ function drutact_core_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'features_rebuild_on_flush';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['features_rebuild_on_flush'] = $strongarm;
 
   $strongarm = new stdClass();
