@@ -27,14 +27,15 @@
 #  profiles/drutact/modules/core/drutact_wysiwyg/drutact_wysiwyg.module: n/a
 #  profiles/drutact/modules/environments/drutact_dev/drutact_dev.info: n/a
 #  profiles/drutact/modules/environments/drutact_prod/drutact_prod.info: n/a
+#  profiles/drutact/modules/languages/drutact_en/drutact_en.info: n/a
 #  profiles/drutact/modules/languages/drutact_fr/drutact_fr.info: n/a
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-11-25 13:49-0500\n"
-"PO-Revision-Date: 2015-11-25 13:49-0500\n"
+"POT-Creation-Date: 2015-11-25 16:38-0500\n"
+"PO-Revision-Date: 2015-11-25 16:38-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -73,7 +74,7 @@ msgstr "Titre"
 msgid "Title"
 msgstr "Titre"
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:55
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:132
 msgctxt "field_instance:node_title-title_field:label"
 msgid "Title"
 msgstr "Titre"
@@ -289,6 +290,11 @@ msgstr ""
 msgid "Name"
 msgstr "Nom"
 
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:134
+msgctxt "field_instance:tags-name_field:label"
+msgid "Name"
+msgstr "Nom"
+
 #: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:955
 msgid "Active"
 msgstr "Actif"
@@ -449,6 +455,11 @@ msgstr ""
 msgid "Media components of DruTACT installation profile."
 msgstr ""
 
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:133
+msgctxt "field_instance:tags-description_field:label"
+msgid "Description"
+msgstr "Description"
+
 #: profiles/drutact/modules/core/drutact_node/drutact_node.info:0
 msgid "DruTACT Node"
 msgstr ""
@@ -518,15 +529,23 @@ msgstr ""
 msgid "Production environment of DruTACT installation profile."
 msgstr ""
 
+#: profiles/drutact/modules/languages/drutact_en/drutact_en.info:0
+msgid "DruTACT English"
+msgstr ""
+
+#: profiles/drutact/modules/languages/drutact_en/drutact_en.info:0
+msgid "English support for DruTACT installation profile."
+msgstr ""
+
+#: profiles/drutact/modules/languages/drutact_en/drutact_en.info:0 profiles/drutact/modules/languages/drutact_fr/drutact_fr.info:0
+msgid "DruTACT Languages"
+msgstr ""
+
 #: profiles/drutact/modules/languages/drutact_fr/drutact_fr.info:0
 msgid "DruTACT Français"
 msgstr ""
 
 #: profiles/drutact/modules/languages/drutact_fr/drutact_fr.info:0
 msgid "French language support for DruTACT installation profile."
-msgstr ""
-
-#: profiles/drutact/modules/languages/drutact_fr/drutact_fr.info:0
-msgid "DruTACT Languages"
 msgstr ""
 
