@@ -1,0 +1,16 @@
+<?php
+/**
+ * @file
+ * Drupal needs this blank file.
+ */
+
+/**
+ * Implements hook_post_features_rebuild().
+ */
+function drutact_fr_post_features_rebuild($component) {
+  if ($component == 'language') {
+    // Translate Editor role name.
+    _drutact_l10n_translate_role(DRUTACT_EDITOR_RID, 'fr', 'Éditeur');
+    _drutact_l10n_translate_role(DRUTACT_ADMINISTRATOR_RID, 'fr', 'Administrateur');
+  }
+}

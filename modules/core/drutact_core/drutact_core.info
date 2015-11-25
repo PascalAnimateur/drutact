@@ -9,6 +9,7 @@ dependencies[] = entity
 dependencies[] = entity_token
 dependencies[] = features
 dependencies[] = features_banish
+dependencies[] = features_translations
 dependencies[] = jquery_update
 dependencies[] = libraries
 dependencies[] = role_export
