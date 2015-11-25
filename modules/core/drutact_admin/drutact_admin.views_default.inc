@@ -363,11 +363,12 @@ function drutact_admin_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
     'views_bulk_operations' => 'views_bulk_operations',
-    'title' => 'title',
-    'timestamp' => 'title',
+    'title_field_et' => 'title_field_et',
+    'timestamp' => 'timestamp',
     'type' => 'type',
-    'name' => 'name',
+    'realname' => 'realname',
     'status' => 'status',
+    'language' => 'status',
     'changed' => 'changed',
     'edit_node' => 'edit_node',
     'delete_node' => 'edit_node',
@@ -379,11 +380,11 @@ function drutact_admin_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
-    'title' => array(
-      'sortable' => 1,
+    'title_field_et' => array(
+      'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
-      'separator' => '&nbsp;',
+      'separator' => '',
       'empty_column' => 0,
     ),
     'timestamp' => array(
@@ -398,8 +399,8 @@ function drutact_admin_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
-    'name' => array(
-      'sortable' => 1,
+    'realname' => array(
+      'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
@@ -408,6 +409,13 @@ function drutact_admin_views_default_views() {
     'status' => array(
       'sortable' => 1,
       'default_sort_order' => 'desc',
+      'align' => '',
+      'separator' => '&nbsp;',
+      'empty_column' => 0,
+    ),
+    'language' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -497,11 +505,17 @@ function drutact_admin_views_default_views() {
       'label' => 'Unpublish',
     ),
   );
-  /* Field: Field: Title */
-  $handler->display->display_options['fields']['title_field']['id'] = 'title_field';
-  $handler->display->display_options['fields']['title_field']['table'] = 'field_data_title_field';
-  $handler->display->display_options['fields']['title_field']['field'] = 'title_field';
-  $handler->display->display_options['fields']['title_field']['link_to_entity'] = 1;
+  /* Field: Entity translation: Title: translated */
+  $handler->display->display_options['fields']['title_field_et']['id'] = 'title_field_et';
+  $handler->display->display_options['fields']['title_field_et']['table'] = 'field_data_title_field';
+  $handler->display->display_options['fields']['title_field_et']['field'] = 'title_field_et';
+  $handler->display->display_options['fields']['title_field_et']['label'] = 'Title';
+  $handler->display->display_options['fields']['title_field_et']['type'] = 'title_linked';
+  $handler->display->display_options['fields']['title_field_et']['settings'] = array(
+    'title_style' => '_none',
+    'title_link' => 'content',
+    'title_class' => '',
+  );
   /* Field: Content: Has new content */
   $handler->display->display_options['fields']['timestamp']['id'] = 'timestamp';
   $handler->display->display_options['fields']['timestamp']['table'] = 'history';
@@ -524,6 +538,15 @@ function drutact_admin_views_default_views() {
   $handler->display->display_options['fields']['status']['field'] = 'status';
   $handler->display->display_options['fields']['status']['type'] = 'unicode-yes-no';
   $handler->display->display_options['fields']['status']['not'] = 0;
+  /* Field: Content: Language */
+  $handler->display->display_options['fields']['language']['id'] = 'language';
+  $handler->display->display_options['fields']['language']['table'] = 'node';
+  $handler->display->display_options['fields']['language']['field'] = 'language';
+  $handler->display->display_options['fields']['language']['label'] = '';
+  $handler->display->display_options['fields']['language']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['language']['alter']['text'] = '([language])';
+  $handler->display->display_options['fields']['language']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['language']['language_display'] = 'native';
   /* Field: Content: Updated date */
   $handler->display->display_options['fields']['changed']['id'] = 'changed';
   $handler->display->display_options['fields']['changed']['table'] = 'node';
@@ -631,6 +654,7 @@ function drutact_admin_views_default_views() {
     t('Type'),
     t('Author'),
     t('Published'),
+    t('([language])'),
     t('Updated'),
     t('Operations'),
     t('System'),
