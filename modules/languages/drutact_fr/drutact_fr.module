@@ -12,5 +12,7 @@ function drutact_fr_post_features_rebuild($component) {
     // Translate Editor role name.
     _drutact_l10n_translate_role(DRUTACT_EDITOR_RID, 'fr', 'Éditeur');
     _drutact_l10n_translate_role(DRUTACT_ADMINISTRATOR_RID, 'fr', 'Administrateur');
+    // Update translations from code.
+    _potx_exportables_import_data();
   }
 }
