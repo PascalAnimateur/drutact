@@ -4,4 +4,17 @@
  * Install, update and uninstall functions for DruTACT Core.
  */
 
-// Default module permissions need to be set in hook_post_features_rebuild().
+/**
+ * Implements hook_install().
+ */
+function drutact_core_install() {
+  // Default module permissions need to be set in hook_post_features_rebuild().
+
+  // Default multilingual variables.
+  _drutact_l10n_default_i18n_variables(array(
+    'date_views_day_format_with_year',
+    'date_views_day_format_without_year',
+    'date_views_week_format_with_year',
+    'date_views_week_format_without_year',
+  ));
+}
