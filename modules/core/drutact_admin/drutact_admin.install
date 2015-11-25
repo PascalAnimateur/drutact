@@ -64,6 +64,9 @@ function drutact_admin_install() {
     ),
   ));
 
+  // Default module weight (drutact_admin).
+  _drutact_default_module_weight('drutact_admin', 20);
+
   // Disable overridden views.
   _drutact_disable_views(array(
     'admin_views_file',
