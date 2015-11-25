@@ -30,10 +30,6 @@ projects[potx_exportables][type] = module
 projects[i18n][type] = module
 projects[i18n][patch][1252144] = https://www.drupal.org/files/1252144-80-support-wysiwyg.patch
 
-; Pathauto internationalization
-projects[pathauto_i18n][type] = module
-projects[pathauto_i18n][patch][2362035] = https://www.drupal.org/files/issues/pathauto_i18n-check_permission-2362035-12.patch
-
 ; Roles translation
 projects[roles_simple_translate][type] = module
 projects[roles_simple_translate][download][type] = git
