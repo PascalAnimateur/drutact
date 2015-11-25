@@ -8,33 +8,7 @@
  * Implements hook_install().
  */
 function drutact_l10n_install() {
-  // Default module permissions ().
-  _drutact_default_module_permissions(array(
-    DRUPAL_ANONYMOUS_RID => array(),
-    DRUPAL_AUTHENTICATED_RID => array(),
-    DRUTACT_EDITOR_RID => array(
-      // Entity translation
-      'translate any entity',
-      'translate node entities',
-      'translate taxonomy_term entities',
-      // Locale
-      'translate interface',
-    ),
-    DRUTACT_ADMINISTRATOR_RID => array(
-      // Entity translation
-      'administer entity translation',
-      'toggle field translatability',
-      'translate any entity',
-      'translate node entities',
-      'translate taxonomy_term entities',
-      // Internationalization
-      'translate admin strings',
-      'translate user-defined strings',
-      // Locale
-      'administer languages',
-      'translate interface',
-    ),
-  ));
+  // Default module permissions need to be set in hook_post_features_rebuild().
 
   // Default module weight (drutact_l10n).
   _drutact_default_module_weight('drutact_l10n', 20);

@@ -96,3 +96,38 @@ function _drutact_l10n_translate_vocabulary($vocabulary, $langcode, $name, $desc
     }
   }
 }
+
+/**
+ * Implements hook_post_features_rebuild().
+ */
+function drutact_l10n_post_features_rebuild($component) {
+  if ($component == 'variable') {
+    // Default module permissions (entity_translation, i18n, locale).
+    _drutact_default_module_permissions(array(
+      DRUPAL_ANONYMOUS_RID => array(),
+      DRUPAL_AUTHENTICATED_RID => array(),
+      DRUTACT_EDITOR_RID => array(
+        // Entity translation
+        'translate any entity',
+        'translate node entities',
+        'translate taxonomy_term entities',
+        // Locale
+        'translate interface',
+      ),
+      DRUTACT_ADMINISTRATOR_RID => array(
+        // Entity translation
+        'administer entity translation',
+        'toggle field translatability',
+        'translate any entity',
+        'translate node entities',
+        'translate taxonomy_term entities',
+        // Internationalization
+        'translate admin strings',
+        'translate user-defined strings',
+        // Locale
+        'administer languages',
+        'translate interface',
+      ),
+    ));
+  }
+}
