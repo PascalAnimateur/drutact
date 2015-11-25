@@ -24,4 +24,10 @@ function drutact_l10n_install() {
   _drutact_l10n_default_i18n_menus(array(
     'main-menu',
   ));
+
+  // Enable DruTACT language module.
+  global $language;
+  if (isset($language->language)) {
+    module_enable(array('drutact_' . $language->language));
+  }
 }

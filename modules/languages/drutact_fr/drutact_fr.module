@@ -12,6 +12,11 @@ function drutact_fr_post_features_rebuild($component) {
     // Translate Editor role name.
     _drutact_l10n_translate_role(DRUTACT_EDITOR_RID, 'fr', 'Éditeur');
     _drutact_l10n_translate_role(DRUTACT_ADMINISTRATOR_RID, 'fr', 'Administrateur');
+
+    // Translate vocabularies.
+    _drutact_l10n_translate_vocabulary('tags', 'fr', 'Mots-clés',
+      'Utiliser les mots-clés pour regrouper le contenu en catégories par sujets similaires.');
+
     // Update translations from code.
     _potx_exportables_import_data();
   }
