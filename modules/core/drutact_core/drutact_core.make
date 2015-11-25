@@ -29,7 +29,7 @@ projects[rules][type] = module
 
 ; Tadaa
 projects[tadaa][type] = module
-projects[tadaa][patch][2434949] = https://www.drupal.org/files/issues/tadaa-left_toolbar-2434949-1.patch
+projects[tadaa][patch][2434949] = https://www.drupal.org/files/issues/tadaa-left_toolbar-2434949-2.patch
 
 ; Token
 projects[token][type] = module
