@@ -1,5 +1,98 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the DruTACT Localization feature.
  */
+
+include_once 'drutact_l10n.features.inc';
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function drutact_l10n_form_node_type_form_alter(&$form, &$form_state, $form_id) {
+  // Enable field translation and hide translation links by default.
+  $form['workflow']['language_content_type']['#default_value'] = 4;
+  $form['workflow']['entity_translation_hide_translation_links']['#default_value'] = 1;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function drutact_l10n_form_node_form_alter(&$form, &$form_state, $form_id) {
+  if (isset($form['menu']['link']['tset'])) {
+    // Enable menu link only for current language by default.
+    $form['menu']['link']['tset']['#default_value'] = TRUE;
+    $form['menu']['link']['tset']['#access'] = FALSE;
+  }
+}
+
+/**
+ * Helper function to set default multilingual menus.
+ *
+ * @param $menus
+ * Array of names of multilingual menus.
+ */
+function _drutact_l10n_default_i18n_menus($menus) {
+  foreach ($menus as $menu_name) {
+    $menu = menu_load($menu_name);
+    $menu['i18n_mode'] = 5;
+    menu_save($menu);
+  }
+}
+
+/**
+ * Helper function to set default multilingual variables.
+ *
+ * @param $variables
+ * Array containing names of multilingual variables to enable.
+ */
+function _drutact_l10n_default_i18n_variables($variables) {
+  $old_variables = variable_realm_get('global', 'default', 'variable_realm_list_language');
+  $variables = array_merge($old_variables, $variables);
+  variable_realm_set('global', 'default', 'variable_realm_list_language', $variables, FALSE);
+}
+
+/**
+ * Helper function used to translate role name.
+ */
+function _drutact_l10n_translate_role($rid, $langcode, $translation) {
+  $roles = user_roles();
+  if (!isset($roles[$rid])) {
+    drupal_set_message(t('Role %rid does not exist.', array('%rid' => $rid)), 'warning');
+  }
+  $languages = language_list();
+  if (!isset($languages[$langcode])) {
+    drupal_set_message(t('Language %language is not installed or does not exist.', array('%language' => $langcode)), 'warning');
+  }
+  $results = db_select('role_translate', 'rt')
+    ->fields('rt')
+    ->condition('rid', $rid)
+    ->condition('language', $langcode)
+    ->execute()
+    ->fetchAssoc();
+  if (empty($results)) {
+    // Insert the translation if doesn't exist.
+    db_insert('role_translate')->fields(array(
+      'rid' => $rid,
+      'translation' => $translation,
+      'language' => $langcode,
+    ))->execute();
+  }
+}
+
+/**
+ * Helper function used to translate role name.
+ */
+function _drutact_l10n_translate_vocabulary($vocabulary, $langcode, $name, $description = '') {
+  if (module_exists('i18n_string')) {
+    $vocabulary = taxonomy_vocabulary_machine_name_load($vocabulary);
+    if (!isset($vocabulary)) {
+      return;
+    }
+    $vid = $vocabulary->vid;
+    i18n_string_textgroup('taxonomy')->update_translation(array('vocabulary', $vid, 'name'), $langcode, $name);
+    if (!empty($description)) {
+      i18n_string_textgroup('taxonomy')->update_translation(array('vocabulary', $vid, 'description'), $langcode, $description);
+    }
+  }
+}

@@ -13,10 +13,23 @@ function drutact_l10n_install() {
     DRUPAL_ANONYMOUS_RID => array(),
     DRUPAL_AUTHENTICATED_RID => array(),
     DRUTACT_EDITOR_RID => array(
+      // Entity translation
+      'translate any entity',
+      'translate node entities',
+      'translate taxonomy_term entities',
       // Locale
       'translate interface',
     ),
     DRUTACT_ADMINISTRATOR_RID => array(
+      // Entity translation
+      'administer entity translation',
+      'toggle field translatability',
+      'translate any entity',
+      'translate node entities',
+      'translate taxonomy_term entities',
+      // Internationalization
+      'translate admin strings',
+      'translate user-defined strings',
       // Locale
       'administer languages',
       'translate interface',
@@ -32,4 +45,9 @@ function drutact_l10n_install() {
 
   // Default translations directory.
   variable_set('l10n_update_download_store', conf_path() . '/files/translations');
+
+  // Enable multilingual menus.
+  _drutact_l10n_default_i18n_menus(array(
+    'main-menu',
+  ));
 }

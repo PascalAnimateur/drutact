@@ -1,5 +1,5 @@
 api = 2
-core = 7
+core = 7.x
 
 ; Entity translation
 projects[entity_translation][version] = 1.x-dev
@@ -30,6 +30,10 @@ projects[potx_exportables][type] = module
 projects[i18n][type] = module
 projects[i18n][patch][1252144] = https://www.drupal.org/files/1252144-80-support-wysiwyg.patch
 
+; Pathauto internationalization
+projects[pathauto_i18n][type] = module
+projects[pathauto_i18n][patch][2362035] = https://www.drupal.org/files/issues/pathauto_i18n-check_permission-2362035-12.patch
+
 ; Roles translation
 projects[roles_simple_translate][type] = module
 projects[roles_simple_translate][download][type] = git
@@ -37,3 +41,6 @@ projects[roles_simple_translate][download][url] = http://git.drupal.org/sandbox/
 projects[roles_simple_translate][download][branch] = 7.x-1.x
 projects[roles_simple_translate][patch][2496557] = https://www.drupal.org/files/issues/roles_simple_translate-english_default_language-2496557-3.patch
 projects[roles_simple_translate][patch][2559409] = https://www.drupal.org/files/issues/roles_simple_translate-redirect_after_save.patch
+
+; Variable
+projects[variable][type] = module
