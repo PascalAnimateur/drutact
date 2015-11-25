@@ -1,0 +1,532 @@
+# $Id$
+#
+# French translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  profiles/drutact/drutact.info: n/a
+#  profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc: n/a
+#  profiles/drutact/modules/content_types/drutact_page/drutact_page.features.inc: n/a
+#  profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc: n/a
+#  profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc: n/a
+#  profiles/drutact/modules/content_types/drutact_page/drutact_page.info: n/a
+#  profiles/drutact/modules/core/drutact_user/drutact_user.module: n/a
+#  profiles/drutact/modules/core/drutact_admin/drutact_admin.info: n/a
+#  profiles/drutact/modules/core/drutact_core/drutact_core.info: n/a
+#  profiles/drutact/modules/core/drutact_email/drutact_email.info: n/a
+#  profiles/drutact/modules/core/drutact_l10n/drutact_l10n.info: n/a
+#  profiles/drutact/modules/core/drutact_media/drutact_media.info: n/a
+#  profiles/drutact/modules/core/drutact_node/drutact_node.info: n/a
+#  profiles/drutact/modules/core/drutact_seo/drutact_seo.info: n/a
+#  profiles/drutact/modules/core/drutact_user/drutact_user.info: n/a
+#  profiles/drutact/modules/core/drutact_wysiwyg/drutact_wysiwyg.info: n/a
+#  profiles/drutact/modules/core/drutact_email/drutact_email.module: n/a
+#  profiles/drutact/modules/core/drutact_l10n/drutact_l10n.module: n/a
+#  profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc: n/a
+#  profiles/drutact/modules/core/drutact_media/drutact_media.module: n/a
+#  profiles/drutact/modules/core/drutact_user/drutact_user.features.field_instance.inc: n/a
+#  profiles/drutact/modules/core/drutact_wysiwyg/drutact_wysiwyg.module: n/a
+#  profiles/drutact/modules/environments/drutact_dev/drutact_dev.info: n/a
+#  profiles/drutact/modules/environments/drutact_prod/drutact_prod.info: n/a
+#  profiles/drutact/modules/languages/drutact_fr/drutact_fr.info: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2015-11-25 13:49-0500\n"
+"PO-Revision-Date: 2015-11-25 13:49-0500\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n>1);\n"
+
+#: profiles/drutact/drutact.info:0
+msgid "DruTACT"
+msgstr ""
+
+#: profiles/drutact/drutact.info:0
+msgid "DruTACT installation profile."
+msgstr ""
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:117
+msgctxt "field_instance:page-body:label"
+msgid "Body"
+msgstr "Corps"
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:118
+msgctxt "field_instance:page-body:description"
+msgid "The body of this page. Use the 'Edit summary' link above to set a shorter, text-only version that will be used to describe the page when it's displayed as a teaser (i.e. in a list on the front page)."
+msgstr ""
+"Le corps de cette page. Utiliser le lien 'Modifier le résumé' "
+"ci-haut pour définir une version textuelle plus courte qui sera "
+"utilisée pour décrire cette page lorsqu'elle sera affichée en "
+"accroche (i.e. dans une liste sur la page d'accueil)."
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:119
+msgctxt "field_instance:page-title_field:label"
+msgid "Title"
+msgstr "Titre"
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.inc:26 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:322;653
+msgid "Title"
+msgstr "Titre"
+
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:55
+msgctxt "field_instance:node_title-title_field:label"
+msgid "Title"
+msgstr "Titre"
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:120
+msgctxt "field_instance:page-title_field:description"
+msgid "The title of this page."
+msgstr "Le titre de cette page."
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.inc:22
+msgid "Page"
+msgstr "Page"
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.inc:24
+msgid "Use <em>pages</em> for static content, such as the 'About us' page."
+msgstr ""
+"Utiliser les <em>pages</em> pour le contenu statique tel que la page "
+"'À propos'."
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.info:0
+msgid "DruTACT Page"
+msgstr ""
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.info:0
+msgid "Page content type of DruTACT installation profile."
+msgstr ""
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.info:0
+msgid "DruTACT Content types"
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:301
+msgid "Master"
+msgstr "Maître"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:302
+msgid "Files"
+msgstr "Fichiers"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:303;632;935
+msgid "more"
+msgstr "plus"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:304;633;936
+msgid "Apply"
+msgstr "Appliquer"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:305;634;937
+msgid "Reset"
+msgstr "Réinitialiser"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:306;635;938
+msgid "Sort by"
+msgstr "Trier par"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:307;636;939
+msgid "Asc"
+msgstr "Asc"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:308;637;940
+msgid "Desc"
+msgstr "Desc"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:309;638;941
+msgid "Items per page"
+msgstr "Éléments par page"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:310;639;942
+msgid "- All -"
+msgstr "- Tout -"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:311;640;943
+msgid "Offset"
+msgstr "Décalage"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:312;641;944
+msgid "« first"
+msgstr "« premier"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:313;642;945
+msgid "‹ previous"
+msgstr "‹ précédent"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:314;643;946
+msgid "next ›"
+msgstr "suivant ›"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:315;644;947
+msgid "last »"
+msgstr "dernier »"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:316
+msgid "No files available."
+msgstr "Aucun fichier disponible."
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:317
+msgid "user"
+msgstr "utilisateur"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:318;647;949
+msgid "- Choose an operation -"
+msgstr "- Choisir une opération -"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:319
+msgid "Create archive"
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:320;649
+msgid "Delete"
+msgstr "Supprimer"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:321;650;951
+msgid "Change value"
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:323;654
+msgid "Type"
+msgstr "Type"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:324
+msgid "Size"
+msgstr "Taille"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:325
+msgid "0 bytes"
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:326
+msgid "User"
+msgstr "Utilisateur"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:327;658
+msgid "Updated"
+msgstr "Mis à jour"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:328
+msgid "Used in"
+msgstr "Utilisé dans"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:329
+msgid "<ul class=\"links inline\">\n<li>[edit]</li>\n<li>[delete]</li>\n</ul>"
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:333;659;959
+msgid "Operations"
+msgstr "Actions"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:334;660;963
+msgid "System"
+msgstr "Système"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:630;933
+msgid "Defaults"
+msgstr "Paramètres par défaut"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:631
+msgid "Content"
+msgstr "Contenu"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:645
+msgid "No content available."
+msgstr "Aucun contenu disponible."
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:646
+msgid "author"
+msgstr "auteur"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:648
+msgid "Change author"
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:651
+msgid "Publish"
+msgstr "Publier"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:652
+msgid "Unpublish"
+msgstr "Dépublier"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:655
+msgid "Author"
+msgstr "Auteur"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:656
+msgid "Published"
+msgstr "Publié"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:657
+msgid "([language])"
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:934 profiles/drutact/modules/core/drutact_user/drutact_user.module:38
+msgid "Users"
+msgstr "Utilisateurs"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:948
+msgid "No users available."
+msgstr "Aucun utilisateur disponible."
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:950
+msgid "Cancel account"
+msgstr "Annuler le compte"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:952
+msgid "Change roles"
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:953
+msgid "Contact via email"
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:954
+msgid "Name"
+msgstr "Nom"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:955
+msgid "Active"
+msgstr "Actif"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:956
+msgid "Roles"
+msgstr "Rôles"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:957
+msgid "Member for"
+msgstr "Membre depuis"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:958
+msgid "Last access"
+msgstr "Dernier accès"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:960
+msgid "cancel account"
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:961
+msgid "E-mail"
+msgstr "Courriel"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:962
+msgid "Role"
+msgstr "Rôle"
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.info:0
+msgid "DruTACT Administration"
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.info:0
+msgid "Administration components of DruTACT installation profile."
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.info:0 profiles/drutact/modules/core/drutact_core/drutact_core.info:0;0 profiles/drutact/modules/core/drutact_email/drutact_email.info:0 profiles/drutact/modules/core/drutact_l10n/drutact_l10n.info:0 profiles/drutact/modules/core/drutact_media/drutact_media.info:0 profiles/drutact/modules/core/drutact_node/drutact_node.info:0 profiles/drutact/modules/core/drutact_seo/drutact_seo.info:0 profiles/drutact/modules/core/drutact_user/drutact_user.info:0 profiles/drutact/modules/core/drutact_wysiwyg/drutact_wysiwyg.info:0
+msgid "DruTACT Core"
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_core/drutact_core.info:0
+msgid "Core components of DruTACT installation profile."
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_email/drutact_email.module:35
+msgid "Send"
+msgstr "Envoyer"
+
+#: profiles/drutact/modules/core/drutact_email/drutact_email.info:0
+msgid "DruTACT Email"
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_email/drutact_email.info:0
+msgid "Email components of DruTACT installation profile."
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_l10n/drutact_l10n.module:61
+msgid "Role %rid does not exist."
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_l10n/drutact_l10n.module:65
+msgid "Language %language is not installed or does not exist."
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_l10n/drutact_l10n.info:0
+msgid "DruTACT Localization"
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_l10n/drutact_l10n.info:0
+msgid "Multilingual components of DruTACT installation profile."
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:339
+msgctxt "field_instance:audio-filename_field:label"
+msgid "File name"
+msgstr "Nom du fichier"
+
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:341
+msgctxt "field_instance:document-filename_field:label"
+msgid "File name"
+msgstr "Nom du fichier"
+
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:347
+msgctxt "field_instance:image-filename_field:label"
+msgid "File name"
+msgstr "Nom du fichier"
+
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:349
+msgctxt "field_instance:video-filename_field:label"
+msgid "File name"
+msgstr "Nom du fichier"
+
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:340
+msgctxt "field_instance:audio-filename_field:description"
+msgid "A field replacing file name."
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:342
+msgctxt "field_instance:document-filename_field:description"
+msgid "A field replacing file name."
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:348
+msgctxt "field_instance:image-filename_field:description"
+msgid "A field replacing file name."
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:350
+msgctxt "field_instance:video-filename_field:description"
+msgid "A field replacing file name."
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:343
+msgctxt "field_instance:image-field_file_image_alt_text:label"
+msgid "Alt Text"
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:344
+msgctxt "field_instance:image-field_file_image_alt_text:description"
+msgid "Alternative text is used by screen readers, search engines, and when the image cannot be loaded. By adding alt text you improve accessibility and search engine optimization."
+msgstr ""
+"Le texte alternatif est utilisé par les lecteurs d'écran, les "
+"moteurs de recherche et lorsque l'image ne peut pas se charger. En "
+"ajoutant un texte alternatif, vous améliorez l'accessibilité et "
+"l'optimisation pour les moteurs de recherche."
+
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:345
+msgctxt "field_instance:image-field_file_image_title_text:label"
+msgid "Title Text"
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:346
+msgctxt "field_instance:image-field_file_image_title_text:description"
+msgid "Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability."
+msgstr ""
+"Le texte du titre est utilisé comme une infobulle lorsqu'un "
+"utilisateur survole l'image avec sa souris. Ajouter un texte du titre "
+"facilite la compréhension du contexte d'une image et améliore "
+"l'usage."
+
+#: profiles/drutact/modules/core/drutact_media/drutact_media.module:25
+msgid "Public files"
+msgstr "Fichiers publics"
+
+#: profiles/drutact/modules/core/drutact_media/drutact_media.module:26
+msgid "Private files"
+msgstr "Fichiers privés"
+
+#: profiles/drutact/modules/core/drutact_media/drutact_media.module:27;37
+msgid "Public files are accessible to everyone, while access to private files must be explicitly granted (i.e. through group access)."
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_media/drutact_media.info:0
+msgid "DruTACT Media"
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_media/drutact_media.info:0
+msgid "Media components of DruTACT installation profile."
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_node/drutact_node.info:0
+msgid "DruTACT Node"
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_node/drutact_node.info:0
+msgid "Node components of DruTACT installation profile."
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_seo/drutact_seo.info:0
+msgid "DruTACT SEO"
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_seo/drutact_seo.info:0
+msgid "Search Engine Optimization for DruTACT installation profile."
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_user/drutact_user.features.field_instance.inc:87
+msgctxt "field_instance:user-field_full_name:label"
+msgid "Full name"
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_user/drutact_user.module:17
+msgid "Email password reset link"
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_user/drutact_user.info:0
+msgid "DruTACT User"
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_user/drutact_user.info:0
+msgid "User components for DruTACT installation profile."
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_wysiwyg/drutact_wysiwyg.module:86
+msgid "Display options"
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_wysiwyg/drutact_wysiwyg.module:109
+msgid "Preview"
+msgstr "Aperçu"
+
+#: profiles/drutact/modules/core/drutact_wysiwyg/drutact_wysiwyg.info:0
+msgid "DruTACT WYSIWYG"
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_wysiwyg/drutact_wysiwyg.info:0
+msgid "WYSIWYG components for DruTACT installation profile."
+msgstr ""
+
+#: profiles/drutact/modules/environments/drutact_dev/drutact_dev.info:0
+msgid "DruTACT Development"
+msgstr ""
+
+#: profiles/drutact/modules/environments/drutact_dev/drutact_dev.info:0
+msgid "Development environment of DruTACT installation profile."
+msgstr ""
+
+#: profiles/drutact/modules/environments/drutact_dev/drutact_dev.info:0 profiles/drutact/modules/environments/drutact_prod/drutact_prod.info:0
+msgid "DruTACT Environments"
+msgstr ""
+
+#: profiles/drutact/modules/environments/drutact_prod/drutact_prod.info:0
+msgid "DruTACT Production"
+msgstr ""
+
+#: profiles/drutact/modules/environments/drutact_prod/drutact_prod.info:0
+msgid "Production environment of DruTACT installation profile."
+msgstr ""
+
+#: profiles/drutact/modules/languages/drutact_fr/drutact_fr.info:0
+msgid "DruTACT Français"
+msgstr ""
+
+#: profiles/drutact/modules/languages/drutact_fr/drutact_fr.info:0
+msgid "French language support for DruTACT installation profile."
+msgstr ""
+
+#: profiles/drutact/modules/languages/drutact_fr/drutact_fr.info:0
+msgid "DruTACT Languages"
+msgstr ""
+
