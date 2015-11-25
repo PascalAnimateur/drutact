@@ -40,6 +40,7 @@ function drutact_page_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'display_summary' => 1,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -85,6 +86,7 @@ function drutact_page_field_default_field_instances() {
     'label' => 'Title',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'hide_label' => array(
         'entity' => 0,
         'page' => 0,
@@ -111,6 +113,8 @@ function drutact_page_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
+  t('The body of this page. Use the \'Edit summary\' link above to set a shorter, text-only version that will be used to describe the page when it\'s displayed as a teaser (i.e. in a list on the front page).');
+  t('The title of this page.');
   t('Title');
 
   return $field_instances;
