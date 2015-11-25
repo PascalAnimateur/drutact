@@ -21,3 +21,28 @@ function drutact_admin_features_banish_alter(&$banished) {
     }
   }
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function drutact_admin_form_taxonomy_form_term_alter(&$form, &$form_state, $form_id) {
+  // Enable additional settings vertical tabs on taxonomy term form.
+  $form['additional_settings'] = array(
+    '#type' => 'vertical_tabs',
+    '#weight' => 99,
+    '#attached' => array(
+      'js' => array(drupal_get_path('module', 'node') . '/content_types.js'),
+    ),
+  );
+  foreach ($form as $delta => $element) {
+    if (is_array($element)) {
+      if (!empty($element['#type'])) {
+        if ($element['#type'] == 'fieldset') {
+          $form[$delta]['#group'] = 'additional_settings';
+          $form['additional_settings'][$delta] = $form[$delta];
+          unset($form[$delta]);
+        }
+      }
+    }
+  }
+}
