@@ -334,12 +334,21 @@ function drutact_media_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('A field replacing file name.');
-  t('Alt Text');
-  t('Alternative text is used by screen readers, search engines, and when the image cannot be loaded. By adding alt text you improve accessibility and search engine optimization.');
-  t('File name');
-  t('Title Text');
-  t('Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability.');
+
+  // Translatables created/updated by the Localize Fields (localize_fields) module.
+  t('File name', array(), array('context' => 'field_instance:audio-filename_field:label'));
+  t('A field replacing file name.', array(), array('context' => 'field_instance:audio-filename_field:description'));
+  t('File name', array(), array('context' => 'field_instance:document-filename_field:label'));
+  t('A field replacing file name.', array(), array('context' => 'field_instance:document-filename_field:description'));
+  t('Alt Text', array(), array('context' => 'field_instance:image-field_file_image_alt_text:label'));
+  t('Alternative text is used by screen readers, search engines, and when the image cannot be loaded. By adding alt text you improve accessibility and search engine optimization.', array(), array('context' => 'field_instance:image-field_file_image_alt_text:description'));
+  t('Title Text', array(), array('context' => 'field_instance:image-field_file_image_title_text:label'));
+  t('Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability.', array(), array('context' => 'field_instance:image-field_file_image_title_text:description'));
+  t('File name', array(), array('context' => 'field_instance:image-filename_field:label'));
+  t('A field replacing file name.', array(), array('context' => 'field_instance:image-filename_field:description'));
+  t('File name', array(), array('context' => 'field_instance:video-filename_field:label'));
+  t('A field replacing file name.', array(), array('context' => 'field_instance:video-filename_field:description'));
+
 
   return $field_instances;
 }

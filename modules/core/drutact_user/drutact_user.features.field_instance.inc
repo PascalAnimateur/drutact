@@ -82,7 +82,10 @@ function drutact_user_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Full name');
+
+  // Translatables created/updated by the Localize Fields (localize_fields) module.
+  t('Full name', array(), array('context' => 'field_instance:user-field_full_name:label'));
+
 
   return $field_instances;
 }

@@ -112,10 +112,13 @@ function drutact_page_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Body');
-  t('The body of this page. Use the \'Edit summary\' link above to set a shorter, text-only version that will be used to describe the page when it\'s displayed as a teaser (i.e. in a list on the front page).');
-  t('The title of this page.');
-  t('Title');
+
+  // Translatables created/updated by the Localize Fields (localize_fields) module.
+  t('Body', array(), array('context' => 'field_instance:page-body:label'));
+  t('The body of this page. Use the \'Edit summary\' link above to set a shorter, text-only version that will be used to describe the page when it\'s displayed as a teaser (i.e. in a list on the front page).', array(), array('context' => 'field_instance:page-body:description'));
+  t('Title', array(), array('context' => 'field_instance:page-title_field:label'));
+  t('The title of this page.', array(), array('context' => 'field_instance:page-title_field:description'));
+
 
   return $field_instances;
 }
