@@ -23,6 +23,10 @@ function drutact_wysiwyg_default_linkit_profiles() {
       'plain_text' => 0,
     ),
     'search_plugins' => array(
+      'entity:taxonomy_term' => array(
+        'enabled' => 1,
+        'weight' => '-10',
+      ),
       'entity:file' => array(
         'enabled' => 1,
         'weight' => '-10',
@@ -43,6 +47,9 @@ function drutact_wysiwyg_default_linkit_profiles() {
     'entity:node' => array(
       'result_description' => '[node:content-type]',
       'include_unpublished' => 0,
+    ),
+    'entity:taxonomy_term' => array(
+      'result_description' => '[term:vocabulary]',
     ),
     'entity:profile2' => array(
       'result_description' => '',
