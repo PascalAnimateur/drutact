@@ -1,8 +1,10 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the DruTACT Français feature.
  */
+
+include_once 'drutact_fr.features.inc';
 
 /**
  * Implements hook_post_features_rebuild().

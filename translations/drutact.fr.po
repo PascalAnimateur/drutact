@@ -34,8 +34,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-11-25 16:38-0500\n"
-"PO-Revision-Date: 2015-11-25 16:38-0500\n"
+"POT-Creation-Date: 2015-11-25 22:17-0500\n"
+"PO-Revision-Date: 2015-11-25 22:17-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -74,7 +74,7 @@ msgstr "Titre"
 msgid "Title"
 msgstr "Titre"
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:132
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:140
 msgctxt "field_instance:node_title-title_field:label"
 msgid "Title"
 msgstr "Titre"
@@ -290,7 +290,7 @@ msgstr ""
 msgid "Name"
 msgstr "Nom"
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:134
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:142
 msgctxt "field_instance:tags-name_field:label"
 msgid "Name"
 msgstr "Nom"
@@ -367,52 +367,52 @@ msgstr ""
 msgid "Multilingual components of DruTACT installation profile."
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:339
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:345
 msgctxt "field_instance:audio-filename_field:label"
 msgid "File name"
 msgstr "Nom du fichier"
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:341
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:347
 msgctxt "field_instance:document-filename_field:label"
 msgid "File name"
 msgstr "Nom du fichier"
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:347
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:353
 msgctxt "field_instance:image-filename_field:label"
 msgid "File name"
 msgstr "Nom du fichier"
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:349
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:355
 msgctxt "field_instance:video-filename_field:label"
 msgid "File name"
 msgstr "Nom du fichier"
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:340
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:346
 msgctxt "field_instance:audio-filename_field:description"
 msgid "A field replacing file name."
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:342
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:348
 msgctxt "field_instance:document-filename_field:description"
 msgid "A field replacing file name."
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:348
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:354
 msgctxt "field_instance:image-filename_field:description"
 msgid "A field replacing file name."
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:350
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:356
 msgctxt "field_instance:video-filename_field:description"
 msgid "A field replacing file name."
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:343
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:349
 msgctxt "field_instance:image-field_file_image_alt_text:label"
 msgid "Alt Text"
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:344
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:350
 msgctxt "field_instance:image-field_file_image_alt_text:description"
 msgid "Alternative text is used by screen readers, search engines, and when the image cannot be loaded. By adding alt text you improve accessibility and search engine optimization."
 msgstr ""
@@ -421,12 +421,12 @@ msgstr ""
 "ajoutant un texte alternatif, vous améliorez l'accessibilité et "
 "l'optimisation pour les moteurs de recherche."
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:345
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:351
 msgctxt "field_instance:image-field_file_image_title_text:label"
 msgid "Title Text"
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:346
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:352
 msgctxt "field_instance:image-field_file_image_title_text:description"
 msgid "Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability."
 msgstr ""
@@ -455,7 +455,7 @@ msgstr ""
 msgid "Media components of DruTACT installation profile."
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:133
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:141
 msgctxt "field_instance:tags-description_field:label"
 msgid "Description"
 msgstr "Description"
