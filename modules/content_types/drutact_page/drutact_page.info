@@ -34,5 +34,6 @@ features[variable][] = pathauto_node_page_fr_pattern
 features[variable][] = pathauto_node_page_pattern
 features[variable][] = pathauto_node_page_und_pattern
 features[variable][] = save_continue_page
+features[variable][] = xmlsitemap_settings_node_page
 features_exclude[field_base][body] = body
 project path = profiles/drutact/modules/content_types

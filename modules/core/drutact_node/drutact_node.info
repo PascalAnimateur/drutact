@@ -41,4 +41,5 @@ features[variable][] = taxonomy_menu_voc_item_tags
 features[variable][] = taxonomy_menu_voc_name_tags
 features[variable][] = taxonomy_menu_vocab_menu_tags
 features[variable][] = taxonomy_menu_vocab_parent_tags
+features[variable][] = xmlsitemap_settings_taxonomy_term_tags
 project path = profiles/drutact/modules/core

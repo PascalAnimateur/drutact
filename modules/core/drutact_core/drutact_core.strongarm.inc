@@ -612,6 +612,7 @@ function drutact_core_strongarm() {
     'flood_unblock' => 0,
     'captcha' => 0,
     'hidden_captcha' => 0,
+    'xmlsitemap_engines' => 0,
   );
   $export['tadaa_dev_modules'] = $strongarm;
 
@@ -655,6 +656,7 @@ function drutact_core_strongarm() {
     'flood_unblock' => 1,
     'captcha' => 1,
     'hidden_captcha' => 1,
+    'xmlsitemap_engines' => 1,
   );
   $export['tadaa_prod_modules'] = $strongarm;
 

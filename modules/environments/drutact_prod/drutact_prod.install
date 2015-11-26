@@ -42,6 +42,7 @@ function drutact_prod_disable() {
     'flood_control',
     'flood_unblock',
     'drutact_prod',
+    'xmlsitemap_engines',
   ));
 
   // Delete production variables.
@@ -64,6 +65,11 @@ function drutact_prod_disable() {
     'user_failed_login_ip_window',
     'user_failed_login_user_limit',
     'user_failed_login_user_window',
+    'xmlsitemap_engines_custom_urls',
+    'xmlsitemap_engines_engines',
+    'xmlsitemap_engines_minimum_lifetime',
+    'xmlsitemap_engines_submit_updated',
+    'xmlsitemap_regenerate_needed',
   );
   foreach ($variables as $variable) {
     variable_del($variable);
