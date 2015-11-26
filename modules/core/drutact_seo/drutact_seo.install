@@ -8,7 +8,7 @@
  * Implements hook_install().
  */
 function drutact_seo_install() {
-  // Default module permissions (path).
+  // Default module permissions (path, pathauto).
   _drutact_default_module_permissions(array(
     DRUPAL_ANONYMOUS_RID => array(),
     DRUPAL_AUTHENTICATED_RID => array(),
@@ -16,11 +16,16 @@ function drutact_seo_install() {
       // Path
       'administer url aliases',
       'create url aliases',
+      // Pathauto
+      'notify of path changes',
     ),
     DRUTACT_ADMINISTRATOR_RID => array(
       // Path
       'administer url aliases',
       'create url aliases',
+      // Pathauto
+      'administer pathauto',
+      'notify of path changes',
     ),
   ));
 }

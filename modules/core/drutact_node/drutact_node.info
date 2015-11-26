@@ -25,6 +25,7 @@ features[taxonomy][] = tags
 features[variable][] = entity_translation_settings_taxonomy_term__tags
 features[variable][] = field_bundle_settings_field_library__node_title
 features[variable][] = field_bundle_settings_taxonomy_term__tags
+features[variable][] = pathauto_taxonomy_term_tags_pattern
 features[variable][] = taxonomy_menu_display_descendants_tags
 features[variable][] = taxonomy_menu_display_num_tags
 features[variable][] = taxonomy_menu_end_all_tags
