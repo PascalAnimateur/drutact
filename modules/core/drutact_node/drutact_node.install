@@ -8,7 +8,7 @@
  * Implements hook_install().
  */
 function drutact_node_install() {
-  // Default module permissions (node).
+  // Default module permissions (field_library, node).
   _drutact_default_module_permissions(array(
     DRUPAL_ANONYMOUS_RID => array(
       // Node
@@ -30,6 +30,9 @@ function drutact_node_install() {
       'view revisions',
     ),
     DRUTACT_ADMINISTRATOR_RID => array(
+      // Field library
+      'administer field_library',
+      'use field_library',
       // Node
       'access content',
       'access content overview',

@@ -5,3 +5,13 @@
  */
 
 include_once 'drutact_node.features.inc';
+
+/**
+ * Implements hook_post_features_rebuild().
+ */
+function drutact_node_post_features_rebuild($component) {
+  if ($component == 'taxonomy') {
+    // Default vocabulary permissions.
+    _drutact_default_vocabulary_permissions('tags');
+  }
+}

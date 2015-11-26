@@ -100,6 +100,31 @@ function _drutact_default_module_weight($module, $weight) {
 }
 
 /**
+ * Helper function to set default vocabulary permissions.
+ */
+function _drutact_default_vocabulary_permissions($vocabulary_name) {
+  $vocabulary = taxonomy_vocabulary_machine_name_load($vocabulary_name);
+  if (!isset($vocabulary)) {
+    return;
+  }
+  $vid = $vocabulary->vid;
+  _drutact_default_module_permissions(array(
+    DRUPAL_ANONYMOUS_RID => array(),
+    DRUPAL_AUTHENTICATED_RID => array(),
+    DRUTACT_EDITOR_RID => array(
+      "add terms in $vocabulary_name",
+      "delete terms in $vid",
+      "edit terms in $vid",
+    ),
+    DRUTACT_ADMINISTRATOR_RID => array(
+      "add terms in $vocabulary_name",
+      "delete terms in $vid",
+      "edit terms in $vid",
+    ),
+  ));
+}
+
+/**
  * Helper function to disable an array of views.
  *
  * @param $views

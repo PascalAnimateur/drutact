@@ -11,14 +11,25 @@ include_once 'drutact_core.features.inc';
  */
 function drutact_core_post_features_rebuild($component) {
   if ($component == 'user_role') {
-    // Default module permissions (ctools, features).
+    // Default module permissions (ctools, date, features, rules, tadaa, views).
     _drutact_default_module_permissions(array(
-      DRUPAL_ANONYMOUS_RID => array(),
-      DRUPAL_AUTHENTICATED_RID => array(),
-      DRUTACT_EDITOR_RID => array(),
+      DRUPAL_ANONYMOUS_RID => array(
+        // Date
+        'view date repeats',
+      ),
+      DRUPAL_AUTHENTICATED_RID => array(
+        // Date
+        'view date repeats',
+      ),
+      DRUTACT_EDITOR_RID => array(
+        // Date
+        'view date repeats',
+      ),
       DRUTACT_ADMINISTRATOR_RID => array(
         // CTools
         'use ctools import',
+        // Date
+        'view date repeats',
         // Features
         'administer features',
         'generate features',

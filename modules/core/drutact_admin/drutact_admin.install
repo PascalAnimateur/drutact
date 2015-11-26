@@ -8,7 +8,7 @@
  * Implements hook_install().
  */
 function drutact_admin_install() {
-  // Default module permissions (admin_menu, block, contextual, menu, module_filter and system).
+  // Default module permissions (admin_menu, block, contextual, menu, module_filter, system, taxonomy).
   _drutact_default_module_permissions(array(
     DRUPAL_ANONYMOUS_RID => array(
       // System
@@ -37,6 +37,8 @@ function drutact_admin_install() {
       'access site reports',
       'block IP addresses',
       'view the administration theme',
+      // Taxonomy
+      'administer taxonomy',
     ),
     DRUTACT_ADMINISTRATOR_RID => array(
       // Administration menu
@@ -61,6 +63,8 @@ function drutact_admin_install() {
       'administer themes',
       'block IP addresses',
       'view the administration theme',
+      // Taxonomy
+      'administer taxonomy',
     ),
   ));
 
