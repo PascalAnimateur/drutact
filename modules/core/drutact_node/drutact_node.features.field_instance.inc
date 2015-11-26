@@ -66,18 +66,20 @@ function drutact_node_field_default_field_instances() {
     'entity_type' => 'taxonomy_term',
     'field_name' => 'description_field',
     'label' => 'Description',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
       'display_summary' => 0,
       'entity_translation_sync' => FALSE,
-      'hide_label' => array(
-        'entity' => 0,
-        'page' => 0,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
       ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'rows' => 20,
@@ -105,17 +107,23 @@ function drutact_node_field_default_field_instances() {
     'entity_type' => 'taxonomy_term',
     'field_name' => 'name_field',
     'label' => 'Name',
-    'required' => TRUE,
+    'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'hide_label' => array(
         'entity' => 0,
         'page' => 0,
       ),
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'size' => 60,
@@ -127,9 +135,12 @@ function drutact_node_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Description');
-  t('Name');
-  t('Title');
+
+  // Translatables created/updated by the Localize Fields (localize_fields) module.
+  t('Title', array(), array('context' => 'field_instance:node_title-title_field:label'));
+  t('Description', array(), array('context' => 'field_instance:tags-description_field:label'));
+  t('Name', array(), array('context' => 'field_instance:tags-name_field:label'));
+
 
   return $field_instances;
 }

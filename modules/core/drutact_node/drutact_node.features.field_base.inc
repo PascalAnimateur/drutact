@@ -50,6 +50,7 @@ function drutact_node_field_default_field_bases() {
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
+      'profile2_private' => FALSE,
     ),
     'translatable' => 1,
     'type' => 'text_with_summary',
@@ -72,6 +73,7 @@ function drutact_node_field_default_field_bases() {
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'max_length' => 255,
+      'profile2_private' => FALSE,
     ),
     'translatable' => 1,
     'type' => 'text',
