@@ -41,6 +41,7 @@ function drutact_media_field_default_field_instances() {
     'label' => 'File name',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'hide_label' => array(
         'entity' => 0,
         'page' => 0,
@@ -96,6 +97,7 @@ function drutact_media_field_default_field_instances() {
     'label' => 'File name',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'hide_label' => array(
         'entity' => 0,
         'page' => 0,
@@ -157,6 +159,7 @@ function drutact_media_field_default_field_instances() {
     'label' => 'Alt Text',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -208,6 +211,7 @@ function drutact_media_field_default_field_instances() {
     'label' => 'Title Text',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -253,6 +257,7 @@ function drutact_media_field_default_field_instances() {
     'label' => 'File name',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'hide_label' => array(
         'entity' => 0,
         'page' => 0,
@@ -308,6 +313,7 @@ function drutact_media_field_default_field_instances() {
     'label' => 'File name',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'hide_label' => array(
         'entity' => 0,
         'page' => 0,

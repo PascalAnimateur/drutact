@@ -209,6 +209,13 @@ function drutact_media_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'file_entity_file_replace_options_keep_original_filename';
+  $strongarm->value = 1;
+  $export['file_entity_file_replace_options_keep_original_filename'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'file_entity_file_upload_wizard_skip_fields';
   $strongarm->value = 0;
   $export['file_entity_file_upload_wizard_skip_fields'] = $strongarm;

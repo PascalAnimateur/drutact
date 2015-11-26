@@ -152,6 +152,7 @@ features[variable][] = field_bundle_settings_file__video
 features[variable][] = file_default_scheme
 features[variable][] = file_entity_alt
 features[variable][] = file_entity_default_allowed_extensions
+features[variable][] = file_entity_file_replace_options_keep_original_filename
 features[variable][] = file_entity_file_upload_wizard_skip_fields
 features[variable][] = file_entity_file_upload_wizard_skip_file_type
 features[variable][] = file_entity_file_upload_wizard_skip_scheme
