@@ -57,6 +57,7 @@ function drutact_user_field_default_field_bases() {
         'middle' => 0,
         'title' => 0,
       ),
+      'entity_translation_sync' => FALSE,
       'generational_options' => '-- --
 Jr.
 Sr.

@@ -31,7 +31,9 @@ function drutact_user_field_default_field_instances() {
     'settings' => array(
       'component_css' => '',
       'component_layout' => 'default',
+      'components' => array(),
       'credentials_inline' => 0,
+      'entity_translation_sync' => FALSE,
       'field_type' => array(
         'credentials' => 'text',
         'family' => 'text',
@@ -49,6 +51,15 @@ function drutact_user_field_default_field_instances() {
         'middle' => '',
         'title' => '',
       ),
+      'labels' => array(
+        'credentials' => '',
+        'family' => '',
+        'generational' => '',
+        'given' => '',
+        'middle' => '',
+        'title' => '',
+      ),
+      'minimum_components' => array(),
       'name_user_preferred' => 0,
       'override_format' => 'default',
       'show_component_required_marker' => 1,
