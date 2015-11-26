@@ -6,7 +6,7 @@ projects[logintoboggan][type] = module
 
 ; Name field
 projects[name][type] = module
-projects[name][patch][1788156] = https://www.drupal.org/files/issues/name_title_translation-1788156-10.patch
+projects[name][patch][1788156] = https://www.drupal.org/files/issues/name_title_translation-1788156-12.patch
 
 ; Real name
 projects[realname][type] = module
