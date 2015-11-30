@@ -8,7 +8,42 @@
  * Implements hook_install().
  */
 function drutact_core_install() {
-  // Default module permissions need to be set in hook_post_features_rebuild().
+  // Default module permissions (ctools, date, features, rules, tadaa, views).
+  _drutact_default_module_permissions(array(
+    DRUPAL_ANONYMOUS_RID => array(
+      // Date
+      'view date repeats',
+    ),
+    DRUPAL_AUTHENTICATED_RID => array(
+      // Date
+      'view date repeats',
+    ),
+    DRUTACT_EDITOR_RID => array(
+      // Date
+      'view date repeats',
+    ),
+    DRUTACT_ADMINISTRATOR_RID => array(
+      // CTools
+      'use ctools import',
+      // Date
+      'view date repeats',
+      // Features
+      'administer features',
+      'generate features',
+      'manage features',
+      'rename features',
+      // Rules
+      'administer rules',
+      'bypass rules access',
+      'access rules debug',
+      // Tadaa
+      'access tadaa toolbar',
+      'use tadaa',
+      // Views
+      'administer views',
+      'access all views',
+    ),
+  ));
 
   // Default multilingual variables.
   _drutact_l10n_default_i18n_variables(array(
