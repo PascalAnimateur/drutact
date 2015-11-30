@@ -6,6 +6,7 @@ version = 7.x-1.3-alpha12
 dependencies[] = ctools
 dependencies[] = drutact_core
 dependencies[] = drutact_node
+dependencies[] = drutact_roles
 dependencies[] = entity_translation
 dependencies[] = entity_translation_i18n_menu
 dependencies[] = i18n_block

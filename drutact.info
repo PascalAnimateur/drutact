@@ -10,6 +10,7 @@ dependencies[] = drutact_email
 dependencies[] = drutact_l10n
 dependencies[] = drutact_media
 dependencies[] = drutact_node
+dependencies[] = drutact_roles
 dependencies[] = drutact_seo
 dependencies[] = drutact_user
 dependencies[] = drutact_wysiwyg
