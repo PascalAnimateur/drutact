@@ -160,12 +160,5 @@ function drutact_prod_strongarm() {
   $strongarm->value = 1;
   $export['xmlsitemap_engines_submit_updated'] = $strongarm;
 
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'xmlsitemap_regenerate_needed';
-  $strongarm->value = TRUE;
-  $export['xmlsitemap_regenerate_needed'] = $strongarm;
-
   return $export;
 }
