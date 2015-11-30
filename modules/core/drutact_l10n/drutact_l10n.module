@@ -19,8 +19,8 @@ function drutact_l10n_form_node_type_form_alter(&$form, &$form_state, $form_id) 
  * Implements hook_form_FORM_ID_alter().
  */
 function drutact_l10n_form_node_form_alter(&$form, &$form_state, $form_id) {
+  // Enable menu link only for current language by default.
   if (isset($form['menu']['link']['tset'])) {
-    // Enable menu link only for current language by default.
     $form['menu']['link']['tset']['#default_value'] = TRUE;
     $form['menu']['link']['tset']['#access'] = FALSE;
   }
