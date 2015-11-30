@@ -23,6 +23,7 @@ dependencies[] = field_ui
 dependencies[] = fpa
 dependencies[] = hierarchical_term_formatter
 dependencies[] = menu
+dependencies[] = menu_admin_per_menu
 dependencies[] = menu_attributes
 dependencies[] = menu_expanded
 dependencies[] = menu_select

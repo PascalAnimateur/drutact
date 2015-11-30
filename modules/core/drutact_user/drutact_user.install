@@ -44,6 +44,7 @@ function drutact_user_install() {
       'access user profiles',
       'administer permissions',
       'administer users',
+      'administer users settings',
       'cancel account',
       'change own username',
       'select account cancellation method',

@@ -31,14 +31,12 @@ function drutact_admin_install() {
       // Contextual links
       'access contextual links',
       // Menu
-      'administer menu',
+      'administer main-menu menu items',
       // System
       'access administration pages',
       'access site reports',
       'block IP addresses',
       'view the administration theme',
-      // Taxonomy
-      'administer taxonomy',
     ),
     DRUTACT_ADMINISTRATOR_RID => array(
       // Administration menu
@@ -50,6 +48,11 @@ function drutact_admin_install() {
       'access contextual links',
       // Menu
       'administer menu',
+      'administer features menu items',
+      'administer main-menu menu items',
+      'administer management menu items',
+      'administer navigation menu items',
+      'administer user-menu menu items',
       // Module filter
       'administer module filter',
       // System

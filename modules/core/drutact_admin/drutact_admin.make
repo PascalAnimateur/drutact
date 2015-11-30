@@ -25,6 +25,7 @@ libraries[wvega-timepicker][download][url] = https://github.com/wvega/timepicker
 projects[fpa][type] = module
 
 ; Menu
+projects[menu_admin_per_menu][type] = module
 projects[menu_attributes][version] = 1.x-dev
 projects[menu_expanded][type] = module
 projects[menu_select][version] = 1.x-dev
