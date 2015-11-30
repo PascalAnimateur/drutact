@@ -64,14 +64,14 @@ function drutact_node_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'metatag_enable_taxonomy_term';
-  $strongarm->value = 1;
+  $strongarm->value = TRUE;
   $export['metatag_enable_taxonomy_term'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'metatag_enable_taxonomy_term__tags';
-  $strongarm->value = 1;
+  $strongarm->value = TRUE;
   $export['metatag_enable_taxonomy_term__tags'] = $strongarm;
 
   $strongarm = new stdClass();
