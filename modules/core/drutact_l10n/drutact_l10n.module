@@ -111,8 +111,6 @@ function drutact_l10n_post_features_rebuild($component) {
         'translate any entity',
         'translate node entities',
         'translate taxonomy_term entities',
-        // Locale
-        'translate interface',
       ),
       DRUTACT_ADMINISTRATOR_RID => array(
         // Entity translation
