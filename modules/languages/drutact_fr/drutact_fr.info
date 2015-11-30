@@ -17,6 +17,7 @@ features[language][] = fr
 features[translations_fr][] = fr:blocks
 features[translations_fr][] = fr:default
 features[translations_fr][] = fr:menu
+features[translations_fr][] = fr:metatag
 features[translations_fr][] = fr:node
 features[translations_fr][] = fr:profile2
 features[translations_fr][] = fr:taxonomy
