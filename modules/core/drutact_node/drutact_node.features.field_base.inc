@@ -30,7 +30,7 @@ function drutact_node_field_default_field_bases() {
       'entity_translation_sync' => FALSE,
       'profile2_private' => FALSE,
     ),
-    'translatable' => 0,
+    'translatable' => 1,
     'type' => 'text_with_summary',
   );
 
