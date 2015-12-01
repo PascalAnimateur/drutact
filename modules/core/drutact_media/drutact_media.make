@@ -10,6 +10,13 @@ projects[file_entity][patch][2264145] = https://www.drupal.org/files/issues/2264
 projects[file_entity][patch][2537982] = https://www.drupal.org/files/issues/2537982-fix-changing-file-scheme.patch
 projects[file_entity][patch][2112491] = https://www.drupal.org/files/issues/file_entity-optionnally_keep_original_filename-2112491-15.patch
 
+; Focal point
+projects[focal_point][type] = module
+projects[focal_point][patch][2626882] = https://www.drupal.org/files/issues/focal_point-remove_test_drive_images-2626882-2.patch
+
+; Image dimensions
+projects[image_dimensions][type] = module
+
 ; ImageMagick
 projects[imagemagick][type] = module
 
