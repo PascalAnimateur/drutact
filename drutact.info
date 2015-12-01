@@ -16,4 +16,5 @@ dependencies[] = drutact_user
 dependencies[] = drutact_wysiwyg
 
 ; DruTACT Content types
+dependencies[] = drutact_group
 dependencies[] = drutact_page
