@@ -15,31 +15,6 @@ define('DRUTACT_EDITOR_RID', 200153887);
 define('DRUTACT_ADMINISTRATOR_RID', 30037204);
 
 /**
- * Implements hook_update_projects_alter().
- */
-function drutact_update_projects_alter(&$projects)
-{
-  // Disable checking for updates on all DruTACT modules.
-  foreach ($projects as $name => $project) {
-    if (strpos($name, 'drutact_') !== FALSE) {
-      unset($projects[$name]);
-    }
-  }
-}
-
-/**
- * Implements hook_potx_file_location_info().
- */
-function drutact_potx_file_location_info() {
-  // Expose DruTACT translations path to potx_exportables.
-  return array(
-    'drutact' => array(
-      'path' => drupal_get_path('profile', 'drutact') . '/translations',
-    ),
-  );
-}
-
-/**
  * Helper function to set default content type permissions.
  */
 function _drutact_default_content_type_permissions($content_type) {

@@ -23,6 +23,19 @@ function drutact_admin_features_banish_alter(&$banished) {
 }
 
 /**
+ * Implements hook_update_projects_alter().
+ */
+function drutact_admin_update_projects_alter(&$projects)
+{
+  // Disable checking for updates on all DruTACT modules.
+  foreach ($projects as $name => $project) {
+    if (strpos($name, 'drutact_') !== FALSE) {
+      unset($projects[$name]);
+    }
+  }
+}
+
+/**
  * Implements hook_form_FORM_ID_alter().
  */
 function drutact_admin_form_taxonomy_form_term_alter(&$form, &$form_state, $form_id) {
