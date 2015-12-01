@@ -19,7 +19,7 @@ function drutact_node_form_alter(&$form, &$form_state, $form_id) {
       '#collapsed' => TRUE,
       '#tree' => TRUE,
       '#group' => 'additional_settings',
-      '#weight' => 99,
+      '#weight' => -5,
     );
     if (isset($form['field_sections'])) {
       $form['classification_tab']['field_sections'] = $form['field_sections'];
@@ -36,13 +36,32 @@ function drutact_node_form_alter(&$form, &$form_state, $form_id) {
       array_unshift($form['actions']['submit']['#validate'], '_drutact_node_classification_tab_form_validate');
     }
   }
+
+  // Move Image to Vignette vertical tab.
+  if (isset($form['field_image'])) {
+    $form['vignette_tab'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('Vignette'),
+      '#collapsible' => TRUE,
+      '#collapsed' => TRUE,
+      '#tree' => TRUE,
+      '#group' => 'additional_settings',
+      '#weight' => -10,
+      'field_image' => $form['field_image'],
+    );
+    $form['field_image']['#access'] = FALSE;
+    // Add custom validation callback needed to fix form values
+    if (isset($form['#node_edit_form'])) {
+      array_unshift($form['#validate'], '_drutact_node_vignette_tab_form_validate');
+    }
+  }
 }
 
 /**
  * Validation callback needed for classification tab in node add/edit form.
  */
 function _drutact_node_classification_tab_form_validate($form, &$form_state) {
-  // Copy field_sections value from classification_tab to its original location
+  // Copy field_sections value from classification_tab to its original location.
   if (isset($form_state['values']['classification_tab']['field_sections'])) {
     $form_state['values']['field_sections'] = $form_state['values']['classification_tab']['field_sections'];
     unset($form_state['values']['classification_tab']['field_sections']);
@@ -52,6 +71,19 @@ function _drutact_node_classification_tab_form_validate($form, &$form_state) {
   if (isset($form_state['values']['classification_tab']['field_tags'])) {
     $form_state['values']['field_tags'] = $form_state['values']['classification_tab']['field_tags'];
     unset($form_state['values']['classification_tab']['field_tags']);
+  }
+
+  return $form;
+}
+
+/**
+ * Validation callback needed for Vignette tab on node add/edit form.
+ */
+function _drutact_node_vignette_tab_form_validate($form, &$form_state) {
+  // Copy field_image value from vignette_tab to its original location.
+  if (isset($form_state['values']['vignette_tab']['field_image'])) {
+    $form_state['values']['field_image'] = $form_state['values']['vignette_tab']['field_image'];
+    unset($form_state['values']['vignette_tab']['field_image']);
   }
 
   return $form;

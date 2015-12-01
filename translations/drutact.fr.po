@@ -37,8 +37,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-11-30 23:30-0500\n"
-"PO-Revision-Date: 2015-11-30 23:30-0500\n"
+"POT-Creation-Date: 2015-12-01 17:14-0500\n"
+"PO-Revision-Date: 2015-12-01 17:14-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -54,12 +54,12 @@ msgstr ""
 msgid "DruTACT installation profile."
 msgstr ""
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:223
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:291
 msgctxt "field_instance:page-body:label"
 msgid "Body"
 msgstr "Corps"
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:224
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:292
 msgctxt "field_instance:page-body:description"
 msgid "The body of this page. Use the 'Edit summary' link above to set a shorter, text-only version that will be used to describe the page when it's displayed as a teaser (i.e. in a list on the front page)."
 msgstr ""
@@ -68,32 +68,52 @@ msgstr ""
 "utilisée pour décrire cette page lorsqu'elle sera affichée en "
 "accroche (i.e. dans une liste sur la page d'accueil)."
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:225
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:293
+msgctxt "field_instance:page-field_image:label"
+msgid "Image"
+msgstr "Image"
+
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:374
+msgctxt "field_instance:vignette-field_image:label"
+msgid "Image"
+msgstr "Image"
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:294
+msgctxt "field_instance:page-field_image:description"
+msgid "Image accompanying the content."
+msgstr "Image accompagnant le contenu."
+
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:375
+msgctxt "field_instance:vignette-field_image:description"
+msgid "Image accompanying the content."
+msgstr "Image accompagnant le contenu."
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:295
 msgctxt "field_instance:page-field_sections:label"
 msgid "Section(s)"
 msgstr "Section(s)"
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:311
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:369
 msgctxt "field_instance:classification-field_sections:label"
 msgid "Section(s)"
 msgstr "Section(s)"
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:226
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:296
 msgctxt "field_instance:page-field_sections:description"
 msgid "Assign this content to specific section(s) of the site."
 msgstr "Assigner ce contenu à une(des) section(s) spécifique(s) du site."
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:312
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:370
 msgctxt "field_instance:classification-field_sections:description"
 msgid "Assign this content to specific section(s) of the site."
 msgstr "Assigner ce contenu à une(des) section(s) spécifique(s) du site."
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:227
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:297
 msgctxt "field_instance:page-field_tags:label"
 msgid "Tags"
 msgstr "Mots-clés"
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:305
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:371
 msgctxt "field_instance:classification-field_tags:label"
 msgid "Tags"
 msgstr "Mots-clés"
@@ -102,21 +122,21 @@ msgstr "Mots-clés"
 msgid "Tags"
 msgstr "Mots-clés"
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:228
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:298
 msgctxt "field_instance:page-field_tags:description"
 msgid "Enter individual keywords to describe this content's topic."
 msgstr ""
 "Saisir des mots-clés individuels pour décrire le sujet de ce "
 "contenu."
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:314
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:372
 msgctxt "field_instance:classification-field_tags:description"
 msgid "Enter individual keywords to describe this content's topic."
 msgstr ""
 "Saisir des mots-clés individuels pour décrire le sujet de ce "
 "contenu."
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:229
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:299
 msgctxt "field_instance:page-title_field:label"
 msgid "Title"
 msgstr "Titre"
@@ -125,12 +145,12 @@ msgstr "Titre"
 msgid "Title"
 msgstr "Titre"
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:315
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:373
 msgctxt "field_instance:node_title-title_field:label"
 msgid "Title"
 msgstr "Titre"
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:230
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:300
 msgctxt "field_instance:page-title_field:description"
 msgid "The title of this page."
 msgstr "Le titre de cette page."
@@ -341,12 +361,12 @@ msgstr ""
 msgid "Name"
 msgstr "Nom"
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:318
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:378
 msgctxt "field_instance:sections-name_field:label"
 msgid "Name"
 msgstr "Nom"
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:322
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:382
 msgctxt "field_instance:tags-name_field:label"
 msgid "Name"
 msgstr "Nom"
@@ -511,32 +531,32 @@ msgstr ""
 msgid "Media components of DruTACT installation profile."
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:316
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:376
 msgctxt "field_instance:sections-description_field:label"
 msgid "Description"
 msgstr "Description"
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:320
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:380
 msgctxt "field_instance:tags-description_field:label"
 msgid "Description"
 msgstr "Description"
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:317
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:377
 msgctxt "field_instance:sections-description_field:description"
 msgid "Describe what this section is about."
 msgstr "Décrire ce sur quoi porte cette section."
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:319
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:379
 msgctxt "field_instance:sections-name_field:description"
 msgid "The name or title of this section."
 msgstr "Le nom ou le titre de cette section."
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:321
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:381
 msgctxt "field_instance:tags-description_field:description"
 msgid "Describe what this tag is about."
 msgstr "Décrire ce sur quoi porte ce mot-clé."
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:323
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:383
 msgctxt "field_instance:tags-name_field:description"
 msgid "The name or title of this tag."
 msgstr "Le nom ou le titre de ce mot-clé."
@@ -544,6 +564,10 @@ msgstr "Le nom ou le titre de ce mot-clé."
 #: profiles/drutact/modules/core/drutact_node/drutact_node.module:17
 msgid "Classification"
 msgstr "Classification"
+
+#: profiles/drutact/modules/core/drutact_node/drutact_node.module:44
+msgid "Vignette"
+msgstr "Vignette"
 
 #: profiles/drutact/modules/core/drutact_node/drutact_node.info:0
 msgid "DruTACT Node"

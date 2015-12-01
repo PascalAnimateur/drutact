@@ -24,5 +24,12 @@ function drutact_node_field_library_bundle_defaults() {
   $field_library_bundle->description = 'Title field.';
   $export['node_title'] = $field_library_bundle;
 
+  $field_library_bundle = new stdClass();
+  $field_library_bundle->api_version = 1;
+  $field_library_bundle->name = 'vignette';
+  $field_library_bundle->title = 'Vignette';
+  $field_library_bundle->description = 'Vignette image.';
+  $export['vignette'] = $field_library_bundle;
+
   return $export;
 }

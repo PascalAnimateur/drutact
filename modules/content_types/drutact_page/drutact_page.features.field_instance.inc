@@ -61,6 +61,74 @@ function drutact_page_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-page-field_image'.
+  $field_instances['node-page-field_image'] = array(
+    'bundle' => 'page',
+    'deleted' => 0,
+    'description' => 'Image accompanying the content.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'responsive',
+        ),
+        'type' => 'image',
+        'weight' => -5,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => 'content',
+          'image_style' => 'thumbnail',
+        ),
+        'type' => 'image',
+        'weight' => -5,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_image',
+    'label' => 'Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => 'images',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'private' => 0,
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 0,
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => -5,
+    ),
+  );
+
   // Exported field_instance: 'node-page-field_sections'.
   $field_instances['node-page-field_sections'] = array(
     'bundle' => 'page',
@@ -222,6 +290,8 @@ function drutact_page_field_default_field_instances() {
   // Translatables created/updated by the Localize Fields (localize_fields) module.
   t('Body', array(), array('context' => 'field_instance:page-body:label'));
   t('The body of this page. Use the \'Edit summary\' link above to set a shorter, text-only version that will be used to describe the page when it\'s displayed as a teaser (i.e. in a list on the front page).', array(), array('context' => 'field_instance:page-body:description'));
+  t('Image', array(), array('context' => 'field_instance:page-field_image:label'));
+  t('Image accompanying the content.', array(), array('context' => 'field_instance:page-field_image:description'));
   t('Section(s)', array(), array('context' => 'field_instance:page-field_sections:label'));
   t('Assign this content to specific section(s) of the site.', array(), array('context' => 'field_instance:page-field_sections:description'));
   t('Tags', array(), array('context' => 'field_instance:page-field_tags:label'));

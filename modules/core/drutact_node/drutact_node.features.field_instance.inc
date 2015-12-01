@@ -136,6 +136,64 @@ function drutact_node_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'field_library-vignette-field_image'.
+  $field_instances['field_library-vignette-field_image'] = array(
+    'bundle' => 'vignette',
+    'deleted' => 0,
+    'description' => 'Image accompanying the content.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'responsive',
+        ),
+        'type' => 'image',
+        'weight' => -5,
+      ),
+    ),
+    'entity_type' => 'field_library',
+    'field_name' => 'field_image',
+    'label' => 'Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => 'images',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'private' => 0,
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 0,
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => -5,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-sections-description_field'.
   $field_instances['taxonomy_term-sections-description_field'] = array(
     'bundle' => 'sections',
@@ -313,6 +371,8 @@ function drutact_node_field_default_field_instances() {
   t('Tags', array(), array('context' => 'field_instance:classification-field_tags:label'));
   t('Enter individual keywords to describe this content\'s topic.', array(), array('context' => 'field_instance:classification-field_tags:description'));
   t('Title', array(), array('context' => 'field_instance:node_title-title_field:label'));
+  t('Image', array(), array('context' => 'field_instance:vignette-field_image:label'));
+  t('Image accompanying the content.', array(), array('context' => 'field_instance:vignette-field_image:description'));
   t('Description', array(), array('context' => 'field_instance:sections-description_field:label'));
   t('Describe what this section is about.', array(), array('context' => 'field_instance:sections-description_field:description'));
   t('Name', array(), array('context' => 'field_instance:sections-name_field:label'));
