@@ -26,8 +26,6 @@ function drutact_admin_install() {
       // Administration menu
       'access administration menu',
       'flush caches',
-      // Block
-      'administer blocks',
       // Contextual links
       'access contextual links',
       // Menu
