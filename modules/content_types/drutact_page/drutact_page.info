@@ -8,7 +8,6 @@ dependencies[] = drutact_node
 dependencies[] = features
 dependencies[] = hierarchical_term_formatter
 dependencies[] = metatag
-dependencies[] = node
 dependencies[] = select2widget
 dependencies[] = strongarm
 dependencies[] = taxonomy

@@ -141,83 +141,7 @@ function drutact_node_field_default_field_instances() {
     'bundle' => 'sections',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'taxonomy_term',
-    'field_name' => 'description_field',
-    'label' => 'Description',
-    'required' => FALSE,
-    'settings' => array(
-      'display_summary' => 0,
-      'entity_translation_sync' => FALSE,
-      'hide_label' => array(
-        'entity' => 0,
-        'page' => 0,
-      ),
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 0,
-    ),
-  );
-
-  // Exported field_instance: 'taxonomy_term-sections-name_field'.
-  $field_instances['taxonomy_term-sections-name_field'] = array(
-    'bundle' => 'sections',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => -50,
-      ),
-    ),
-    'entity_type' => 'taxonomy_term',
-    'field_name' => 'name_field',
-    'label' => 'Name',
-    'required' => TRUE,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'hide_label' => array(
-        'entity' => 0,
-        'page' => 0,
-      ),
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => -50,
-    ),
-  );
-
-  // Exported field_instance: 'taxonomy_term-tags-description_field'.
-  $field_instances['taxonomy_term-tags-description_field'] = array(
-    'bundle' => 'tags',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
+    'description' => 'Describe what this section is about.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -238,7 +162,91 @@ function drutact_node_field_default_field_instances() {
         'enable' => 0,
         'profile' => '',
       ),
-      'text_processing' => 1,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-sections-name_field'.
+  $field_instances['taxonomy_term-sections-name_field'] = array(
+    'bundle' => 'sections',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'The name or title of this section.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => -50,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'name_field',
+    'label' => 'Name',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => 0,
+        'page' => 0,
+      ),
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -50,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-tags-description_field'.
+  $field_instances['taxonomy_term-tags-description_field'] = array(
+    'bundle' => 'tags',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Describe what this tag is about.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'description_field',
+    'label' => 'Description',
+    'required' => 0,
+    'settings' => array(
+      'display_summary' => 0,
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -258,7 +266,7 @@ function drutact_node_field_default_field_instances() {
     'bundle' => 'tags',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The name or title of this tag.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -306,9 +314,13 @@ function drutact_node_field_default_field_instances() {
   t('Enter individual keywords to describe this content\'s topic.', array(), array('context' => 'field_instance:classification-field_tags:description'));
   t('Title', array(), array('context' => 'field_instance:node_title-title_field:label'));
   t('Description', array(), array('context' => 'field_instance:sections-description_field:label'));
+  t('Describe what this section is about.', array(), array('context' => 'field_instance:sections-description_field:description'));
   t('Name', array(), array('context' => 'field_instance:sections-name_field:label'));
+  t('The name or title of this section.', array(), array('context' => 'field_instance:sections-name_field:description'));
   t('Description', array(), array('context' => 'field_instance:tags-description_field:label'));
+  t('Describe what this tag is about.', array(), array('context' => 'field_instance:tags-description_field:description'));
   t('Name', array(), array('context' => 'field_instance:tags-name_field:label'));
+  t('The name or title of this tag.', array(), array('context' => 'field_instance:tags-name_field:description'));
 
 
   return $field_instances;

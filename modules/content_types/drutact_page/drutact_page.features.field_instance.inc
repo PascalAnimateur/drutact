@@ -66,7 +66,7 @@ function drutact_page_field_default_field_instances() {
     'bundle' => 'page',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Assign this content to specific section(s) of the site.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -111,7 +111,7 @@ function drutact_page_field_default_field_instances() {
         'max_depth' => '',
         'parent_term_id' => '',
         'select_parents' => 0,
-        'start_minimized' => 0,
+        'start_minimized' => 1,
         'token_display' => '',
         'track_list' => 0,
       ),
@@ -123,9 +123,8 @@ function drutact_page_field_default_field_instances() {
   // Exported field_instance: 'node-page-field_tags'.
   $field_instances['node-page-field_tags'] = array(
     'bundle' => 'page',
-    'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Enter individual keywords to describe this content\'s topic.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -224,7 +223,9 @@ function drutact_page_field_default_field_instances() {
   t('Body', array(), array('context' => 'field_instance:page-body:label'));
   t('The body of this page. Use the \'Edit summary\' link above to set a shorter, text-only version that will be used to describe the page when it\'s displayed as a teaser (i.e. in a list on the front page).', array(), array('context' => 'field_instance:page-body:description'));
   t('Section(s)', array(), array('context' => 'field_instance:page-field_sections:label'));
+  t('Assign this content to specific section(s) of the site.', array(), array('context' => 'field_instance:page-field_sections:description'));
   t('Tags', array(), array('context' => 'field_instance:page-field_tags:label'));
+  t('Enter individual keywords to describe this content\'s topic.', array(), array('context' => 'field_instance:page-field_tags:description'));
   t('Title', array(), array('context' => 'field_instance:page-title_field:label'));
   t('The title of this page.', array(), array('context' => 'field_instance:page-title_field:description'));
 
