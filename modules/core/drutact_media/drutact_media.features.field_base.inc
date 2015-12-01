@@ -73,7 +73,7 @@ function drutact_media_field_default_field_bases() {
       'max_length' => 255,
       'profile2_private' => FALSE,
     ),
-    'translatable' => 1,
+    'translatable' => 0,
     'type' => 'text',
   );
 

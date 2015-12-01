@@ -251,6 +251,23 @@ function drutact_media_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'focal_point_default_method';
+  $strongarm->value = '';
+  $export['focal_point_default_method'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'focal_point_enabled_for';
+  $strongarm->value = array(
+    'image' => 'image',
+    'media' => 'media',
+  );
+  $export['focal_point_enabled_for'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'imagemagick_convert';
   $strongarm->value = 'convert';
   $export['imagemagick_convert'] = $strongarm;

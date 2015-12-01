@@ -15,3 +15,24 @@ function drutact_media_ctools_plugin_api($module = NULL, $api = NULL) {
     return array("version" => "1");
   }
 }
+
+/**
+ * Implements hook_image_default_styles().
+ */
+function drutact_media_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: responsive.
+  $styles['responsive'] = array(
+    'label' => 'Responsive (100%)',
+    'effects' => array(
+      1 => array(
+        'name' => 'image_dimensions',
+        'data' => array(),
+        'weight' => 0,
+      ),
+    ),
+  );
+
+  return $styles;
+}
