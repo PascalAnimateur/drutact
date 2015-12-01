@@ -12,6 +12,13 @@ function drutact_node_field_library_bundle_defaults() {
 
   $field_library_bundle = new stdClass();
   $field_library_bundle->api_version = 1;
+  $field_library_bundle->name = 'classification';
+  $field_library_bundle->title = 'Classification';
+  $field_library_bundle->description = 'Sections and tags for organizing content.';
+  $export['classification'] = $field_library_bundle;
+
+  $field_library_bundle = new stdClass();
+  $field_library_bundle->api_version = 1;
   $field_library_bundle->name = 'node_title';
   $field_library_bundle->title = 'Node - Title';
   $field_library_bundle->description = 'Title field.';

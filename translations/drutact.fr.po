@@ -5,9 +5,10 @@
 # Generated from files:
 #  profiles/drutact/drutact.info: n/a
 #  profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc: n/a
+#  profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc: n/a
+#  profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc: n/a
 #  profiles/drutact/modules/content_types/drutact_page/drutact_page.features.inc: n/a
 #  profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc: n/a
-#  profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc: n/a
 #  profiles/drutact/modules/content_types/drutact_page/drutact_page.info: n/a
 #  profiles/drutact/modules/core/drutact_user/drutact_user.module: n/a
 #  profiles/drutact/modules/core/drutact_admin/drutact_admin.info: n/a
@@ -16,6 +17,7 @@
 #  profiles/drutact/modules/core/drutact_l10n/drutact_l10n.info: n/a
 #  profiles/drutact/modules/core/drutact_media/drutact_media.info: n/a
 #  profiles/drutact/modules/core/drutact_node/drutact_node.info: n/a
+#  profiles/drutact/modules/core/drutact_roles/drutact_roles.info: n/a
 #  profiles/drutact/modules/core/drutact_seo/drutact_seo.info: n/a
 #  profiles/drutact/modules/core/drutact_user/drutact_user.info: n/a
 #  profiles/drutact/modules/core/drutact_wysiwyg/drutact_wysiwyg.info: n/a
@@ -23,6 +25,7 @@
 #  profiles/drutact/modules/core/drutact_l10n/drutact_l10n.module: n/a
 #  profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc: n/a
 #  profiles/drutact/modules/core/drutact_media/drutact_media.module: n/a
+#  profiles/drutact/modules/core/drutact_node/drutact_node.module: n/a
 #  profiles/drutact/modules/core/drutact_user/drutact_user.features.field_instance.inc: n/a
 #  profiles/drutact/modules/core/drutact_wysiwyg/drutact_wysiwyg.module: n/a
 #  profiles/drutact/modules/environments/drutact_dev/drutact_dev.info: n/a
@@ -34,8 +37,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-11-25 22:17-0500\n"
-"PO-Revision-Date: 2015-11-25 22:17-0500\n"
+"POT-Creation-Date: 2015-11-30 22:54-0500\n"
+"PO-Revision-Date: 2015-11-30 22:54-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -51,12 +54,12 @@ msgstr ""
 msgid "DruTACT installation profile."
 msgstr ""
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:117
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:217
 msgctxt "field_instance:page-body:label"
 msgid "Body"
 msgstr "Corps"
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:118
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:218
 msgctxt "field_instance:page-body:description"
 msgid "The body of this page. Use the 'Edit summary' link above to set a shorter, text-only version that will be used to describe the page when it's displayed as a teaser (i.e. in a list on the front page)."
 msgstr ""
@@ -65,7 +68,31 @@ msgstr ""
 "utilisée pour décrire cette page lorsqu'elle sera affichée en "
 "accroche (i.e. dans une liste sur la page d'accueil)."
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:119
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:219
+msgctxt "field_instance:page-field_sections:label"
+msgid "Section(s)"
+msgstr "Section(s)"
+
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:303
+msgctxt "field_instance:classification-field_sections:label"
+msgid "Section(s)"
+msgstr "Section(s)"
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:220
+msgctxt "field_instance:page-field_tags:label"
+msgid "Tags"
+msgstr "Mots-clés"
+
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:305
+msgctxt "field_instance:classification-field_tags:label"
+msgid "Tags"
+msgstr "Mots-clés"
+
+#: profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc:30
+msgid "Tags"
+msgstr "Mots-clés"
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:221
 msgctxt "field_instance:page-title_field:label"
 msgid "Title"
 msgstr "Titre"
@@ -74,12 +101,12 @@ msgstr "Titre"
 msgid "Title"
 msgstr "Titre"
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:140
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:307
 msgctxt "field_instance:node_title-title_field:label"
 msgid "Title"
 msgstr "Titre"
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:120
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:222
 msgctxt "field_instance:page-title_field:description"
 msgid "The title of this page."
 msgstr "Le titre de cette page."
@@ -290,7 +317,12 @@ msgstr ""
 msgid "Name"
 msgstr "Nom"
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:142
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:309
+msgctxt "field_instance:sections-name_field:label"
+msgid "Name"
+msgstr "Nom"
+
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:311
 msgctxt "field_instance:tags-name_field:label"
 msgid "Name"
 msgstr "Nom"
@@ -331,7 +363,7 @@ msgstr ""
 msgid "Administration components of DruTACT installation profile."
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.info:0 profiles/drutact/modules/core/drutact_core/drutact_core.info:0;0 profiles/drutact/modules/core/drutact_email/drutact_email.info:0 profiles/drutact/modules/core/drutact_l10n/drutact_l10n.info:0 profiles/drutact/modules/core/drutact_media/drutact_media.info:0 profiles/drutact/modules/core/drutact_node/drutact_node.info:0 profiles/drutact/modules/core/drutact_seo/drutact_seo.info:0 profiles/drutact/modules/core/drutact_user/drutact_user.info:0 profiles/drutact/modules/core/drutact_wysiwyg/drutact_wysiwyg.info:0
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.info:0 profiles/drutact/modules/core/drutact_core/drutact_core.info:0;0 profiles/drutact/modules/core/drutact_email/drutact_email.info:0 profiles/drutact/modules/core/drutact_l10n/drutact_l10n.info:0 profiles/drutact/modules/core/drutact_media/drutact_media.info:0 profiles/drutact/modules/core/drutact_node/drutact_node.info:0 profiles/drutact/modules/core/drutact_roles/drutact_roles.info:0 profiles/drutact/modules/core/drutact_seo/drutact_seo.info:0 profiles/drutact/modules/core/drutact_user/drutact_user.info:0 profiles/drutact/modules/core/drutact_wysiwyg/drutact_wysiwyg.info:0
 msgid "DruTACT Core"
 msgstr ""
 
@@ -455,10 +487,31 @@ msgstr ""
 msgid "Media components of DruTACT installation profile."
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:141
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:304
+msgctxt "field_instance:classification-field_sections:description"
+msgid "Assign this content to specific section(s) of the site."
+msgstr "Assigner ce contenu à une(des) section(s) spécifique(s) du site."
+
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:306
+msgctxt "field_instance:classification-field_tags:description"
+msgid "Enter individual keywords to describe this content's topic."
+msgstr ""
+"Saisir des mots-clés individuels pour décrire le sujet de ce "
+"contenu."
+
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:308
+msgctxt "field_instance:sections-description_field:label"
+msgid "Description"
+msgstr "Description"
+
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:310
 msgctxt "field_instance:tags-description_field:label"
 msgid "Description"
 msgstr "Description"
+
+#: profiles/drutact/modules/core/drutact_node/drutact_node.module:17
+msgid "Classification"
+msgstr "Classification"
 
 #: profiles/drutact/modules/core/drutact_node/drutact_node.info:0
 msgid "DruTACT Node"
@@ -466,6 +519,14 @@ msgstr ""
 
 #: profiles/drutact/modules/core/drutact_node/drutact_node.info:0
 msgid "Node components of DruTACT installation profile."
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_roles/drutact_roles.info:0
+msgid "DruTACT Roles"
+msgstr ""
+
+#: profiles/drutact/modules/core/drutact_roles/drutact_roles.info:0
+msgid "Editor and Administrator roles for DruTACT installation profile."
 msgstr ""
 
 #: profiles/drutact/modules/core/drutact_seo/drutact_seo.info:0
@@ -476,10 +537,10 @@ msgstr ""
 msgid "Search Engine Optimization for DruTACT installation profile."
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_user/drutact_user.features.field_instance.inc:87
+#: profiles/drutact/modules/core/drutact_user/drutact_user.features.field_instance.inc:98
 msgctxt "field_instance:user-field_full_name:label"
 msgid "Full name"
-msgstr ""
+msgstr "Nom complet"
 
 #: profiles/drutact/modules/core/drutact_user/drutact_user.module:17
 msgid "Email password reset link"
@@ -540,6 +601,14 @@ msgstr ""
 #: profiles/drutact/modules/languages/drutact_en/drutact_en.info:0 profiles/drutact/modules/languages/drutact_fr/drutact_fr.info:0
 msgid "DruTACT Languages"
 msgstr ""
+
+#: profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc:21
+msgid "Searching..."
+msgstr "Recherche en cours..."
+
+#: profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc:39
+msgid "Please enter one more character"
+msgstr "Veuillez saisir un caractère additionnel"
 
 #: profiles/drutact/modules/languages/drutact_fr/drutact_fr.info:0
 msgid "DruTACT Français"

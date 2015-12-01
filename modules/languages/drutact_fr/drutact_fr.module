@@ -15,7 +15,9 @@ function drutact_fr_post_features_rebuild($component) {
     _drutact_l10n_translate_role(DRUTACT_EDITOR_RID, 'fr', 'Éditeur');
     _drutact_l10n_translate_role(DRUTACT_ADMINISTRATOR_RID, 'fr', 'Administrateur');
 
-    // Translate vocabularies.
+    // Translate vocabularies (sections, tags).
+    _drutact_l10n_translate_vocabulary('sections', 'fr', 'Sections',
+      'Utiliser les sections pour organiser le site en zones de contenu ou départements.');
     _drutact_l10n_translate_vocabulary('tags', 'fr', 'Mots-clés',
       'Utiliser les mots-clés pour regrouper le contenu en catégories par sujets similaires.');
 

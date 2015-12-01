@@ -57,6 +57,12 @@ function drutact_node_metatag_export_default() {
     ),
   );
 
+  // Exported Metatag config instance: taxonomy_term:sections.
+  $config['taxonomy_term:sections'] = array(
+    'instance' => 'taxonomy_term:sections',
+    'config' => array(),
+  );
+
   // Exported Metatag config instance: taxonomy_term:tags.
   $config['taxonomy_term:tags'] = array(
     'instance' => 'taxonomy_term:tags',
