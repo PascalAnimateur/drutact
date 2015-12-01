@@ -8,7 +8,7 @@
  * Implements hook_install().
  */
 function drutact_media_install() {
-  // Default module permissions (image).
+  // Default module permissions (focal_point, image).
   _drutact_default_module_permissions(array(
     DRUPAL_ANONYMOUS_RID => array(
       // File entity
@@ -32,6 +32,8 @@ function drutact_media_install() {
       'view files',
       'view own files',
       'view own private files',
+      // Focal point
+      'preview focal point',
       // Media
       'access media browser',
     ),
@@ -68,6 +70,8 @@ function drutact_media_install() {
       'view own files',
       'view own private files',
       'view private files',
+      // Focal point
+      'preview focal point',
       // Media
       'access media browser',
     ),
@@ -105,6 +109,8 @@ function drutact_media_install() {
       'view own files',
       'view own private files',
       'view private files',
+      // Focal point
+      'preview focal point',
       // Image
       'administer image styles',
       // Media
