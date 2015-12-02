@@ -1,3 +1,7 @@
+drutact 7.x-1.3-alpha15 (2015-12-02)
+===================================
+Group management.
+
 drutact 7.x-1.3-alpha14 (2015-12-01)
 ====================================
 Image, Sections and Tags.
