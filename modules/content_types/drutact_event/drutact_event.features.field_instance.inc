@@ -15,7 +15,7 @@ function drutact_event_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The description of this event. Use the \'Edit summary\' link above to set a shorter, text-only version that will be used to describe this content when it\'s being displayed as a teaser (i.e. in a list on the front page).',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -65,7 +65,7 @@ function drutact_event_field_default_field_instances() {
   $field_instances['node-event-field_event_date'] = array(
     'bundle' => 'event',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The start and end dates of the event, with optional repeating rules.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -312,7 +312,7 @@ function drutact_event_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Determine if this content will be accessible to non-members of the assigned group(s).',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -352,13 +352,13 @@ function drutact_event_field_default_field_instances() {
     'default_value' => NULL,
     'default_value_function' => 'entityreference_prepopulate_field_default_value',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Assign this content to the selected group(s).',
     'display' => array(
       'default' => array(
         'label' => 'inline',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
         'weight' => 20,
@@ -430,13 +430,13 @@ function drutact_event_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The title or name of this event.',
     'display' => array(
       'default' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => -50,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -479,7 +479,9 @@ function drutact_event_field_default_field_instances() {
 
   // Translatables created/updated by the Localize Fields (localize_fields) module.
   t('Description', array(), array('context' => 'field_instance:event-body:label'));
+  t('The description of this event. Use the \'Edit summary\' link above to set a shorter, text-only version that will be used to describe this content when it\'s being displayed as a teaser (i.e. in a list on the front page).', array(), array('context' => 'field_instance:event-body:description'));
   t('Event date', array(), array('context' => 'field_instance:event-field_event_date:label'));
+  t('The start and end dates of the event, with optional repeating rules.', array(), array('context' => 'field_instance:event-field_event_date:description'));
   t('Image', array(), array('context' => 'field_instance:event-field_image:label'));
   t('Image accompanying the content.', array(), array('context' => 'field_instance:event-field_image:description'));
   t('Section(s)', array(), array('context' => 'field_instance:event-field_sections:label'));
@@ -487,8 +489,11 @@ function drutact_event_field_default_field_instances() {
   t('Tags', array(), array('context' => 'field_instance:event-field_tags:label'));
   t('Enter individual keywords to describe this content\'s topic.', array(), array('context' => 'field_instance:event-field_tags:description'));
   t('Group content visibility', array(), array('context' => 'field_instance:event-group_content_access:label'));
+  t('Determine if this content will be accessible to non-members of the assigned group(s).', array(), array('context' => 'field_instance:event-group_content_access:description'));
   t('Groups audience', array(), array('context' => 'field_instance:event-og_group_ref:label'));
+  t('Assign this content to the selected group(s).', array(), array('context' => 'field_instance:event-og_group_ref:description'));
   t('Title', array(), array('context' => 'field_instance:event-title_field:label'));
+  t('The title or name of this event.', array(), array('context' => 'field_instance:event-title_field:description'));
 
 
   return $field_instances;

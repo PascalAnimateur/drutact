@@ -50,8 +50,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-12-02 16:40-0500\n"
-"PO-Revision-Date: 2015-12-02 16:40-0500\n"
+"POT-Creation-Date: 2015-12-02 16:45-0500\n"
+"PO-Revision-Date: 2015-12-02 16:45-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -91,7 +91,7 @@ msgctxt "field_instance:article-field_image:label"
 msgid "Image"
 msgstr "Image"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.field_instance.inc:483
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.field_instance.inc:485
 msgctxt "field_instance:event-field_image:label"
 msgid "Image"
 msgstr "Image"
@@ -116,7 +116,7 @@ msgctxt "field_instance:article-field_image:description"
 msgid "Image accompanying the content."
 msgstr "Image accompagnant le contenu."
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.field_instance.inc:484
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.field_instance.inc:486
 msgctxt "field_instance:event-field_image:description"
 msgid "Image accompanying the content."
 msgstr "Image accompagnant le contenu."
@@ -141,7 +141,7 @@ msgctxt "field_instance:article-field_sections:label"
 msgid "Section(s)"
 msgstr "Section(s)"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.field_instance.inc:485
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.field_instance.inc:487
 msgctxt "field_instance:event-field_sections:label"
 msgid "Section(s)"
 msgstr "Section(s)"
@@ -166,7 +166,7 @@ msgctxt "field_instance:article-field_sections:description"
 msgid "Assign this content to specific section(s) of the site."
 msgstr "Assigner ce contenu à une(des) section(s) spécifique(s) du site."
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.field_instance.inc:486
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.field_instance.inc:488
 msgctxt "field_instance:event-field_sections:description"
 msgid "Assign this content to specific section(s) of the site."
 msgstr "Assigner ce contenu à une(des) section(s) spécifique(s) du site."
@@ -191,7 +191,7 @@ msgctxt "field_instance:article-field_tags:label"
 msgid "Tags"
 msgstr "Mots-clés"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.field_instance.inc:487
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.field_instance.inc:489
 msgctxt "field_instance:event-field_tags:label"
 msgid "Tags"
 msgstr "Mots-clés"
@@ -222,7 +222,7 @@ msgstr ""
 "Saisir des mots-clés individuels pour décrire le sujet de ce "
 "contenu."
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.field_instance.inc:488
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.field_instance.inc:490
 msgctxt "field_instance:event-field_tags:description"
 msgid "Enter individual keywords to describe this content's topic."
 msgstr ""
@@ -255,7 +255,7 @@ msgctxt "field_instance:article-group_content_access:label"
 msgid "Group content visibility"
 msgstr "Visibilité du contenu de groupe"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.field_instance.inc:489
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.field_instance.inc:491
 msgctxt "field_instance:event-group_content_access:label"
 msgid "Group content visibility"
 msgstr "Visibilité du contenu de groupe"
@@ -277,12 +277,19 @@ msgstr ""
 "Détermier si ce contenu sera accessible aux non-membres du(des) "
 "groupe(s) assigné(s)."
 
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.field_instance.inc:492
+msgctxt "field_instance:event-group_content_access:description"
+msgid "Determine if this content will be accessible to non-members of the assigned group(s)."
+msgstr ""
+"Détermier si ce contenu sera accessible aux non-membres du(des) "
+"groupe(s) assigné(s)."
+
 #: profiles/drutact/modules/content_types/drutact_article/drutact_article.features.field_instance.inc:423
 msgctxt "field_instance:article-og_group_ref:label"
 msgid "Groups audience"
 msgstr "Audience de groupe"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.field_instance.inc:490
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.field_instance.inc:493
 msgctxt "field_instance:event-og_group_ref:label"
 msgid "Groups audience"
 msgstr "Audience de groupe"
@@ -322,6 +329,11 @@ msgctxt "field_instance:article-og_group_ref:description"
 msgid "Assign this content to the selected group(s)."
 msgstr "Assigner ce contenu au(x) groupe(s) sélectionné(s)."
 
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.field_instance.inc:494
+msgctxt "field_instance:event-og_group_ref:description"
+msgid "Assign this content to the selected group(s)."
+msgstr "Assigner ce contenu au(x) groupe(s) sélectionné(s)."
+
 #: profiles/drutact/modules/content_types/drutact_article/drutact_article.features.field_instance.inc:425
 msgctxt "field_instance:article-title_field:label"
 msgid "Title"
@@ -331,7 +343,7 @@ msgstr "Titre"
 msgid "Title"
 msgstr "Titre"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.field_instance.inc:491
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.field_instance.inc:495
 msgctxt "field_instance:event-title_field:label"
 msgid "Title"
 msgstr "Titre"
@@ -399,13 +411,40 @@ msgid "Description"
 msgstr "Description"
 
 #: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.field_instance.inc:482
+msgctxt "field_instance:event-body:description"
+msgid "The description of this event. Use the 'Edit summary' link above to set a shorter, text-only version that will be used to describe this content when it's being displayed as a teaser (i.e. in a list on the front page)."
+msgstr ""
+"La description de cet évènement. Utiliser le lien 'Modifier le "
+"résumé' ci-haut pour définir une version textuelle plus courte qui "
+"sera utilisée pour décrire ce contenu lorsqu'il sera affiché en "
+"accroche (i.e. dans une liste sur la page d'accueil)."
+
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.field_instance.inc:483
 msgctxt "field_instance:event-field_event_date:label"
 msgid "Event date"
 msgstr "Date de l'événement"
 
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.field_instance.inc:484
+msgctxt "field_instance:event-field_event_date:description"
+msgid "The start and end dates of the event, with optional repeating rules."
+msgstr ""
+"Les dates de début et de fin de cet évènement, ainsi que les "
+"règles optionnelles de répétition."
+
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.field_instance.inc:496
+msgctxt "field_instance:event-title_field:description"
+msgid "The title or name of this event."
+msgstr "Le titre ou le nom de cet évènement."
+
 #: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.inc:22
 msgid "Event"
 msgstr "Événement"
+
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.inc:24
+msgid "Use <em>events</em> for time-specific content that should appear in the calendar, such as meetings."
+msgstr ""
+"Utilisez les <em>événements</em> pour les contenus apparaissant à "
+"date fixe dans le calendrier, tels que les réunions."
 
 #: profiles/drutact/modules/content_types/drutact_event/drutact_event.info:0
 msgid "DruTACT Event"

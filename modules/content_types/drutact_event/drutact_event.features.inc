@@ -21,7 +21,7 @@ function drutact_event_node_info() {
     'event' => array(
       'name' => t('Event'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('Use <em>events</em> for time-specific content that should appear in the calendar, such as meetings.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
