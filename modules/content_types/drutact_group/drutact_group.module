@@ -6,6 +6,27 @@
 
 include_once 'drutact_group.features.inc';
 
+function drutact_group_og_permission() {
+  $items = array();
+
+  // Add OG permission to
+  $items['manage content'] = array(
+    'title' => t('Manage content'),
+    'description' => t('Users may access the Content tab on the group page.'),
+    'default role' => array(OG_ADMINISTRATOR_ROLE),
+    'restrict access' => TRUE,
+  );
+
+  $items['manage files'] = array(
+    'title' => t('Manage files'),
+    'description' => t('Users may access the Files tab on the group page.'),
+    'default role' => array(OG_ADMINISTRATOR_ROLE),
+    'restrict access' => TRUE,
+  );
+
+  return $items;
+}
+
 /**
  * Implements hook_form_alter().
  */
@@ -69,6 +90,97 @@ function _drutact_group_access_tab_form_validate($form, &$form_state) {
   }
 
   return $form;
+}
+
+/**
+ * Implements hook_menu_alter().
+ */
+function drutact_group_menu_alter(&$items) {
+  // Replace default OG group tab with administration_group_members view.
+  $items['node/%/group']['type'] = MENU_CALLBACK;
+  $items['node/%/group']['page callback'] = '_drutact_group_redirect_to_members';
+  $items['group/%/%/admin/people']['page callback'] = '_drutact_group_redirect_to_members';
+}
+
+/**
+ * Helper function to redirect to Administration - Group members tab.
+ */
+function _drutact_group_redirect_to_members($entity_type, $etid) {
+  drupal_goto($entity_type . '/' . $etid . '/members');
+}
+
+/**
+ * Implements hook_admin_paths().
+ */
+function drutact_group_admin_paths() {
+  $paths = array(
+    'node/*/contact' => TRUE,
+    'node/*/content' => TRUE,
+    'node/*/files' => TRUE,
+    'node/*/members' => TRUE,
+  );
+  return $paths;
+}
+
+/**
+ * Implements hook_menu_local_tasks_alter().
+ */
+function drutact_group_menu_local_tasks_alter(&$data, $router_item, $root_path) {
+  switch ($root_path) {
+    case 'admin/people/groups':
+      // 'Add group' action link.
+      $item = menu_get_item('node/add/group');
+      $item['title'] = t('Add group');
+      $data['actions']['output'][] = array(
+        '#theme' => 'menu_local_action',
+        '#link' => $item,
+      );
+      break;
+
+    case 'node/%/files':
+      // 'Add group file' action link.
+      $item = menu_get_item('file/add');
+      $gid = $router_item['page_arguments'][2];
+      if ($item['access']) {
+        $item['title'] = t('Add group File');
+        $item['localized_options'] = array('query' => array('og_group_ref' => $gid));
+        $data['actions']['output'][] = array(
+          '#theme' => 'menu_local_action',
+          '#link' => $item,
+        );
+      }
+      break;
+
+    case 'node/%/members':
+      // Add group Member action link.
+      $item = menu_get_item('group/node/' . $router_item['page_arguments'][2] . '/admin/people/add-user');
+      if ($item['access']) {
+        $item['title'] = t('Add group member');
+        $data['actions']['output'][] = array(
+          '#theme' => 'menu_local_action',
+          '#link' => $item,
+        );
+      }
+      // Change manager action link.
+      $item = menu_get_item('group/node/' . $router_item['page_arguments'][2] . '/admin/manager');
+      if ($item['access']) {
+        $item['title'] = t('Change manager');
+        $data['actions']['output'][] = array(
+          '#theme' => 'menu_local_action',
+          '#link' => $item,
+        );
+      }
+      // Default members action link.
+      $item = menu_get_item('group/node/' . $router_item['page_arguments'][2] . '/admin/default-members');
+      if ($item['access']) {
+        $item['title'] = t('Default members');
+        $data['actions']['output'][] = array(
+          '#theme' => 'menu_local_action',
+          '#link' => $item,
+        );
+      }
+      break;
+  }
 }
 
 /**
