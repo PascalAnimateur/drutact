@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Code for the DruTACT Event feature.
+ */
+
+include_once 'drutact_event.features.inc';
+
+/**
+ * Implements hook_post_features_rebuild().
+ */
+function drutact_event_post_features_rebuild($component) {
+  if ($component == 'ctools') {
+    // Default content type permissions (event).
+    _drutact_default_content_type_permissions('event');
+  }
+}

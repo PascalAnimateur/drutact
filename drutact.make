@@ -5,6 +5,7 @@ core = 7.x
 defaults[projects][subdir] = "contrib"
 
 ; DruTACT Content types
+includes[] = modules/content_types/drutact_event/drutact_event.make
 includes[] = modules/content_types/drutact_group/drutact_group.make
 
 ; DruTACT Core
