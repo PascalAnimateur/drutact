@@ -769,8 +769,8 @@ function drutact_admin_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
     'views_bulk_operations' => 'views_bulk_operations',
-    'title' => 'title',
-    'timestamp' => 'title',
+    'title_field_et' => 'title_field_et',
+    'timestamp' => 'title_field_et',
     'group_access' => 'group_access',
     'name' => 'name',
     'changed' => 'changed',
@@ -784,7 +784,7 @@ function drutact_admin_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
-    'title' => array(
+    'title_field_et' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
@@ -874,12 +874,18 @@ function drutact_admin_views_default_views() {
       ),
     ),
   );
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Entity translation: Title: translated */
+  $handler->display->display_options['fields']['title_field_et']['id'] = 'title_field_et';
+  $handler->display->display_options['fields']['title_field_et']['table'] = 'field_data_title_field';
+  $handler->display->display_options['fields']['title_field_et']['field'] = 'title_field_et';
+  $handler->display->display_options['fields']['title_field_et']['label'] = 'Title';
+  $handler->display->display_options['fields']['title_field_et']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title_field_et']['type'] = 'title_linked';
+  $handler->display->display_options['fields']['title_field_et']['settings'] = array(
+    'title_style' => '_none',
+    'title_link' => 'content',
+    'title_class' => '',
+  );
   /* Field: Content: Has new content */
   $handler->display->display_options['fields']['timestamp']['id'] = 'timestamp';
   $handler->display->display_options['fields']['timestamp']['table'] = 'history';
