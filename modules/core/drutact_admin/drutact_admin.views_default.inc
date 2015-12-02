@@ -896,7 +896,6 @@ function drutact_admin_views_default_views() {
   $handler->display->display_options['fields']['group_access']['id'] = 'group_access';
   $handler->display->display_options['fields']['group_access']['table'] = 'field_data_group_access';
   $handler->display->display_options['fields']['group_access']['field'] = 'group_access';
-  $handler->display->display_options['fields']['group_access']['label'] = 'Visibilité du groupe';
   $handler->display->display_options['fields']['group_access']['element_label_colon'] = FALSE;
   /* Field: User: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
@@ -997,13 +996,12 @@ function drutact_admin_views_default_views() {
     t('Delete'),
     t('Change value'),
     t('Title'),
-    t('Visibilité du groupe'),
+    t('Group visibility'),
     t('Author'),
     t('Updated date'),
     t('Operations'),
     t('edit'),
     t('delete'),
-    t('Group visibility'),
     t('Page'),
     t('more'),
   );

@@ -237,3 +237,12 @@ function drutact_group_post_features_rebuild($component) {
     field_update_instance($instance_info);
   }
 }
+
+// Translatables
+// Included for use with string extractors like potx.
+
+t('Members');
+t('Group manager: !manager');
+t('Total content: @count');
+t('Total files: @count');
+t('Total members: @count');

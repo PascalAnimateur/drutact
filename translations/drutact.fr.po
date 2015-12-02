@@ -44,8 +44,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-12-02 15:24-0500\n"
-"PO-Revision-Date: 2015-12-02 15:24-0500\n"
+"POT-Creation-Date: 2015-12-02 15:45-0500\n"
+"PO-Revision-Date: 2015-12-02 15:45-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -219,7 +219,7 @@ msgctxt "field_instance:group-group_access:label"
 msgid "Group visibility"
 msgstr "Visibilité du groupe"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1006
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:999
 msgid "Group visibility"
 msgstr "Visibilité du groupe"
 
@@ -240,7 +240,7 @@ msgctxt "field_instance:group-title_field:label"
 msgid "Title"
 msgstr "Titre"
 
-#: profiles/drutact/modules/content_types/drutact_group/drutact_group.features.inc:26 profiles/drutact/modules/content_types/drutact_page/drutact_page.features.inc:26 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:404;999;1373
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.features.inc:26 profiles/drutact/modules/content_types/drutact_page/drutact_page.features.inc:26 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:404;998;1371
 msgid "Title"
 msgstr "Titre"
 
@@ -308,6 +308,26 @@ msgstr "Modifier Gestionnaire"
 #: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:208
 msgid "Default Members"
 msgstr "Membres par Défaut"
+
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:244
+msgid "Members"
+msgstr "Membres"
+
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:245
+msgid "Group manager: !manager"
+msgstr "Gestionnaire du groupe: !manager"
+
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:246
+msgid "Total content: @count"
+msgstr "Total contenu: @count"
+
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:247
+msgid "Total files: @count"
+msgstr "Total fichiers: @count"
+
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:248
+msgid "Total members: @count"
+msgstr "Total membres: @count"
 
 #: profiles/drutact/modules/content_types/drutact_group/drutact_group.info:0
 msgid "DruTACT Group"
@@ -380,7 +400,7 @@ msgctxt "field_instance:page-title_field:description"
 msgid "The title of this page."
 msgstr "Le titre de cette page."
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.inc:22 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:738;1007
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.inc:22 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:738;1005
 msgid "Page"
 msgstr "Page"
 
@@ -398,7 +418,7 @@ msgstr ""
 msgid "Page content type of DruTACT installation profile."
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:381;706;980
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:381;706;979
 msgid "Master"
 msgstr "Maître"
 
@@ -406,55 +426,55 @@ msgstr "Maître"
 msgid "Files"
 msgstr "Fichiers"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:383;739;1008;1351;1668
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:383;739;1006;1349;1666
 msgid "more"
 msgstr "plus"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:384;708;982;1352;1669
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:384;708;981;1350;1667
 msgid "Filter"
 msgstr "Filtrer"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:385;709;983;1353;1670
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:385;709;982;1351;1668
 msgid "Reset"
 msgstr "Réinitialiser"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:386;710;984;1354;1671
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:386;710;983;1352;1669
 msgid "Sort by"
 msgstr "Trier par"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:387;711;985;1355;1672
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:387;711;984;1353;1670
 msgid "Asc"
 msgstr "Asc"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:388;712;986;1356;1673
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:388;712;985;1354;1671
 msgid "Desc"
 msgstr "Desc"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:389;713;987;1357;1674
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:389;713;986;1355;1672
 msgid "Items per page"
 msgstr "Éléments par page"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:390;714;988;1358;1675
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:390;714;987;1356;1673
 msgid "- All -"
 msgstr "- Tout -"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:391;715;989;1359;1676
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:391;715;988;1357;1674
 msgid "Offset"
 msgstr "Décalage"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:392;716;990;1360;1677
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:392;716;989;1358;1675
 msgid "« first"
 msgstr "« premier"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:393;717;991;1361;1678
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:393;717;990;1359;1676
 msgid "‹ previous"
 msgstr "‹ précédent"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:394;718;992;1362;1679
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:394;718;991;1360;1677
 msgid "next ›"
 msgstr "suivant ›"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:395;719;993;1363;1680
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:395;719;992;1361;1678
 msgid "last »"
 msgstr "dernier »"
 
@@ -466,7 +486,7 @@ msgstr "Aucun fichier disponible."
 msgid "user"
 msgstr "utilisateur"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:398;723;996;1366;1682
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:398;723;995;1364;1680
 msgid "- Choose an operation -"
 msgstr "- Choisir une opération -"
 
@@ -474,11 +494,11 @@ msgstr "- Choisir une opération -"
 msgid "Create archive"
 msgstr "Créer une archive"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:400;997;1368
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:400;996;1366
 msgid "Delete"
 msgstr "Supprimer"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:401;1370
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:401;1368
 msgid "Assign to group"
 msgstr "Assigner au groupe"
 
@@ -486,11 +506,11 @@ msgstr "Assigner au groupe"
 msgid "Make permanent"
 msgstr "Rendre permanent"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:403;998;1369;1684
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:403;997;1367;1682
 msgid "Change value"
 msgstr "Modifier une valeur"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:405;1374
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:405;1372
 msgid "Type"
 msgstr "Type"
 
@@ -514,7 +534,7 @@ msgstr ""
 msgid "User"
 msgstr "Utilisateur"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:411;1378
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:411;1376
 msgid "Updated"
 msgstr "Mis à jour"
 
@@ -522,7 +542,7 @@ msgstr "Mis à jour"
 msgid "Used in"
 msgstr "Utilisé dans"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:413;732;1003;1379;1693
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:413;732;1002;1377;1691
 msgid "Operations"
 msgstr "Actions"
 
@@ -530,7 +550,7 @@ msgstr "Actions"
 msgid "Status"
 msgstr "Statut"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:415;1380;1697
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:415;1378;1695
 msgid "System"
 msgstr "Système"
 
@@ -546,7 +566,7 @@ msgstr "Gérer les fichiers du groupe."
 msgid "OG membership from file"
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:419;1384
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:419;1382
 msgid "All"
 msgstr "Tout"
 
@@ -586,7 +606,7 @@ msgstr "Retirer du groupe"
 msgid "Contact via e-mail"
 msgstr "Contacter par courriel"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:728;1688
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:728;1686
 msgid "Name"
 msgstr "Nom"
 
@@ -612,7 +632,7 @@ msgstr "Rôles de groupe"
 msgid "Member since"
 msgstr "Membre depuis"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:733;1004
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:733;1003
 msgid "edit"
 msgstr "modifier"
 
@@ -628,131 +648,127 @@ msgstr "tout"
 msgid "Members of group %1"
 msgstr "Membres du groupe %1"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:737;1695
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:737;1693
 msgid "E-mail"
 msgstr "Courriel"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:981
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:980
 msgid "Groups"
 msgstr "Groupes"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:994
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:993
 msgid "No groups found matching the search criteria."
 msgstr "Aucun groupe trouvé ne correspond aux critères de recherche."
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:995;1365
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:994;1363
 msgid "author"
 msgstr "auteur"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1000
-msgid "Visibilité du groupe"
-msgstr ""
-
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1001;1375
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1000;1373
 msgid "Author"
 msgstr "Auteur"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1002
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1001
 msgid "Updated date"
 msgstr "Date de mise à jour"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1005
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1004
 msgid "delete"
 msgstr "supprimer"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1349;1666
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1347;1664
 msgid "Defaults"
 msgstr "Paramètres par défaut"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1350
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1348
 msgid "Content"
 msgstr "Contenu"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1364
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1362
 msgid "No content available."
 msgstr "Aucun contenu disponible."
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1367
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1365
 msgid "Change author"
 msgstr "Modifier l'auteur"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1371
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1369
 msgid "Publish"
 msgstr "Publier"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1372
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1370
 msgid "Unpublish"
 msgstr "Dépublier"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1376
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1374
 msgid "Published"
 msgstr "Publié"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1377
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1375
 msgid "([language])"
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1381
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1379
 msgid "Group nodes"
 msgstr "Contenu du groupe"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1382
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1380
 msgid "Manage group nodes."
 msgstr "Gérer le contenu du groupe"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1383
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1381
 msgid "OG membership from node"
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1385
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1383
 msgid "Content assigned to group %1"
 msgstr "Contenu du groupe %1"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1667 profiles/drutact/modules/core/drutact_user/drutact_user.module:38
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1665 profiles/drutact/modules/core/drutact_user/drutact_user.module:38
 msgid "Users"
 msgstr "Utilisateurs"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1681
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1679
 msgid "No users available."
 msgstr "Aucun utilisateur disponible."
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1683
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1681
 msgid "Cancel account"
 msgstr "Annuler le compte"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1685
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1683
 msgid "Change roles"
 msgstr "Modifier les rôles"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1686
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1684
 msgid "Contact via email"
 msgstr "Contacter par courriel"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1687
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1685
 msgid "Subscribe to group"
 msgstr "S'abonner au groupe"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1689
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1687
 msgid "Active"
 msgstr "Actif"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1690
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1688
 msgid "Roles"
 msgstr "Rôles"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1691
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1689
 msgid "Member for"
 msgstr "Membre depuis"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1692
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1690
 msgid "Last access"
 msgstr "Dernier accès"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1694
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1692
 msgid "cancel account"
 msgstr "Annuler le compte"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1696
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1694
 msgid "Role"
 msgstr "Rôle"
 
