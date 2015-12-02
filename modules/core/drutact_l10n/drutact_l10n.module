@@ -104,7 +104,7 @@ function drutact_l10n_potx_file_location_info() {
   // Expose DruTACT translations path to potx_exportables.
   return array(
     'drutact' => array(
-      'path' => drupal_get_path('profile', variable_get('install_profile', 'drutact')) . '/translations',
+      'path' => drupal_get_path('profile', 'drutact') . '/translations',
     ),
   );
 }
