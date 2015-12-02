@@ -129,7 +129,7 @@ function drutact_group_menu_local_tasks_alter(&$data, $router_item, $root_path) 
     case 'admin/people/groups':
       // 'Add group' action link.
       $item = menu_get_item('node/add/group');
-      $item['title'] = t('Add group');
+      $item['title'] = t('Add Group');
       $data['actions']['output'][] = array(
         '#theme' => 'menu_local_action',
         '#link' => $item,
@@ -159,7 +159,7 @@ function drutact_group_menu_local_tasks_alter(&$data, $router_item, $root_path) 
       foreach ($names as $type => $name) {
         $item = menu_get_item('node/add/' . str_replace('_', '-', $type));
         if ($item['access']) {
-          $item['title'] = t('Add group !name', array('!name' => $name));
+          $item['title'] = t('Add !name', array('!name' => $name));
           $item['localized_options'] = array('query' => array('og_group_ref' => $gid));
           $data['actions']['output'][] = array(
             '#theme' => 'menu_local_action',
@@ -174,7 +174,7 @@ function drutact_group_menu_local_tasks_alter(&$data, $router_item, $root_path) 
       $item = menu_get_item('file/add');
       $gid = $router_item['page_arguments'][2];
       if ($item['access']) {
-        $item['title'] = t('Add group File');
+        $item['title'] = t('Add File');
         $item['localized_options'] = array('query' => array('og_group_ref' => $gid));
         $data['actions']['output'][] = array(
           '#theme' => 'menu_local_action',
@@ -187,7 +187,7 @@ function drutact_group_menu_local_tasks_alter(&$data, $router_item, $root_path) 
       // Add group Member action link.
       $item = menu_get_item('group/node/' . $router_item['page_arguments'][2] . '/admin/people/add-user');
       if ($item['access']) {
-        $item['title'] = t('Add group member');
+        $item['title'] = t('Add Member');
         $data['actions']['output'][] = array(
           '#theme' => 'menu_local_action',
           '#link' => $item,
@@ -196,7 +196,7 @@ function drutact_group_menu_local_tasks_alter(&$data, $router_item, $root_path) 
       // Change manager action link.
       $item = menu_get_item('group/node/' . $router_item['page_arguments'][2] . '/admin/manager');
       if ($item['access']) {
-        $item['title'] = t('Change manager');
+        $item['title'] = t('Change Manager');
         $data['actions']['output'][] = array(
           '#theme' => 'menu_local_action',
           '#link' => $item,
@@ -205,7 +205,7 @@ function drutact_group_menu_local_tasks_alter(&$data, $router_item, $root_path) 
       // Default members action link.
       $item = menu_get_item('group/node/' . $router_item['page_arguments'][2] . '/admin/default-members');
       if ($item['access']) {
-        $item['title'] = t('Default members');
+        $item['title'] = t('Default Members');
         $data['actions']['output'][] = array(
           '#theme' => 'menu_local_action',
           '#link' => $item,
