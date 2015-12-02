@@ -37,5 +37,14 @@ function drutact_fr_translations_fr_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('Please enter one more character', array(), array('context' => ''));
+  $translations['fr:default']['c5a5240b71e77388d00b62f6cd2f3157'] = array(
+    'source' => 'Add Event',
+    'context' => '',
+    'location' => 'profiles/drutact/modules/content_types/drutact_event/drutact_event.module:17',
+    'translation' => 'Ajouter Événement',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Add Event', array(), array('context' => ''));
   return $translations;
 }

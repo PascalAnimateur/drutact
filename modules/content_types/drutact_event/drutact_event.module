@@ -7,6 +7,23 @@
 include_once 'drutact_event.features.inc';
 
 /**
+ * Implements hook_menu_local_tasks_alter().
+ */
+function drutact_event_menu_local_tasks_alter(&$data, $router_item, $root_path) {
+  switch ($root_path) {
+    case 'admin/content/events':
+      // 'Add event' action link.
+      $item = menu_get_item('node/add/event');
+      $item['title'] = t('Add Event');
+      $data['actions']['output'][] = array(
+        '#theme' => 'menu_local_action',
+        '#link' => $item,
+      );
+      break;
+  }
+}
+
+/**
  * Implements hook_post_features_rebuild().
  */
 function drutact_event_post_features_rebuild($component) {
