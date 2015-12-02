@@ -476,17 +476,20 @@ function drutact_event_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Assign this content to specific section(s) of the site.');
-  t('Description');
-  t('Enter individual keywords to describe this content\'s topic.');
-  t('Event date');
-  t('Group content visibility');
-  t('Groups audience');
-  t('Image');
-  t('Image accompanying the content.');
-  t('Section(s)');
-  t('Tags');
-  t('Title');
+
+  // Translatables created/updated by the Localize Fields (localize_fields) module.
+  t('Description', array(), array('context' => 'field_instance:event-body:label'));
+  t('Event date', array(), array('context' => 'field_instance:event-field_event_date:label'));
+  t('Image', array(), array('context' => 'field_instance:event-field_image:label'));
+  t('Image accompanying the content.', array(), array('context' => 'field_instance:event-field_image:description'));
+  t('Section(s)', array(), array('context' => 'field_instance:event-field_sections:label'));
+  t('Assign this content to specific section(s) of the site.', array(), array('context' => 'field_instance:event-field_sections:description'));
+  t('Tags', array(), array('context' => 'field_instance:event-field_tags:label'));
+  t('Enter individual keywords to describe this content\'s topic.', array(), array('context' => 'field_instance:event-field_tags:description'));
+  t('Group content visibility', array(), array('context' => 'field_instance:event-group_content_access:label'));
+  t('Groups audience', array(), array('context' => 'field_instance:event-og_group_ref:label'));
+  t('Title', array(), array('context' => 'field_instance:event-title_field:label'));
+
 
   return $field_instances;
 }

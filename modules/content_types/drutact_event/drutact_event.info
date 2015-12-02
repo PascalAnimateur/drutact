@@ -41,6 +41,7 @@ features[variable][] = diff_show_preview_changes_node_event
 features[variable][] = diff_view_mode_preview_node_event
 features[variable][] = entity_translation_hide_translation_links_event
 features[variable][] = entity_translation_node_metadata_event
+features[variable][] = entity_translation_settings_node__event
 features[variable][] = field_bundle_settings_node__event
 features[variable][] = language_content_type_event
 features[variable][] = menu_options_event
