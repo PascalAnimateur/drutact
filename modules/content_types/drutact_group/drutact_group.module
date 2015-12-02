@@ -9,14 +9,13 @@ include_once 'drutact_group.features.inc';
 function drutact_group_og_permission() {
   $items = array();
 
-  // Add OG permission to
+  // Custom OG permissions (manage content / files).
   $items['manage content'] = array(
     'title' => t('Manage content'),
     'description' => t('Users may access the Content tab on the group page.'),
     'default role' => array(OG_ADMINISTRATOR_ROLE),
     'restrict access' => TRUE,
   );
-
   $items['manage files'] = array(
     'title' => t('Manage files'),
     'description' => t('Users may access the Files tab on the group page.'),
@@ -203,26 +202,5 @@ function drutact_group_post_features_rebuild($component) {
     $instance_info['display']['default']['weight'] = 20;
     $instance_info['display']['default']['settings'] = array('link' => 1);
     field_update_instance($instance_info);
-  }
-  if ($component == 'rules_config') {
-    // Enable default permissions.
-    _drutact_default_module_permissions(array(
-      DRUPAL_ANONYMOUS_RID => array(),
-      DRUPAL_AUTHENTICATED_RID => array(),
-      DRUTACT_EDITOR_RID => array(
-        // Rules
-        'use Rules component rules_file_assign_to_group',
-        'use Rules component rules_node_assign_to_group',
-        'use Rules component rules_user_subscribe_to_group',
-      ),
-      DRUTACT_ADMINISTRATOR_RID => array(
-        // Organic group
-        'administer group',
-        // Rules
-        'use Rules component rules_file_assign_to_group',
-        'use Rules component rules_node_assign_to_group',
-        'use Rules component rules_user_subscribe_to_group',
-      )
-    ));
   }
 }

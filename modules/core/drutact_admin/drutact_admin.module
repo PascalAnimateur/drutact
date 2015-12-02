@@ -68,7 +68,7 @@ function drutact_admin_form_views_form_administration_files_admin_alter(&$form, 
   if ($form_state['step'] == 'views_bulk_operations_config_form') {
     if (isset($form['parameter']['group']['settings']['group'])) {
       $form['parameter']['group']['settings']['group']['#type'] = 'select';
-      $form['parameter']['group']['settings']['group']['#options'] = _drutact_group_select_group_options();
+      $form['parameter']['group']['settings']['group']['#options'] = _drutact_admin_select_group_options();
       $form['parameter']['group']['settings']['group']['#description'] = t('Select the group to which the file(s) will be assigned.');
     }
   }
@@ -89,7 +89,7 @@ function drutact_admin_form_views_form_administration_nodes_admin_alter(&$form, 
   if ($form_state['step'] == 'views_bulk_operations_config_form') {
     if (isset($form['parameter']['group']['settings']['group'])) {
       $form['parameter']['group']['settings']['group']['#type'] = 'select';
-      $form['parameter']['group']['settings']['group']['#options'] = _drutact_group_select_group_options();
+      $form['parameter']['group']['settings']['group']['#options'] = _drutact_admin_select_group_options();
       $form['parameter']['group']['settings']['group']['#description'] = t('Select the group to which the file(s) will be assigned.');
     }
   }
@@ -110,7 +110,7 @@ function drutact_admin_form_views_form_administration_users_admin_alter(&$form, 
   if ($form_state['step'] == 'views_bulk_operations_config_form') {
     if (isset($form['parameter']['group']['settings']['group'])) {
       $form['parameter']['group']['settings']['group']['#type'] = 'select';
-      $form['parameter']['group']['settings']['group']['#options'] = _drutact_group_select_group_options();
+      $form['parameter']['group']['settings']['group']['#options'] = _drutact_admin_select_group_options();
       $form['parameter']['group']['settings']['group']['#description'] = t('Select the group to which the user(s) will be subscribed.');
     }
   }
@@ -119,7 +119,7 @@ function drutact_admin_form_views_form_administration_users_admin_alter(&$form, 
 /**
  * Helper function to generate group selection options.
  */
-function _drutact_group_select_group_options() {
+function _drutact_admin_select_group_options() {
   global $user;
   $options = array();
 
@@ -137,4 +137,31 @@ function _drutact_group_select_group_options() {
   }
 
   return $options;
+}
+
+/**
+ * Implements hook_post_features_rebuild().
+ */
+function drutact_admin_post_features_rebuild($component) {
+  if ($component == 'rules_config') {
+    // Enable default permissions.
+    _drutact_default_module_permissions(array(
+      DRUPAL_ANONYMOUS_RID => array(),
+      DRUPAL_AUTHENTICATED_RID => array(),
+      DRUTACT_EDITOR_RID => array(
+        // Rules
+        'use Rules component rules_file_assign_to_group',
+        'use Rules component rules_node_assign_to_group',
+        'use Rules component rules_user_subscribe_to_group',
+      ),
+      DRUTACT_ADMINISTRATOR_RID => array(
+        // Organic group
+        'administer group',
+        // Rules
+        'use Rules component rules_file_assign_to_group',
+        'use Rules component rules_node_assign_to_group',
+        'use Rules component rules_user_subscribe_to_group',
+      )
+    ));
+  }
 }

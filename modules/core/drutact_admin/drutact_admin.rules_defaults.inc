@@ -7,7 +7,7 @@
 /**
  * Implements hook_default_rules_configuration().
  */
-function drutact_group_default_rules_configuration() {
+function drutact_admin_default_rules_configuration() {
   $items = array();
   $items['rules_file_assign_to_group'] = entity_import('rules_config', '{ "rules_file_assign_to_group" : {
       "LABEL" : "File - Assign to group",
