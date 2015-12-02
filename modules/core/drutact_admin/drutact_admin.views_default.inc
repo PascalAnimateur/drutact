@@ -39,7 +39,6 @@ function drutact_admin_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
     'views_bulk_operations' => 'views_bulk_operations',
-    'rendered' => 'filename',
     'filename' => 'filename',
     'type' => 'type',
     'filesize' => 'filesize',
@@ -47,19 +46,11 @@ function drutact_admin_views_default_views() {
     'timestamp' => 'timestamp',
     'usage' => 'usage',
     'edit' => 'edit',
-    'delete' => 'delete',
-    'nothing' => 'nothing',
+    'delete' => 'edit',
   );
   $handler->display->display_options['style_options']['default'] = 'timestamp';
   $handler->display->display_options['style_options']['info'] = array(
     'views_bulk_operations' => array(
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'rendered' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -108,15 +99,10 @@ function drutact_admin_views_default_views() {
     ),
     'edit' => array(
       'align' => '',
-      'separator' => '',
+      'separator' => '&emsp;',
       'empty_column' => 0,
     ),
     'delete' => array(
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'nothing' => array(
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -224,30 +210,14 @@ function drutact_admin_views_default_views() {
   $handler->display->display_options['fields']['edit']['id'] = 'edit';
   $handler->display->display_options['fields']['edit']['table'] = 'file_managed';
   $handler->display->display_options['fields']['edit']['field'] = 'edit';
-  $handler->display->display_options['fields']['edit']['label'] = '';
-  $handler->display->display_options['fields']['edit']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['edit']['label'] = 'Operations';
   $handler->display->display_options['fields']['edit']['element_label_colon'] = FALSE;
   /* Field: File: Delete link */
   $handler->display->display_options['fields']['delete']['id'] = 'delete';
   $handler->display->display_options['fields']['delete']['table'] = 'file_managed';
   $handler->display->display_options['fields']['delete']['field'] = 'delete';
   $handler->display->display_options['fields']['delete']['label'] = '';
-  $handler->display->display_options['fields']['delete']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['delete']['alter']['text'] = '<ul class="links inline">
-<li>[edit]</li>
-<li>[delete]</li>
-</ul>';
   $handler->display->display_options['fields']['delete']['element_label_colon'] = FALSE;
-  /* Field: Global: Custom text */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['label'] = 'Operations';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<ul class="links inline">
-<li>[edit]</li>
-<li>[delete]</li>
-</ul>';
-  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Filter criterion: File: Name */
   $handler->display->display_options['filters']['filename']['id'] = 'filename';
   $handler->display->display_options['filters']['filename']['table'] = 'file_managed';
@@ -334,10 +304,6 @@ function drutact_admin_views_default_views() {
     t('User'),
     t('Updated'),
     t('Used in'),
-    t('<ul class="links inline">
-<li>[edit]</li>
-<li>[delete]</li>
-</ul>'),
     t('Operations'),
     t('System'),
   );
