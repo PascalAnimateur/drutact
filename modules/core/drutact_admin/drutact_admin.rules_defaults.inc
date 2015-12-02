@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * drutact_group.rules_defaults.inc
+ * drutact_admin.rules_defaults.inc
  */
 
 /**
