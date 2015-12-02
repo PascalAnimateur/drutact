@@ -78,6 +78,10 @@ msgstr "Corps"
 msgctxt "field_instance:article-body:description"
 msgid "The body of this article. Use the 'Edit summary' link above to set a shorter, text-only version that will be used to describe the content when it's displayed as a teaser (i.e. in a list on the front page)."
 msgstr ""
+"Le corps de cet article. Utiliser le lien 'Modifier le résumé' "
+"ci-haut pour définir une version textuelle plus courte qui sera "
+"utilisée pour décrire ce contenu lorsqu'il sera affiché en accroche "
+"(i.e. dans une liste sur la page d'accueil)."
 
 #: profiles/drutact/modules/content_types/drutact_article/drutact_article.features.field_instance.inc:415
 msgctxt "field_instance:article-field_image:label"
