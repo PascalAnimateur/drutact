@@ -141,3 +141,40 @@ function drutact_l10n_post_features_rebuild($component) {
     ));
   }
 }
+
+/**
+ * Helper function to translate path aliases.
+ *
+ * @param array $paths
+ *   Array of paths to be translated.
+ */
+function _drutact_l10n_translate_path_aliases(array $paths) {
+  $languages = locale_language_list();
+  module_load_include('inc', 'pathauto');
+
+  foreach ($languages as $langcode => $language) {
+    // Don't translate english paths.
+    if ($langcode == 'en') {
+      continue;
+    }
+    // Determine translated path aliases from 'drutact:path_aliases' context.
+    $path_aliases[$langcode] = array();
+    foreach ($paths as $path) {
+      $path_aliases[$langcode][$path] = t($path, array(), array('context' => 'drutact:path_aliases', 'langcode' => $langcode));
+    }
+    foreach ($path_aliases[$langcode] as $source => $alias) {
+      $existing_alias = _pathauto_existing_alias_data($source, $langcode);
+      if (isset($existing_alias['alias']) && $existing_alias['alias'] == $alias) {
+        continue;
+      }
+      $new_alias = array(
+        'source' => $source,
+        'alias' => $alias,
+        'language' => $langcode,
+      );
+      _pathauto_set_alias($new_alias);
+      watchdog('drutact_l10n', 'Created !alias path alias (!langcode).',
+        array('!alias' => $alias, '!langcode' => $langcode), WATCHDOG_INFO);
+    }
+  }
+}
