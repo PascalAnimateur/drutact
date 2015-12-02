@@ -230,6 +230,8 @@ msgstr "Visibilité du contenu de groupe"
 msgctxt "field_instance:article-group_content_access:description"
 msgid "Determine if this content will be accessible to non-members of the assigned group(s)."
 msgstr ""
+"Détermier si ce contenu sera accessible aux non-membres du(des) "
+"groupe(s) assigné(s)."
 
 #: profiles/drutact/modules/content_types/drutact_article/drutact_article.features.field_instance.inc:423
 msgctxt "field_instance:article-og_group_ref:label"
@@ -269,7 +271,7 @@ msgstr "Audience de groupe"
 #: profiles/drutact/modules/content_types/drutact_article/drutact_article.features.field_instance.inc:424
 msgctxt "field_instance:article-og_group_ref:description"
 msgid "Assign this content to the selected group(s)."
-msgstr ""
+msgstr "Assigner ce contenu au(x) groupe(s) sélectionné(s)."
 
 #: profiles/drutact/modules/content_types/drutact_article/drutact_article.features.field_instance.inc:425
 msgctxt "field_instance:article-title_field:label"
@@ -307,6 +309,8 @@ msgstr "Article"
 #: profiles/drutact/modules/content_types/drutact_article/drutact_article.features.inc:24
 msgid "Use <em>articles</em> for time-sensitive content like news or press releases."
 msgstr ""
+"Utiliser les <em>articles</em> pour les contenus possédant une "
+"temporalité, tels que les actualités ou les annonces."
 
 #: profiles/drutact/modules/content_types/drutact_article/drutact_article.info:0
 msgid "DruTACT Article"
