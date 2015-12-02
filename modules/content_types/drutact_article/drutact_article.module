@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Code for the DruTACT Article feature.
+ */
+
+include_once 'drutact_article.features.inc';
+
+/**
+ * Implements hook_post_features_rebuild().
+ */
+function drutact_article_post_features_rebuild($component) {
+  if ($component == 'ctools') {
+    // Default content type permissions (article).
+    _drutact_default_content_type_permissions('article');
+  }
+}
