@@ -4,12 +4,18 @@
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from files:
 #  profiles/drutact/drutact.info: n/a
-#  profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc: n/a
+#  profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_base.inc: n/a
+#  profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_instance.inc: n/a
+#  profiles/drutact/modules/content_types/drutact_group/drutact_group.features.inc: n/a
 #  profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc: n/a
+#  profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc: n/a
 #  profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc: n/a
 #  profiles/drutact/modules/content_types/drutact_page/drutact_page.features.inc: n/a
 #  profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc: n/a
+#  profiles/drutact/modules/content_types/drutact_group/drutact_group.module: n/a
+#  profiles/drutact/modules/content_types/drutact_group/drutact_group.info: n/a
 #  profiles/drutact/modules/content_types/drutact_page/drutact_page.info: n/a
+#  profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc: n/a
 #  profiles/drutact/modules/core/drutact_user/drutact_user.module: n/a
 #  profiles/drutact/modules/core/drutact_admin/drutact_admin.info: n/a
 #  profiles/drutact/modules/core/drutact_core/drutact_core.info: n/a
@@ -23,8 +29,8 @@
 #  profiles/drutact/modules/core/drutact_wysiwyg/drutact_wysiwyg.info: n/a
 #  profiles/drutact/modules/core/drutact_email/drutact_email.module: n/a
 #  profiles/drutact/modules/core/drutact_l10n/drutact_l10n.module: n/a
-#  profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc: n/a
 #  profiles/drutact/modules/core/drutact_media/drutact_media.module: n/a
+#  profiles/drutact/modules/core/drutact_node/drutact_node.features.field_base.inc: n/a
 #  profiles/drutact/modules/core/drutact_node/drutact_node.module: n/a
 #  profiles/drutact/modules/core/drutact_user/drutact_user.features.field_instance.inc: n/a
 #  profiles/drutact/modules/core/drutact_wysiwyg/drutact_wysiwyg.module: n/a
@@ -37,8 +43,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-12-01 17:14-0500\n"
-"PO-Revision-Date: 2015-12-01 17:14-0500\n"
+"POT-Creation-Date: 2015-12-01 19:31-0500\n"
+"PO-Revision-Date: 2015-12-01 19:31-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -54,66 +60,126 @@ msgstr ""
 msgid "DruTACT installation profile."
 msgstr ""
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:291
-msgctxt "field_instance:page-body:label"
-msgid "Body"
-msgstr "Corps"
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_base.inc:69
+msgctxt "field:group_access:allowed_values"
+msgid "Public"
+msgstr "Public"
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:292
-msgctxt "field_instance:page-body:description"
-msgid "The body of this page. Use the 'Edit summary' link above to set a shorter, text-only version that will be used to describe the page when it's displayed as a teaser (i.e. in a list on the front page)."
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_base.inc:70
+msgctxt "field:group_access:allowed_values"
+msgid "Secret"
+msgstr "Secret"
+
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_base.inc:71
+msgctxt "field:group_group:allowed_values"
+msgid "Not a group"
+msgstr "Pas un groupe"
+
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_base.inc:72
+msgctxt "field:group_group:allowed_values"
+msgid "Group"
+msgstr "Groupe"
+
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_instance.inc:409
+msgctxt "field_instance:group-group_group:label"
+msgid "Group"
+msgstr "Groupe"
+
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.features.inc:22
+msgid "Group"
+msgstr "Groupe"
+
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_instance.inc:399
+msgctxt "field_instance:group-body:label"
+msgid "Description"
+msgstr "Description"
+
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:473
+msgctxt "field_instance:sections-description_field:label"
+msgid "Description"
+msgstr "Description"
+
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:477
+msgctxt "field_instance:tags-description_field:label"
+msgid "Description"
+msgstr "Description"
+
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_instance.inc:400
+msgctxt "field_instance:group-body:description"
+msgid "The description of this group. Use the 'Edit summary' link above to set a shorter, text-only version that will be used to describe the content when it's displayed as a teaser (i.e. in a list on the front page)."
 msgstr ""
-"Le corps de cette page. Utiliser le lien 'Modifier le résumé' "
-"ci-haut pour définir une version textuelle plus courte qui sera "
-"utilisée pour décrire cette page lorsqu'elle sera affichée en "
-"accroche (i.e. dans une liste sur la page d'accueil)."
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:293
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_instance.inc:401
+msgctxt "field_instance:group-field_image:label"
+msgid "Image"
+msgstr "Image"
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:420
 msgctxt "field_instance:page-field_image:label"
 msgid "Image"
 msgstr "Image"
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:374
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:471
 msgctxt "field_instance:vignette-field_image:label"
 msgid "Image"
 msgstr "Image"
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:294
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_instance.inc:402
+msgctxt "field_instance:group-field_image:description"
+msgid "Image accompanying the content."
+msgstr "Image accompagnant le contenu."
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:421
 msgctxt "field_instance:page-field_image:description"
 msgid "Image accompanying the content."
 msgstr "Image accompagnant le contenu."
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:375
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:472
 msgctxt "field_instance:vignette-field_image:description"
 msgid "Image accompanying the content."
 msgstr "Image accompagnant le contenu."
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:295
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_instance.inc:403
+msgctxt "field_instance:group-field_sections:label"
+msgid "Section(s)"
+msgstr "Section(s)"
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:422
 msgctxt "field_instance:page-field_sections:label"
 msgid "Section(s)"
 msgstr "Section(s)"
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:369
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:464
 msgctxt "field_instance:classification-field_sections:label"
 msgid "Section(s)"
 msgstr "Section(s)"
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:296
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_instance.inc:404
+msgctxt "field_instance:group-field_sections:description"
+msgid "Assign this content to specific section(s) of the site."
+msgstr "Assigner ce contenu à une(des) section(s) spécifique(s) du site."
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:423
 msgctxt "field_instance:page-field_sections:description"
 msgid "Assign this content to specific section(s) of the site."
 msgstr "Assigner ce contenu à une(des) section(s) spécifique(s) du site."
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:370
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:465
 msgctxt "field_instance:classification-field_sections:description"
 msgid "Assign this content to specific section(s) of the site."
 msgstr "Assigner ce contenu à une(des) section(s) spécifique(s) du site."
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:297
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_instance.inc:405
+msgctxt "field_instance:group-field_tags:label"
+msgid "Tags"
+msgstr "Mots-clés"
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:424
 msgctxt "field_instance:page-field_tags:label"
 msgid "Tags"
 msgstr "Mots-clés"
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:371
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:466
 msgctxt "field_instance:classification-field_tags:label"
 msgid "Tags"
 msgstr "Mots-clés"
@@ -122,35 +188,141 @@ msgstr "Mots-clés"
 msgid "Tags"
 msgstr "Mots-clés"
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:298
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_instance.inc:406
+msgctxt "field_instance:group-field_tags:description"
+msgid "Enter individual keywords to describe this content's topic."
+msgstr ""
+"Saisir des mots-clés individuels pour décrire le sujet de ce "
+"contenu."
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:425
 msgctxt "field_instance:page-field_tags:description"
 msgid "Enter individual keywords to describe this content's topic."
 msgstr ""
 "Saisir des mots-clés individuels pour décrire le sujet de ce "
 "contenu."
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:372
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:467
 msgctxt "field_instance:classification-field_tags:description"
 msgid "Enter individual keywords to describe this content's topic."
 msgstr ""
 "Saisir des mots-clés individuels pour décrire le sujet de ce "
 "contenu."
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:299
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_instance.inc:407
+msgctxt "field_instance:group-group_access:label"
+msgid "Group visibility"
+msgstr "Visibilité du groupe"
+
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_instance.inc:408
+msgctxt "field_instance:group-group_access:description"
+msgid "Determine if this group will be visible to everyone (public) or only to its members (secret)."
+msgstr ""
+
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_instance.inc:410
+msgctxt "field_instance:group-group_group:description"
+msgid "Determine if this is an OG group."
+msgstr ""
+
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_instance.inc:411
+msgctxt "field_instance:group-title_field:label"
+msgid "Title"
+msgstr "Titre"
+
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.features.inc:26 profiles/drutact/modules/content_types/drutact_page/drutact_page.features.inc:26 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:322;653
+msgid "Title"
+msgstr "Titre"
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:428
 msgctxt "field_instance:page-title_field:label"
 msgid "Title"
 msgstr "Titre"
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.inc:26 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:322;653
-msgid "Title"
-msgstr "Titre"
-
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:373
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:470
 msgctxt "field_instance:node_title-title_field:label"
 msgid "Title"
 msgstr "Titre"
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:300
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_instance.inc:412
+msgctxt "field_instance:group-title_field:description"
+msgid "The title or name of this group."
+msgstr "Le titre ou le nom de ce groupe."
+
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.features.inc:24
+msgid "Use <em>groups</em> to create lists of users who share a collaborative space."
+msgstr ""
+
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:24
+msgid "Group access"
+msgstr "Accès de groupe"
+
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.info:0
+msgid "DruTACT Group"
+msgstr ""
+
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.info:0
+msgid "Group content type of DruTACT installation profile."
+msgstr ""
+
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.info:0 profiles/drutact/modules/content_types/drutact_page/drutact_page.info:0
+msgid "DruTACT Content types"
+msgstr ""
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:418
+msgctxt "field_instance:page-body:label"
+msgid "Body"
+msgstr "Corps"
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:419
+msgctxt "field_instance:page-body:description"
+msgid "The body of this page. Use the 'Edit summary' link above to set a shorter, text-only version that will be used to describe the page when it's displayed as a teaser (i.e. in a list on the front page)."
+msgstr ""
+"Le corps de cette page. Utiliser le lien 'Modifier le résumé' "
+"ci-haut pour définir une version textuelle plus courte qui sera "
+"utilisée pour décrire cette page lorsqu'elle sera affichée en "
+"accroche (i.e. dans une liste sur la page d'accueil)."
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:426
+msgctxt "field_instance:page-group_content_access:label"
+msgid "Group content visibility"
+msgstr "Visibilité du contenu de groupe"
+
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:468
+msgctxt "field_instance:group_content-group_content_access:label"
+msgid "Group content visibility"
+msgstr "Visibilité du contenu de groupe"
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:427
+msgctxt "field_instance:page-og_group_ref:label"
+msgid "Groups audience"
+msgstr "Audience de groupe"
+
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:705
+msgctxt "field_instance:audio-og_group_ref:label"
+msgid "Groups audience"
+msgstr "Audience de groupe"
+
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:708
+msgctxt "field_instance:document-og_group_ref:label"
+msgid "Groups audience"
+msgstr "Audience de groupe"
+
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:715
+msgctxt "field_instance:image-og_group_ref:label"
+msgid "Groups audience"
+msgstr "Audience de groupe"
+
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:718
+msgctxt "field_instance:video-og_group_ref:label"
+msgid "Groups audience"
+msgstr "Audience de groupe"
+
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:469
+msgctxt "field_instance:group_content-og_group_ref:label"
+msgid "Groups audience"
+msgstr "Audience de groupe"
+
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:429
 msgctxt "field_instance:page-title_field:description"
 msgid "The title of this page."
 msgstr "Le titre de cette page."
@@ -171,10 +343,6 @@ msgstr ""
 
 #: profiles/drutact/modules/content_types/drutact_page/drutact_page.info:0
 msgid "Page content type of DruTACT installation profile."
-msgstr ""
-
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.info:0
-msgid "DruTACT Content types"
 msgstr ""
 
 #: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:301
@@ -361,12 +529,12 @@ msgstr ""
 msgid "Name"
 msgstr "Nom"
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:378
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:475
 msgctxt "field_instance:sections-name_field:label"
 msgid "Name"
 msgstr "Nom"
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:382
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:479
 msgctxt "field_instance:tags-name_field:label"
 msgid "Name"
 msgstr "Nom"
@@ -443,52 +611,42 @@ msgstr ""
 msgid "Multilingual components of DruTACT installation profile."
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:345
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:703
 msgctxt "field_instance:audio-filename_field:label"
-msgid "File name"
-msgstr "Nom du fichier"
+msgid "Audio title"
+msgstr "Titre de l'audio"
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:347
-msgctxt "field_instance:document-filename_field:label"
-msgid "File name"
-msgstr "Nom du fichier"
-
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:353
-msgctxt "field_instance:image-filename_field:label"
-msgid "File name"
-msgstr "Nom du fichier"
-
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:355
-msgctxt "field_instance:video-filename_field:label"
-msgid "File name"
-msgstr "Nom du fichier"
-
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:346
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:704
 msgctxt "field_instance:audio-filename_field:description"
-msgid "A field replacing file name."
+msgid "The internal file name can be overridden to display a title allowing the use of special characters and no file extension."
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:348
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:707
 msgctxt "field_instance:document-filename_field:description"
-msgid "A field replacing file name."
+msgid "The internal file name can be overridden to display a title allowing the use of special characters and no file extension."
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:354
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:714
 msgctxt "field_instance:image-filename_field:description"
-msgid "A field replacing file name."
+msgid "The internal file name can be overridden to display a title allowing the use of special characters and no file extension."
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:356
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:717
 msgctxt "field_instance:video-filename_field:description"
-msgid "A field replacing file name."
+msgid "The internal file name can be overridden to display a title allowing the use of special characters and no file extension."
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:349
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:706
+msgctxt "field_instance:document-filename_field:label"
+msgid "Document title"
+msgstr "Titre du document"
+
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:709
 msgctxt "field_instance:image-field_file_image_alt_text:label"
-msgid "Alt Text"
-msgstr ""
+msgid "Alternative text"
+msgstr "Texte alternatif"
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:350
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:710
 msgctxt "field_instance:image-field_file_image_alt_text:description"
 msgid "Alternative text is used by screen readers, search engines, and when the image cannot be loaded. By adding alt text you improve accessibility and search engine optimization."
 msgstr ""
@@ -497,19 +655,25 @@ msgstr ""
 "ajoutant un texte alternatif, vous améliorez l'accessibilité et "
 "l'optimisation pour les moteurs de recherche."
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:351
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:711
 msgctxt "field_instance:image-field_file_image_title_text:label"
-msgid "Title Text"
+msgid "Image description"
+msgstr "Description de l'image"
+
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:712
+msgctxt "field_instance:image-field_file_image_title_text:description"
+msgid "This text is used in the tool tip when a user hovers their mouse over the image. Adding an image description makes it easier to understand the context of an image and improves usability."
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:352
-msgctxt "field_instance:image-field_file_image_title_text:description"
-msgid "Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability."
-msgstr ""
-"Le texte du titre est utilisé comme une infobulle lorsqu'un "
-"utilisateur survole l'image avec sa souris. Ajouter un texte du titre "
-"facilite la compréhension du contexte d'une image et améliore "
-"l'usage."
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:713
+msgctxt "field_instance:image-filename_field:label"
+msgid "Image title"
+msgstr "Titre de l'image"
+
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:716
+msgctxt "field_instance:video-filename_field:label"
+msgid "Video title"
+msgstr "Titre de la vidéo"
 
 #: profiles/drutact/modules/core/drutact_media/drutact_media.module:25
 msgid "Public files"
@@ -531,32 +695,37 @@ msgstr ""
 msgid "Media components of DruTACT installation profile."
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:376
-msgctxt "field_instance:sections-description_field:label"
-msgid "Description"
-msgstr "Description"
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_base.inc:260
+msgctxt "field:group_content_access:allowed_values"
+msgid "Use group defaults"
+msgstr "Paramètres par défaut du groupe"
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:380
-msgctxt "field_instance:tags-description_field:label"
-msgid "Description"
-msgstr "Description"
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_base.inc:261
+msgctxt "field:group_content_access:allowed_values"
+msgid "Public - accessible to all site users"
+msgstr "Public - accessible à tous les utilisateurs du site"
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:377
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_base.inc:262
+msgctxt "field:group_content_access:allowed_values"
+msgid "Private - accessible only to group members"
+msgstr "Privé - accessible seulement aux membres du groupe"
+
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:474
 msgctxt "field_instance:sections-description_field:description"
 msgid "Describe what this section is about."
 msgstr "Décrire ce sur quoi porte cette section."
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:379
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:476
 msgctxt "field_instance:sections-name_field:description"
 msgid "The name or title of this section."
 msgstr "Le nom ou le titre de cette section."
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:381
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:478
 msgctxt "field_instance:tags-description_field:description"
 msgid "Describe what this tag is about."
 msgstr "Décrire ce sur quoi porte ce mot-clé."
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:383
+#: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:480
 msgctxt "field_instance:tags-name_field:description"
 msgid "The name or title of this tag."
 msgstr "Le nom ou le titre de ce mot-clé."

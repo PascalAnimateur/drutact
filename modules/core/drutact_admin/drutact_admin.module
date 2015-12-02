@@ -59,3 +59,68 @@ function drutact_admin_form_taxonomy_form_term_alter(&$form, &$form_state, $form
     }
   }
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function drutact_admin_form_views_form_administration_files_system_1_alter(&$form, &$form_state, $form_id) {
+  // Assign files to group.
+  if ($form_state['step'] == 'views_bulk_operations_config_form') {
+    if (isset($form['parameter']['group']['settings']['group'])) {
+      $form['parameter']['group']['settings']['group']['#type'] = 'select';
+      $form['parameter']['group']['settings']['group']['#options'] = _drutact_group_select_group_options();
+      $form['parameter']['group']['settings']['group']['#description'] = t('Select the group to which the file(s) will be assigned.');
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function drutact_admin_form_views_form_administration_nodes_system_1_alter(&$form, &$form_state, $form_id) {
+  // Assign nodes to group.
+  if ($form_state['step'] == 'views_bulk_operations_config_form') {
+    if (isset($form['parameter']['group']['settings']['group'])) {
+      $form['parameter']['group']['settings']['group']['#type'] = 'select';
+      $form['parameter']['group']['settings']['group']['#options'] = _drutact_group_select_group_options();
+      $form['parameter']['group']['settings']['group']['#description'] = t('Select the group to which the file(s) will be assigned.');
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function drutact_admin_form_views_form_administration_users_system_1_alter(&$form, &$form_state, $form_id) {
+  // Subscribe users to group.
+  if ($form_state['step'] == 'views_bulk_operations_config_form') {
+    if (isset($form['parameter']['group']['settings']['group'])) {
+      $form['parameter']['group']['settings']['group']['#type'] = 'select';
+      $form['parameter']['group']['settings']['group']['#options'] = _drutact_group_select_group_options();
+      $form['parameter']['group']['settings']['group']['#description'] = t('Select the group to which the user(s) will be subscribed.');
+    }
+  }
+}
+
+/**
+ * Helper function to generate group selection options.
+ */
+function _drutact_group_select_group_options() {
+  global $user;
+  $options = array();
+
+  // Get groups of the current user.
+  $types = og_get_all_group_entity();
+  foreach ($types as $entity_type => $name) {
+    $gids = og_get_all_group($entity_type);
+    $entities = entity_load($entity_type, $gids);
+    foreach ($entities as $entity) {
+      list($gid) = entity_extract_ids($entity_type, $entity);
+      if (og_user_access('node', $gid, 'manage members', $user)) {
+        $options[$gid] = check_plain(t(entity_label($entity_type, $entity)));
+      }
+    }
+  }
+
+  return $options;
+}

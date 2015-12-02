@@ -15,30 +15,30 @@ function drutact_media_field_default_field_instances() {
     'bundle' => 'audio',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'A field replacing file name.',
+    'description' => 'The internal file name can be overridden to display a title allowing the use of special characters and no file extension.',
     'display' => array(
       'default' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => -50,
       ),
       'preview' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => -50,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => -50,
       ),
     ),
     'entity_type' => 'file',
     'field_name' => 'filename_field',
-    'label' => 'File name',
+    'label' => 'Audio title',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -66,35 +66,124 @@ function drutact_media_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'file-audio-og_group_ref'.
+  $field_instances['file-audio-og_group_ref'] = array(
+    'bundle' => 'audio',
+    'default_value' => NULL,
+    'default_value_function' => 'entityreference_prepopulate_field_default_value',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 20,
+      ),
+      'preview' => array(
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 20,
+      ),
+      'teaser' => array(
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 20,
+      ),
+    ),
+    'entity_type' => 'file',
+    'field_name' => 'og_group_ref',
+    'label' => 'Groups audience',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'og_widget' => array(
+          'access_override' => 0,
+          'admin' => array(
+            'widget_type' => 'options_buttons',
+          ),
+          'default' => array(
+            'widget_type' => 'options_buttons',
+          ),
+          'status' => TRUE,
+        ),
+        'prepopulate' => array(
+          'action' => 'none',
+          'action_on_edit' => 0,
+          'fallback' => 'none',
+          'providers' => array(
+            'og_context' => 0,
+            'url' => 1,
+          ),
+          'skip_perm' => 0,
+          'status' => 1,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+      'wysiwyg_override' => 1,
+    ),
+    'view modes' => array(
+      'full' => array(
+        'custom settings' => FALSE,
+        'label' => 'Full',
+        'type' => 'og_list_default',
+      ),
+      'teaser' => array(
+        'custom settings' => FALSE,
+        'label' => 'Teaser',
+        'type' => 'og_list_default',
+      ),
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'og',
+      'settings' => array(),
+      'type' => 'og_complex',
+      'weight' => 20,
+    ),
+  );
+
   // Exported field_instance: 'file-document-filename_field'.
   $field_instances['file-document-filename_field'] = array(
     'bundle' => 'document',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'A field replacing file name.',
+    'description' => 'The internal file name can be overridden to display a title allowing the use of special characters and no file extension.',
     'display' => array(
       'default' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => -50,
       ),
       'preview' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => -50,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => -50,
       ),
     ),
     'entity_type' => 'file',
     'field_name' => 'filename_field',
-    'label' => 'File name',
+    'label' => 'Document title',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -119,6 +208,95 @@ function drutact_media_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => -50,
+    ),
+  );
+
+  // Exported field_instance: 'file-document-og_group_ref'.
+  $field_instances['file-document-og_group_ref'] = array(
+    'bundle' => 'document',
+    'default_value' => NULL,
+    'default_value_function' => 'entityreference_prepopulate_field_default_value',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 20,
+      ),
+      'preview' => array(
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 20,
+      ),
+      'teaser' => array(
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 20,
+      ),
+    ),
+    'entity_type' => 'file',
+    'field_name' => 'og_group_ref',
+    'label' => 'Groups audience',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'og_widget' => array(
+          'access_override' => 0,
+          'admin' => array(
+            'widget_type' => 'options_buttons',
+          ),
+          'default' => array(
+            'widget_type' => 'options_buttons',
+          ),
+          'status' => TRUE,
+        ),
+        'prepopulate' => array(
+          'action' => 'none',
+          'action_on_edit' => 0,
+          'fallback' => 'none',
+          'providers' => array(
+            'og_context' => 0,
+            'url' => 1,
+          ),
+          'skip_perm' => 0,
+          'status' => 1,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+      'wysiwyg_override' => 1,
+    ),
+    'view modes' => array(
+      'full' => array(
+        'custom settings' => FALSE,
+        'label' => 'Full',
+        'type' => 'og_list_default',
+      ),
+      'teaser' => array(
+        'custom settings' => FALSE,
+        'label' => 'Teaser',
+        'type' => 'og_list_default',
+      ),
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'og',
+      'settings' => array(),
+      'type' => 'og_complex',
+      'weight' => 20,
     ),
   );
 
@@ -156,12 +334,13 @@ function drutact_media_field_default_field_instances() {
     ),
     'entity_type' => 'file',
     'field_name' => 'field_file_image_alt_text',
-    'label' => 'Alt Text',
+    'label' => 'Alternative text',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
+      'wysiwyg_override' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -179,7 +358,7 @@ function drutact_media_field_default_field_instances() {
     'bundle' => 'image',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability.',
+    'description' => 'This text is used in the tool tip when a user hovers their mouse over the image. Adding an image description makes it easier to understand the context of an image and improves usability.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -197,23 +376,24 @@ function drutact_media_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 11,
       ),
     ),
     'entity_type' => 'file',
     'field_name' => 'field_file_image_title_text',
-    'label' => 'Title Text',
+    'label' => 'Image description',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
+      'wysiwyg_override' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -222,7 +402,7 @@ function drutact_media_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -231,30 +411,30 @@ function drutact_media_field_default_field_instances() {
     'bundle' => 'image',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'A field replacing file name.',
+    'description' => 'The internal file name can be overridden to display a title allowing the use of special characters and no file extension.',
     'display' => array(
       'default' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => -50,
       ),
       'preview' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => -50,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => -50,
       ),
     ),
     'entity_type' => 'file',
     'field_name' => 'filename_field',
-    'label' => 'File name',
+    'label' => 'Image title',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -279,6 +459,95 @@ function drutact_media_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => -50,
+    ),
+  );
+
+  // Exported field_instance: 'file-image-og_group_ref'.
+  $field_instances['file-image-og_group_ref'] = array(
+    'bundle' => 'image',
+    'default_value' => NULL,
+    'default_value_function' => 'entityreference_prepopulate_field_default_value',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 20,
+      ),
+      'preview' => array(
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 20,
+      ),
+      'teaser' => array(
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 20,
+      ),
+    ),
+    'entity_type' => 'file',
+    'field_name' => 'og_group_ref',
+    'label' => 'Groups audience',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'og_widget' => array(
+          'access_override' => 0,
+          'admin' => array(
+            'widget_type' => 'options_buttons',
+          ),
+          'default' => array(
+            'widget_type' => 'options_buttons',
+          ),
+          'status' => TRUE,
+        ),
+        'prepopulate' => array(
+          'action' => 'none',
+          'action_on_edit' => 0,
+          'fallback' => 'none',
+          'providers' => array(
+            'og_context' => 0,
+            'url' => 1,
+          ),
+          'skip_perm' => 0,
+          'status' => 1,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+      'wysiwyg_override' => 1,
+    ),
+    'view modes' => array(
+      'full' => array(
+        'custom settings' => FALSE,
+        'label' => 'Full',
+        'type' => 'og_list_default',
+      ),
+      'teaser' => array(
+        'custom settings' => FALSE,
+        'label' => 'Teaser',
+        'type' => 'og_list_default',
+      ),
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'og',
+      'settings' => array(),
+      'type' => 'og_complex',
+      'weight' => 20,
     ),
   );
 
@@ -287,30 +556,30 @@ function drutact_media_field_default_field_instances() {
     'bundle' => 'video',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'A field replacing file name.',
+    'description' => 'The internal file name can be overridden to display a title allowing the use of special characters and no file extension.',
     'display' => array(
       'default' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => -50,
       ),
       'preview' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => -50,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => -50,
       ),
     ),
     'entity_type' => 'file',
     'field_name' => 'filename_field',
-    'label' => 'File name',
+    'label' => 'Video title',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -338,22 +607,115 @@ function drutact_media_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'file-video-og_group_ref'.
+  $field_instances['file-video-og_group_ref'] = array(
+    'bundle' => 'video',
+    'default_value' => NULL,
+    'default_value_function' => 'entityreference_prepopulate_field_default_value',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 20,
+      ),
+      'preview' => array(
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 20,
+      ),
+      'teaser' => array(
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 20,
+      ),
+    ),
+    'entity_type' => 'file',
+    'field_name' => 'og_group_ref',
+    'label' => 'Groups audience',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'og_widget' => array(
+          'access_override' => 0,
+          'admin' => array(
+            'widget_type' => 'options_buttons',
+          ),
+          'default' => array(
+            'widget_type' => 'options_buttons',
+          ),
+          'status' => TRUE,
+        ),
+        'prepopulate' => array(
+          'action' => 'none',
+          'action_on_edit' => 0,
+          'fallback' => 'none',
+          'providers' => array(
+            'og_context' => 0,
+            'url' => 1,
+          ),
+          'skip_perm' => 0,
+          'status' => 1,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+      'wysiwyg_override' => 1,
+    ),
+    'view modes' => array(
+      'full' => array(
+        'custom settings' => FALSE,
+        'label' => 'Full',
+        'type' => 'og_list_default',
+      ),
+      'teaser' => array(
+        'custom settings' => FALSE,
+        'label' => 'Teaser',
+        'type' => 'og_list_default',
+      ),
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'og',
+      'settings' => array(),
+      'type' => 'og_complex',
+      'weight' => 20,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
 
   // Translatables created/updated by the Localize Fields (localize_fields) module.
-  t('File name', array(), array('context' => 'field_instance:audio-filename_field:label'));
-  t('A field replacing file name.', array(), array('context' => 'field_instance:audio-filename_field:description'));
-  t('File name', array(), array('context' => 'field_instance:document-filename_field:label'));
-  t('A field replacing file name.', array(), array('context' => 'field_instance:document-filename_field:description'));
-  t('Alt Text', array(), array('context' => 'field_instance:image-field_file_image_alt_text:label'));
+  t('Audio title', array(), array('context' => 'field_instance:audio-filename_field:label'));
+  t('The internal file name can be overridden to display a title allowing the use of special characters and no file extension.', array(), array('context' => 'field_instance:audio-filename_field:description'));
+  t('Groups audience', array(), array('context' => 'field_instance:audio-og_group_ref:label'));
+  t('Document title', array(), array('context' => 'field_instance:document-filename_field:label'));
+  t('The internal file name can be overridden to display a title allowing the use of special characters and no file extension.', array(), array('context' => 'field_instance:document-filename_field:description'));
+  t('Groups audience', array(), array('context' => 'field_instance:document-og_group_ref:label'));
+  t('Alternative text', array(), array('context' => 'field_instance:image-field_file_image_alt_text:label'));
   t('Alternative text is used by screen readers, search engines, and when the image cannot be loaded. By adding alt text you improve accessibility and search engine optimization.', array(), array('context' => 'field_instance:image-field_file_image_alt_text:description'));
-  t('Title Text', array(), array('context' => 'field_instance:image-field_file_image_title_text:label'));
-  t('Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability.', array(), array('context' => 'field_instance:image-field_file_image_title_text:description'));
-  t('File name', array(), array('context' => 'field_instance:image-filename_field:label'));
-  t('A field replacing file name.', array(), array('context' => 'field_instance:image-filename_field:description'));
-  t('File name', array(), array('context' => 'field_instance:video-filename_field:label'));
-  t('A field replacing file name.', array(), array('context' => 'field_instance:video-filename_field:description'));
+  t('Image description', array(), array('context' => 'field_instance:image-field_file_image_title_text:label'));
+  t('This text is used in the tool tip when a user hovers their mouse over the image. Adding an image description makes it easier to understand the context of an image and improves usability.', array(), array('context' => 'field_instance:image-field_file_image_title_text:description'));
+  t('Image title', array(), array('context' => 'field_instance:image-filename_field:label'));
+  t('The internal file name can be overridden to display a title allowing the use of special characters and no file extension.', array(), array('context' => 'field_instance:image-filename_field:description'));
+  t('Groups audience', array(), array('context' => 'field_instance:image-og_group_ref:label'));
+  t('Video title', array(), array('context' => 'field_instance:video-filename_field:label'));
+  t('The internal file name can be overridden to display a title allowing the use of special characters and no file extension.', array(), array('context' => 'field_instance:video-filename_field:description'));
+  t('Groups audience', array(), array('context' => 'field_instance:video-og_group_ref:label'));
 
 
   return $field_instances;

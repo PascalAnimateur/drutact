@@ -1,5 +1,116 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the DruTACT Group feature.
  */
+
+include_once 'drutact_group.features.inc';
+
+/**
+ * Implements hook_form_alter().
+ */
+function drutact_group_form_alter(&$form, &$form_state, $form_id)
+{
+  if (isset($form['og_group_ref'])) {
+    if (!isset($form['additional_settings'])) {
+      $form['additional_settings'] = array(
+        '#type' => 'vertical_tabs',
+        '#weight' => 99,
+      );
+    }
+    // Move Group audience to Group access vertical tab.
+    $form['group_access_tab'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('Group access'),
+      '#collapsible' => TRUE,
+      '#collapsed' => TRUE,
+      '#tree' => TRUE,
+      '#group' => 'additional_settings',
+      '#weight' => 99,
+      'og_group_ref' => $form['og_group_ref'],
+    );
+    $form['og_group_ref']['#access'] = FALSE;
+    // Move Group visibility to Group access vertical tab.
+    if (isset($form['group_content_access'])) {
+      $form['group_access_tab']['group_content_access'] = $form['group_content_access'];
+      $form['group_content_access']['#access'] = FALSE;
+    }
+    // Replicate og_complex_widget_after_build on og_group_ref.
+    unset($form['group_access_tab']['og_group_ref'][LANGUAGE_NONE]['#theme']);
+    unset($form['group_access_tab']['og_group_ref'][LANGUAGE_NONE]['add_more']);
+    unset($form['group_access_tab']['og_group_ref'][LANGUAGE_NONE][0]['_weight']);
+    // Add custom validation callback needed to fix form values.
+    if (isset($form['#node_edit_form']) || $form_id == 'file_entity_add_upload') {
+      array_unshift($form['#validate'], '_drutact_group_access_tab_form_validate');
+    } else if($form_id == 'file_entity_edit') {
+      array_unshift($form['actions']['submit']['#validate'], '_drutact_group_access_tab_form_validate');
+    }
+  }
+
+  if (isset($form['membership_fields']['og_membership_request'])) {
+    // Hide Request message from group subscription form.
+    $form['membership_fields']['og_membership_request']['#access'] = FALSE;
+  }
+}
+
+/**
+ * Validation callback needed for group content node add/edit form.
+ */
+function _drutact_group_access_tab_form_validate($form, &$form_state) {
+  // Copy og_group_ref value to its original location
+  if (isset($form_state['values']['group_access_tab']['og_group_ref'])) {
+    $form_state['values']['og_group_ref'] = $form_state['values']['group_access_tab']['og_group_ref'];
+    unset($form_state['values']['group_access_tab']['og_group_ref']);
+  }
+  // Copy group_content_access value to its original location
+  if (isset($form_state['values']['group_access_tab']['group_content_access'])) {
+    $form_state['values']['group_content_access'] = $form_state['values']['group_access_tab']['group_content_access'];
+    unset($form_state['values']['group_access_tab']['group_content_access']);
+  }
+
+  return $form;
+}
+
+/**
+ * Implements hook_post_features_rebuild().
+ */
+function drutact_group_post_features_rebuild($component) {
+  if ($component == 'ctools') {
+    // Default content type permissions.
+    _drutact_default_content_type_permissions('group');
+  }
+  if ($component == 'field_instance') {
+    // Group membership user field instance.
+    $instance_info = field_info_instance('user', 'og_user_node', 'user');
+    $instance_info['widget']['weight'] = 20;
+    $instance_info['settings']['behaviors']['og_widget']['default']['widget_type'] = 'options_buttons';
+    $instance_info['settings']['behaviors']['og_widget']['admin']['widget_type'] = 'options_buttons';
+    $instance_info['display']['default']['label'] = 'inline';
+    $instance_info['display']['default']['module'] = 'entityreference';
+    $instance_info['display']['default']['type'] = 'entityreference_label';
+    $instance_info['display']['default']['weight'] = 20;
+    $instance_info['display']['default']['settings'] = array('link' => 1);
+    field_update_instance($instance_info);
+  }
+  if ($component == 'rules_config') {
+    // Enable default permissions.
+    _drutact_default_module_permissions(array(
+      DRUPAL_ANONYMOUS_RID => array(),
+      DRUPAL_AUTHENTICATED_RID => array(),
+      DRUTACT_EDITOR_RID => array(
+        // Rules
+        'use Rules component rules_file_assign_to_group',
+        'use Rules component rules_node_assign_to_group',
+        'use Rules component rules_user_subscribe_to_group',
+      ),
+      DRUTACT_ADMINISTRATOR_RID => array(
+        // Organic group
+        'administer group',
+        // Rules
+        'use Rules component rules_file_assign_to_group',
+        'use Rules component rules_node_assign_to_group',
+        'use Rules component rules_user_subscribe_to_group',
+      )
+    ));
+  }
+}

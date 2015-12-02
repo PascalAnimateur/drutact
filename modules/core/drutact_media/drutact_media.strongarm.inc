@@ -15,11 +15,30 @@ function drutact_media_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_file__audio';
   $strongarm->value = array(
-    'view_modes' => array(),
+    'view_modes' => array(
+      'teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'preview' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
     'extra_fields' => array(
       'form' => array(
         'preview' => array(
           'weight' => '-5',
+        ),
+        'metatags' => array(
+          'weight' => '40',
         ),
       ),
       'display' => array(
@@ -29,6 +48,10 @@ function drutact_media_strongarm() {
             'visible' => TRUE,
           ),
           'preview' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'default' => array(
             'weight' => '0',
             'visible' => TRUE,
           ),
@@ -64,6 +87,9 @@ function drutact_media_strongarm() {
       'form' => array(
         'preview' => array(
           'weight' => '-5',
+        ),
+        'metatags' => array(
+          'weight' => '40',
         ),
       ),
       'display' => array(
@@ -116,6 +142,9 @@ function drutact_media_strongarm() {
         'preview' => array(
           'weight' => '-5',
         ),
+        'metatags' => array(
+          'weight' => '40',
+        ),
       ),
       'display' => array(
         'file' => array(
@@ -163,6 +192,9 @@ function drutact_media_strongarm() {
       'form' => array(
         'preview' => array(
           'weight' => '-5',
+        ),
+        'metatags' => array(
+          'weight' => '40',
         ),
       ),
       'display' => array(
@@ -432,6 +464,41 @@ function drutact_media_strongarm() {
   $strongarm->name = 'metatag_enable_file__video';
   $strongarm->value = 1;
   $export['metatag_enable_file__video'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_file_audio_pattern';
+  $strongarm->value = '';
+  $export['pathauto_file_audio_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_file_document_pattern';
+  $strongarm->value = '';
+  $export['pathauto_file_document_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_file_image_pattern';
+  $strongarm->value = '';
+  $export['pathauto_file_image_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_file_pattern';
+  $strongarm->value = 'files/[file:filename-field]';
+  $export['pathauto_file_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_file_video_pattern';
+  $strongarm->value = '';
+  $export['pathauto_file_video_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

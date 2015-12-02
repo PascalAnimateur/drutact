@@ -56,6 +56,23 @@ function drutact_node_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_field_library__group_content';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_field_library__group_content'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_field_library__node_title';
   $strongarm->value = array(
     'view_modes' => array(
@@ -134,22 +151,29 @@ function drutact_node_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'metatag_enable_taxonomy_term';
-  $strongarm->value = TRUE;
+  $strongarm->value = 1;
   $export['metatag_enable_taxonomy_term'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'metatag_enable_taxonomy_term__sections';
-  $strongarm->value = TRUE;
+  $strongarm->value = 1;
   $export['metatag_enable_taxonomy_term__sections'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'metatag_enable_taxonomy_term__tags';
-  $strongarm->value = TRUE;
+  $strongarm->value = 1;
   $export['metatag_enable_taxonomy_term__tags'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_pattern';
+  $strongarm->value = 'content/[node:title-field]';
+  $export['pathauto_node_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

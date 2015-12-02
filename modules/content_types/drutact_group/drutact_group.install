@@ -1,0 +1,30 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for DruTACT Group.
+ */
+
+// Default content type permissions need to be set in hook_post_features_rebuild().
+
+function drutact_group_install() {
+    // Enable default permissions.
+  _drutact_default_module_permissions(array(
+    DRUPAL_ANONYMOUS_RID => array(),
+    DRUPAL_AUTHENTICATED_RID => array(),
+    DRUTACT_EDITOR_RID => array(),
+    DRUTACT_ADMINISTRATOR_RID => array(
+      // Organic group
+      'administer group',
+    ),
+  ));
+
+  // Default members enabled roles (authenticated, editor, administrator).
+  variable_set('og_default_members_enabled_roles', array(
+    DRUPAL_AUTHENTICATED_RID => '2',
+    DRUTACT_EDITOR_RID => '200153887',
+    DRUTACT_ADMINISTRATOR_RID => '30037204',
+  ));
+
+  // Rebuild node access permissions.
+  node_access_rebuild(TRUE);
+}

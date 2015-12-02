@@ -11,12 +11,6 @@ projects[og_file_entity][download][url] = http://git.drupal.org/sandbox/jeffschu
 projects[og_file_entity][download][branch] = 7.x-1.x
 projects[og_file_entity][patch][2112373] = https://www.drupal.org/files/issues/og_file_entity-add_view_access-2112373.patch
 
-; Group contact
-projects[group_contact][type] = module
-projects[group_contact][download][type] = git
-projects[group_contact][download][url] = http://git.drupal.org/sandbox/PascalAnimateur/2554115.git
-projects[group_contact][download][branch] = 7.x-1.x
-
 ; Manager change
 projects[og_manager_change][type] = module
 

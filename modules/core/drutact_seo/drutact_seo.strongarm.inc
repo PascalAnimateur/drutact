@@ -94,41 +94,6 @@ function drutact_seo_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_file_audio_pattern';
-  $strongarm->value = '';
-  $export['pathauto_file_audio_pattern'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_file_document_pattern';
-  $strongarm->value = '';
-  $export['pathauto_file_document_pattern'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_file_image_pattern';
-  $strongarm->value = '';
-  $export['pathauto_file_image_pattern'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_file_pattern';
-  $strongarm->value = 'files/[file:filename-field]';
-  $export['pathauto_file_pattern'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_file_video_pattern';
-  $strongarm->value = '';
-  $export['pathauto_file_video_pattern'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_ignore_words';
   $strongarm->value = '';
   $export['pathauto_ignore_words'] = $strongarm;
@@ -146,13 +111,6 @@ function drutact_seo_strongarm() {
   $strongarm->name = 'pathauto_max_length';
   $strongarm->value = '100';
   $export['pathauto_max_length'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_node_pattern';
-  $strongarm->value = 'content/[node:title-field]';
-  $export['pathauto_node_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

@@ -97,6 +97,101 @@ function drutact_node_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'field_library-group_content-group_content_access'.
+  $field_instances['field_library-group_content-group_content_access'] = array(
+    'bundle' => 'group_content',
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 21,
+      ),
+    ),
+    'entity_type' => 'field_library',
+    'field_name' => 'group_content_access',
+    'label' => 'Group content visibility',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 21,
+    ),
+  );
+
+  // Exported field_instance: 'field_library-group_content-og_group_ref'.
+  $field_instances['field_library-group_content-og_group_ref'] = array(
+    'bundle' => 'group_content',
+    'default_value' => NULL,
+    'default_value_function' => 'entityreference_prepopulate_field_default_value',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 20,
+      ),
+    ),
+    'entity_type' => 'field_library',
+    'field_name' => 'og_group_ref',
+    'label' => 'Groups audience',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'og_widget' => array(
+          'access_override' => 0,
+          'admin' => array(
+            'widget_type' => 'select2widgetajax',
+          ),
+          'default' => array(
+            'widget_type' => 'options_buttons',
+          ),
+          'status' => TRUE,
+        ),
+        'prepopulate' => array(
+          'action' => 'disable',
+          'action_on_edit' => 1,
+          'fallback' => 'none',
+          'providers' => array(
+            'og_context' => 0,
+            'url' => 1,
+          ),
+          'skip_perm' => 0,
+          'status' => 1,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'og',
+      'settings' => array(),
+      'type' => 'og_complex',
+      'weight' => 20,
+    ),
+  );
+
   // Exported field_instance: 'field_library-node_title-title_field'.
   $field_instances['field_library-node_title-title_field'] = array(
     'bundle' => 'node_title',
@@ -370,6 +465,8 @@ function drutact_node_field_default_field_instances() {
   t('Assign this content to specific section(s) of the site.', array(), array('context' => 'field_instance:classification-field_sections:description'));
   t('Tags', array(), array('context' => 'field_instance:classification-field_tags:label'));
   t('Enter individual keywords to describe this content\'s topic.', array(), array('context' => 'field_instance:classification-field_tags:description'));
+  t('Group content visibility', array(), array('context' => 'field_instance:group_content-group_content_access:label'));
+  t('Groups audience', array(), array('context' => 'field_instance:group_content-og_group_ref:label'));
   t('Title', array(), array('context' => 'field_instance:node_title-title_field:label'));
   t('Image', array(), array('context' => 'field_instance:vignette-field_image:label'));
   t('Image accompanying the content.', array(), array('context' => 'field_instance:vignette-field_image:description'));

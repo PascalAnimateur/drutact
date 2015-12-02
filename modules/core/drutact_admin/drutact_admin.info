@@ -110,6 +110,7 @@ features[variable][] = vertical_tabs_responsive_path_whitelist
 features[variable][] = vertical_tabs_responsive_per_role
 features[variable][] = vertical_tabs_responsive_vt_width
 features[views_view][] = administration_files
+features[views_view][] = administration_groups
 features[views_view][] = administration_nodes
 features[views_view][] = administration_users
 features_banish[variable][] = entityreference:base-tables

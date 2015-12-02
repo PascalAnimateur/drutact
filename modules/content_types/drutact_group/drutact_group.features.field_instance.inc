@@ -1,21 +1,21 @@
 <?php
 /**
  * @file
- * drutact_page.features.field_instance.inc
+ * drutact_group.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function drutact_page_field_default_field_instances() {
+function drutact_group_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-page-body'.
-  $field_instances['node-page-body'] = array(
-    'bundle' => 'page',
+  // Exported field_instance: 'node-group-body'.
+  $field_instances['node-group-body'] = array(
+    'bundle' => 'group',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The body of this page. Use the \'Edit summary\' link above to set a shorter, text-only version that will be used to describe the page when it\'s displayed as a teaser (i.e. in a list on the front page).',
+    'description' => 'The description of this group. Use the \'Edit summary\' link above to set a shorter, text-only version that will be used to describe the content when it\'s displayed as a teaser (i.e. in a list on the front page).',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -36,7 +36,7 @@ function drutact_page_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'body',
-    'label' => 'Body',
+    'label' => 'Description',
     'required' => 0,
     'settings' => array(
       'display_summary' => 1,
@@ -61,9 +61,9 @@ function drutact_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_image'.
-  $field_instances['node-page-field_image'] = array(
-    'bundle' => 'page',
+  // Exported field_instance: 'node-group-field_image'.
+  $field_instances['node-group-field_image'] = array(
+    'bundle' => 'group',
     'deleted' => 0,
     'description' => 'Image accompanying the content.',
     'display' => array(
@@ -129,9 +129,9 @@ function drutact_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_sections'.
-  $field_instances['node-page-field_sections'] = array(
-    'bundle' => 'page',
+  // Exported field_instance: 'node-group-field_sections'.
+  $field_instances['node-group-field_sections'] = array(
+    'bundle' => 'group',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Assign this content to specific section(s) of the site.',
@@ -188,9 +188,9 @@ function drutact_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_tags'.
-  $field_instances['node-page-field_tags'] = array(
-    'bundle' => 'page',
+  // Exported field_instance: 'node-group-field_tags'.
+  $field_instances['node-group-field_tags'] = array(
+    'bundle' => 'group',
     'deleted' => 0,
     'description' => 'Enter individual keywords to describe this content\'s topic.',
     'display' => array(
@@ -225,7 +225,7 @@ function drutact_page_field_default_field_instances() {
           'allow_new' => 1,
           'match_operator' => 'STARTS_WITH',
           'min_char' => 1,
-          'separator' => '|',
+          'separator' => ',',
           'set_level' => 0,
           'width' => '100%',
         ),
@@ -235,34 +235,33 @@ function drutact_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-group_content_access'.
-  $field_instances['node-page-group_content_access'] = array(
-    'bundle' => 'page',
+  // Exported field_instance: 'node-group-group_access'.
+  $field_instances['node-group-group_access'] = array(
+    'bundle' => 'group',
     'default_value' => array(
       0 => array(
-        'value' => 1,
+        'value' => 0,
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Determine if this group will be visible to everyone (public) or only to its members (secret).',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 13,
-      ),
-      'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 21,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'group_content_access',
-    'label' => 'Group content visibility',
+    'field_name' => 'group_access',
+    'label' => 'Group visibility',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -271,73 +270,53 @@ function drutact_page_field_default_field_instances() {
     'view modes' => array(
       'full' => array(
         'label' => 'above',
-        'type' => 'list_default',
+        'type' => 'options_onoff',
       ),
       'teaser' => array(
         'label' => 'above',
-        'type' => 'list_default',
+        'type' => 'options_onoff',
       ),
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'options',
       'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 21,
+      'type' => 'options_buttons',
+      'weight' => -6,
     ),
     'widget_type' => 'options_select',
   );
 
-  // Exported field_instance: 'node-page-og_group_ref'.
-  $field_instances['node-page-og_group_ref'] = array(
-    'bundle' => 'page',
-    'default_value' => NULL,
-    'default_value_function' => 'entityreference_prepopulate_field_default_value',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'og_ui',
-        'settings' => array(),
-        'type' => 'og_list_default',
-        'weight' => 12,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+  // Exported field_instance: 'node-group-group_group'.
+  $field_instances['node-group-group_group'] = array(
+    'bundle' => 'group',
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
       ),
     ),
-    'entity_type' => 'node',
-    'field_name' => 'og_group_ref',
-    'label' => 'Groups audience',
-    'required' => 0,
-    'settings' => array(
-      'behaviors' => array(
-        'og_widget' => array(
-          'access_override' => 0,
-          'admin' => array(
-            'widget_type' => 'options_buttons',
-          ),
-          'default' => array(
-            'widget_type' => 'options_buttons',
-          ),
-          'status' => TRUE,
-        ),
-        'prepopulate' => array(
-          'action' => 'none',
-          'action_on_edit' => 0,
-          'fallback' => 'none',
-          'providers' => array(
-            'og_context' => 0,
-            'url' => 1,
-          ),
-          'skip_perm' => 0,
-          'status' => 1,
-        ),
+    'deleted' => 0,
+    'description' => 'Determine if this is an OG group.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
       ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
+    ),
+    'display_label' => 1,
+    'entity_type' => 'node',
+    'field_name' => 'group_group',
+    'label' => 'Group',
+    'required' => FALSE,
+    'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
@@ -345,29 +324,31 @@ function drutact_page_field_default_field_instances() {
       'full' => array(
         'custom settings' => FALSE,
         'label' => 'Full',
-        'type' => 'og_list_default',
+        'type' => 'og_group_subscribe',
       ),
       'teaser' => array(
         'custom settings' => FALSE,
         'label' => 'Teaser',
-        'type' => 'og_list_default',
+        'type' => 'og_group_subscribe',
       ),
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'og',
-      'settings' => array(),
-      'type' => 'og_complex',
-      'weight' => 20,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 0,
+        'og_hide' => TRUE,
+      ),
+      'type' => 'options_onoff',
+      'weight' => -5,
     ),
   );
 
-  // Exported field_instance: 'node-page-title_field'.
-  $field_instances['node-page-title_field'] = array(
-    'bundle' => 'page',
+  // Exported field_instance: 'node-group-title_field'.
+  $field_instances['node-group-title_field'] = array(
+    'bundle' => 'group',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The title of this page.',
+    'description' => 'The title or name of this group.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -415,18 +396,20 @@ function drutact_page_field_default_field_instances() {
   // Included for use with string extractors like potx.
 
   // Translatables created/updated by the Localize Fields (localize_fields) module.
-  t('Body', array(), array('context' => 'field_instance:page-body:label'));
-  t('The body of this page. Use the \'Edit summary\' link above to set a shorter, text-only version that will be used to describe the page when it\'s displayed as a teaser (i.e. in a list on the front page).', array(), array('context' => 'field_instance:page-body:description'));
-  t('Image', array(), array('context' => 'field_instance:page-field_image:label'));
-  t('Image accompanying the content.', array(), array('context' => 'field_instance:page-field_image:description'));
-  t('Section(s)', array(), array('context' => 'field_instance:page-field_sections:label'));
-  t('Assign this content to specific section(s) of the site.', array(), array('context' => 'field_instance:page-field_sections:description'));
-  t('Tags', array(), array('context' => 'field_instance:page-field_tags:label'));
-  t('Enter individual keywords to describe this content\'s topic.', array(), array('context' => 'field_instance:page-field_tags:description'));
-  t('Group content visibility', array(), array('context' => 'field_instance:page-group_content_access:label'));
-  t('Groups audience', array(), array('context' => 'field_instance:page-og_group_ref:label'));
-  t('Title', array(), array('context' => 'field_instance:page-title_field:label'));
-  t('The title of this page.', array(), array('context' => 'field_instance:page-title_field:description'));
+  t('Description', array(), array('context' => 'field_instance:group-body:label'));
+  t('The description of this group. Use the \'Edit summary\' link above to set a shorter, text-only version that will be used to describe the content when it\'s displayed as a teaser (i.e. in a list on the front page).', array(), array('context' => 'field_instance:group-body:description'));
+  t('Image', array(), array('context' => 'field_instance:group-field_image:label'));
+  t('Image accompanying the content.', array(), array('context' => 'field_instance:group-field_image:description'));
+  t('Section(s)', array(), array('context' => 'field_instance:group-field_sections:label'));
+  t('Assign this content to specific section(s) of the site.', array(), array('context' => 'field_instance:group-field_sections:description'));
+  t('Tags', array(), array('context' => 'field_instance:group-field_tags:label'));
+  t('Enter individual keywords to describe this content\'s topic.', array(), array('context' => 'field_instance:group-field_tags:description'));
+  t('Group visibility', array(), array('context' => 'field_instance:group-group_access:label'));
+  t('Determine if this group will be visible to everyone (public) or only to its members (secret).', array(), array('context' => 'field_instance:group-group_access:description'));
+  t('Group', array(), array('context' => 'field_instance:group-group_group:label'));
+  t('Determine if this is an OG group.', array(), array('context' => 'field_instance:group-group_group:description'));
+  t('Title', array(), array('context' => 'field_instance:group-title_field:label'));
+  t('The title or name of this group.', array(), array('context' => 'field_instance:group-title_field:description'));
 
 
   return $field_instances;
