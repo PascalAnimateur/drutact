@@ -1056,7 +1056,7 @@ function drutact_admin_views_default_views() {
       'empty_column' => 0,
     ),
     'title_field_et' => array(
-      'sortable' => 0,
+      'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '&nbsp;',
@@ -1075,7 +1075,7 @@ function drutact_admin_views_default_views() {
       'empty_column' => 0,
     ),
     'realname' => array(
-      'sortable' => 0,
+      'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',

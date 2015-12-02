@@ -112,6 +112,7 @@ features[views_view][] = administration_group_members
 features[views_view][] = administration_groups
 features[views_view][] = administration_nodes
 features[views_view][] = administration_users
+features_banish[variable][] = date_db_tz_support
 features_banish[variable][] = entityreference:base-tables
 features_banish[variable][] = maintenance_mode
 features_banish[variable][] = menu_default_active_menus
