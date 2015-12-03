@@ -27,7 +27,7 @@ function drutact_admin_features_banish_alter(&$banished) {
  */
 function drutact_admin_update_projects_alter(&$projects)
 {
-  // Disable checking for updates on all DruTACT modules.
+  // Disable checking for updates (drutact_*).
   foreach ($projects as $name => $project) {
     if (strpos($name, 'drutact_') !== FALSE) {
       unset($projects[$name]);

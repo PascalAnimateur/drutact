@@ -736,7 +736,7 @@ msgstr "Vos abonnements à des infolettres"
 
 #: profiles/drutact/modules/contrib/simplenews/simplenews.install:350;1083
 msgid "Newsletter issue"
-msgstr "Parution d'infolettre"
+msgstr "Parution d’infolettre"
 
 #: profiles/drutact/modules/contrib/simplenews/simplenews.install:352
 msgid "A newsletter issue to be sent to subscribed email addresses."
@@ -885,7 +885,7 @@ msgstr "Poids"
 #: profiles/drutact/modules/contrib/simplenews/includes/simplenews.admin.inc:412
 msgid "No newsletter categories. <a href=\"@link\">Add newsletter</a>."
 msgstr ""
-"Aucune catégorie d'infolettre. <a href=\"@link\">Ajouter une "
+"Aucune catégorie d’infolettre. <a href=\"@link\">Ajouter une "
 "infolettre</a>."
 
 #: profiles/drutact/modules/contrib/simplenews/includes/simplenews.admin.inc:438
@@ -1318,7 +1318,7 @@ msgstr "Régulation des tâches planifiées (cron)"
 #: profiles/drutact/modules/contrib/simplenews/includes/simplenews.admin.inc:1347
 msgid "Sets the numbers of newsletters sent per cron run. Failure to send will also be counted."
 msgstr ""
-"Définit le nombre d'infolettres envoyées à chaque exécution de la "
+"Définit le nombre d’infolettres envoyées à chaque exécution de la "
 "tâche planifiée (cron). Les échecs d’envoi seront également "
 "comptés."
 

@@ -74,6 +74,15 @@ function _drutact_newsletter_submit_simplenews_form_send_ready($form, &$form_sta
 }
 
 /**
+ * Implements hook_update_projects_alter().
+ */
+function drutact_newsletter_update_projects_alter(&$projects)
+{
+  // Disable checking for updates (simpenews).
+  unset($projects['simplenews']);
+}
+
+/**
  * Implements hook_post_features_rebuild().
  */
 function drutact_newsletter_post_features_rebuild($component) {
