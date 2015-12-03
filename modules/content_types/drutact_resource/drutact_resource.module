@@ -12,6 +12,6 @@ include_once 'drutact_resource.features.inc';
 function drutact_resource_post_features_rebuild($component) {
   if ($component == 'ctools') {
     // Default content permissions (resource).
-    _drutact_enable_content_type_permissions('resource');
+    _drutact_default_content_type_permissions('resource');
   }
 }
