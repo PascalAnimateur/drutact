@@ -28,6 +28,11 @@ projects[entityreference_prepopulate][type] = module
 ; Fast Permissions Administration
 projects[fpa][type] = module
 
+; Link
+projects[advanced_link][type] = module
+projects[link][type] = module
+projects[link][patch][2568981] = https://www.drupal.org/files/issues/link-add_url_description-2568981-2.patch
+
 ; Menu
 projects[menu_admin_per_menu][type] = module
 projects[menu_attributes][version] = 1.x-dev
@@ -39,6 +44,10 @@ projects[simplified_menu_admin][type] = module
 
 ; Module filter
 projects[module_filter][type] = module
+
+; Options
+projects[options_element][type] = module
+projects[select_or_other][type] = module
 
 ; Select2 Field Widget
 projects[select2widget][type] = module
