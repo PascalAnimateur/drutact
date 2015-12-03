@@ -15,6 +15,32 @@ $realm_variables = array();
   'date_views_day_format_with_year' => 'l, F j, Y',
   'date_views_week_format_without_year' => 'F j',
   'date_views_week_format_with_year' => 'F j, Y',
+  'simplenews_confirm_combined_body' => 'We have received a request for the following subscription changes for [simplenews-subscriber:mail] at [site:url]:
+
+[changes-list]
+
+To confirm please use the link below.
+
+[simplenews-subscriber:combined-url]',
+  'simplenews_confirm_combined_body_unchanged' => 'We have received a request for the following subscription changes for [simplenews-subscriber:mail] at [site:url]:
+
+[changes-list]
+
+No confirmation necessary because all requested changes equal the current state.',
+  'simplenews_confirm_combined_line_subscribe_subscribed' => 'Already subscribed to [simplenews-newsletter:name]',
+  'simplenews_confirm_combined_line_subscribe_unsubscribed' => 'Subscribe to [simplenews-newsletter:name]',
+  'simplenews_confirm_combined_line_unsubscribe_subscribed' => 'Unsubscribe from [simplenews-newsletter:name]',
+  'simplenews_confirm_combined_line_unsubscribe_unsubscribed' => 'Already unsubscribed from [simplenews-newsletter:name]',
+  'simplenews_confirm_combined_subject' => 'Confirmation for [site:name]',
+  'simplenews_confirm_subscribe_subject' => 'Confirmation for [simplenews-newsletter:name] from [site:name]',
+  'simplenews_confirm_subscribe_subscribed' => 'We have received a request to subscribe [simplenews-subscriber:mail] to the [simplenews-newsletter:name]  newsletter on [site:name] website at [site:url]. However, this email is already subscribed to this newsletter. If you intended to unsubscribe please visit our site: [site:url]',
+  'simplenews_confirm_subscribe_unsubscribed' => 'We have received a request to subscribe [simplenews-subscriber:mail] to the [simplenews-newsletter:name] newsletter on [site:name] website at [site:url]. To confirm please use the link below.
+
+[simplenews-subscriber:subscribe-url]',
+  'simplenews_confirm_unsubscribe_subscribed' => 'We have received a request to remove the [simplenews-subscriber:mail] from the [simplenews-newsletter:name] mailing list on [site:name] website at [site:url]. To confirm please use the link below.
+
+[simplenews-subscriber:unsubscribe-url]',
+  'simplenews_confirm_unsubscribe_unsubscribed' => 'We have received a request to remove the [simplenews-subscriber:mail] from the [simplenews-newsletter:name] mailing list on [site:name] website at [site:url]. However, this email is not subscribed to this mailing list. If you intended to subscribe please visit our site at [site:url]',
   'user_mail_cancel_confirm_body' => 'Hello [user:name],
 
 A request to cancel your account has been made at [site:name].

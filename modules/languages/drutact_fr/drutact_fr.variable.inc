@@ -16,6 +16,32 @@ $realm_variables = array();
   'date_views_week_format_without_year' => 'j F',
   'date_views_week_format_with_year' => 'j F, Y',
   'maintenance_mode_message' => 'Le site est en cours de maintenance. Nous serons de retour très bientôt. Merci de votre patience.',
+  'simplenews_confirm_combined_body' => 'Nous avons reçu une demande pour les changements d\'abonnement suivants pour le courriel [simplenews-subscriber:mail] sur le site [site:url]:
+
+[changes-list]
+
+Afin de confirmer ces changements, veuillez utiliser le lien ci-dessous.
+
+[simplenews-subscriber:combined-url]',
+  'simplenews_confirm_combined_body_unchanged' => 'Nous avons reçu une demande pour les changements d\'abonnement suivants pour le courriel [simplenews-subscriber:mail] sur le site [site:url]:
+
+[changes-list]
+
+Aucune confirmation n\'est requise puisque les changements demandés correspondent à l\'état actuel d\'abonnement.',
+  'simplenews_confirm_combined_line_subscribe_subscribed' => 'Déjà abonné(e) à [simplenews-newsletter:name]',
+  'simplenews_confirm_combined_line_subscribe_unsubscribed' => 'Abonnement à [simplenews-newsletter:name]',
+  'simplenews_confirm_combined_line_unsubscribe_subscribed' => 'Désabonnement de [simplenews-newsletter:name]',
+  'simplenews_confirm_combined_line_unsubscribe_unsubscribed' => 'Déjà désabonné(e) de [simplenews-newsletter:name]',
+  'simplenews_confirm_combined_subject' => 'Confirmation de [site:name]',
+  'simplenews_confirm_subscribe_subject' => 'Confirmation pour [simplenews-newsletter:name] depuis [site:name]',
+  'simplenews_confirm_subscribe_subscribed' => 'Nous avons reçu une demande d\'abonnement à l\'infolettre [simplenews-newsletter:name] sur le site [site:name] à l\'adresse [site:url] pour le courriel [simplenews-subscriber:mail]. Toutefois, ce courriel est déjà abonnée à l\'infolettre. Si vous désirez vous désabonner, veuillez visiter le site: [site:url]',
+  'simplenews_confirm_subscribe_unsubscribed' => 'Nous avons reçu une demande d\'abonnement à l\'infolettre [simplenews-newsletter:name] sur le site [site:name] à l\'adresse [site:url] pour le courriel [simplenews-subscriber:mail]. Afin de confirmer l\'abonnement, veuillez utiliser le lien ci-dessous:
+
+[simplenews-subscriber:subscribe-url]',
+  'simplenews_confirm_unsubscribe_subscribed' => 'Nous avons reçu une demande de désabonnement à l\'infolettre [simplenews-newsletter:name] sur le site [site:name] à l\'adresse [site:url] pour le courriel [simplenews-subscriber:mail]. Afin de confirmer le désabonnement, veuillez utiliser le lien ci-dessous:
+
+[simplenews-subscriber:unsubscribe-url]',
+  'simplenews_confirm_unsubscribe_unsubscribed' => 'Nous avons reçu une demande de désabonnement à l\'infolettre [simplenews-newsletter:name] sur le site [site:name] à l\'adresse [site:url] pour le courriel [simplenews-subscriber:mail]. Toutefois, ce courriel n\'est pas abonné à l\'infolettre. Si vous désirez vous abonner, veuillez visiter le site: [site:url]',
   'user_mail_cancel_confirm_body' => 'Bonjour [user:name],
 
 Une demande d\'annulation de votre compte a été faite sur le site [site:name].

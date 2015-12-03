@@ -381,19 +381,16 @@ function drutact_newsletter_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-
-  // Translatables created/updated by the Localize Fields (localize_fields) module.
-  t('Body', array(), array('context' => 'field_instance:simplenews-body:label'));
-  t('The body of this newsletter issue. Use the \'Edit summary\' link above to set a shorter, text-only version that will be used to describe the content when it\'s displayed as a teaser (i.e. in a list on the front page).', array(), array('context' => 'field_instance:simplenews-body:description'));
-  t('Recipient Handler', array(), array('context' => 'field_instance:simplenews-simplenews_handler:label'));
-  t('Recipient Handle Settings', array(), array('context' => 'field_instance:simplenews-simplenews_handler_settings:label'));
-  t('Status', array(), array('context' => 'field_instance:simplenews-simplenews_issue_status:label'));
-  t('Subscription lists', array(), array('context' => 'field_instance:simplenews-simplenews_newsletter:label'));
-  t('The subscription lists to which this newsletter issue will be sent.', array(), array('context' => 'field_instance:simplenews-simplenews_newsletter:description'));
-  t('Sent subscriber count', array(), array('context' => 'field_instance:simplenews-simplenews_sent_count:label'));
-  t('Title', array(), array('context' => 'field_instance:simplenews-title_field:label'));
-  t('The title of this newsletter issue.', array(), array('context' => 'field_instance:simplenews-title_field:description'));
-
+  t('Body');
+  t('Recipient Handle Settings');
+  t('Recipient Handler');
+  t('Sent subscriber count');
+  t('Status');
+  t('Subscription lists');
+  t('The body of this newsletter issue. Use the \'Edit summary\' link above to set a shorter, text-only version that will be used to describe the content when it\'s displayed as a teaser (i.e. in a list on the front page).');
+  t('The subscription lists to which this newsletter issue will be sent.');
+  t('The title of this newsletter issue.');
+  t('Title');
 
   return $field_instances;
 }
