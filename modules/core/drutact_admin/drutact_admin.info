@@ -60,6 +60,7 @@ features[variable][] = adminimal_admin_menu_jquery
 features[variable][] = adminimal_admin_menu_render
 features[variable][] = adminimal_admin_menu_slicknav
 features[variable][] = date_api_version
+features[variable][] = date_format_time
 features[variable][] = date_popup_timepicker
 features[variable][] = dblog_row_limit
 features[variable][] = maintenance_mode_message

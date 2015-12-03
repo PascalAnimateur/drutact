@@ -103,6 +103,13 @@ function drutact_admin_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_time';
+  $strongarm->value = 'G:i';
+  $export['date_format_time'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'date_popup_timepicker';
   $strongarm->value = 'wvega';
   $export['date_popup_timepicker'] = $strongarm;
