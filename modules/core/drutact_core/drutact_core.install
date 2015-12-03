@@ -45,7 +45,7 @@ function drutact_core_install() {
     ),
   ));
 
-  // Default multilingual variables.
+  // Default multilingual variables (date_views).
   _drutact_l10n_default_i18n_variables(array(
     'date_views_day_format_with_year',
     'date_views_day_format_without_year',

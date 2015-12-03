@@ -249,13 +249,6 @@ No confirmation necessary because all requested changes equal the current state.
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'simplenews_confirm_subscribe_page';
-  $strongarm->value = '';
-  $export['simplenews_confirm_subscribe_page'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'simplenews_confirm_subscribe_subject';
   $strongarm->value = 'Confirmation for [simplenews-newsletter:name] from [site:name]';
   $export['simplenews_confirm_subscribe_subject'] = $strongarm;
@@ -275,13 +268,6 @@ No confirmation necessary because all requested changes equal the current state.
 
 [simplenews-subscriber:subscribe-url]';
   $export['simplenews_confirm_subscribe_unsubscribed'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'simplenews_confirm_unsubscribe_page';
-  $strongarm->value = '';
-  $export['simplenews_confirm_unsubscribe_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

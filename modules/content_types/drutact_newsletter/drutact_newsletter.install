@@ -35,6 +35,22 @@ function drutact_newsletter_enable() {
     ),
   ));
 
+  // Default multilingual variables (simplenews).
+  _drutact_l10n_default_i18n_variables(array(
+    'simplenews_confirm_combined_body',
+    'simplenews_confirm_combined_body_unchanged',
+    'simplenews_confirm_combined_line_subscribe_subscribed',
+    'simplenews_confirm_combined_line_subscribe_unsubscribed',
+    'simplenews_confirm_combined_line_unsubscribe_subscribed',
+    'simplenews_confirm_combined_line_unsubscribe_unsubscribed',
+    'simplenews_confirm_combined_subject',
+    'simplenews_confirm_subscribe_subject',
+    'simplenews_confirm_subscribe_subscribed',
+    'simplenews_confirm_subscribe_unsubscribed',
+    'simplenews_confirm_unsubscribe_subscribed',
+    'simplenews_confirm_unsubscribe_unsubscribed',
+  ));
+
   // Default weight for newsletter userfield..
   $field_bundle_setting = variable_get('field_bundle_settings_user__user', array());
   $field_bundle_setting['extra_fields']['display']['simplenews']['default']['weight'] = 10;

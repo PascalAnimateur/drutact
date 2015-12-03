@@ -57,7 +57,7 @@ function drutact_user_install() {
   // Default realname pattern from full name.
   variable_set('realname_pattern', '[user:name-field-full-name]');
 
-  // Enable multilingual variables.
+  // Default multilingual variables (user).
   _drutact_l10n_default_i18n_variables(array(
     'anonymous',
     'user_registration_help',
