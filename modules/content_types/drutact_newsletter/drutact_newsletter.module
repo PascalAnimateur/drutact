@@ -1,5 +1,90 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the DruTACT Newsletter feature.
  */
+
+include_once 'drutact_newsletter.features.inc';
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function drutact_newsletter_form_simplenews_node_tab_send_form_alter(&$form, &$form_state, $form_id) {
+  // Pre-populate test email address with current user.
+  global $user;
+  $form['simplenews']['test_address']['#default_value'] = $user->mail;
+  // Add options to mark newsletter as sent / not sent.
+  if (user_access('administer simplenews settings')) {
+    $node = node_load($form['nid']['#value']);
+    if (simplenews_issue_status($node) == SIMPLENEWS_STATUS_SEND_READY) {
+      $form['options']['submit'] = array(
+        '#type' => 'submit',
+        '#value' => t('Mark as not sent'),
+        '#submit' => array('_drutact_newsletter_submit_simplenews_form_send_not'),
+      );
+    }
+    if (simplenews_issue_status($node) == SIMPLENEWS_STATUS_SEND_NOT) {
+      $form['options']['send_not'] = array(
+        '#type' => 'button',
+        '#value' => t('Mark as sent'),
+        '#validate' => array('_drutact_newsletter_submit_simplenews_form_send_ready'),
+      );
+    }
+  }
+}
+
+/**
+ * Helper function to mark newsletter as not sent.
+ */
+function _drutact_newsletter_submit_simplenews_form_send_not($form, &$form_state) {
+  if (user_access('administer simplenews settings')) {
+    // Reset newsletter issue status and sent count.
+    $nid = $form['nid']['#value'];
+    db_delete('field_data_simplenews_issue_status')
+      ->condition('entity_id', $nid)
+      ->execute();
+    db_delete('field_data_simplenews_sent_count')
+      ->condition('entity_id', $nid)
+      ->execute();
+    cache_clear_all("field:node:$nid", 'cache_field');
+    drupal_set_message(t('You are now able to resend this newsletter.'));
+  }
+}
+
+/**
+ * Helper function to mark newsletter as sent.
+ */
+function _drutact_newsletter_submit_simplenews_form_send_ready($form, &$form_state) {
+  if (user_access('administer simplenews settings')) {
+    // Set newsletter issue status to SIMPLENEWS_STATUS_SEND_READY.
+    $nid = $form['nid']['#value'];
+    $node = node_load($nid);
+    $field = variable_get('simplenews_issue_status_field', 'simplenews_issue_status');
+    $node->$field = array(
+      LANGUAGE_NONE => array(
+        array(
+          'value' => SIMPLENEWS_STATUS_SEND_READY,
+        ),
+      ),
+    );
+    node_save($node);
+    drupal_set_message(t('This newsletter is marked as sent.'));
+    drupal_goto("node/$nid/simplenews");
+  }
+}
+
+/**
+ * Implements hook_post_features_rebuild().
+ */
+function drutact_newsletter_post_features_rebuild($component) {
+  if ($component == 'ctools') {
+    // Default content type permissions (simplenews).
+    _drutact_default_content_type_permissions('simplenews');
+  }
+  if ($component == 'node') {
+    // Revert components (drutact_newsletter).
+    $feature = features_get_features('drutact_newsletter');
+    $components = array_keys($feature->info['features']);
+    features_revert(array('drutact_newsletter' => $components));
+  }
+}

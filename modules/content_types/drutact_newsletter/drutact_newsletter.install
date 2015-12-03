@@ -1,0 +1,42 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for DruTACT Newsletter.
+ */
+
+/**
+ * Implements hook_enable().
+ */
+function drutact_newsletter_enable() {
+  // Default module permissions (simplenews).
+  _drutact_default_module_permissions(array(
+    DRUPAL_ANONYMOUS_RID => array(
+      // Simplenews
+      'subscribe to newsletters',
+    ),
+    DRUPAL_AUTHENTICATED_RID => array(
+      // Simplenews
+      'subscribe to newsletters',
+    ),
+    DRUTACT_EDITOR_RID => array(
+      // Simplenews
+      'administer newsletters',
+      'administer simplenews subscriptions',
+      'send newsletter',
+      'subscribe to newsletters',
+    ),
+    DRUTACT_ADMINISTRATOR_RID => array(
+      // Simplenews
+      'administer newsletters',
+      'administer simplenews settings',
+      'administer simplenews subscriptions',
+      'send newsletter',
+      'subscribe to newsletters',
+    ),
+  ));
+
+  // Default weight for newsletter userfield..
+  $field_bundle_setting = variable_get('field_bundle_settings_user__user', array());
+  $field_bundle_setting['extra_fields']['display']['simplenews']['default']['weight'] = 10;
+  variable_set('field_bundle_settings_user__user', $field_bundle_setting);
+}
