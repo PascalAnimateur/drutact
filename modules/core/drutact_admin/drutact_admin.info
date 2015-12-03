@@ -26,6 +26,7 @@ dependencies[] = menu_select
 dependencies[] = module_filter
 dependencies[] = og
 dependencies[] = og_context
+dependencies[] = options_element
 dependencies[] = rules
 dependencies[] = select2widget
 dependencies[] = simplified_menu_admin

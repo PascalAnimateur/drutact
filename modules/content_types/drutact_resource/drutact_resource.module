@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Code for the DruTACT Resource feature.
+ */
+
+include_once 'drutact_resource.features.inc';
+
+/**
+ * Implements hook_post_features_rebuild().
+ */
+function drutact_resource_post_features_rebuild($component) {
+  if ($component == 'ctools') {
+    // Default content permissions (resource).
+    _drutact_enable_content_type_permissions('resource');
+  }
+}
