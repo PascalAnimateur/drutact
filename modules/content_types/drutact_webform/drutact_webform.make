@@ -12,6 +12,10 @@ projects[webform_import][patch][2420619] = https://www.drupal.org/files/issues/n
 ; Multiple file support
 projects[webform_multiple_file][type] = module
 
+; References
+projects[webform_references][type] = module
+projects[webform_references][patch][2537912] = https://www.drupal.org/files/issues/webform_references-realname_integration-2537912-5.patch
+
 ; Scheduler
 projects[webform_scheduler][type] = module
 
