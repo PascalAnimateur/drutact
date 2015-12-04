@@ -66,8 +66,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-12-04 10:32-0500\n"
-"PO-Revision-Date: 2015-12-04 10:32-0500\n"
+"POT-Creation-Date: 2015-12-04 10:43-0500\n"
+"PO-Revision-Date: 2015-12-04 10:43-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -1134,9 +1134,9 @@ msgstr "Webform"
 #: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.inc:24
 msgid "Use <em>webforms</em> to create questionnaires accessible to users. Submission results and statistics are recorded and accessible to privileged users."
 msgstr ""
-"Create a new form or questionnaire accessible to users. Submission "
-"results and statistics are recorded and accessible to privileged "
-"users."
+"Utiliser les <em>formulaires</em> afin de créer des questionnaires "
+"accessibles aux utilisateurs. Les soumissions et leurs statistiques "
+"sont enregistrées et accessibles aux utilisateurs privilégiés."
 
 #: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.inc:27
 msgid "You must first save the webform with a title and optional description before being able to add components (questions, instructions, etc.)"
