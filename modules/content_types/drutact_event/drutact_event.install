@@ -6,26 +6,7 @@
 
 // Default content type permissions need to be set in hook_post_features_rebuild().
 
-/**
- * Implements hook_enable().
- */
-function drutact_event_enable() {
-  // Translate path aliases (calendar).
-  _drutact_l10n_translate_path_aliases(array(
-    'calendar',
-    'calendar/month',
-    'calendar/week',
-    'calendar/day',
-    'calendar/year',
-  ));
-}
-
 // Translatables
 // Included for use with string extractors like potx.
 
-t('calendar', array(), array('context' => 'drutact:path_aliases'));
-t('calendar/month', array(), array('context' => 'drutact:path_aliases'));
-t('calendar/week', array(), array('context' => 'drutact:path_aliases'));
-t('calendar/day', array(), array('context' => 'drutact:path_aliases'));
-t('calendar/year', array(), array('context' => 'drutact:path_aliases'));
 t('Events');

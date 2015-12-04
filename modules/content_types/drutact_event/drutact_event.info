@@ -61,5 +61,4 @@ features[variable][] = pathauto_node_event_und_pattern
 features[variable][] = save_continue_event
 features[variable][] = xmlsitemap_settings_node_event
 features[views_view][] = administration_events
-features[views_view][] = event_calendar
 project path = profiles/drutact/modules/content_types

@@ -1,0 +1,29 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for DruTACT Event Calendar.
+ */
+
+/**
+ * Implements hook_enable().
+ */
+function drutact_event_calendar_enable() {
+  // Translate path aliases (event_calendar).
+  _drutact_l10n_translate_path_aliases(array(
+    'calendar',
+    'calendar/month',
+    'calendar/week',
+    'calendar/day',
+    'calendar/year',
+  ));
+}
+
+// Translatables
+// Included for use with string extractors like potx.
+
+t('calendar', array(), array('context' => 'drutact:path_aliases'));
+t('calendar/month', array(), array('context' => 'drutact:path_aliases'));
+t('calendar/week', array(), array('context' => 'drutact:path_aliases'));
+t('calendar/day', array(), array('context' => 'drutact:path_aliases'));
+t('calendar/year', array(), array('context' => 'drutact:path_aliases'));
+

@@ -27,8 +27,12 @@
 #  profiles/drutact/modules/content_types/drutact_page/drutact_page.info: n/a
 #  profiles/drutact/modules/content_types/drutact_resource/drutact_resource.info: n/a
 #  profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc: n/a
+#  profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.views_default.inc: n/a
 #  profiles/drutact/modules/content_types/drutact_event/drutact_event.install: n/a
 #  profiles/drutact/modules/content_types/drutact_event/drutact_event.module: n/a
+#  profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.install: n/a
+#  profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.info: n/a
+#  profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_registration/drutact_event_registration.info: n/a
 #  profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_base.inc: n/a
 #  profiles/drutact/modules/content_types/drutact_group/drutact_group.module: n/a
 #  profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.module: n/a
@@ -60,8 +64,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-12-03 15:19-0500\n"
-"PO-Revision-Date: 2015-12-03 15:19-0500\n"
+"POT-Creation-Date: 2015-12-04 09:39-0500\n"
+"PO-Revision-Date: 2015-12-04 09:39-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -534,15 +538,15 @@ msgstr ""
 "Utilisez les <em>événements</em> pour les contenus apparaissant à "
 "date fixe dans le calendrier, tels que les réunions."
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:289;673 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:381;706;979
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:289 profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.views_default.inc:367 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:381;706;979
 msgid "Master"
 msgstr "Maître"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:290 profiles/drutact/modules/content_types/drutact_event/drutact_event.install:31
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:290 profiles/drutact/modules/content_types/drutact_event/drutact_event.install:12
 msgid "Events"
 msgstr "Événements"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:291;681 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:383;739;1006;1349;1666
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:291 profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.views_default.inc:375 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:383;739;1006;1349;1666
 msgid "more"
 msgstr "plus"
 
@@ -550,19 +554,19 @@ msgstr "plus"
 msgid "Filter"
 msgstr "Filtrer"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:293;676 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:385;709;982;1351;1668
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:293 profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.views_default.inc:370 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:385;709;982;1351;1668
 msgid "Reset"
 msgstr "Réinitialiser"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:294;677 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:386;710;983;1352;1669
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:294 profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.views_default.inc:371 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:386;710;983;1352;1669
 msgid "Sort by"
 msgstr "Trier par"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:295;678 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:387;711;984;1353;1670
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:295 profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.views_default.inc:372 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:387;711;984;1353;1670
 msgid "Asc"
 msgstr "Asc"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:296;679 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:388;712;985;1354;1671
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:296 profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.views_default.inc:373 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:388;712;985;1354;1671
 msgid "Desc"
 msgstr "Desc"
 
@@ -654,78 +658,9 @@ msgstr "Actions"
 msgid "Page"
 msgstr "Page"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:674
-msgid "Calendar"
-msgstr "Calendrier"
-
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:675
-msgid "Apply"
-msgstr "Appliquer"
-
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:680
-msgid "Month"
-msgstr "Mois"
-
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:682 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:419;1382
-msgid "All"
-msgstr "Tout"
-
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:683
-msgid "Week"
-msgstr "Semaine"
-
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:684
-msgid "%1"
-msgstr ""
-
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:685
-msgid "Day"
-msgstr "Jour"
-
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:686
-msgid "Year"
-msgstr "Année"
-
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:687
-msgid "Block"
-msgstr "Bloc"
-
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:688
-msgid "Upcoming"
-msgstr "Prochainement"
-
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:689
-msgid "Upcoming events block"
-msgstr "Bloc des événements à venir"
-
 #: profiles/drutact/modules/content_types/drutact_event/drutact_event.module:17 profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc:48
 msgid "Add Event"
 msgstr "Ajouter Événement"
-
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.install:26
-msgctxt "drutact:path_aliases"
-msgid "calendar"
-msgstr "calendrier"
-
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.install:27
-msgctxt "drutact:path_aliases"
-msgid "calendar/month"
-msgstr "calendrier/mois"
-
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.install:28
-msgctxt "drutact:path_aliases"
-msgid "calendar/week"
-msgstr "calendrier/semaine"
-
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.install:29
-msgctxt "drutact:path_aliases"
-msgid "calendar/day"
-msgstr "calendrier/jour"
-
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.install:30
-msgctxt "drutact:path_aliases"
-msgid "calendar/year"
-msgstr "calendrier/annee"
 
 #: profiles/drutact/modules/content_types/drutact_event/drutact_event.info:0
 msgid "DruTACT Event"
@@ -733,6 +668,95 @@ msgstr ""
 
 #: profiles/drutact/modules/content_types/drutact_event/drutact_event.info:0
 msgid "Event content type of DruTACT installation profile."
+msgstr ""
+
+#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.views_default.inc:368
+msgid "Calendar"
+msgstr "Calendrier"
+
+#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.views_default.inc:369
+msgid "Apply"
+msgstr "Appliquer"
+
+#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.views_default.inc:374
+msgid "Month"
+msgstr "Mois"
+
+#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.views_default.inc:376 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:419;1382
+msgid "All"
+msgstr "Tout"
+
+#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.views_default.inc:377
+msgid "Week"
+msgstr "Semaine"
+
+#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.views_default.inc:378
+msgid "%1"
+msgstr ""
+
+#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.views_default.inc:379
+msgid "Day"
+msgstr "Jour"
+
+#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.views_default.inc:380
+msgid "Year"
+msgstr "Année"
+
+#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.views_default.inc:381
+msgid "Block"
+msgstr "Bloc"
+
+#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.views_default.inc:382
+msgid "Upcoming"
+msgstr "Prochainement"
+
+#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.views_default.inc:383
+msgid "Upcoming events block"
+msgstr "Bloc des événements à venir"
+
+#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.install:24
+msgctxt "drutact:path_aliases"
+msgid "calendar"
+msgstr "calendrier"
+
+#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.install:25
+msgctxt "drutact:path_aliases"
+msgid "calendar/month"
+msgstr "calendrier/mois"
+
+#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.install:26
+msgctxt "drutact:path_aliases"
+msgid "calendar/week"
+msgstr "calendrier/semaine"
+
+#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.install:27
+msgctxt "drutact:path_aliases"
+msgid "calendar/day"
+msgstr "calendrier/jour"
+
+#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.install:28
+msgctxt "drutact:path_aliases"
+msgid "calendar/year"
+msgstr "calendrier/annee"
+
+#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.info:0
+msgid "DruTACT Event Calendar"
+msgstr ""
+
+#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.info:0
+msgid "Event Calendar for DruTACT Event content type."
+msgstr ""
+
+#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.info:0 profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_registration/drutact_event_registration.info:0
+msgid "DruTACT Extra"
+msgstr ""
+
+#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_registration/drutact_event_registration.info:0
+msgid "DruTACT Event Registration"
+msgstr ""
+
+#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_registration/drutact_event_registration.info:0
+msgid "Event Registration for DruTACT Event content type."
 msgstr ""
 
 #: profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_base.inc:69
