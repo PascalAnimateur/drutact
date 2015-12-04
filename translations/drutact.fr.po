@@ -10,6 +10,7 @@
 #  profiles/drutact/modules/content_types/drutact_event/drutact_event.features.field_instance.inc: n/a
 #  profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_instance.inc: n/a
 #  profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc: n/a
+#  profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.field_instance.inc: n/a
 #  profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc: n/a
 #  profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc: n/a
 #  profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc: n/a
@@ -19,6 +20,7 @@
 #  profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.features.inc: n/a
 #  profiles/drutact/modules/content_types/drutact_page/drutact_page.features.inc: n/a
 #  profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.inc: n/a
+#  profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.inc: n/a
 #  profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc: n/a
 #  profiles/drutact/modules/content_types/drutact_article/drutact_article.info: n/a
 #  profiles/drutact/modules/content_types/drutact_event/drutact_event.info: n/a
@@ -26,13 +28,13 @@
 #  profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.info: n/a
 #  profiles/drutact/modules/content_types/drutact_page/drutact_page.info: n/a
 #  profiles/drutact/modules/content_types/drutact_resource/drutact_resource.info: n/a
+#  profiles/drutact/modules/content_types/drutact_webform/drutact_webform.info: n/a
 #  profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc: n/a
 #  profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.views_default.inc: n/a
 #  profiles/drutact/modules/content_types/drutact_event/drutact_event.install: n/a
 #  profiles/drutact/modules/content_types/drutact_event/drutact_event.module: n/a
 #  profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.install: n/a
 #  profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.info: n/a
-#  profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_registration/drutact_event_registration.info: n/a
 #  profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_base.inc: n/a
 #  profiles/drutact/modules/content_types/drutact_group/drutact_group.module: n/a
 #  profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.module: n/a
@@ -64,8 +66,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-12-04 09:39-0500\n"
-"PO-Revision-Date: 2015-12-04 09:39-0500\n"
+"POT-Creation-Date: 2015-12-04 10:32-0500\n"
+"PO-Revision-Date: 2015-12-04 10:32-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -130,6 +132,11 @@ msgctxt "field_instance:resource-field_image:label"
 msgid "Image"
 msgstr "Image"
 
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.field_instance.inc:342
+msgctxt "field_instance:webform-field_image:label"
+msgid "Image"
+msgstr "Image"
+
 #: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:471
 msgctxt "field_instance:vignette-field_image:label"
 msgid "Image"
@@ -157,6 +164,11 @@ msgstr "Image accompagnant le contenu."
 
 #: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:538
 msgctxt "field_instance:resource-field_image:description"
+msgid "Image accompanying the content."
+msgstr "Image accompagnant le contenu."
+
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.field_instance.inc:343
+msgctxt "field_instance:webform-field_image:description"
 msgid "Image accompanying the content."
 msgstr "Image accompagnant le contenu."
 
@@ -190,6 +202,11 @@ msgctxt "field_instance:resource-field_sections:label"
 msgid "Section(s)"
 msgstr "Section(s)"
 
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.field_instance.inc:344
+msgctxt "field_instance:webform-field_sections:label"
+msgid "Section(s)"
+msgstr "Section(s)"
+
 #: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:464
 msgctxt "field_instance:classification-field_sections:label"
 msgid "Section(s)"
@@ -220,6 +237,11 @@ msgctxt "field_instance:resource-field_sections:description"
 msgid "Assign this content to specific section(s) of the site."
 msgstr "Assigner ce contenu à une(des) section(s) spécifique(s) du site."
 
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.field_instance.inc:345
+msgctxt "field_instance:webform-field_sections:description"
+msgid "Assign this content to specific section(s) of the site."
+msgstr "Assigner ce contenu à une(des) section(s) spécifique(s) du site."
+
 #: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:465
 msgctxt "field_instance:classification-field_sections:description"
 msgid "Assign this content to specific section(s) of the site."
@@ -247,6 +269,11 @@ msgstr "Mots-clés"
 
 #: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:541
 msgctxt "field_instance:resource-field_tags:label"
+msgid "Tags"
+msgstr "Mots-clés"
+
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.field_instance.inc:346
+msgctxt "field_instance:webform-field_tags:label"
 msgid "Tags"
 msgstr "Mots-clés"
 
@@ -294,6 +321,13 @@ msgstr ""
 "Saisir des mots-clés individuels pour décrire le sujet de ce "
 "contenu."
 
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.field_instance.inc:347
+msgctxt "field_instance:webform-field_tags:description"
+msgid "Enter individual keywords to describe this content's topic."
+msgstr ""
+"Saisir des mots-clés individuels pour décrire le sujet de ce "
+"contenu."
+
 #: profiles/drutact/modules/core/drutact_node/drutact_node.features.field_instance.inc:467
 msgctxt "field_instance:classification-field_tags:description"
 msgid "Enter individual keywords to describe this content's topic."
@@ -318,6 +352,11 @@ msgstr "Visibilité du contenu de groupe"
 
 #: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:545
 msgctxt "field_instance:resource-group_content_access:label"
+msgid "Group content visibility"
+msgstr "Visibilité du contenu de groupe"
+
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.field_instance.inc:348
+msgctxt "field_instance:webform-group_content_access:label"
 msgid "Group content visibility"
 msgstr "Visibilité du contenu de groupe"
 
@@ -347,6 +386,13 @@ msgstr ""
 "Détermier si ce contenu sera accessible aux non-membres du(des) "
 "groupe(s) assigné(s)."
 
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.field_instance.inc:349
+msgctxt "field_instance:webform-group_content_access:description"
+msgid "Determine if this content will be accessible to non-members of the assigned group(s)."
+msgstr ""
+"Détermier si ce contenu sera accessible aux non-membres du(des) "
+"groupe(s) assigné(s)."
+
 #: profiles/drutact/modules/content_types/drutact_article/drutact_article.features.field_instance.inc:423
 msgctxt "field_instance:article-og_group_ref:label"
 msgid "Groups audience"
@@ -364,6 +410,11 @@ msgstr "Audience de groupes"
 
 #: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:547
 msgctxt "field_instance:resource-og_group_ref:label"
+msgid "Groups audience"
+msgstr "Audience de groupes"
+
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.field_instance.inc:350
+msgctxt "field_instance:webform-og_group_ref:label"
 msgid "Groups audience"
 msgstr "Audience de groupes"
 
@@ -407,12 +458,17 @@ msgctxt "field_instance:resource-og_group_ref:description"
 msgid "Assign this content to the selected group(s)."
 msgstr "Assigner ce contenu au(x) groupe(s) sélectionné(s)."
 
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.field_instance.inc:351
+msgctxt "field_instance:webform-og_group_ref:description"
+msgid "Assign this content to the selected group(s)."
+msgstr "Assigner ce contenu au(x) groupe(s) sélectionné(s)."
+
 #: profiles/drutact/modules/content_types/drutact_article/drutact_article.features.field_instance.inc:425
 msgctxt "field_instance:article-title_field:label"
 msgid "Title"
 msgstr "Titre"
 
-#: profiles/drutact/modules/content_types/drutact_article/drutact_article.features.inc:26 profiles/drutact/modules/content_types/drutact_event/drutact_event.features.inc:33 profiles/drutact/modules/content_types/drutact_group/drutact_group.features.inc:26 profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.features.inc:26 profiles/drutact/modules/content_types/drutact_page/drutact_page.features.inc:26 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.inc:26 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:404;998;1371
+#: profiles/drutact/modules/content_types/drutact_article/drutact_article.features.inc:26 profiles/drutact/modules/content_types/drutact_event/drutact_event.features.inc:33 profiles/drutact/modules/content_types/drutact_group/drutact_group.features.inc:26 profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.features.inc:26 profiles/drutact/modules/content_types/drutact_page/drutact_page.features.inc:26 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.inc:26 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.inc:26 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:404;998;1371
 msgid "Title"
 msgstr "Titre"
 
@@ -438,6 +494,11 @@ msgstr "Titre"
 
 #: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:549
 msgctxt "field_instance:resource-title_field:label"
+msgid "Title"
+msgstr "Titre"
+
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.field_instance.inc:352
+msgctxt "field_instance:webform-title_field:label"
 msgid "Title"
 msgstr "Titre"
 
@@ -469,7 +530,7 @@ msgstr ""
 msgid "Article content type of DruTACT installation profile."
 msgstr ""
 
-#: profiles/drutact/modules/content_types/drutact_article/drutact_article.info:0 profiles/drutact/modules/content_types/drutact_event/drutact_event.info:0 profiles/drutact/modules/content_types/drutact_group/drutact_group.info:0 profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.info:0 profiles/drutact/modules/content_types/drutact_page/drutact_page.info:0 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.info:0
+#: profiles/drutact/modules/content_types/drutact_article/drutact_article.info:0 profiles/drutact/modules/content_types/drutact_event/drutact_event.info:0 profiles/drutact/modules/content_types/drutact_group/drutact_group.info:0 profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.info:0 profiles/drutact/modules/content_types/drutact_page/drutact_page.info:0 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.info:0 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.info:0
 msgid "DruTACT Content types"
 msgstr ""
 
@@ -747,16 +808,8 @@ msgstr ""
 msgid "Event Calendar for DruTACT Event content type."
 msgstr ""
 
-#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.info:0 profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_registration/drutact_event_registration.info:0
+#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.info:0
 msgid "DruTACT Extra"
-msgstr ""
-
-#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_registration/drutact_event_registration.info:0
-msgid "DruTACT Event Registration"
-msgstr ""
-
-#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_registration/drutact_event_registration.info:0
-msgid "Event Registration for DruTACT Event content type."
 msgstr ""
 
 #: profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_base.inc:69
@@ -1067,6 +1120,37 @@ msgstr ""
 
 #: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.info:0
 msgid "Resource content type of DruTACT installation profile."
+msgstr ""
+
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.field_instance.inc:353
+msgctxt "field_instance:webform-title_field:description"
+msgid "The title or name of this webform."
+msgstr "Le titre ou le nom de ce formulaire."
+
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.inc:22
+msgid "Webform"
+msgstr "Webform"
+
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.inc:24
+msgid "Use <em>webforms</em> to create questionnaires accessible to users. Submission results and statistics are recorded and accessible to privileged users."
+msgstr ""
+"Create a new form or questionnaire accessible to users. Submission "
+"results and statistics are recorded and accessible to privileged "
+"users."
+
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.inc:27
+msgid "You must first save the webform with a title and optional description before being able to add components (questions, instructions, etc.)"
+msgstr ""
+"Vous devez d'abord enregistrer le formulaire avec un titre et une "
+"description optionnelle avant de pouvoir y ajouter des composants "
+"(questions, instructions, etc.)"
+
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.info:0
+msgid "DruTACT Webform"
+msgstr ""
+
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.info:0
+msgid "Webform content type of DruTACT installation profile."
 msgstr ""
 
 #: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:382

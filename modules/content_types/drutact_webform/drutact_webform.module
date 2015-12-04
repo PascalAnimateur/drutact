@@ -1,0 +1,24 @@
+<?php
+/**
+ * @file
+ * Code for the DruTACT Webform feature.
+ */
+
+include_once 'drutact_webform.features.inc';
+
+/**
+ * Implements hook_post_features_rebuild().
+ */
+function drutact_webform_post_features_rebuild($component) {
+  if ($component == 'ctools') {
+    // Default content type permissions (webform).
+    _drutact_default_content_type_permissions('webform');
+  }
+
+  if ($component == 'node') {
+    // Revert components (drutact_webform).
+    $feature = features_get_features('drutact_webform');
+    $components = array_keys($feature->info['features']);
+    features_revert(array('drutact_webform' => $components));
+  }
+}
