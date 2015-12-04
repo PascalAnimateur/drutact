@@ -6,6 +6,16 @@
 
 include_once 'drutact_webform.features.inc';
 
+function drutact_webform_form_webform_components_form_alter(&$form, $form_state, $form_id) {
+  drupal_set_message('Test');
+  $form['#attached']['css'] = array(
+    array(
+      'data' => '.form-item-existing-type { max-width: 500px; }',
+      'type' => 'inline',
+    ),
+  );
+}
+
 /**
  * Implements hook_post_features_rebuild().
  */
