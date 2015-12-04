@@ -38,3 +38,13 @@ function drutact_media_form_file_entity_edit_alter(&$form, &$form_state, $form_i
   $form['destination']['#weight'] = -5;
   unset($form['destination']['#group']);
 }
+
+/**
+ * Implements hook_post_features_rebuild().
+ */
+function drutact_media_post_features_rebuild($component) {
+  if ($component == 'file_display') {
+    // Revert file entity display settings.
+    features_revert(array('drutact_media' => array('file_display')));
+  }
+}
