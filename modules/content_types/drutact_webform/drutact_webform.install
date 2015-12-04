@@ -1,0 +1,47 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for DruTACT Webform.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function drutact_webform_install() {
+  // Default module permissions (webform, webform_scheduler).
+  _drutact_default_module_permissions(array(
+    DRUPAL_ANONYMOUS_RID => array(),
+    DRUPAL_AUTHENTICATED_RID => array(
+      // Webform
+      'access own webform results',
+      'access own webform submissions',
+      'edit own webform submissions',
+    ),
+    DRUTACT_EDITOR_RID => array(
+      // Webform
+      'access all webform results',
+      'access own webform results',
+      'access own webform submissions',
+      'delete all webform submissions',
+      'delete own webform submissions',
+      'edit all webform submissions',
+      'edit own webform submissions',
+      'edit webform components',
+      // Webform scheduler
+      'schedule webforms',
+    ),
+    DRUTACT_ADMINISTRATOR_RID => array(
+      // Webform
+      'access all webform results',
+      'access own webform results',
+      'access own webform submissions',
+      'delete all webform submissions',
+      'delete own webform submissions',
+      'edit all webform submissions',
+      'edit own webform submissions',
+      'edit webform components',
+      // Webform scheduler
+      'schedule webforms',
+    ),
+  ));
+}

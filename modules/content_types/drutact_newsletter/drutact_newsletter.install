@@ -5,9 +5,9 @@
  */
 
 /**
- * Implements hook_enable().
+ * Implements hook_install().
  */
-function drutact_newsletter_enable() {
+function drutact_newsletter_install() {
   // Default module permissions (simplenews).
   _drutact_default_module_permissions(array(
     DRUPAL_ANONYMOUS_RID => array(

@@ -40,7 +40,7 @@ function drutact_fr_translations_fr_defaults() {
   $translations['fr:default']['c5a5240b71e77388d00b62f6cd2f3157'] = array(
     'source' => 'Add Event',
     'context' => '',
-    'location' => 'profiles/drutact/modules/content_types/drutact_event/drutact_event.module:17',
+    'location' => 'profiles/drutact/modules/content_types/drutact_event/drutact_event.module:17 profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc:48',
     'translation' => 'Ajouter Événement',
     'plid' => 0,
     'plural' => 0,
