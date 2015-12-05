@@ -1,14 +1,16 @@
 <?php
 /**
  * @file
- * Install, update and uninstall functions for DruTACT WYSIWYG.
+ * Install, update and uninstall functions for the DruTACT WYSIWYG feature.
  */
 
 /**
  * Implements hook_install().
+ *
+ * Default module permissions (filter, linkit).
  */
 function drutact_wysiwyg_install() {
-  // Default module permissions (filter).
+  // Default module permissions (filter, linkit).
   _drutact_default_module_permissions(array(
     DRUPAL_ANONYMOUS_RID => array(),
     DRUPAL_AUTHENTICATED_RID => array(),

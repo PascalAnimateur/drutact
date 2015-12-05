@@ -8,6 +8,8 @@ include_once 'drutact_user.features.inc';
 
 /**
  * Implements hook_action_info().
+ *
+ * Email password reset link action.
  */
 function drutact_user_action_info() {
   // Email password reset link action.
@@ -31,17 +33,21 @@ function drutact_user_email_password_reset_link_action(&$user, $context) {
 }
 
 /**
- * Implements hook_menu_alter().
- */
-function drutact_user_menu_alter(&$items) {
-  // Rename people administration tab from List to Users.
-  $items['admin/people/people']['title'] = 'Users';
-}
-
-/**
  * Implements hook_form_FORM_ID_alter().
+ *
+ * Notify user of new account by default.
  */
 function drutact_user_form_user_register_form_alter(&$form, &$form_state, $form_id) {
   // Notify user of new account by default.
   $form['account']['notify']['#default_value'] = TRUE;
+}
+
+/**
+ * Implements hook_menu_alter().
+ *
+ * Rename people administration tab from List to Users.
+ */
+function drutact_user_menu_alter(&$items) {
+  // Rename people administration tab from List to Users.
+  $items['admin/people/people']['title'] = 'Users';
 }

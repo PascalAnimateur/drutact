@@ -8,11 +8,15 @@ include_once 'drutact_newsletter.features.inc';
 
 /**
  * Implements hook_form_FORM_ID_alter().
+ *
+ * Pre-populate newsletter test email address with current user.
+ * Add options to mark newsletter as sent / not sent.
  */
 function drutact_newsletter_form_simplenews_node_tab_send_form_alter(&$form, &$form_state, $form_id) {
-  // Pre-populate test email address with current user.
+  // Pre-populate newsletter test email address with current user.
   global $user;
   $form['simplenews']['test_address']['#default_value'] = $user->mail;
+
   // Add options to mark newsletter as sent / not sent.
   if (user_access('administer simplenews settings')) {
     $node = node_load($form['nid']['#value']);
@@ -74,26 +78,32 @@ function _drutact_newsletter_submit_simplenews_form_send_ready($form, &$form_sta
 }
 
 /**
- * Implements hook_update_projects_alter().
- */
-function drutact_newsletter_update_projects_alter(&$projects)
-{
-  // Disable checking for updates (simpenews).
-  unset($projects['simplenews']);
-}
-
-/**
  * Implements hook_post_features_rebuild().
+ *
+ * Default content type permissions (simplenews).
+ * Revert feature components (drutact_newsletter).
  */
 function drutact_newsletter_post_features_rebuild($component) {
   if ($component == 'ctools') {
     // Default content type permissions (simplenews).
     _drutact_default_content_type_permissions('simplenews');
   }
+
   if ($component == 'node') {
-    // Revert components (drutact_newsletter).
+    // Revert feature components (drutact_newsletter).
     $feature = features_get_features('drutact_newsletter');
     $components = array_keys($feature->info['features']);
     features_revert(array('drutact_newsletter' => $components));
   }
+}
+
+/**
+ * Implements hook_update_projects_alter().
+ *
+ * Disable checking for updates (simpenews).
+ */
+function drutact_newsletter_update_projects_alter(&$projects)
+{
+  // Disable checking for updates (simpenews).
+  unset($projects['simplenews']);
 }

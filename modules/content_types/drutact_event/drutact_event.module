@@ -8,11 +8,13 @@ include_once 'drutact_event.features.inc';
 
 /**
  * Implements hook_menu_local_tasks_alter().
+ *
+ * Default action links (Add Event).
  */
 function drutact_event_menu_local_tasks_alter(&$data, $router_item, $root_path) {
   switch ($root_path) {
     case 'admin/content/events':
-      // 'Add event' action link.
+      // Default action links (Add Event).
       $item = menu_get_item('node/add/event');
       $item['title'] = t('Add Event');
       $data['actions']['output'][] = array(
@@ -25,6 +27,8 @@ function drutact_event_menu_local_tasks_alter(&$data, $router_item, $root_path) 
 
 /**
  * Implements hook_post_features_rebuild().
+ *
+ * Default content type permissions (event).
  */
 function drutact_event_post_features_rebuild($component) {
   if ($component == 'ctools') {
@@ -32,3 +36,8 @@ function drutact_event_post_features_rebuild($component) {
     _drutact_default_content_type_permissions('event');
   }
 }
+
+// Translatables
+// Included for use with string extractors like potx.
+
+t('Events');

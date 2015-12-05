@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * DruTACT installation profile.
+ * Code for the DruTACT installation profile.
  */
 
 /**

@@ -7,26 +7,6 @@
 include_once 'drutact_l10n.features.inc';
 
 /**
- * Implements hook_form_FORM_ID_alter().
- */
-function drutact_l10n_form_node_type_form_alter(&$form, &$form_state, $form_id) {
-  // Enable field translation and hide translation links by default.
-  $form['workflow']['language_content_type']['#default_value'] = 4;
-  $form['workflow']['entity_translation_hide_translation_links']['#default_value'] = 1;
-}
-
-/**
- * Implements hook_form_FORM_ID_alter().
- */
-function drutact_l10n_form_node_form_alter(&$form, &$form_state, $form_id) {
-  // Enable menu link only for current language by default.
-  if (isset($form['menu']['link']['tset'])) {
-    $form['menu']['link']['tset']['#default_value'] = TRUE;
-    $form['menu']['link']['tset']['#access'] = FALSE;
-  }
-}
-
-/**
  * Helper function to set default multilingual menus.
  *
  * @param $menus
@@ -50,96 +30,6 @@ function _drutact_l10n_default_i18n_variables($variables) {
   $old_variables = variable_realm_get('global', 'default', 'variable_realm_list_language');
   $variables = array_merge($old_variables, $variables);
   variable_realm_set('global', 'default', 'variable_realm_list_language', $variables, FALSE);
-}
-
-/**
- * Helper function used to translate role name.
- */
-function _drutact_l10n_translate_role($rid, $langcode, $translation) {
-  $roles = user_roles();
-  if (!isset($roles[$rid])) {
-    drupal_set_message(t('Role %rid does not exist.', array('%rid' => $rid)), 'warning');
-  }
-  $languages = language_list();
-  if (!isset($languages[$langcode])) {
-    drupal_set_message(t('Language %language is not installed or does not exist.', array('%language' => $langcode)), 'warning');
-  }
-  $results = db_select('role_translate', 'rt')
-    ->fields('rt')
-    ->condition('rid', $rid)
-    ->condition('language', $langcode)
-    ->execute()
-    ->fetchAssoc();
-  if (empty($results)) {
-    // Insert the translation if doesn't exist.
-    db_insert('role_translate')->fields(array(
-      'rid' => $rid,
-      'translation' => $translation,
-      'language' => $langcode,
-    ))->execute();
-  }
-}
-
-/**
- * Helper function used to translate role name.
- */
-function _drutact_l10n_translate_vocabulary($vocabulary, $langcode, $name, $description = '') {
-  if (module_exists('i18n_string')) {
-    $vocabulary = taxonomy_vocabulary_machine_name_load($vocabulary);
-    if (!isset($vocabulary)) {
-      return;
-    }
-    $vid = $vocabulary->vid;
-    i18n_string_textgroup('taxonomy')->update_translation(array('vocabulary', $vid, 'name'), $langcode, $name);
-    if (!empty($description)) {
-      i18n_string_textgroup('taxonomy')->update_translation(array('vocabulary', $vid, 'description'), $langcode, $description);
-    }
-  }
-}
-
-/**
- * Implements hook_potx_file_location_info().
- */
-function drutact_l10n_potx_file_location_info() {
-  // Expose DruTACT translations path to potx_exportables.
-  return array(
-    'drutact' => array(
-      'path' => drupal_get_path('profile', 'drutact') . '/translations',
-    ),
-  );
-}
-
-/**
- * Implements hook_post_features_rebuild().
- */
-function drutact_l10n_post_features_rebuild($component) {
-  if ($component == 'variable') {
-    // Default module permissions (entity_translation, i18n, locale).
-    _drutact_default_module_permissions(array(
-      DRUPAL_ANONYMOUS_RID => array(),
-      DRUPAL_AUTHENTICATED_RID => array(),
-      DRUTACT_EDITOR_RID => array(
-        // Entity translation
-        'translate any entity',
-        'translate node entities',
-        'translate taxonomy_term entities',
-      ),
-      DRUTACT_ADMINISTRATOR_RID => array(
-        // Entity translation
-        'administer entity translation',
-        'toggle field translatability',
-        'translate any entity',
-        'translate node entities',
-        'translate taxonomy_term entities',
-        // Internationalization
-        'translate admin strings',
-        'translate user-defined strings',
-        // Locale
-        'administer languages',
-        'translate interface',
-      ),
-    ));
-  }
 }
 
 /**
@@ -177,4 +67,122 @@ function _drutact_l10n_translate_path_aliases(array $paths) {
         array('!alias' => $alias, '!langcode' => $langcode), WATCHDOG_INFO);
     }
   }
+}
+
+/**
+ * Helper function used to translate role name.
+ */
+function _drutact_l10n_translate_role($rid, $langcode, $translation) {
+  $roles = user_roles();
+  if (!isset($roles[$rid])) {
+    drupal_set_message(t('Role %rid does not exist.', array('%rid' => $rid)), 'warning');
+  }
+  $languages = language_list();
+  if (!isset($languages[$langcode])) {
+    drupal_set_message(t('Language %language is not installed or does not exist.', array('%language' => $langcode)), 'warning');
+  }
+  $results = db_select('role_translate', 'rt')
+    ->fields('rt')
+    ->condition('rid', $rid)
+    ->condition('language', $langcode)
+    ->execute()
+    ->fetchAssoc();
+  if (empty($results)) {
+    // Insert the translation if doesn't exist.
+    db_insert('role_translate')->fields(array(
+      'rid' => $rid,
+      'translation' => $translation,
+      'language' => $langcode,
+    ))->execute();
+  }
+}
+
+/**
+ * Helper function used to translate vocabulary.
+ */
+function _drutact_l10n_translate_vocabulary($vocabulary, $langcode, $name, $description = '') {
+  if (module_exists('i18n_string')) {
+    $vocabulary = taxonomy_vocabulary_machine_name_load($vocabulary);
+    if (!isset($vocabulary)) {
+      return;
+    }
+    $vid = $vocabulary->vid;
+    i18n_string_textgroup('taxonomy')->update_translation(array('vocabulary', $vid, 'name'), $langcode, $name);
+    if (!empty($description)) {
+      i18n_string_textgroup('taxonomy')->update_translation(array('vocabulary', $vid, 'description'), $langcode, $description);
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Enable content menu link only for current language by default.
+ */
+function drutact_l10n_form_node_form_alter(&$form, &$form_state, $form_id) {
+  // Enable content menu link only for current language by default.
+  if (isset($form['menu']['link']['tset'])) {
+    $form['menu']['link']['tset']['#default_value'] = TRUE;
+    $form['menu']['link']['tset']['#access'] = FALSE;
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Enable field translation and hide translation links by default for all content types.
+ */
+function drutact_l10n_form_node_type_form_alter(&$form, &$form_state, $form_id) {
+  // Enable field translation and hide translation links by default for all content types.
+  $form['workflow']['language_content_type']['#default_value'] = 4;
+  $form['workflow']['entity_translation_hide_translation_links']['#default_value'] = 1;
+}
+
+/**
+ * Implements hook_post_features_rebuild().
+ *
+ * Default module permissions (entity_translation, i18n, locale).
+ */
+function drutact_l10n_post_features_rebuild($component) {
+  if ($component == 'variable') {
+    // Default module permissions (entity_translation, i18n, locale).
+    _drutact_default_module_permissions(array(
+      DRUPAL_ANONYMOUS_RID => array(),
+      DRUPAL_AUTHENTICATED_RID => array(),
+      DRUTACT_EDITOR_RID => array(
+        // Entity translation
+        'translate any entity',
+        'translate node entities',
+        'translate taxonomy_term entities',
+      ),
+      DRUTACT_ADMINISTRATOR_RID => array(
+        // Entity translation
+        'administer entity translation',
+        'toggle field translatability',
+        'translate any entity',
+        'translate node entities',
+        'translate taxonomy_term entities',
+        // Internationalization
+        'translate admin strings',
+        'translate user-defined strings',
+        // Locale
+        'administer languages',
+        'translate interface',
+      ),
+    ));
+  }
+}
+
+/**
+ * Implements hook_potx_file_location_info().
+ *
+ * Default translations folder for potx_exportables.
+ */
+function drutact_l10n_potx_file_location_info() {
+  // Default translations folder for potx_exportables.
+  return array(
+    'drutact' => array(
+      'path' => drupal_get_path('profile', 'drutact') . '/translations',
+    ),
+  );
 }

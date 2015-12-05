@@ -1,11 +1,13 @@
 <?php
 /**
  * @file
- * Install, update and uninstall functions for DruTACT Production.
+ * Install, update and uninstall functions for the DruTACT Production feature.
  */
 
 /**
  * Implements hook_enable().
+ *
+ * Default module permissions (captcha, flood_control, flood_unblock).
  */
 function drutact_prod_enable() {
   // Default module permissions (captcha, flood_control, flood_unblock).
@@ -33,6 +35,9 @@ function drutact_prod_enable() {
 
 /**
  * Implements hook_disable().
+ *
+ * Uninstall production modules.
+ * Delete production variables.
  */
 function drutact_prod_disable() {
   // Uninstall production modules.

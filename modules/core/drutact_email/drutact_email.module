@@ -7,21 +7,15 @@
 include_once 'drutact_email.features.inc';
 
 /**
- * Implements hook_form_user_profile_form_alter().
- */
-function drutact_email_form_user_profile_form_alter(&$form, &$form_state) {
-  // Hide Mime Mail settings from user profile form.
-  $form['mimemail']['#access'] = FALSE;
-}
-
-/**
  * Implements hook_form_alter().
+ *
+ * Pre-populate mimemail_send_email_action form.
  */
 function drutact_email_form_alter(&$form, &$form_state, $form_id) {
   global $user;
   if (isset($form_state['values']['operation']) && $form_state['values']['operation'] == 'action::mimemail_send_email_action') {
     if (isset($form_state['step']) && $form_state['step'] == 'views_bulk_operations_config_form') {
-      // Pre-populate send email action form.
+      // Pre-populate mimemail_send_email_action form.
       $form['key']['#value'] = 'drutact_email';
       $form['key']['#access'] = false;
       $form['to']['#value'] = '[user:mail]';
@@ -38,7 +32,19 @@ function drutact_email_form_alter(&$form, &$form_state, $form_id) {
 }
 
 /**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Hide Mime Mail settings from user profile form.
+ */
+function drutact_email_form_user_profile_form_alter(&$form, &$form_state) {
+  // Hide Mime Mail settings from user profile form.
+  $form['mimemail']['#access'] = FALSE;
+}
+
+/**
  * Implements hook_preprocess_mimemail_message().
+ *
+ * Expose base_url variable to Mime Mail message template.
  */
 function drutact_email_preprocess_mimemail_message(&$variables) {
   // Expose base_url variable to Mime Mail message template.
@@ -48,8 +54,10 @@ function drutact_email_preprocess_mimemail_message(&$variables) {
 
 /**
  * Implements hook_theme_registry_alter().
+ *
+ * Default templates folder (mimemail_message).
  */
 function drutact_email_theme_registry_alter(&$theme_registry) {
-  // Look for Mime Mail message template in drutact_email/templates folder.
+  // Default templates folder (mimemail_message).
   $theme_registry['mimemail_message']['path'] = drupal_get_path('module', 'drutact_email') . '/templates';
 }

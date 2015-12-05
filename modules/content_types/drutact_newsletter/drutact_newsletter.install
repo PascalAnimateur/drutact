@@ -1,11 +1,15 @@
 <?php
 /**
  * @file
- * Install, update and uninstall functions for DruTACT Newsletter.
+ * Install, update and uninstall functions for the DruTACT Newsletter feature.
  */
 
 /**
  * Implements hook_install().
+ *
+ * Default module permissions (simplenews).
+ * Default multilingual variables (simplenews).
+ * Default user field instance (simplenews).
  */
 function drutact_newsletter_install() {
   // Default module permissions (simplenews).
@@ -51,7 +55,7 @@ function drutact_newsletter_install() {
     'simplenews_confirm_unsubscribe_unsubscribed',
   ));
 
-  // Default weight for newsletter userfield..
+  // Default user field instance (simplenews).
   $field_bundle_setting = variable_get('field_bundle_settings_user__user', array());
   $field_bundle_setting['extra_fields']['display']['simplenews']['default']['weight'] = 10;
   variable_set('field_bundle_settings_user__user', $field_bundle_setting);

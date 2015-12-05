@@ -1,11 +1,13 @@
 <?php
 /**
  * @file
- * Install, update and uninstall functions for DruTACT Webform.
+ * Install, update and uninstall functions for the DruTACT Webform feature.
  */
 
 /**
  * Implements hook_install().
+ *
+ * Default module permissions (webform, webform_scheduler).
  */
 function drutact_webform_install() {
   // Default module permissions (webform, webform_scheduler).

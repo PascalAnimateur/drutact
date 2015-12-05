@@ -8,10 +8,14 @@ include_once 'drutact_fr.features.inc';
 
 /**
  * Implements hook_post_features_rebuild().
+ *
+ * Translate role names (editor, administrator).
+ * Translate vocabularies (sections, tags).
+ * Update translations from code.
  */
 function drutact_fr_post_features_rebuild($component) {
   if ($component == 'language') {
-    // Translate Editor role name.
+    // Translate role names (Editor, Administrator).
     _drutact_l10n_translate_role(DRUTACT_EDITOR_RID, 'fr', 'Éditeur');
     _drutact_l10n_translate_role(DRUTACT_ADMINISTRATOR_RID, 'fr', 'Administrateur');
 

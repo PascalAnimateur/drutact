@@ -1,11 +1,14 @@
 <?php
 /**
  * @file
- * Install, update and uninstall functions for DruTACT Core.
+ * Install, update and uninstall functions for the DruTACT Core feature.
  */
 
 /**
  * Implements hook_install().
+ *
+ * Default module permissions (ctools, date, features, rules, tadaa, views).
+ * Default multilingual variables (date_views).
  */
 function drutact_core_install() {
   // Default module permissions (ctools, date, features, rules, tadaa, views).

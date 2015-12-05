@@ -1,12 +1,14 @@
 <?php
 /**
  * @file
- * Install, update and uninstall functions for DruTACT Charts.
+ * Install, update and uninstall functions for the DruTACT Charts feature.
  */
-
 
 /**
  * Implements hook_install().
+ *
+ * Default module permissions (charts).
+ * Disable views (charts_demo).
  */
 function drutact_charts_install() {
   // Default module permissions (charts).
@@ -21,7 +23,7 @@ function drutact_charts_install() {
     ),
   ));
 
-  // Disable overridden views.
+  // Disable views (charts_demo).
   _drutact_disable_views(array(
     'charts_demo',
   ));

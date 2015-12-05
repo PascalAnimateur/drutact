@@ -1,13 +1,20 @@
 <?php
 /**
  * @file
- * Install, update and uninstall functions for DruTACT Media.
+ * Install, update and uninstall functions for the DruTACT Media feature.
  */
 
 /**
  * Implements hook_install().
+ *
+ * Create missing directories (public://pdfpreview).
+ * Default module permissions (focal_point, image).
  */
 function drutact_media_install() {
+  // Create missing directories (public://pdfpreview).
+  $pdfpreview_dir = "public://pdfpreview";
+  file_prepare_directory($pdfpreview_dir, FILE_CREATE_DIRECTORY|FILE_MODIFY_PERMISSIONS);
+
   // Default module permissions (focal_point, image).
   _drutact_default_module_permissions(array(
     DRUPAL_ANONYMOUS_RID => array(
@@ -118,8 +125,4 @@ function drutact_media_install() {
       'administer media browser',
     ),
   ));
-
-  // Create missing directories (pdfpreview).
-  $pdfpreview_dir = "public://pdfpreview";
-  file_prepare_directory($pdfpreview_dir, FILE_CREATE_DIRECTORY|FILE_MODIFY_PERMISSIONS);
 }

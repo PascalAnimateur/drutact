@@ -6,9 +6,11 @@
 
 /**
  * Implements hook_install().
+ *
+ * Default blocks on default theme (content, login, navigation, help).
  */
 function drutact_install() {
-  // Enable blocks on default theme (content, login, navigation, help).
+  // Default blocks on default theme (content, login, navigation, help).
   $default_theme = variable_get('theme_default', 'bartik');
   $blocks = array(
     array(

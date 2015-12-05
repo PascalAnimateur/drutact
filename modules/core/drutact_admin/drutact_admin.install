@@ -1,13 +1,47 @@
 <?php
 /**
  * @file
- * Install, update and uninstall functions for DruTACT Administration.
+ * Install, update and uninstall functions for the DruTACT Administration feature.
  */
 
 /**
  * Implements hook_install().
+ *
+ * Default blocks on admin theme (help).
+ * Default module permissions (admin_menu, block, contextual, menu, module_filter, system, taxonomy).
+ * Default module weight (drutact_admin).
+ * Disable views (admin_views_file, admin_views_node, admin_views_user).
  */
 function drutact_admin_install() {
+  // Default blocks on admin theme (help).
+  $admin_theme = variable_get('admin_theme', 'shiny');
+  $blocks = array(
+    array(
+      'module' => 'system',
+      'delta' => 'help',
+      'theme' => $admin_theme,
+      'status' => 1,
+      'weight' => 0,
+      'region' => 'help',
+      'pages' => '',
+      'cache' => -1,
+    ),
+  );
+  $query = db_insert('block')->fields(array(
+    'module',
+    'delta',
+    'theme',
+    'status',
+    'weight',
+    'region',
+    'pages',
+    'cache'
+  ));
+  foreach ($blocks as $block) {
+    $query->values($block);
+  }
+  $query->execute();
+
   // Default module permissions (admin_menu, block, contextual, menu, module_filter, system, taxonomy).
   _drutact_default_module_permissions(array(
     DRUPAL_ANONYMOUS_RID => array(
@@ -72,36 +106,7 @@ function drutact_admin_install() {
   // Default module weight (drutact_admin).
   _drutact_default_module_weight('drutact_admin', 20);
 
-  // Default blocks on admin theme (help).
-  $admin_theme = variable_get('admin_theme', 'shiny');
-  $blocks = array(
-    array(
-      'module' => 'system',
-      'delta' => 'help',
-      'theme' => $admin_theme,
-      'status' => 1,
-      'weight' => 0,
-      'region' => 'help',
-      'pages' => '',
-      'cache' => -1,
-    ),
-  );
-  $query = db_insert('block')->fields(array(
-    'module',
-    'delta',
-    'theme',
-    'status',
-    'weight',
-    'region',
-    'pages',
-    'cache'
-  ));
-  foreach ($blocks as $block) {
-    $query->values($block);
-  }
-  $query->execute();
-
-  // Disable overridden views.
+  // Disable views (admin_views_file, admin_views_node, admin_views_user).
   _drutact_disable_views(array(
     'admin_views_file',
     'admin_views_node',

@@ -1,12 +1,5 @@
 <?php
 /**
  * @file
- * Install, update and uninstall functions for DruTACT Event.
+ * Install, update and uninstall functions for the DruTACT Event feature.
  */
-
-// Default content type permissions need to be set in hook_post_features_rebuild().
-
-// Translatables
-// Included for use with string extractors like potx.
-
-t('Events');

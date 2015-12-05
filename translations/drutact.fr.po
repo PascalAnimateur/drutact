@@ -31,7 +31,6 @@
 #  profiles/drutact/modules/content_types/drutact_webform/drutact_webform.info: n/a
 #  profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc: n/a
 #  profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.views_default.inc: n/a
-#  profiles/drutact/modules/content_types/drutact_event/drutact_event.install: n/a
 #  profiles/drutact/modules/content_types/drutact_event/drutact_event.module: n/a
 #  profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.install: n/a
 #  profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.info: n/a
@@ -67,8 +66,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-12-04 22:19-0500\n"
-"PO-Revision-Date: 2015-12-04 22:19-0500\n"
+"POT-Creation-Date: 2015-12-05 13:01-0500\n"
+"PO-Revision-Date: 2015-12-05 13:01-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -592,7 +591,7 @@ msgstr "Le titre ou le nom de cet événement."
 
 #: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.inc:29
 msgid "Event"
-msgstr "Événement"
+msgstr "Évènement"
 
 #: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.inc:31
 msgid "Use <em>events</em> for time-specific content that should appear in the calendar, such as meetings."
@@ -604,7 +603,7 @@ msgstr ""
 msgid "Master"
 msgstr "Maître"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:290 profiles/drutact/modules/content_types/drutact_event/drutact_event.install:12
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:290 profiles/drutact/modules/content_types/drutact_event/drutact_event.module:43
 msgid "Events"
 msgstr "Événements"
 
@@ -720,7 +719,7 @@ msgstr "Actions"
 msgid "Page"
 msgstr "Page"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.module:17 profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc:48
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.module:19 profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc:48
 msgid "Add Event"
 msgstr "Ajouter Événement"
 
@@ -754,7 +753,7 @@ msgstr "Semaine"
 
 #: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.views_default.inc:378
 msgid "%1"
-msgstr ""
+msgstr "%1"
 
 #: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.views_default.inc:379
 msgid "Day"
@@ -883,67 +882,67 @@ msgstr ""
 "Utiliser les <em>groupes</em> afin de créer des listes d'utilisateurs "
 "partageant un espace collaboratif."
 
-#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:14
-msgid "Manage content"
-msgstr "Gérer le contenu"
-
-#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:15
-msgid "Users may access the Content tab on the group page."
-msgstr "Accéder à l'onglet Contenu sur la page du groupe."
-
-#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:20
-msgid "Manage files"
-msgstr "Gérer les fichiers"
-
-#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:21
-msgid "Users may access the Files tab on the group page."
-msgstr "Accéder à l'onglet Fichiers sur la page du groupe."
-
-#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:44
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:42
 msgid "Group access"
 msgstr "Accès de groupe"
 
-#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:132
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:121
 msgid "Add Group"
 msgstr "Ajouter Groupe"
 
-#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:162
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:151
 msgid "Add !name"
 msgstr "Ajouter !name"
 
-#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:177
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:166
 msgid "Add File"
 msgstr "Ajouter Fichier"
 
-#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:190
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:179
 msgid "Add Member"
 msgstr "Ajouter Membre"
 
-#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:199
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:188
 msgid "Change Manager"
 msgstr "Modifier Gestionnaire"
 
-#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:208
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:197
 msgid "Default Members"
 msgstr "Membres par Défaut"
 
-#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:244
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:217
+msgid "Manage content"
+msgstr "Gérer le contenu"
+
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:218
+msgid "Users may access the Content tab on the group page."
+msgstr "Accéder à l'onglet Contenu sur la page du groupe."
+
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:223
+msgid "Manage files"
+msgstr "Gérer les fichiers"
+
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:224
+msgid "Users may access the Files tab on the group page."
+msgstr "Accéder à l'onglet Fichiers sur la page du groupe."
+
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:262
 msgid "Members"
 msgstr "Membres"
 
-#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:245
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:263
 msgid "Group manager: !manager"
 msgstr "Gestionnaire du groupe: !manager"
 
-#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:246
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:264
 msgid "Total content: @count"
 msgstr "Total contenu: @count"
 
-#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:247
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:265
 msgid "Total files: @count"
 msgstr "Total fichiers: @count"
 
-#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:248
+#: profiles/drutact/modules/content_types/drutact_group/drutact_group.module:266
 msgid "Total members: @count"
 msgstr "Total membres: @count"
 
@@ -1015,19 +1014,19 @@ msgstr ""
 "Utiliser les <em>parutions d'infolettre</em> afin d'envoyer de "
 "l'information par courriel à des listes d'abonnements."
 
-#: profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.module:22
+#: profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.module:26
 msgid "Mark as not sent"
 msgstr "Marquer comme n'étant pas envoyée"
 
-#: profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.module:29
+#: profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.module:33
 msgid "Mark as sent"
 msgstr "Marquer comme étant envoyée"
 
-#: profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.module:50
+#: profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.module:54
 msgid "You are now able to resend this newsletter."
 msgstr "Vous pouvez désormais envoyer la parution d'infolettre à nouveau."
 
-#: profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.module:71
+#: profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.module:75
 msgid "This newsletter is marked as sent."
 msgstr "Cette parution d'infolettre a été marquée comme étant envoyée."
 
@@ -1344,7 +1343,7 @@ msgstr ""
 msgid "Content assigned to group %1"
 msgstr "Contenu du groupe %1"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1665 profiles/drutact/modules/core/drutact_user/drutact_user.module:38
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1665 profiles/drutact/modules/core/drutact_user/drutact_user.module:52
 msgid "Users"
 msgstr "Utilisateurs"
 
@@ -1392,13 +1391,13 @@ msgstr "Annuler le compte"
 msgid "Role"
 msgstr "Rôle"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.module:72;93
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.module:38;61
 msgid "Select the group to which the file(s) will be assigned."
 msgstr ""
 "Séletcionner le groupe auquel le(s) fichier(s) sera(seront) "
 "assigné(s)."
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.module:114
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.module:84
 msgid "Select the group to which the user(s) will be subscribed."
 msgstr ""
 "Sélectionner le groupe auquel le(s) utilisateur(s) sera(seront) "
@@ -1420,7 +1419,7 @@ msgstr ""
 msgid "Core components of DruTACT installation profile."
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_email/drutact_email.module:35
+#: profiles/drutact/modules/core/drutact_email/drutact_email.module:29
 msgid "Send"
 msgstr "Envoyer"
 
@@ -1432,19 +1431,19 @@ msgstr ""
 msgid "Email components of DruTACT installation profile."
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_l10n/drutact_l10n.module:61
+#: profiles/drutact/modules/core/drutact_l10n/drutact_l10n.module:78
 msgid "Role %rid does not exist."
 msgstr "Le rôle %rid n'existe pas."
 
-#: profiles/drutact/modules/core/drutact_l10n/drutact_l10n.module:65
+#: profiles/drutact/modules/core/drutact_l10n/drutact_l10n.module:82
 msgid "Language %language is not installed or does not exist."
 msgstr "La langue %language n'est pas installée ou n'existe pas."
 
-#: profiles/drutact/modules/core/drutact_l10n/drutact_l10n.module:176
+#: profiles/drutact/modules/core/drutact_l10n/drutact_l10n.module:66
 msgid "drutact_l10n"
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_l10n/drutact_l10n.module:176
+#: profiles/drutact/modules/core/drutact_l10n/drutact_l10n.module:66
 msgid "Created !alias path alias (!langcode)."
 msgstr "L'alias de chemin !alias a été créé (!langcode)."
 
@@ -1532,15 +1531,15 @@ msgctxt "field_instance:video-filename_field:label"
 msgid "Video title"
 msgstr "Titre de la vidéo"
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.module:25
+#: profiles/drutact/modules/core/drutact_media/drutact_media.module:17
 msgid "Public files"
 msgstr "Fichiers publics"
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.module:26
+#: profiles/drutact/modules/core/drutact_media/drutact_media.module:18
 msgid "Private files"
 msgstr "Fichiers privés"
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.module:27;37
+#: profiles/drutact/modules/core/drutact_media/drutact_media.module:19;31
 msgid "Public files are accessible to everyone, while access to private files must be explicitly granted (i.e. through group access)."
 msgstr ""
 "Les fichiers publics sont accessibles en tout temps, tandis que "
@@ -1590,11 +1589,11 @@ msgctxt "field_instance:tags-name_field:description"
 msgid "The name or title of this tag."
 msgstr "Le nom ou le titre de ce mot-clé."
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.module:17
+#: profiles/drutact/modules/core/drutact_node/drutact_node.module:20
 msgid "Classification"
 msgstr "Classification"
 
-#: profiles/drutact/modules/core/drutact_node/drutact_node.module:44
+#: profiles/drutact/modules/core/drutact_node/drutact_node.module:47
 msgid "Vignette"
 msgstr "Vignette"
 
@@ -1627,7 +1626,7 @@ msgctxt "field_instance:user-field_full_name:label"
 msgid "Full name"
 msgstr "Nom complet"
 
-#: profiles/drutact/modules/core/drutact_user/drutact_user.module:17
+#: profiles/drutact/modules/core/drutact_user/drutact_user.module:19
 msgid "Email password reset link"
 msgstr "Réinitialiser le mot de passe"
 
@@ -1639,11 +1638,11 @@ msgstr ""
 msgid "User components for DruTACT installation profile."
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_wysiwyg/drutact_wysiwyg.module:86
+#: profiles/drutact/modules/core/drutact_wysiwyg/drutact_wysiwyg.module:18
 msgid "Display options"
 msgstr "Options d'affichage"
 
-#: profiles/drutact/modules/core/drutact_wysiwyg/drutact_wysiwyg.module:109
+#: profiles/drutact/modules/core/drutact_wysiwyg/drutact_wysiwyg.module:44
 msgid "Preview"
 msgstr "Aperçu"
 

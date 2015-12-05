@@ -8,9 +8,12 @@ include_once 'drutact_node.features.inc';
 
 /**
  * Implements hook_form().
+ *
+ * Move Sections / Tags to Classification vertical tab.
+ * Move Image to Vignette vertical tab.
  */
 function drutact_node_form_alter(&$form, &$form_state, $form_id) {
-  // Move Sections and Tags to Classification vertical tab.
+  // Move Sections / Tags to Classification vertical tab.
   if (isset($form['field_sections']) || isset($form['field_tags'])) {
     $form['classification_tab'] = array(
       '#type' => 'fieldset',
@@ -58,7 +61,7 @@ function drutact_node_form_alter(&$form, &$form_state, $form_id) {
 }
 
 /**
- * Validation callback needed for classification tab in node add/edit form.
+ * Validation callback needed for Classification tab in node add/edit form.
  */
 function _drutact_node_classification_tab_form_validate($form, &$form_state) {
   // Copy field_sections value from classification_tab to its original location.
@@ -91,6 +94,8 @@ function _drutact_node_vignette_tab_form_validate($form, &$form_state) {
 
 /**
  * Implements hook_post_features_rebuild().
+ *
+ * Default vocabulary permissions (sections, tags).
  */
 function drutact_node_post_features_rebuild($component) {
   if ($component == 'taxonomy') {

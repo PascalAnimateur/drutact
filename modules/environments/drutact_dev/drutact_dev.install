@@ -1,11 +1,13 @@
 <?php
 /**
  * @file
- * Install, update and uninstall functions for DruTACT Development.
+ * Install, update and uninstall functions for the DruTACT Development feature.
  */
 
 /**
  * Implements hook_enable().
+ *
+ * Default module permissions (devel).
  */
 function drutact_dev_enable() {
   // Default module permissions (devel).
@@ -24,6 +26,9 @@ function drutact_dev_enable() {
 
 /**
  * Implements hook_disable().
+ *
+ * Uninstall development modules.
+ * Delete development variables.
  */
 function drutact_dev_disable() {
   // Uninstall development modules.

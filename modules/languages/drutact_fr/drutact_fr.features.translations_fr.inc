@@ -22,7 +22,7 @@ function drutact_fr_translations_fr_defaults() {
   $translations['fr:default']['189f63f277cd73395561651753563065'] = array(
     'source' => 'Tags',
     'context' => '',
-    'location' => 'profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc:30',
+    'location' => '',
     'translation' => 'Mots-clés',
     'plid' => 0,
     'plural' => 0,

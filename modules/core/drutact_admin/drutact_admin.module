@@ -8,6 +8,8 @@ include_once 'drutact_admin.features.inc';
 
 /**
  * Implements hook_features_banish_alter().
+ *
+ * Banish all *__active_tab variables.
  */
 function drutact_admin_features_banish_alter(&$banished) {
   global $conf;
@@ -15,7 +17,7 @@ function drutact_admin_features_banish_alter(&$banished) {
   $banished['variable'] = is_array($banished['variable']) ? $banished['variable'] : array();
 
   foreach ($keys as $key) {
-    // Banish most of the annoying __active_tab variables.
+    // Banish all *__active_tab variables.
     if (strpos($key, '__active_tab') !== FALSE) {
       $banished['variable'][] = $key;
     }
@@ -23,20 +25,94 @@ function drutact_admin_features_banish_alter(&$banished) {
 }
 
 /**
- * Implements hook_update_projects_alter().
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Assign files to group selection widget from user's groups.
  */
-function drutact_admin_update_projects_alter(&$projects)
-{
-  // Disable checking for updates (drutact_*).
-  foreach ($projects as $name => $project) {
-    if (strpos($name, 'drutact_') !== FALSE) {
-      unset($projects[$name]);
+function drutact_admin_form_views_form_administration_files_admin_alter(&$form, &$form_state, $form_id) {
+  // Assign files to group selection widget from user's groups.
+  if ($form_state['step'] == 'views_bulk_operations_config_form') {
+    if (isset($form['parameter']['group']['settings']['group'])) {
+      $form['parameter']['group']['settings']['group']['#type'] = 'select';
+      $form['parameter']['group']['settings']['group']['#options'] = _drutact_admin_select_group_options();
+      $form['parameter']['group']['settings']['group']['#description'] = t('Select the group to which the file(s) will be assigned.');
     }
   }
 }
 
 /**
  * Implements hook_form_FORM_ID_alter().
+ */
+function drutact_admin_form_views_form_administration_files_group_alter(&$form, &$form_state, $form_id) {
+  drutact_admin_form_views_form_administration_files_admin_alter($form, $form_state, $form_id);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Assign nodes to group selection widget from user's groups.
+ */
+function drutact_admin_form_views_form_administration_nodes_admin_alter(&$form, &$form_state, $form_id) {
+  // Assign nodes to group selection widget from user's groups.
+  if ($form_state['step'] == 'views_bulk_operations_config_form') {
+    if (isset($form['parameter']['group']['settings']['group'])) {
+      $form['parameter']['group']['settings']['group']['#type'] = 'select';
+      $form['parameter']['group']['settings']['group']['#options'] = _drutact_admin_select_group_options();
+      $form['parameter']['group']['settings']['group']['#description'] = t('Select the group to which the file(s) will be assigned.');
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function drutact_admin_form_views_form_administration_nodes_group_alter(&$form, &$form_state, $form_id) {
+  drutact_admin_form_views_form_administration_nodes_admin_alter($form, $form_state, $form_id);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Subscribe users to group selection widget from user's groups.
+ */
+function drutact_admin_form_views_form_administration_users_admin_alter(&$form, &$form_state, $form_id) {
+  // Subscribe users to group selection widget from user's groups.
+  if ($form_state['step'] == 'views_bulk_operations_config_form') {
+    if (isset($form['parameter']['group']['settings']['group'])) {
+      $form['parameter']['group']['settings']['group']['#type'] = 'select';
+      $form['parameter']['group']['settings']['group']['#options'] = _drutact_admin_select_group_options();
+      $form['parameter']['group']['settings']['group']['#description'] = t('Select the group to which the user(s) will be subscribed.');
+    }
+  }
+}
+
+/**
+ * Helper function to generate selection widget from user's groups.
+ */
+function _drutact_admin_select_group_options() {
+  global $user;
+  $options = array();
+
+  // Get groups of the current user.
+  $types = og_get_all_group_entity();
+  foreach ($types as $entity_type => $name) {
+    $gids = og_get_all_group($entity_type);
+    $entities = entity_load($entity_type, $gids);
+    foreach ($entities as $entity) {
+      list($gid) = entity_extract_ids($entity_type, $entity);
+      if (og_user_access('node', $gid, 'manage members', $user)) {
+        $options[$gid] = check_plain(t(entity_label($entity_type, $entity)));
+      }
+    }
+  }
+
+  return $options;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Enable additional settings vertical tabs on taxonomy term form.
  */
 function drutact_admin_form_taxonomy_form_term_alter(&$form, &$form_state, $form_id) {
   // Enable additional settings vertical tabs on taxonomy term form.
@@ -61,90 +137,13 @@ function drutact_admin_form_taxonomy_form_term_alter(&$form, &$form_state, $form
 }
 
 /**
- * Implements hook_form_FORM_ID_alter().
- */
-function drutact_admin_form_views_form_administration_files_admin_alter(&$form, &$form_state, $form_id) {
-  // Assign files to group.
-  if ($form_state['step'] == 'views_bulk_operations_config_form') {
-    if (isset($form['parameter']['group']['settings']['group'])) {
-      $form['parameter']['group']['settings']['group']['#type'] = 'select';
-      $form['parameter']['group']['settings']['group']['#options'] = _drutact_admin_select_group_options();
-      $form['parameter']['group']['settings']['group']['#description'] = t('Select the group to which the file(s) will be assigned.');
-    }
-  }
-}
-
-/**
- * Implements hook_form_FORM_ID_alter().
- */
-function drutact_admin_form_views_form_administration_files_group_alter(&$form, &$form_state, $form_id) {
-  drutact_admin_form_views_form_administration_files_admin_alter($form, $form_state, $form_id);
-}
-
-/**
- * Implements hook_form_FORM_ID_alter().
- */
-function drutact_admin_form_views_form_administration_nodes_admin_alter(&$form, &$form_state, $form_id) {
-  // Assign nodes to group.
-  if ($form_state['step'] == 'views_bulk_operations_config_form') {
-    if (isset($form['parameter']['group']['settings']['group'])) {
-      $form['parameter']['group']['settings']['group']['#type'] = 'select';
-      $form['parameter']['group']['settings']['group']['#options'] = _drutact_admin_select_group_options();
-      $form['parameter']['group']['settings']['group']['#description'] = t('Select the group to which the file(s) will be assigned.');
-    }
-  }
-}
-
-/**
- * Implements hook_form_FORM_ID_alter().
- */
-function drutact_admin_form_views_form_administration_nodes_group_alter(&$form, &$form_state, $form_id) {
-  drutact_admin_form_views_form_administration_nodes_admin_alter($form, $form_state, $form_id);
-}
-
-/**
- * Implements hook_form_FORM_ID_alter().
- */
-function drutact_admin_form_views_form_administration_users_admin_alter(&$form, &$form_state, $form_id) {
-  // Subscribe users to group.
-  if ($form_state['step'] == 'views_bulk_operations_config_form') {
-    if (isset($form['parameter']['group']['settings']['group'])) {
-      $form['parameter']['group']['settings']['group']['#type'] = 'select';
-      $form['parameter']['group']['settings']['group']['#options'] = _drutact_admin_select_group_options();
-      $form['parameter']['group']['settings']['group']['#description'] = t('Select the group to which the user(s) will be subscribed.');
-    }
-  }
-}
-
-/**
- * Helper function to generate group selection options.
- */
-function _drutact_admin_select_group_options() {
-  global $user;
-  $options = array();
-
-  // Get groups of the current user.
-  $types = og_get_all_group_entity();
-  foreach ($types as $entity_type => $name) {
-    $gids = og_get_all_group($entity_type);
-    $entities = entity_load($entity_type, $gids);
-    foreach ($entities as $entity) {
-      list($gid) = entity_extract_ids($entity_type, $entity);
-      if (og_user_access('node', $gid, 'manage members', $user)) {
-        $options[$gid] = check_plain(t(entity_label($entity_type, $entity)));
-      }
-    }
-  }
-
-  return $options;
-}
-
-/**
  * Implements hook_post_features_rebuild().
+ *
+ *Default rules permissions (assign / subscribe to group).
  */
 function drutact_admin_post_features_rebuild($component) {
   if ($component == 'rules_config') {
-    // Enable default permissions.
+    // Default rules permissions (assign / subscribe to group).
     _drutact_default_module_permissions(array(
       DRUPAL_ANONYMOUS_RID => array(),
       DRUPAL_AUTHENTICATED_RID => array(),
@@ -155,13 +154,26 @@ function drutact_admin_post_features_rebuild($component) {
         'use Rules component rules_user_subscribe_to_group',
       ),
       DRUTACT_ADMINISTRATOR_RID => array(
-        // Organic group
-        'administer group',
         // Rules
         'use Rules component rules_file_assign_to_group',
         'use Rules component rules_node_assign_to_group',
         'use Rules component rules_user_subscribe_to_group',
       )
     ));
+  }
+}
+
+/**
+ * Implements hook_update_projects_alter().
+ *
+ * Disable checking for updates (drutact_*).
+ */
+function drutact_admin_update_projects_alter(&$projects)
+{
+  // Disable checking for updates (drutact_*).
+  foreach ($projects as $name => $project) {
+    if (strpos($name, 'drutact_') !== FALSE) {
+      unset($projects[$name]);
+    }
   }
 }

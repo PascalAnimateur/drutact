@@ -8,6 +8,8 @@ include_once 'drutact_resource.features.inc';
 
 /**
  * Implements hook_post_features_rebuild().
+ *
+ * Default content permissions (resource).
  */
 function drutact_resource_post_features_rebuild($component) {
   if ($component == 'ctools') {

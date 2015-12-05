@@ -1,11 +1,15 @@
 <?php
 /**
  * @file
- * Install, update and uninstall functions for DruTACT Email.
+ * Install, update and uninstall functions for the DruTACT Email feature.
  */
 
 /**
  * Implements hook_install().
+ *
+ * Default module permissions (mailsystem, mimemail).
+ * Default module weight (drutact_email).
+ * Default user field instance (mimemail).
  */
 function drutact_email_install() {
   // Default module permissions (mailsystem, mimemail).
@@ -31,7 +35,7 @@ function drutact_email_install() {
   // Default module weight (drutact_email).
   _drutact_default_module_weight('drutact_email', 20);
 
-  // Hide Mime Mail settings from user profile.
+  // Default user field instance (mimemail).
   $field_bundle_setting = variable_get('field_bundle_settings_user__user', array());
   $field_bundle_setting['extra_fields']['form']['mimemail']['weight'] = 50;
   $field_bundle_setting['extra_fields']['display']['mimemail']['default']['visible'] = FALSE;

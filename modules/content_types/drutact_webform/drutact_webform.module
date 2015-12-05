@@ -8,6 +8,8 @@ include_once 'drutact_webform.features.inc';
 
 /**
  * Implements hook_form_FORM_ID_alter().
+ *
+ * Set a maximum width for the existing component select box.
  */
 function drutact_webform_form_webform_components_form_alter(&$form, $form_state, $form_id) {
   // Set a maximum width for the existing component select box.
@@ -21,6 +23,9 @@ function drutact_webform_form_webform_components_form_alter(&$form, $form_state,
 
 /**
  * Implements hook_post_features_rebuild().
+ *
+ * Default content type permissions (webform).
+ * Revert feature components (drutact_webform).
  */
 function drutact_webform_post_features_rebuild($component) {
   if ($component == 'ctools') {
@@ -29,7 +34,7 @@ function drutact_webform_post_features_rebuild($component) {
   }
 
   if ($component == 'node') {
-    // Revert components (drutact_webform).
+    // Revert feature components (drutact_webform).
     $feature = features_get_features('drutact_webform');
     $components = array_keys($feature->info['features']);
     features_revert(array('drutact_webform' => $components));

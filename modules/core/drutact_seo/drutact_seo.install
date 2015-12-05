@@ -1,11 +1,13 @@
 <?php
 /**
  * @file
- * Install, update and uninstall functions for DruTACT SEO.
+ * Install, update and uninstall functions for the DruTACT SEO feature.
  */
 
 /**
  * Implements hook_install().
+ *
+ * Default module permissions (metatag, path, pathauto, xmlsitemap).
  */
 function drutact_seo_install() {
   // Default module permissions (metatag, path, pathauto, xmlsitemap).

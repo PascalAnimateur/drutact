@@ -1,31 +1,35 @@
 <?php
 /**
  * @file
- * Install, update and uninstall functions for DruTACT Localization.
+ * Install, update and uninstall functions for the DruTACT Localization feature.
  */
 
 /**
  * Implements hook_install().
+ *
+ * Create missing directories (public://translations).
+ * Default module weight (drutact_l10n).
+ * Default multilingual menus (main-menu).
+ * Default variables (l10n_update_download_store).
+ * Enable DruTACT language module (drutact_$langcode).
  */
 function drutact_l10n_install() {
-  // Default module permissions need to be set in hook_post_features_rebuild().
+  // Create missing directories (public://translations).
+  $translations_dir = "public://translations";
+  file_prepare_directory($translations_dir, FILE_CREATE_DIRECTORY | FILE_MODIFY_PERMISSIONS);
 
   // Default module weight (drutact_l10n).
   _drutact_default_module_weight('drutact_l10n', 20);
 
-  // Create missing directories (translations).
-  $translations_dir = "public://translations";
-  file_prepare_directory($translations_dir, FILE_CREATE_DIRECTORY | FILE_MODIFY_PERMISSIONS);
-
-  // Default translations directory.
-  variable_set('l10n_update_download_store', conf_path() . '/files/translations');
-
-  // Enable multilingual menus.
+  // Default multilingual menus (main-menu).
   _drutact_l10n_default_i18n_menus(array(
     'main-menu',
   ));
 
-  // Enable DruTACT language module.
+  // Default variables (l10n_update_download_store).
+  variable_set('l10n_update_download_store', conf_path() . '/files/translations');
+
+  // Enable DruTACT language module (drutact_$langcode).
   global $language;
   if (isset($language->language)) {
     module_enable(array('drutact_' . $language->language));

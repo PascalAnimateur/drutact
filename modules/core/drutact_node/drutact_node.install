@@ -1,11 +1,13 @@
 <?php
 /**
  * @file
- * Install, update and uninstall functions for DruTACT Node.
+ * Install, update and uninstall functions for the DruTACT Node feature.
  */
 
 /**
  * Implements hook_install().
+ *
+ * Default module permissions (field_library, node).
  */
 function drutact_node_install() {
   // Default module permissions (field_library, node).
