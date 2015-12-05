@@ -35,6 +35,7 @@
 #  profiles/drutact/modules/content_types/drutact_event/drutact_event.module: n/a
 #  profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.install: n/a
 #  profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.info: n/a
+#  profiles/drutact/modules/extra/drutact_charts/drutact_charts.info: n/a
 #  profiles/drutact/modules/content_types/drutact_group/drutact_group.features.field_base.inc: n/a
 #  profiles/drutact/modules/content_types/drutact_group/drutact_group.module: n/a
 #  profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.module: n/a
@@ -66,8 +67,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-12-04 10:43-0500\n"
-"PO-Revision-Date: 2015-12-04 10:43-0500\n"
+"POT-Creation-Date: 2015-12-04 22:19-0500\n"
+"PO-Revision-Date: 2015-12-04 22:19-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -808,7 +809,7 @@ msgstr ""
 msgid "Event Calendar for DruTACT Event content type."
 msgstr ""
 
-#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.info:0
+#: profiles/drutact/modules/content_types/drutact_event/modules/drutact_event_calendar/drutact_event_calendar.info:0 profiles/drutact/modules/extra/drutact_charts/drutact_charts.info:0
 msgid "DruTACT Extra"
 msgstr ""
 
@@ -1672,6 +1673,14 @@ msgstr ""
 
 #: profiles/drutact/modules/environments/drutact_prod/drutact_prod.info:0
 msgid "Production environment of DruTACT installation profile."
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_charts/drutact_charts.info:0
+msgid "DruTACT Charts"
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_charts/drutact_charts.info:0
+msgid "Graphs and charts support using the Google Charts library."
 msgstr ""
 
 #: profiles/drutact/modules/languages/drutact_en/drutact_en.info:0
