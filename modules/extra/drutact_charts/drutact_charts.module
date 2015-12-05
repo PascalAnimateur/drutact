@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DruTACT Charts feature.
+ */
+
+include_once 'drutact_charts.features.inc';

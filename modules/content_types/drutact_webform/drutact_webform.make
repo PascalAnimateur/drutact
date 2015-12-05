@@ -4,6 +4,11 @@ core = 7.x
 ; Add existing components
 projects[webform_add_existing][version] = 2.x-dev
 
+; Charts
+projects[webform_charts][type] = module
+projects[webform_charts][patch][2347065] = https://www.drupal.org/files/issues/webform_charts-no_inline_types.patch
+projects[webform_charts][patch][2454389] = https://www.drupal.org/files/issues/webform_charts-fix_empty_analysis_data-2454389-1.patch
+
 ; Import submissions
 projects[webform_import][version] = 1.x-dev
 projects[webform_import][patch][2151745] = https://www.drupal.org/files/issues/webform_import-fix_undefined_mandatory-2151745-5.patch

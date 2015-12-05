@@ -1,0 +1,23 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for DruTACT Charts.
+ */
+
+
+/**
+ * Implements hook_install().
+ */
+function drutact_charts_install() {
+  // Default module permissions (charts).
+  _drutact_default_module_permissions(array(
+    DRUPAL_ANONYMOUS_RID => array(),
+    DRUPAL_AUTHENTICATED_RID => array(),
+    DRUTACT_EDITOR_RID => array(),
+    DRUTACT_ADMINISTRATOR_RID => array(
+      // Charts
+      'access example charts',
+      'administer charts',
+    ),
+  ));
+}
