@@ -15,7 +15,7 @@ function drutact_charts_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'charts_default_settings';
   $strongarm->value = array(
-    'library' => '',
+    'library' => 'google',
     'type' => 'pie',
     'title' => '',
     'title_position' => 'out',

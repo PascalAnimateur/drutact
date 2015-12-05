@@ -1,11 +1,11 @@
 name = DruTACT Charts
-description = Graphs and charts support using the Highcharts.js library.
+description = Graphs and charts support using the Google Charts library.
 core = 7.x
 package = DruTACT Extra
 version = 7.x-1.3-alpha16
 project = drutact_charts
 dependencies[] = charts
-dependencies[] = charts_highcharts
+dependencies[] = charts_google
 dependencies[] = ctools
 dependencies[] = drutact_core
 dependencies[] = features

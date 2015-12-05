@@ -20,4 +20,9 @@ function drutact_charts_install() {
       'administer charts',
     ),
   ));
+
+  // Disable overridden views.
+  _drutact_disable_views(array(
+    'charts_demo',
+  ));
 }
