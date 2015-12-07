@@ -68,8 +68,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-12-07 09:20-0500\n"
-"PO-Revision-Date: 2015-12-07 09:20-0500\n"
+"POT-Creation-Date: 2015-12-07 09:24-0500\n"
+"PO-Revision-Date: 2015-12-07 09:24-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -1129,7 +1129,7 @@ msgctxt "field_instance:webform-title_field:description"
 msgid "The title or name of this webform."
 msgstr "Le titre ou le nom de ce formulaire."
 
-#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.inc:29
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.inc:29 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.module:66
 msgid "Webform"
 msgstr "Webform"
 
@@ -1147,9 +1147,9 @@ msgstr ""
 "description optionnelle avant de pouvoir y ajouter des composants "
 "(questions, instructions, etc.)"
 
-#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:381
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:381 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.module:67
 msgid "Webforms"
-msgstr "Webforms"
+msgstr "Formulaires"
 
 #: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:395
 msgid "No webform found matching the search criteria."

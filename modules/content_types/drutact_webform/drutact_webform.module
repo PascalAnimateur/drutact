@@ -59,3 +59,9 @@ function drutact_webform_post_features_rebuild($component) {
     features_revert(array('drutact_webform' => $components));
   }
 }
+
+// Translatables
+// Included for use with string extractors like potx.
+
+t('Webform');
+t('Webforms');
