@@ -46,4 +46,9 @@ function drutact_webform_install() {
       'schedule webforms',
     ),
   ));
+
+  // Disable views (webform_web).
+  _drutact_disable_views(array(
+    'webform_webforms',
+  ));
 }
