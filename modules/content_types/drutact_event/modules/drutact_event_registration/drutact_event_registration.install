@@ -1,0 +1,37 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the DruTACT Event Registration feature.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function drutact_event_registration_install() {
+  // Default module permissions (registration).
+  _drutact_default_module_permissions(array(
+    DRUPAL_ANONYMOUS_RID => array(),
+    DRUPAL_AUTHENTICATED_RID => array(),
+    DRUTACT_EDITOR_RID => array(
+      // Registration
+      'administer registration',
+    ),
+    DRUTACT_ADMINISTRATOR_RID => array(
+      // Registration
+      'administer registration',
+      'administer registration states',
+      'administer registration types',
+    ),
+  ));
+
+  // Remove default registration states.
+  $default_states = array(
+    'canceled',
+    'complete',
+    'held',
+    'pending',
+  );
+  db_delete('registration_state')
+    ->condition('name', $default_states, 'IN')
+    ->execute();
+}

@@ -1,0 +1,90 @@
+<?php
+/**
+ * @file
+ * Code for the DruTACT Event Registration feature.
+ */
+
+include_once 'drutact_event_registration.features.inc';
+
+/**
+ * Implements hook_admin_paths().
+ *
+ * Use administration theme for group tabs (registrations).
+ */
+function drutact_event_registration_admin_paths() {
+  // Use administration theme for group tabs (registrations).
+  $paths = array(
+    'node/*/registrations' => TRUE,
+    'node/*/registrations/settings' => TRUE,
+    'node/*/registrations/broadcast' => TRUE,
+  );
+  return $paths;
+}
+
+/**
+ * Helper function to set default registration type permissions.
+ */
+function _drutact_event_registration_default_registration_type_permissions($registration_type) {
+  _drutact_default_module_permissions(array(
+    DRUPAL_ANONYMOUS_RID => array(
+      // Registration type.
+      "create $registration_type registration other anonymous",
+    ),
+    DRUPAL_AUTHENTICATED_RID => array(
+      // Registration type.
+      "administer own $registration_type registration",
+      "create $registration_type registration",
+      "create $registration_type registration other anonymous",
+      "create $registration_type registration self",
+      "delete own $registration_type registration",
+      "update own $registration_type registration",
+      "view own $registration_type registration",
+    ),
+    DRUTACT_EDITOR_RID => array(
+      // Registration type.
+      "administer $registration_type registration",
+      "administer own $registration_type registration",
+      "create $registration_type registration",
+      "create $registration_type registration other anonymous",
+      "create $registration_type registration other users",
+      "create $registration_type registration self",
+      "delete any $registration_type registration",
+      "delete own $registration_type registration",
+      "edit $registration_type registration state",
+      "update any $registration_type registration",
+      "update own $registration_type registration",
+      "view $registration_type registration",
+      "view own $registration_type registration",
+      "edit $registration_type registration state",
+    ),
+    DRUTACT_ADMINISTRATOR_RID => array(
+      // Registration type.
+      "administer $registration_type registration",
+      "administer own $registration_type registration",
+      "create $registration_type registration",
+      "create $registration_type registration other anonymous",
+      "create $registration_type registration other users",
+      "create $registration_type registration self",
+      "delete any $registration_type registration",
+      "delete own $registration_type registration",
+      "edit $registration_type registration state",
+      "update any $registration_type registration",
+      "update own $registration_type registration",
+      "view $registration_type registration",
+      "view own $registration_type registration",
+      "edit $registration_type registration state",
+    ),
+  ));
+}
+
+/**
+ * Implements hook_post_features_rebuild().
+ *
+ * Default registration type permissions (default_registration).
+ */
+function drutact_event_registration_post_features_rebuild($component) {
+  if ($component == 'registration_type') {
+    // Default registration type permissions (default_registration).
+    _drutact_event_registration_default_registration_type_permissions('default_registration');
+  }
+}
