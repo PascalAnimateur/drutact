@@ -19,7 +19,7 @@ function drutact_event_registration_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'This option enables people to register for this event.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -65,7 +65,7 @@ function drutact_event_registration_field_default_field_instances() {
             200153887 => 0,
           ),
         ),
-        'status' => 0,
+        'status' => 1,
       ),
       'entity_translation_sync' => FALSE,
       'hide_register_tab' => 1,
@@ -85,6 +85,7 @@ function drutact_event_registration_field_default_field_instances() {
 
   // Translatables created/updated by the Localize Fields (localize_fields) module.
   t('Event registration', array(), array('context' => 'field_instance:event-field_event_registration:label'));
+  t('This option enables people to register for this event.', array(), array('context' => 'field_instance:event-field_event_registration:description'));
 
 
   return $field_instances;

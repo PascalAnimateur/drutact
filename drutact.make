@@ -5,7 +5,6 @@ core = 7.x
 defaults[projects][subdir] = "contrib"
 
 ; DruTACT Content types
-includes[] = modules/content_types/drutact_event/drutact_event.make
 includes[] = modules/content_types/drutact_group/drutact_group.make
 includes[] = modules/content_types/drutact_newsletter/drutact_newsletter.make
 includes[] = modules/content_types/drutact_webform/drutact_webform.make
@@ -27,3 +26,5 @@ includes[] = modules/environments/drutact_prod/drutact_prod.make
 
 ; DruTACT Extra
 includes[] = modules/extra/drutact_charts/drutact_charts.make
+includes[] = modules/extra/drutact_event_calendar/drutact_event_calendar.make
+includes[] = modules/extra/drutact_event_registration/drutact_event_registration.make

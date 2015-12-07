@@ -88,3 +88,14 @@ function drutact_event_registration_post_features_rebuild($component) {
     _drutact_event_registration_default_registration_type_permissions('default_registration');
   }
 }
+
+// Translatables
+// Included for use with string extractors like potx.
+
+t('This registration is for:');
+t('- Select -');
+t('Myself');
+t('Other account');
+t('Other person');
+t('State of this registration');
+
