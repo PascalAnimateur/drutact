@@ -57,6 +57,7 @@ function drutact_newsletter_install() {
 
   // Default user field instance (simplenews).
   $field_bundle_setting = variable_get('field_bundle_settings_user__user', array());
+  $field_bundle_setting['extra_fields']['display']['simplenews']['default']['visible'] = TRUE;
   $field_bundle_setting['extra_fields']['display']['simplenews']['default']['weight'] = 10;
   variable_set('field_bundle_settings_user__user', $field_bundle_setting);
 }
