@@ -14,6 +14,11 @@ projects[file_entity][patch][2112491] = https://www.drupal.org/files/issues/file
 projects[focal_point][type] = module
 projects[focal_point][patch][2626882] = https://www.drupal.org/files/issues/focal_point-remove_test_drive_images-2626882-2.patch
 
+; Font Awesome
+projects[fontawesome][type] = module
+libraries[fontawesome][download][type] = file
+libraries[fontawesome][download][url] = https://fortawesome.github.io/Font-Awesome/assets/font-awesome-4.5.0.zip
+
 ; Image dimensions
 projects[image_dimensions][type] = module
 
