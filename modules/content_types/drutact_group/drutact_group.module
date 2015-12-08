@@ -256,6 +256,21 @@ function drutact_group_post_features_rebuild($component) {
   }
 }
 
+/**
+ * Implements hook_theme_registry_alter().
+ *
+ * Add custom templates path.
+ */
+function drutact_group_theme_registry_alter(&$registry) {
+  // Add custom templates path.
+  $path = drupal_get_path('module', 'drutact_group') . '/templates';
+  $templates = drupal_find_theme_templates($registry, '.tpl.php', $path);
+  foreach ($templates as $key => $value) {
+    $templates[$key]['type'] = 'module';
+  }
+  $registry += $templates;
+}
+
 // Translatables
 // Included for use with string extractors like potx.
 

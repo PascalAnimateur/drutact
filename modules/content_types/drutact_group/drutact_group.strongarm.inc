@@ -124,6 +124,9 @@ function drutact_group_strongarm() {
         'language' => array(
           'weight' => '2',
         ),
+        'xmlsitemap' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(),
     ),

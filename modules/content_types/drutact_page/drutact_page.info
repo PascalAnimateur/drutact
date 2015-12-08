@@ -5,6 +5,7 @@ package = DruTACT Content types
 version = 7.x-1.3-alpha16
 dependencies[] = ctools
 dependencies[] = drutact_node
+dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = hierarchical_term_formatter
 dependencies[] = image

@@ -248,14 +248,16 @@ function drutact_group_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'list_key',
         'weight' => 21,
       ),
       'teaser' => array(
         'label' => 'hidden',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'list_key',
         'weight' => 21,
       ),
     ),
@@ -282,7 +284,7 @@ function drutact_group_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => -6,
+      'weight' => 21,
     ),
     'widget_type' => 'options_select',
   );
@@ -339,7 +341,7 @@ function drutact_group_field_default_field_instances() {
         'og_hide' => TRUE,
       ),
       'type' => 'options_onoff',
-      'weight' => -5,
+      'weight' => 20,
     ),
   );
 
