@@ -72,13 +72,14 @@ function drutact_resource_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_table',
-        'weight' => -5,
+        'weight' => 5,
       ),
       'teaser' => array(
-        'label' => 'hidden',
+        'label' => 'inline',
+        'module' => 'file',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => -5,
+        'type' => 'file_default',
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -114,7 +115,7 @@ function drutact_resource_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => -5,
+      'weight' => 5,
     ),
   );
 
@@ -300,17 +301,18 @@ function drutact_resource_field_default_field_instances() {
     'description' => 'Web sites or other external links related to this resource.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => -5,
+        'weight' => 5,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'inline',
+        'module' => 'link',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => -5,
+        'type' => 'link_default',
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -351,7 +353,7 @@ function drutact_resource_field_default_field_instances() {
         'urls_search' => 'start',
       ),
       'type' => 'advanced_link',
-      'weight' => -5,
+      'weight' => 5,
     ),
   );
 

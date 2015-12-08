@@ -113,7 +113,7 @@ function drutact_node_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'list_key',
         'weight' => 21,
       ),
     ),

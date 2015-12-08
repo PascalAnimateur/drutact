@@ -17,3 +17,18 @@ function drutact_resource_post_features_rebuild($component) {
     _drutact_default_content_type_permissions('resource');
   }
 }
+
+/**
+ * Implements hook_theme_registry_alter().
+ *
+ * Add custom templates path.
+ */
+function drutact_resource_theme_registry_alter(&$registry) {
+  // Add custom templates path.
+  $path = drupal_get_path('module', 'drutact_resource') . '/templates';
+  $templates = drupal_find_theme_templates($registry, '.tpl.php', $path);
+  foreach ($templates as $key => $value) {
+    $templates[$key]['type'] = 'module';
+  }
+  $registry += $templates;
+}
