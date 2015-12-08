@@ -100,6 +100,15 @@ function drutact_resource_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'email_plain' => array(
+        'custom_settings' => FALSE,
+      ),
+      'email_html' => array(
+        'custom_settings' => FALSE,
+      ),
+      'email_textalt' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

@@ -367,17 +367,17 @@ function drutact_resource_field_default_field_instances() {
     'description' => 'Determine if this content will be accessible to non-members of the assigned group(s).',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'list_key',
         'weight' => 21,
       ),
       'teaser' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'list_key',
         'weight' => 21,
       ),
     ),
