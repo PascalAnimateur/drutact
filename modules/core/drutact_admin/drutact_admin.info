@@ -5,6 +5,7 @@ package = DruTACT Core
 version = 7.x-1.3-alpha16
 dependencies[] = admin_views
 dependencies[] = adminimal_admin_menu
+dependencies[] = admin_menu_language
 dependencies[] = block
 dependencies[] = contextual
 dependencies[] = ctools

@@ -4,6 +4,10 @@ core = 7.x
 ; Administration menu
 projects[adminimal_admin_menu][type] = module
 projects[admin_menu][type] = module
+projects[admin_menu_language][type] = module
+projects[admin_menu_language][download][type] = git
+projects[admin_menu_language][download][url] = http://git.drupal.org/sandbox/PascalAnimateur/2631322.git
+projects[admin_menu_language][download][branch] = 7.x-1.x
 
 ; Administration views
 projects[admin_views][type] = module
