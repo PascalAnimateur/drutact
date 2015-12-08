@@ -68,10 +68,10 @@ function drutact_resource_field_default_field_instances() {
     'description' => 'Documents, videos and other files related to this resource.',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'inline',
         'module' => 'file',
         'settings' => array(),
-        'type' => 'file_table',
+        'type' => 'file_default',
         'weight' => 5,
       ),
       'teaser' => array(

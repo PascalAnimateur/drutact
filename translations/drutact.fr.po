@@ -16,6 +16,7 @@
 #  profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc: n/a
 #  profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc: n/a
 #  profiles/drutact/modules/core/drutact_node/templates/field--og-group-ref.tpl.php: n/a
+#  profiles/drutact/themes/drutact_bootstrap/templates/field--og-group-ref.tpl.php: n/a
 #  profiles/drutact/modules/content_types/drutact_article/drutact_article.features.inc: n/a
 #  profiles/drutact/modules/content_types/drutact_event/drutact_event.features.inc: n/a
 #  profiles/drutact/modules/content_types/drutact_group/drutact_group.features.inc: n/a
@@ -40,7 +41,10 @@
 #  profiles/drutact/modules/content_types/drutact_group/drutact_group.module: n/a
 #  profiles/drutact/modules/content_types/drutact_group/templates/field--group-access.tpl.php: n/a
 #  profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.module: n/a
+#  profiles/drutact/modules/content_types/drutact_resource/templates/field--field-attached_files.tpl.php: n/a
+#  profiles/drutact/modules/content_types/drutact_resource/templates/field--field-web-links.tpl.php: n/a
 #  profiles/drutact/modules/content_types/drutact_webform/drutact_webform.module: n/a
+#  profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info: n/a
 #  profiles/drutact/modules/core/drutact_user/drutact_user.module: n/a
 #  profiles/drutact/modules/core/drutact_admin/drutact_admin.module: n/a
 #  profiles/drutact/modules/core/drutact_admin/drutact_admin.info: n/a
@@ -72,13 +76,14 @@
 #  profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.module: n/a
 #  profiles/drutact/modules/languages/drutact_en/drutact_en.info: n/a
 #  profiles/drutact/modules/languages/drutact_fr/drutact_fr.info: n/a
+#  profiles/drutact/themes/drutact_bootstrap/templates/page.tpl.php: n/a
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-12-08 10:23-0500\n"
-"PO-Revision-Date: 2015-12-08 10:23-0500\n"
+"POT-Creation-Date: 2015-12-08 11:02-0500\n"
+"PO-Revision-Date: 2015-12-08 11:02-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -138,7 +143,7 @@ msgctxt "field_instance:page-field_image:label"
 msgid "Image"
 msgstr "Image"
 
-#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:537
+#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:539
 msgctxt "field_instance:resource-field_image:label"
 msgid "Image"
 msgstr "Image"
@@ -173,7 +178,7 @@ msgctxt "field_instance:page-field_image:description"
 msgid "Image accompanying the content."
 msgstr "Image accompagnant le contenu."
 
-#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:538
+#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:540
 msgctxt "field_instance:resource-field_image:description"
 msgid "Image accompanying the content."
 msgstr "Image accompagnant le contenu."
@@ -208,7 +213,7 @@ msgctxt "field_instance:page-field_sections:label"
 msgid "Section(s)"
 msgstr "Section(s)"
 
-#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:539
+#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:541
 msgctxt "field_instance:resource-field_sections:label"
 msgid "Section(s)"
 msgstr "Section(s)"
@@ -247,7 +252,7 @@ msgctxt "field_instance:page-field_sections:description"
 msgid "Assign this content to specific section(s) of the site."
 msgstr "Assigner ce contenu à une(des) section(s) spécifique(s) du site."
 
-#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:540
+#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:542
 msgctxt "field_instance:resource-field_sections:description"
 msgid "Assign this content to specific section(s) of the site."
 msgstr "Assigner ce contenu à une(des) section(s) spécifique(s) du site."
@@ -282,7 +287,7 @@ msgctxt "field_instance:page-field_tags:label"
 msgid "Tags"
 msgstr "Mots-clés"
 
-#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:541
+#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:543
 msgctxt "field_instance:resource-field_tags:label"
 msgid "Tags"
 msgstr "Mots-clés"
@@ -329,7 +334,7 @@ msgstr ""
 "Saisir des mots-clés individuels pour décrire le sujet de ce "
 "contenu."
 
-#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:542
+#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:544
 msgctxt "field_instance:resource-field_tags:description"
 msgid "Enter individual keywords to describe this content's topic."
 msgstr ""
@@ -365,7 +370,7 @@ msgctxt "field_instance:page-group_content_access:label"
 msgid "Group content visibility"
 msgstr "Visibilité du contenu de groupe"
 
-#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:545
+#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:547
 msgctxt "field_instance:resource-group_content_access:label"
 msgid "Group content visibility"
 msgstr "Visibilité du contenu de groupe"
@@ -394,7 +399,7 @@ msgstr ""
 "Détermier si ce contenu sera accessible aux non-membres du(des) "
 "groupe(s) assigné(s)."
 
-#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:546
+#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:548
 msgctxt "field_instance:resource-group_content_access:description"
 msgid "Determine if this content will be accessible to non-members of the assigned group(s)."
 msgstr ""
@@ -423,7 +428,7 @@ msgctxt "field_instance:page-og_group_ref:label"
 msgid "Groups audience"
 msgstr "Audience de groupes"
 
-#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:547
+#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:549
 msgctxt "field_instance:resource-og_group_ref:label"
 msgid "Groups audience"
 msgstr "Audience de groupes"
@@ -458,7 +463,7 @@ msgctxt "field_instance:group_content-og_group_ref:label"
 msgid "Groups audience"
 msgstr "Audience de groupes"
 
-#: profiles/drutact/modules/core/drutact_node/templates/field--og-group-ref.tpl.php:3
+#: profiles/drutact/modules/core/drutact_node/templates/field--og-group-ref.tpl.php:3 profiles/drutact/themes/drutact_bootstrap/templates/field--og-group-ref.tpl.php:3
 msgid "Groups audience"
 msgstr "Audience de groupes"
 
@@ -472,7 +477,7 @@ msgctxt "field_instance:event-og_group_ref:description"
 msgid "Assign this content to the selected group(s)."
 msgstr "Assigner ce contenu au(x) groupe(s) sélectionné(s)."
 
-#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:548
+#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:550
 msgctxt "field_instance:resource-og_group_ref:description"
 msgid "Assign this content to the selected group(s)."
 msgstr "Assigner ce contenu au(x) groupe(s) sélectionné(s)."
@@ -511,7 +516,7 @@ msgctxt "field_instance:page-title_field:label"
 msgid "Title"
 msgstr "Titre"
 
-#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:549
+#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:551
 msgctxt "field_instance:resource-title_field:label"
 msgid "Title"
 msgstr "Titre"
@@ -563,7 +568,7 @@ msgctxt "field_instance:group-body:label"
 msgid "Description"
 msgstr "Description"
 
-#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:533
+#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:535
 msgctxt "field_instance:resource-body:label"
 msgid "Description"
 msgstr "Description"
@@ -1008,7 +1013,7 @@ msgstr ""
 msgid "Page content type of DruTACT installation profile."
 msgstr ""
 
-#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:534
+#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:536
 msgctxt "field_instance:resource-body:description"
 msgid "The description of this resource. Use the 'Edit summary' link above to set a shorter, text-only version that will be used to describe this content when it's being displayed as a teaser (i.e. in a list on the front page)."
 msgstr ""
@@ -1017,31 +1022,39 @@ msgstr ""
 "sera utilisée pour décrire ce contenu lorsqu'il sera affiché en "
 "accroche (i.e. dans une liste sur la page d'accueil)."
 
-#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:535
+#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:537
 msgctxt "field_instance:resource-field_attached_files:label"
 msgid "Attached file(s)"
 msgstr "Fichier(s) attaché(s)"
 
-#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:536
+#: profiles/drutact/modules/content_types/drutact_resource/templates/field--field-attached_files.tpl.php:3
+msgid "Attached file(s)"
+msgstr "Fichier(s) attaché(s)"
+
+#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:538
 msgctxt "field_instance:resource-field_attached_files:description"
 msgid "Documents, videos and other files related to this resource."
 msgstr ""
 "Les documents, vidéos et autres fichiers associés à cette "
 "ressource."
 
-#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:543
+#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:545
 msgctxt "field_instance:resource-field_web_links:label"
 msgid "Web link(s)"
 msgstr "Lien(s) web"
 
-#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:544
+#: profiles/drutact/modules/content_types/drutact_resource/templates/field--field-web-links.tpl.php:3
+msgid "Web link(s)"
+msgstr "Lien(s) web"
+
+#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:546
 msgctxt "field_instance:resource-field_web_links:description"
 msgid "Web sites or other external links related to this resource."
 msgstr ""
 "Les sites web et autres ressources externes associés à cette "
 "ressource."
 
-#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:550
+#: profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.field_instance.inc:552
 msgctxt "field_instance:resource-title_field:description"
 msgid "The title or name of this resource."
 msgstr "Le titre ou le nom de cette ressource."
@@ -1297,7 +1310,7 @@ msgstr "supprimer"
 msgid "Defaults"
 msgstr "Paramètres par défaut"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1348
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1348 profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info:0
 msgid "Content"
 msgstr "Contenu"
 
@@ -1847,5 +1860,57 @@ msgstr ""
 
 #: profiles/drutact/modules/languages/drutact_fr/drutact_fr.info:0
 msgid "French language support for DruTACT installation profile."
+msgstr ""
+
+#: profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info:0
+msgid "DruTACT Bootstrap"
+msgstr ""
+
+#: profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info:0
+msgid "Bootstrap sub-theme of DruTACT installation profile."
+msgstr ""
+
+#: profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info:0
+msgid "Navigation"
+msgstr ""
+
+#: profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info:0
+msgid "Top Bar"
+msgstr ""
+
+#: profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info:0
+msgid "Highlighted"
+msgstr ""
+
+#: profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info:0
+msgid "Help"
+msgstr ""
+
+#: profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info:0
+msgid "Primary"
+msgstr ""
+
+#: profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info:0
+msgid "Secondary"
+msgstr ""
+
+#: profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info:0
+msgid "Footer"
+msgstr ""
+
+#: profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info:0
+msgid "Page top"
+msgstr ""
+
+#: profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info:0
+msgid "Page bottom"
+msgstr ""
+
+#: profiles/drutact/themes/drutact_bootstrap/templates/page.tpl.php:80;81;86
+msgid "Home"
+msgstr ""
+
+#: profiles/drutact/themes/drutact_bootstrap/templates/page.tpl.php:91
+msgid "Toggle navigation"
 msgstr ""
 
