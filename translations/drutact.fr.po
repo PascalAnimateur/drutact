@@ -1071,7 +1071,7 @@ msgstr "Le titre ou le nom de ce formulaire."
 
 #: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.inc:29 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.module:66
 msgid "Webform"
-msgstr "Webform"
+msgstr "Formulaire"
 
 #: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.inc:31
 msgid "Use <em>webforms</em> to create questionnaires accessible to users. Submission results and statistics are recorded and accessible to privileged users."
