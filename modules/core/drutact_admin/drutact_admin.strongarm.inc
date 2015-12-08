@@ -47,6 +47,7 @@ function drutact_admin_strongarm() {
     'admin_menu.menu' => TRUE,
     'admin_menu.users' => TRUE,
     'admin_menu.account' => TRUE,
+    'language.links' => TRUE,
     'admin_menu.search' => FALSE,
   );
   $export['admin_menu_components'] = $strongarm;
