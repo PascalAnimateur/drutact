@@ -72,8 +72,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-12-07 14:09-0500\n"
-"PO-Revision-Date: 2015-12-07 14:09-0500\n"
+"POT-Creation-Date: 2015-12-07 21:24-0500\n"
+"PO-Revision-Date: 2015-12-07 21:24-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -595,9 +595,9 @@ msgctxt "field_instance:event-title_field:description"
 msgid "The title or name of this event."
 msgstr "Le titre ou le nom de cet événement."
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.inc:29
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.inc:29 profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc:39
 msgid "Event"
-msgstr "Évènement"
+msgstr "Événement"
 
 #: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.inc:31
 msgid "Use <em>events</em> for time-specific content that should appear in the calendar, such as meetings."
@@ -725,7 +725,7 @@ msgstr "Actions"
 msgid "Page"
 msgstr "Page"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.module:19 profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc:48
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.module:19 profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc:57
 msgid "Add Event"
 msgstr "Ajouter Événement"
 
@@ -1812,7 +1812,7 @@ msgstr ""
 msgid "Searching..."
 msgstr "Recherche en cours..."
 
-#: profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc:39
+#: profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc:48
 msgid "Please enter one more character"
 msgstr "Veuillez saisir un caractère additionnel"
 
