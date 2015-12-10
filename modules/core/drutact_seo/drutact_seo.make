@@ -20,4 +20,4 @@ projects[subpathauto][patch][1814516] = https://www.drupal.org/files/issues/subp
 ; XML sitemap
 projects[xmlsitemap][type] = module
 projects[xmlsitemap][patch][2244449] = https://www.drupal.org/files/issues/xmlsitemap-relative_xsl_url-2244449-19.patch
-projects[xmlsitemap][patch][1481798] = https://www.drupal.org/files/issues/xmlsitemap-add_support_for_entity_translation-1481798-56.patch
+projects[xmlsitemap][patch][1481798] = https://www.drupal.org/files/issues/add_support_for_entity_translation-1481798-64.patch
