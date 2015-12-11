@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DruTACT Disqus feature.
+ */
+
+include_once 'drutact_disqus.features.inc';

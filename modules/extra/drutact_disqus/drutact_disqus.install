@@ -1,0 +1,36 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the DruTACT Disqus feature.
+ */
+
+/**
+ * Implements hook_enable().
+ */
+function drutact_disqus_enable() {
+  // Enable default permissions.
+  _drutact_default_module_permissions(array(
+    DRUPAL_ANONYMOUS_RID => array(
+      // Disqus
+      'view disqus comments',
+    ),
+    DRUPAL_AUTHENTICATED_RID => array(
+      // Disqus
+      'display disqus comments on profile',
+      'view disqus comments',
+    ),
+    DRUTACT_EDITOR_RID => array(
+      // Disqus
+      'display disqus comments on profile',
+      'toggle disqus comments',
+      'view disqus comments',
+    ),
+    DRUTACT_ADMINISTRATOR_RID => array(
+      // Disqus
+      'administer disqus',
+      'display disqus comments on profile',
+      'toggle disqus comments',
+      'view disqus comments',
+    ),
+  ));
+}

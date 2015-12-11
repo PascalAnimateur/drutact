@@ -26,5 +26,6 @@ includes[] = modules/environments/drutact_prod/drutact_prod.make
 
 ; DruTACT Extra
 includes[] = modules/extra/drutact_charts/drutact_charts.make
+includes[] = modules/extra/drutact_disqus/drutact_disqus.make
 includes[] = modules/extra/drutact_event_calendar/drutact_event_calendar.make
 includes[] = modules/extra/drutact_event_registration/drutact_event_registration.make
