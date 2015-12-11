@@ -16,7 +16,6 @@
 #  profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc: n/a
 #  profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc: n/a
 #  profiles/drutact/modules/core/drutact_node/templates/field--og-group-ref.tpl.php: n/a
-#  profiles/drutact/themes/drutact_bootstrap/templates/field--og-group-ref.tpl.php: n/a
 #  profiles/drutact/modules/content_types/drutact_article/drutact_article.features.inc: n/a
 #  profiles/drutact/modules/content_types/drutact_event/drutact_event.features.inc: n/a
 #  profiles/drutact/modules/content_types/drutact_group/drutact_group.features.inc: n/a
@@ -44,7 +43,6 @@
 #  profiles/drutact/modules/content_types/drutact_resource/templates/field--field-attached_files.tpl.php: n/a
 #  profiles/drutact/modules/content_types/drutact_resource/templates/field--field-web-links.tpl.php: n/a
 #  profiles/drutact/modules/content_types/drutact_webform/drutact_webform.module: n/a
-#  profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info: n/a
 #  profiles/drutact/modules/core/drutact_user/drutact_user.module: n/a
 #  profiles/drutact/modules/core/drutact_admin/drutact_admin.module: n/a
 #  profiles/drutact/modules/core/drutact_admin/drutact_admin.info: n/a
@@ -76,14 +74,13 @@
 #  profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.module: n/a
 #  profiles/drutact/modules/languages/drutact_en/drutact_en.info: n/a
 #  profiles/drutact/modules/languages/drutact_fr/drutact_fr.info: n/a
-#  profiles/drutact/themes/drutact_bootstrap/templates/page.tpl.php: n/a
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-12-08 11:02-0500\n"
-"PO-Revision-Date: 2015-12-08 11:02-0500\n"
+"POT-Creation-Date: 2015-12-11 09:05-0500\n"
+"PO-Revision-Date: 2015-12-11 09:05-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -463,7 +460,7 @@ msgctxt "field_instance:group_content-og_group_ref:label"
 msgid "Groups audience"
 msgstr "Audience de groupes"
 
-#: profiles/drutact/modules/core/drutact_node/templates/field--og-group-ref.tpl.php:3 profiles/drutact/themes/drutact_bootstrap/templates/field--og-group-ref.tpl.php:3
+#: profiles/drutact/modules/core/drutact_node/templates/field--og-group-ref.tpl.php:3
 msgid "Groups audience"
 msgstr "Audience de groupes"
 
@@ -684,8 +681,8 @@ msgid "last »"
 msgstr "dernier »"
 
 #: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:304
-msgid "No events available."
-msgstr ""
+msgid "No event found matching the search criteria."
+msgstr "Aucun événement trouvé ne correspondant aux critères de recherche."
 
 #: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:305 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:396 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:994;1363
 msgid "author"
@@ -1310,7 +1307,7 @@ msgstr "supprimer"
 msgid "Defaults"
 msgstr "Paramètres par défaut"
 
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1348 profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info:0
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1348
 msgid "Content"
 msgstr "Contenu"
 
@@ -1860,57 +1857,5 @@ msgstr ""
 
 #: profiles/drutact/modules/languages/drutact_fr/drutact_fr.info:0
 msgid "French language support for DruTACT installation profile."
-msgstr ""
-
-#: profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info:0
-msgid "DruTACT Bootstrap"
-msgstr ""
-
-#: profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info:0
-msgid "Bootstrap sub-theme of DruTACT installation profile."
-msgstr ""
-
-#: profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info:0
-msgid "Navigation"
-msgstr ""
-
-#: profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info:0
-msgid "Top Bar"
-msgstr ""
-
-#: profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info:0
-msgid "Highlighted"
-msgstr ""
-
-#: profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info:0
-msgid "Help"
-msgstr ""
-
-#: profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info:0
-msgid "Primary"
-msgstr ""
-
-#: profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info:0
-msgid "Secondary"
-msgstr ""
-
-#: profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info:0
-msgid "Footer"
-msgstr ""
-
-#: profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info:0
-msgid "Page top"
-msgstr ""
-
-#: profiles/drutact/themes/drutact_bootstrap/drutact_bootstrap.info:0
-msgid "Page bottom"
-msgstr ""
-
-#: profiles/drutact/themes/drutact_bootstrap/templates/page.tpl.php:80;81;86
-msgid "Home"
-msgstr ""
-
-#: profiles/drutact/themes/drutact_bootstrap/templates/page.tpl.php:91
-msgid "Toggle navigation"
 msgstr ""
 

@@ -115,7 +115,7 @@ function drutact_event_views_default_views() {
   $handler->display->display_options['empty']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['empty']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['empty']['area_text_custom']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area_text_custom']['content'] = 'No events available.';
+  $handler->display->display_options['empty']['area_text_custom']['content'] = 'No event found matching the search criteria.';
   /* Relationship: Content: Author */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
   $handler->display->display_options['relationships']['uid']['table'] = 'node';
@@ -301,7 +301,7 @@ function drutact_event_views_default_views() {
     t('‹ previous'),
     t('next ›'),
     t('last »'),
-    t('No events available.'),
+    t('No event found matching the search criteria.'),
     t('author'),
     t('- Choose an operation -'),
     t('Change author'),
