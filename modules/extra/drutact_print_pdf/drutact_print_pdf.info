@@ -48,6 +48,7 @@ features[variable][] = print_pdf_link_text_enabled
 features[variable][] = print_pdf_link_use_alias
 features[variable][] = print_pdf_page_orientation
 features[variable][] = print_pdf_paper_size
+features[variable][] = print_pdf_pdf_tool
 features[variable][] = print_pdf_show_link
 features[variable][] = print_pdf_sys_link_pages
 features[variable][] = print_pdf_sys_link_visibility

@@ -282,6 +282,13 @@ function drutact_print_pdf_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'print_pdf_pdf_tool';
+  $strongarm->value = 'print_pdf_dompdf|profiles/drutact/libraries/dompdf/dompdf_config.inc.php';
+  $export['print_pdf_pdf_tool'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'print_pdf_show_link';
   $strongarm->value = '3';
   $export['print_pdf_show_link'] = $strongarm;
