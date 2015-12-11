@@ -1,0 +1,13 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the DruTACT IDUL Login feature.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function drutact_idul_login_install() {
+  // Default module weight (drutact_idul_login).
+  _drutact_default_module_weight('drutact_idul_login', 20);
+}

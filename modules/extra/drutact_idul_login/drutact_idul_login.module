@@ -1,0 +1,61 @@
+<?php
+/**
+ * @file
+ * Code for the DruTACT IDUL Login feature.
+ */
+
+include_once 'drutact_idul_login.features.inc';
+
+/**
+ * Implements hook_form_alter().
+ *
+ * Custom title on user login form.
+ */
+function drutact_idul_login_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'user_login_block' || $form_id == 'user_login') {
+    // Custom title on user login form.
+    $form['name']['#title'] = t('Username, email of IDUL');
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Customize user profile form to disable/hide certain fields.
+ */
+function drutact_idul_login_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
+  if (isset($form['#user']->data['ldap_user'])) {
+    // Disable username field for LDAP users.
+    $form['account']['name']['#disabled'] = TRUE;
+    // Hide full name field for LDAP users.
+    $form['field_full_name']['#access'] = FALSE;
+  }
+  // Hide first/last name fields for all users.
+  $form['field_firstname']['#access'] = FALSE;
+  $form['field_lastname']['#access'] = FALSE;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Hide first/last name fields and LDAP user settings from user registration form.
+ */
+function drutact_idul_login_form_user_register_form_alter(&$form, &$form_state, $form_id) {
+  // Hide first/last name fields and LDAP user settings from user registration form.
+  $form['field_firstname']['#access'] = FALSE;
+  $form['field_lastname']['#access'] = FALSE;
+  $form['ldap_user_fields']['#access'] = FALSE;
+}
+
+/**
+ * Implements hook_user_presave().
+ *
+ * Copy first/last name values to full name field for LDAP users.
+ */
+function drutact_idul_login_user_presave(&$edit, $account, $category) {
+  // Copy first/last name values to full name field for LDAP users.
+  if (isset($edit['data']['ldap_user']) && isset($edit['field_firstname']) && isset($edit['field_lastname'])) {
+    $edit['field_full_name']['und'][0]['given'] = $edit['field_firstname']['und'][0]['value'];
+    $edit['field_full_name']['und'][0]['family'] = $edit['field_lastname']['und'][0]['value'];
+  }
+}

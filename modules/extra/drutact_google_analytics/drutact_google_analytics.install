@@ -8,7 +8,7 @@
  * Implements hook_enable().
  */
 function drutact_google_analytics_enable() {
-  // Enable default permissions.
+  // Default module permissions (googleanalytics).
   _drutact_default_module_permissions(array(
     DRUPAL_ANONYMOUS_RID => array(),
     DRUPAL_AUTHENTICATED_RID => array(),
