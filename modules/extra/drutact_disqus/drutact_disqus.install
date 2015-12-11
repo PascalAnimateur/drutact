@@ -16,19 +16,16 @@ function drutact_disqus_enable() {
     ),
     DRUPAL_AUTHENTICATED_RID => array(
       // Disqus
-      'display disqus comments on profile',
       'view disqus comments',
     ),
     DRUTACT_EDITOR_RID => array(
       // Disqus
-      'display disqus comments on profile',
       'toggle disqus comments',
       'view disqus comments',
     ),
     DRUTACT_ADMINISTRATOR_RID => array(
       // Disqus
       'administer disqus',
-      'display disqus comments on profile',
       'toggle disqus comments',
       'view disqus comments',
     ),
