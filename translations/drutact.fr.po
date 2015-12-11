@@ -67,11 +67,16 @@
 #  profiles/drutact/modules/environments/drutact_dev/drutact_dev.info: n/a
 #  profiles/drutact/modules/environments/drutact_prod/drutact_prod.info: n/a
 #  profiles/drutact/modules/extra/drutact_charts/drutact_charts.info: n/a
+#  profiles/drutact/modules/extra/drutact_disqus/drutact_disqus.info: n/a
 #  profiles/drutact/modules/extra/drutact_event_calendar/drutact_event_calendar.info: n/a
 #  profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.info: n/a
+#  profiles/drutact/modules/extra/drutact_google_analytics/drutact_google_analytics.info: n/a
+#  profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.info: n/a
 #  profiles/drutact/modules/extra/drutact_event_calendar/drutact_event_calendar.install: n/a
 #  profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.features.field_instance.inc: n/a
 #  profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.module: n/a
+#  profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.features.field_instance.inc: n/a
+#  profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.module: n/a
 #  profiles/drutact/modules/languages/drutact_en/drutact_en.info: n/a
 #  profiles/drutact/modules/languages/drutact_fr/drutact_fr.info: n/a
 #
@@ -79,8 +84,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-12-11 09:05-0500\n"
-"PO-Revision-Date: 2015-12-11 09:05-0500\n"
+"POT-Creation-Date: 2015-12-11 12:53-0500\n"
+"PO-Revision-Date: 2015-12-11 12:53-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -1678,8 +1683,16 @@ msgstr ""
 msgid "Graphs and charts support using the Google Charts library."
 msgstr ""
 
-#: profiles/drutact/modules/extra/drutact_charts/drutact_charts.info:0 profiles/drutact/modules/extra/drutact_event_calendar/drutact_event_calendar.info:0 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.info:0
+#: profiles/drutact/modules/extra/drutact_charts/drutact_charts.info:0 profiles/drutact/modules/extra/drutact_disqus/drutact_disqus.info:0 profiles/drutact/modules/extra/drutact_event_calendar/drutact_event_calendar.info:0 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.info:0 profiles/drutact/modules/extra/drutact_google_analytics/drutact_google_analytics.info:0 profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.info:0
 msgid "DruTACT Extra"
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_disqus/drutact_disqus.info:0
+msgid "DruTACT Disqus"
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_disqus/drutact_disqus.info:0
+msgid "Disqus integration."
 msgstr ""
 
 #: profiles/drutact/modules/extra/drutact_event_calendar/drutact_event_calendar.views_default.inc:368
@@ -1829,6 +1842,106 @@ msgstr ""
 
 #: profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.info:0
 msgid "Event Registration for DruTACT Event content type."
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_google_analytics/drutact_google_analytics.info:0
+msgid "DruTACT Google Analytics"
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_google_analytics/drutact_google_analytics.info:0
+msgid "Google Analytics integration."
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.features.field_instance.inc:396
+msgctxt "field_instance:user-field_firstname:label"
+msgid "First name"
+msgstr "Prénom"
+
+#: profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.features.field_instance.inc:397
+msgctxt "field_instance:user-field_lastname:label"
+msgid "Last name"
+msgstr "Nom"
+
+#: profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.features.field_instance.inc:398
+msgctxt "field_instance:user-ldap_user_current_dn:label"
+msgid "User LDAP DN"
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.features.field_instance.inc:399
+msgctxt "field_instance:user-ldap_user_current_dn:description"
+msgid "May change when user's DN changes. This field should not be edited."
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.features.field_instance.inc:400
+msgctxt "field_instance:user-ldap_user_last_checked:label"
+msgid "Unix timestamp of when Drupal user was compard to ldap entry.  This could be for purposes of synching, deleteing drupal account, etc."
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.features.field_instance.inc:401
+msgctxt "field_instance:user-ldap_user_last_checked:description"
+msgid "This field should not be edited."
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.features.field_instance.inc:403
+msgctxt "field_instance:user-ldap_user_ldap_exclude:description"
+msgid "This field should not be edited."
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.features.field_instance.inc:405
+msgctxt "field_instance:user-ldap_user_prov_entries:description"
+msgid "This field should not be edited."
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.features.field_instance.inc:407
+msgctxt "field_instance:user-ldap_user_puid:description"
+msgid "This field should not be edited."
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.features.field_instance.inc:409
+msgctxt "field_instance:user-ldap_user_puid_property:description"
+msgid "This field should not be edited."
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.features.field_instance.inc:411
+msgctxt "field_instance:user-ldap_user_puid_sid:description"
+msgid "This field should not be edited."
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.features.field_instance.inc:402
+msgctxt "field_instance:user-ldap_user_ldap_exclude:label"
+msgid "Whether to exclude the user from LDAP functionality"
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.features.field_instance.inc:404
+msgctxt "field_instance:user-ldap_user_prov_entries:label"
+msgid "LDAP Entries that have been provisioned from this Drupal user."
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.features.field_instance.inc:406
+msgctxt "field_instance:user-ldap_user_puid:label"
+msgid "Value of user's permanent unique id.  This should never change for a given ldap identified user."
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.features.field_instance.inc:408
+msgctxt "field_instance:user-ldap_user_puid_property:label"
+msgid "Property specified as user's puid."
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.features.field_instance.inc:410
+msgctxt "field_instance:user-ldap_user_puid_sid:label"
+msgid "LDAP Server ID that puid was derived from.  NULL if puid is independent of server configuration instance."
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.module:17
+msgid "Username, email or IDUL"
+msgstr "Utilisateur, courriel ou IDUL"
+
+#: profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.info:0
+msgid "DruTACT IDUL Login"
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.info:0
+msgid "Provides IDUL authentication support to DruTACT installation profile."
 msgstr ""
 
 #: profiles/drutact/modules/languages/drutact_en/drutact_en.info:0

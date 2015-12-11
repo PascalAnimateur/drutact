@@ -391,17 +391,25 @@ function drutact_idul_login_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('First name');
-  t('LDAP Entries that have been provisioned from this Drupal user.');
-  t('LDAP Server ID that puid was derived from.  NULL if puid is independent of server configuration instance.');
-  t('Last name');
-  t('May change when user\'s DN changes. This field should not be edited.');
-  t('Property specified as user\'s puid.');
-  t('This field should not be edited.');
-  t('Unix timestamp of when Drupal user was compard to ldap entry.  This could be for purposes of synching, deleteing drupal account, etc.');
-  t('User LDAP DN');
-  t('Value of user\'s permanent unique id.  This should never change for a given ldap identified user.');
-  t('Whether to exclude the user from LDAP functionality');
+
+  // Translatables created/updated by the Localize Fields (localize_fields) module.
+  t('First name', array(), array('context' => 'field_instance:user-field_firstname:label'));
+  t('Last name', array(), array('context' => 'field_instance:user-field_lastname:label'));
+  t('User LDAP DN', array(), array('context' => 'field_instance:user-ldap_user_current_dn:label'));
+  t('May change when user\'s DN changes. This field should not be edited.', array(), array('context' => 'field_instance:user-ldap_user_current_dn:description'));
+  t('Unix timestamp of when Drupal user was compard to ldap entry.  This could be for purposes of synching, deleteing drupal account, etc.', array(), array('context' => 'field_instance:user-ldap_user_last_checked:label'));
+  t('This field should not be edited.', array(), array('context' => 'field_instance:user-ldap_user_last_checked:description'));
+  t('Whether to exclude the user from LDAP functionality', array(), array('context' => 'field_instance:user-ldap_user_ldap_exclude:label'));
+  t('This field should not be edited.', array(), array('context' => 'field_instance:user-ldap_user_ldap_exclude:description'));
+  t('LDAP Entries that have been provisioned from this Drupal user.', array(), array('context' => 'field_instance:user-ldap_user_prov_entries:label'));
+  t('This field should not be edited.', array(), array('context' => 'field_instance:user-ldap_user_prov_entries:description'));
+  t('Value of user\'s permanent unique id.  This should never change for a given ldap identified user.', array(), array('context' => 'field_instance:user-ldap_user_puid:label'));
+  t('This field should not be edited.', array(), array('context' => 'field_instance:user-ldap_user_puid:description'));
+  t('Property specified as user\'s puid.', array(), array('context' => 'field_instance:user-ldap_user_puid_property:label'));
+  t('This field should not be edited.', array(), array('context' => 'field_instance:user-ldap_user_puid_property:description'));
+  t('LDAP Server ID that puid was derived from.  NULL if puid is independent of server configuration instance.', array(), array('context' => 'field_instance:user-ldap_user_puid_sid:label'));
+  t('This field should not be edited.', array(), array('context' => 'field_instance:user-ldap_user_puid_sid:description'));
+
 
   return $field_instances;
 }
