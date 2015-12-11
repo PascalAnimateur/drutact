@@ -1,0 +1,11 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the DruTACT Print PDF feature.
+ */
+
+function drutact_print_pdf_install() {
+  // Create missing directories (public://fonts).
+  $font_dir = "public://fonts";
+  file_prepare_directory($font_dir, FILE_CREATE_DIRECTORY|FILE_MODIFY_PERMISSIONS);
+}

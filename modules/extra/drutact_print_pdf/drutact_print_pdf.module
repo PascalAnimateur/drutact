@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DruTACT Print PDF feature.
+ */
+
+include_once 'drutact_print_pdf.features.inc';
