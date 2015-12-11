@@ -1,0 +1,26 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the DruTACT Google Analytics feature.
+ */
+
+/**
+ * Implements hook_enable().
+ */
+function drutact_google_analytics_enable() {
+  // Enable default permissions.
+  _drutact_default_module_permissions(array(
+    DRUPAL_ANONYMOUS_RID => array(),
+    DRUPAL_AUTHENTICATED_RID => array(),
+    DRUTACT_EDITOR_RID => array(
+      // Google Analytics
+      'opt-in or out of tracking',
+    ),
+    DRUTACT_ADMINISTRATOR_RID => array(
+      // Google Analytics
+      'administer google analytics',
+      'opt-in or out of tracking',
+      'use PHP for tracking visibility',
+    ),
+  ));
+}
