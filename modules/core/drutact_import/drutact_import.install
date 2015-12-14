@@ -1,0 +1,25 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the DruTACT Import feature.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Default module permissions (feeds, feeds_tamper).
+ */
+function drutact_import_install() {
+  // Default module permissions (feeds, feeds_tamper).
+  _drutact_default_module_permissions(array(
+    DRUPAL_ANONYMOUS_RID => array(),
+    DRUPAL_AUTHENTICATED_RID => array(),
+    DRUTACT_EDITOR_RID => array(),
+    DRUTACT_ADMINISTRATOR_RID => array(
+      // Feeds
+      'administer feeds',
+      // Feeds tamper
+      'administer feeds_tamper',
+    ),
+  ));
+}

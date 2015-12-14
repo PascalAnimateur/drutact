@@ -1,0 +1,28 @@
+<?php
+/**
+ * @file
+ * Drupal needs this blank file.
+ */
+
+/**
+ * Helper function to set default feed permissions. 
+ */
+function _drutact_import_default_feed_permissions($feed_name) {
+  _drutact_default_module_permissions(array(
+    DRUPAL_ANONYMOUS_RID => array(),
+    DRUPAL_AUTHENTICATED_RID => array(),
+    DRUTACT_EDITOR_RID => array(
+      // Import Users (CSV)
+      "import $feed_name feeds",
+      "clear $feed_name feeds",
+      "unlock $feed_name feeds",
+    ),
+    DRUTACT_ADMINISTRATOR_RID => array(
+      // Import Users (CSV)
+      "import $feed_name feeds",
+      "clear $feed_name feeds",
+      "unlock $feed_name feeds",
+      "tamper $feed_name",
+    ),
+  ));
+}
