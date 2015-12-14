@@ -10,7 +10,7 @@ projects[name][patch][1788156] = https://www.drupal.org/files/issues/name_title_
 
 ; Real name
 projects[realname][type] = module
-projects[realname][patch][1239478] = https://www.drupal.org/files/issues/realname-views-username-field-1239478-79.patch
+projects[realname][patch][1239478] = https://www.drupal.org/files/issues/realname-views-username-field-1239478-93.patch
 projects[realname_registration][type] = module
 projects[realname_registration][patch][1556512] = https://www.drupal.org/files/issues/realname_registration-name_module_support-1556512-8.patch
 projects[realname_registration][patch][2218447] = https://www.drupal.org/files/issues/username-transliteration-2218447-10.patch

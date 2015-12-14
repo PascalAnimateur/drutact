@@ -51,3 +51,40 @@ function drutact_user_menu_alter(&$items) {
   // Rename people administration tab from List to Users.
   $items['admin/people/people']['title'] = 'Users';
 }
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function drutact_user_views_data_alter(&$data) {
+  // User: Encrypted password.
+  $data['users']['encrypted_password'] = array(
+    'title' => t('Encrypted password'),
+    'help' => t("The user's encrypted password (WARNING: Use with caution)."),
+    'real field' => 'pass',
+    'field' => array(
+      'handler' => 'views_handler_field',
+    ),
+  );
+
+  // User: Language code.
+  $data['users']['langcode'] = array(
+    'title' => t('Language code'),
+    'help' => t("The code of the user's preferred language."),
+    'real field' => 'language',
+    'field' => array(
+      'handler' => 'views_handler_field',
+      'click sortable' => TRUE,
+    ),
+    'sort' => array(
+      'handler' => 'views_handler_sort',
+    ),
+    'argument' => array(
+      'handler' => 'views_handler_argument_string',
+    ),
+    'filter' => array(
+      'handler' => 'views_handler_filter_string',
+      'title' => t('Language code'),
+      'help' => t("The code of the user's preferred language.")
+    ),
+  );
+}

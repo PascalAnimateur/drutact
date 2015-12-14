@@ -295,7 +295,7 @@ function drutact_admin_views_default_views() {
     1 => 0,
     3 => 0,
   );
-  /* Filter criterion: Realname: Real name */
+  /* Filter criterion: Realname: Name */
   $handler->display->display_options['filters']['realname']['id'] = 'realname';
   $handler->display->display_options['filters']['realname']['table'] = 'realname';
   $handler->display->display_options['filters']['realname']['field'] = 'realname';
@@ -639,7 +639,7 @@ function drutact_admin_views_default_views() {
   $handler->display->display_options['arguments']['gid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['gid']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['gid']['validate']['type'] = 'og';
-  /* Filter criterion: Realname: Real name */
+  /* Filter criterion: Realname: Name */
   $handler->display->display_options['filters']['realname']['id'] = 'realname';
   $handler->display->display_options['filters']['realname']['table'] = 'realname';
   $handler->display->display_options['filters']['realname']['field'] = 'realname';
@@ -1273,7 +1273,7 @@ function drutact_admin_views_default_views() {
   $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
   $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
   $handler->display->display_options['filters']['type']['expose']['remember'] = TRUE;
-  /* Filter criterion: Realname: Real name */
+  /* Filter criterion: Realname: Name */
   $handler->display->display_options['filters']['realname']['id'] = 'realname';
   $handler->display->display_options['filters']['realname']['table'] = 'realname';
   $handler->display->display_options['filters']['realname']['field'] = 'realname';
@@ -1603,7 +1603,7 @@ function drutact_admin_views_default_views() {
     0 => 0,
   );
   $handler->display->display_options['filters']['uid']['group'] = 1;
-  /* Filter criterion: Realname: Real name */
+  /* Filter criterion: Realname: Name */
   $handler->display->display_options['filters']['realname']['id'] = 'realname';
   $handler->display->display_options['filters']['realname']['table'] = 'realname';
   $handler->display->display_options['filters']['realname']['field'] = 'realname';
@@ -1656,10 +1656,78 @@ function drutact_admin_views_default_views() {
   $handler->display->display_options['filters']['rid']['expose']['identifier'] = 'rid';
   $handler->display->display_options['filters']['rid']['expose']['remember'] = TRUE;
 
-  /* Display: System */
-  $handler = $view->new_display('system', 'System', 'admin');
+  /* Display: Administration */
+  $handler = $view->new_display('system', 'Administration', 'admin');
+  $handler->display->display_options['display_description'] = 'Manage users of the site.';
   $handler->display->display_options['defaults']['access'] = FALSE;
   $handler->display->display_options['path'] = 'admin/people';
+
+  /* Display: Export (CSV) */
+  $handler = $view->new_display('views_data_export', 'Export (CSV)', 'export_csv');
+  $handler->display->display_options['display_description'] = 'Export users to CSV file.';
+  $handler->display->display_options['defaults']['access'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['perm'] = 'administer users';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'views_data_export_csv';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: User: Uid */
+  $handler->display->display_options['fields']['uid']['id'] = 'uid';
+  $handler->display->display_options['fields']['uid']['table'] = 'users';
+  $handler->display->display_options['fields']['uid']['field'] = 'uid';
+  $handler->display->display_options['fields']['uid']['label'] = 'uid';
+  $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
+  /* Field: Name Components: Given */
+  $handler->display->display_options['fields']['field_full_name_given']['id'] = 'field_full_name_given';
+  $handler->display->display_options['fields']['field_full_name_given']['table'] = 'field_data_field_full_name';
+  $handler->display->display_options['fields']['field_full_name_given']['field'] = 'field_full_name_given';
+  $handler->display->display_options['fields']['field_full_name_given']['label'] = 'given_name';
+  $handler->display->display_options['fields']['field_full_name_given']['element_label_colon'] = FALSE;
+  /* Field: Name Components: Family */
+  $handler->display->display_options['fields']['field_full_name_family']['id'] = 'field_full_name_family';
+  $handler->display->display_options['fields']['field_full_name_family']['table'] = 'field_data_field_full_name';
+  $handler->display->display_options['fields']['field_full_name_family']['field'] = 'field_full_name_family';
+  $handler->display->display_options['fields']['field_full_name_family']['label'] = 'family_name';
+  $handler->display->display_options['fields']['field_full_name_family']['element_label_colon'] = FALSE;
+  /* Field: User: E-mail */
+  $handler->display->display_options['fields']['mail']['id'] = 'mail';
+  $handler->display->display_options['fields']['mail']['table'] = 'users';
+  $handler->display->display_options['fields']['mail']['field'] = 'mail';
+  $handler->display->display_options['fields']['mail']['label'] = 'email';
+  $handler->display->display_options['fields']['mail']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['mail']['link_to_user'] = '0';
+  /* Field: User: Username */
+  $handler->display->display_options['fields']['username']['id'] = 'username';
+  $handler->display->display_options['fields']['username']['table'] = 'users';
+  $handler->display->display_options['fields']['username']['field'] = 'username';
+  $handler->display->display_options['fields']['username']['label'] = 'username';
+  $handler->display->display_options['fields']['username']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['username']['link_to_user'] = FALSE;
+  /* Field: User: Encrypted password */
+  $handler->display->display_options['fields']['encrypted_password']['id'] = 'encrypted_password';
+  $handler->display->display_options['fields']['encrypted_password']['table'] = 'users';
+  $handler->display->display_options['fields']['encrypted_password']['field'] = 'encrypted_password';
+  $handler->display->display_options['fields']['encrypted_password']['label'] = 'encrypted_password';
+  $handler->display->display_options['fields']['encrypted_password']['element_label_colon'] = FALSE;
+  /* Field: User: Roles */
+  $handler->display->display_options['fields']['rid']['id'] = 'rid';
+  $handler->display->display_options['fields']['rid']['table'] = 'users_roles';
+  $handler->display->display_options['fields']['rid']['field'] = 'rid';
+  $handler->display->display_options['fields']['rid']['label'] = 'roles';
+  $handler->display->display_options['fields']['rid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['rid']['separator'] = '|';
+  /* Field: User: Language code */
+  $handler->display->display_options['fields']['langcode']['id'] = 'langcode';
+  $handler->display->display_options['fields']['langcode']['table'] = 'users';
+  $handler->display->display_options['fields']['langcode']['field'] = 'langcode';
+  $handler->display->display_options['fields']['langcode']['label'] = 'language';
+  $handler->display->display_options['fields']['langcode']['element_label_colon'] = FALSE;
+  $handler->display->display_options['path'] = 'admin/people/export_users.csv';
+  $handler->display->display_options['displays'] = array(
+    'admin' => 'admin',
+    'default' => 0,
+  );
   $translatables['administration_users'] = array(
     t('Defaults'),
     t('Users'),
@@ -1692,7 +1760,18 @@ function drutact_admin_views_default_views() {
     t('cancel account'),
     t('E-mail'),
     t('Role'),
-    t('System'),
+    t('Administration'),
+    t('Manage users of the site.'),
+    t('Export (CSV)'),
+    t('Export users to CSV file.'),
+    t('uid'),
+    t('given_name'),
+    t('family_name'),
+    t('email'),
+    t('username'),
+    t('encrypted_password'),
+    t('roles'),
+    t('language'),
   );
   $export['administration_users'] = $view;
 
