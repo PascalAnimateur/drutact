@@ -8,6 +8,10 @@
  * Helper function to set default feed permissions. 
  */
 function _drutact_import_default_feed_permissions($feed_name) {
+  // Reset features object cache.
+  ctools_export_load_object_reset();
+
+  // Default module permissions (feeds, feeds_tamper).
   _drutact_default_module_permissions(array(
     DRUPAL_ANONYMOUS_RID => array(),
     DRUPAL_AUTHENTICATED_RID => array(),
