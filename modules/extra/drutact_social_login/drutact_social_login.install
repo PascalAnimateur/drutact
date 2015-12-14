@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the DruTACT Social Login feature.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function drutact_social_login_install() {
+  // Default multilingual variables (hybridauth).
+  _drutact_l10n_default_i18n_variables(array(
+    'hybridauth_widget_link_text',
+    'hybridauth_widget_link_title',
+    'hybridauth_widget_title',
+  ));
+}

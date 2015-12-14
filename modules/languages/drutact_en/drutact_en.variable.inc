@@ -15,6 +15,9 @@ $realm_variables = array();
   'date_views_day_format_with_year' => 'l, F j, Y',
   'date_views_week_format_without_year' => 'F j',
   'date_views_week_format_with_year' => 'F j, Y',
+  'hybridauth_widget_link_text' => 'Social network account',
+  'hybridauth_widget_link_title' => 'Social network account',
+  'hybridauth_widget_title' => 'Or log in with...',
   'simplenews_confirm_combined_body' => 'We have received a request for the following subscription changes for [simplenews-subscriber:mail] at [site:url]:
 
 [changes-list]

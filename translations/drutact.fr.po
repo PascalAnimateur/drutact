@@ -72,6 +72,8 @@
 #  profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.info: n/a
 #  profiles/drutact/modules/extra/drutact_google_analytics/drutact_google_analytics.info: n/a
 #  profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.info: n/a
+#  profiles/drutact/modules/extra/drutact_print_pdf/drutact_print_pdf.info: n/a
+#  profiles/drutact/modules/extra/drutact_social_login/drutact_social_login.info: n/a
 #  profiles/drutact/modules/extra/drutact_event_calendar/drutact_event_calendar.install: n/a
 #  profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.features.field_instance.inc: n/a
 #  profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.module: n/a
@@ -84,8 +86,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-12-11 12:53-0500\n"
-"PO-Revision-Date: 2015-12-11 12:53-0500\n"
+"POT-Creation-Date: 2015-12-14 12:28-0500\n"
+"PO-Revision-Date: 2015-12-14 12:28-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -1683,7 +1685,7 @@ msgstr ""
 msgid "Graphs and charts support using the Google Charts library."
 msgstr ""
 
-#: profiles/drutact/modules/extra/drutact_charts/drutact_charts.info:0 profiles/drutact/modules/extra/drutact_disqus/drutact_disqus.info:0 profiles/drutact/modules/extra/drutact_event_calendar/drutact_event_calendar.info:0 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.info:0 profiles/drutact/modules/extra/drutact_google_analytics/drutact_google_analytics.info:0 profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.info:0
+#: profiles/drutact/modules/extra/drutact_charts/drutact_charts.info:0 profiles/drutact/modules/extra/drutact_disqus/drutact_disqus.info:0 profiles/drutact/modules/extra/drutact_event_calendar/drutact_event_calendar.info:0 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.info:0 profiles/drutact/modules/extra/drutact_google_analytics/drutact_google_analytics.info:0 profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.info:0 profiles/drutact/modules/extra/drutact_print_pdf/drutact_print_pdf.info:0 profiles/drutact/modules/extra/drutact_social_login/drutact_social_login.info:0
 msgid "DruTACT Extra"
 msgstr ""
 
@@ -1942,6 +1944,22 @@ msgstr ""
 
 #: profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.info:0
 msgid "Provides IDUL authentication support to DruTACT installation profile."
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_print_pdf/drutact_print_pdf.info:0
+msgid "DruTACT Print PDF"
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_print_pdf/drutact_print_pdf.info:0
+msgid "Provides printable PDF versions of content."
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_social_login/drutact_social_login.info:0
+msgid "DruTACT Social Login"
+msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_social_login/drutact_social_login.info:0
+msgid "Provides social media authentication support for DruTACT installation profile."
 msgstr ""
 
 #: profiles/drutact/modules/languages/drutact_en/drutact_en.info:0

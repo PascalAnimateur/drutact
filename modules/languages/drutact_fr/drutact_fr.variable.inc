@@ -15,6 +15,9 @@ $realm_variables = array();
   'date_views_day_format_with_year' => 'l, j F, Y',
   'date_views_week_format_without_year' => 'j F',
   'date_views_week_format_with_year' => 'j F, Y',
+  'hybridauth_widget_link_text' => 'Compte de réseau social',
+  'hybridauth_widget_link_title' => 'Compte de réseau social',
+  'hybridauth_widget_title' => 'Connectez-vous avec...',
   'maintenance_mode_message' => 'Le site est en cours de maintenance. Nous serons de retour très bientôt. Merci de votre patience.',
   'simplenews_confirm_combined_body' => 'Nous avons reçu une demande pour les changements d\'abonnement suivants pour le courriel [simplenews-subscriber:mail] sur le site [site:url]:
 
