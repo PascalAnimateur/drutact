@@ -284,7 +284,7 @@ function drutact_group_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 21,
+      'weight' => -10,
     ),
     'widget_type' => 'options_select',
   );
@@ -341,7 +341,7 @@ function drutact_group_field_default_field_instances() {
         'og_hide' => TRUE,
       ),
       'type' => 'options_onoff',
-      'weight' => 20,
+      'weight' => -11,
     ),
   );
 
