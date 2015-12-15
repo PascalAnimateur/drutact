@@ -1,4 +1,4 @@
-name = DruTACT - User import
+name = DruTACT User import
 description = Import users.
 core = 7.x
 package = DruTACT Import

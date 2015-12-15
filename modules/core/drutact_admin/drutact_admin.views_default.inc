@@ -756,6 +756,7 @@ function drutact_admin_views_default_views() {
   $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['use_more_text'] = '';
   $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['perm'] = 'administer nodes';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -966,8 +967,9 @@ function drutact_admin_views_default_views() {
     30037204 => 0,
   );
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
+  /* Display: Administration */
+  $handler = $view->new_display('page', 'Administration', 'admin');
+  $handler->display->display_options['display_description'] = 'Manage all groups.';
   $handler->display->display_options['path'] = 'admin/people/groups';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Groups';
@@ -975,6 +977,109 @@ function drutact_admin_views_default_views() {
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Export (CSV) */
+  $handler = $view->new_display('views_data_export', 'Export (CSV)', 'export_csv');
+  $handler->display->display_options['display_description'] = 'Export groups to CSV file (without members).';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'views_data_export_csv';
+  $handler->display->display_options['style_options']['provide_file'] = 0;
+  $handler->display->display_options['style_options']['parent_sort'] = 0;
+  $handler->display->display_options['style_options']['quote'] = 1;
+  $handler->display->display_options['style_options']['trim'] = 0;
+  $handler->display->display_options['style_options']['replace_newlines'] = 0;
+  $handler->display->display_options['style_options']['newline_token'] = '1';
+  $handler->display->display_options['style_options']['header'] = 1;
+  $handler->display->display_options['style_options']['keep_html'] = 1;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Author */
+  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['table'] = 'node';
+  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['required'] = TRUE;
+  /* Relationship: Field: Image (field_image:fid) */
+  $handler->display->display_options['relationships']['field_image_fid']['id'] = 'field_image_fid';
+  $handler->display->display_options['relationships']['field_image_fid']['table'] = 'field_data_field_image';
+  $handler->display->display_options['relationships']['field_image_fid']['field'] = 'field_image_fid';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Entity translation: Title: translated */
+  $handler->display->display_options['fields']['title_field_et']['id'] = 'title_field_et';
+  $handler->display->display_options['fields']['title_field_et']['table'] = 'field_data_title_field';
+  $handler->display->display_options['fields']['title_field_et']['field'] = 'title_field_et';
+  $handler->display->display_options['fields']['title_field_et']['label'] = 'title';
+  $handler->display->display_options['fields']['title_field_et']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title_field_et']['settings'] = array(
+    'title_style' => '_none',
+    'title_link' => 'content',
+    'title_class' => '',
+  );
+  /* Field: File: Path */
+  $handler->display->display_options['fields']['uri']['id'] = 'uri';
+  $handler->display->display_options['fields']['uri']['table'] = 'file_managed';
+  $handler->display->display_options['fields']['uri']['field'] = 'uri';
+  $handler->display->display_options['fields']['uri']['relationship'] = 'field_image_fid';
+  $handler->display->display_options['fields']['uri']['label'] = 'image';
+  $handler->display->display_options['fields']['uri']['element_label_colon'] = FALSE;
+  /* Field: Content: Group visibility */
+  $handler->display->display_options['fields']['group_access']['id'] = 'group_access';
+  $handler->display->display_options['fields']['group_access']['table'] = 'field_data_group_access';
+  $handler->display->display_options['fields']['group_access']['field'] = 'group_access';
+  $handler->display->display_options['fields']['group_access']['label'] = 'group_visibility';
+  $handler->display->display_options['fields']['group_access']['element_label_colon'] = FALSE;
+  /* Field: User: Username */
+  $handler->display->display_options['fields']['username']['id'] = 'username';
+  $handler->display->display_options['fields']['username']['table'] = 'users';
+  $handler->display->display_options['fields']['username']['field'] = 'username';
+  $handler->display->display_options['fields']['username']['relationship'] = 'uid';
+  $handler->display->display_options['fields']['username']['label'] = 'author';
+  $handler->display->display_options['fields']['username']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['username']['link_to_user'] = FALSE;
+  /* Field: Content: Language */
+  $handler->display->display_options['fields']['language']['id'] = 'language';
+  $handler->display->display_options['fields']['language']['table'] = 'node';
+  $handler->display->display_options['fields']['language']['field'] = 'language';
+  $handler->display->display_options['fields']['language']['label'] = 'language';
+  $handler->display->display_options['fields']['language']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['language']['language_display'] = 'langcode';
+  /* Field: Field: Section(s) */
+  $handler->display->display_options['fields']['field_sections']['id'] = 'field_sections';
+  $handler->display->display_options['fields']['field_sections']['table'] = 'field_data_field_sections';
+  $handler->display->display_options['fields']['field_sections']['field'] = 'field_sections';
+  $handler->display->display_options['fields']['field_sections']['label'] = 'sections';
+  $handler->display->display_options['fields']['field_sections']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_sections']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_sections']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_sections']['separator'] = '|';
+  /* Field: Field: Tags */
+  $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
+  $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
+  $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
+  $handler->display->display_options['fields']['field_tags']['label'] = 'tags';
+  $handler->display->display_options['fields']['field_tags']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_tags']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_tags']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_tags']['separator'] = '|';
+  /* Field: Entity translation: Body: translated */
+  $handler->display->display_options['fields']['body_et_1']['id'] = 'body_et_1';
+  $handler->display->display_options['fields']['body_et_1']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body_et_1']['field'] = 'body_et';
+  $handler->display->display_options['fields']['body_et_1']['label'] = 'summary';
+  $handler->display->display_options['fields']['body_et_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body_et_1']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body_et_1']['settings'] = array(
+    'trim_length' => '600',
+  );
+  /* Field: Entity translation: Body: translated */
+  $handler->display->display_options['fields']['body_et']['id'] = 'body_et';
+  $handler->display->display_options['fields']['body_et']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body_et']['field'] = 'body_et';
+  $handler->display->display_options['fields']['body_et']['label'] = 'body';
+  $handler->display->display_options['fields']['body_et']['element_label_colon'] = FALSE;
+  $handler->display->display_options['path'] = 'admin/people/groups/export_groups.csv';
+  $handler->display->display_options['displays'] = array(
+    'admin' => 'admin',
+    'default' => 0,
+  );
   $translatables['administration_groups'] = array(
     t('Master'),
     t('Groups'),
@@ -1002,8 +1107,20 @@ function drutact_admin_views_default_views() {
     t('Operations'),
     t('edit'),
     t('delete'),
-    t('Page'),
+    t('Administration'),
+    t('Manage all groups.'),
     t('more'),
+    t('Export (CSV)'),
+    t('Export groups to CSV file (without members).'),
+    t('image from field_image'),
+    t('title'),
+    t('image'),
+    t('group_visibility'),
+    t('language'),
+    t('sections'),
+    t('tags'),
+    t('summary'),
+    t('body'),
   );
   $export['administration_groups'] = $view;
 

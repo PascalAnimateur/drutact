@@ -44,6 +44,7 @@ dependencies[] = top_description
 dependencies[] = update
 dependencies[] = vertical_tabs_responsive
 dependencies[] = views
+dependencies[] = views_data_export
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
