@@ -1164,6 +1164,7 @@ function drutact_admin_views_default_views() {
     'changed' => 'changed',
     'edit_node' => 'edit_node',
     'delete_node' => 'edit_node',
+    'nid' => 'edit_node',
   );
   $handler->display->display_options['style_options']['default'] = 'changed';
   $handler->display->display_options['style_options']['info'] = array(
@@ -1225,6 +1226,13 @@ function drutact_admin_views_default_views() {
       'empty_column' => 0,
     ),
     'delete_node' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'nid' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -1362,6 +1370,16 @@ function drutact_admin_views_default_views() {
   $handler->display->display_options['fields']['delete_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['delete_node']['field'] = 'delete_node';
   $handler->display->display_options['fields']['delete_node']['label'] = '';
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['text'] = 'translate';
+  $handler->display->display_options['fields']['nid']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['path'] = 'node/[nid]/translate';
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   /* Filter criterion: Field: Title (title_field) */
   $handler->display->display_options['filters']['title_field_value']['id'] = 'title_field_value';
   $handler->display->display_options['filters']['title_field_value']['table'] = 'field_data_title_field';
@@ -1638,6 +1656,7 @@ function drutact_admin_views_default_views() {
     t('([language])'),
     t('Updated'),
     t('Operations'),
+    t('translate'),
     t('Administration'),
     t('Manage content.'),
     t('Group'),
