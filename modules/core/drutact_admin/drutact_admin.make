@@ -14,7 +14,7 @@ projects[admin_views][type] = module
 
 ; Date
 projects[date][type] = module
-projects[date][patch][2186191] = https://www.drupal.org/files/issues/date-fieldset-help-texts-2186191-20.patch
+projects[date][patch][2186191] = https://www.drupal.org/files/issues/date_repeat_removes_the-2186191-22.patch
 projects[date][patch][2453397] = https://www.drupal.org/files/issues/date-add_hook_variable_info-2453397-3.patch
 projects[date][patch][2455629] = https://www.drupal.org/files/issues/date-remove_date_migrate_example.patch
 projects[date][patch][2570239] = https://www.drupal.org/files/issues/date-display_range_as_span.patch
