@@ -40,4 +40,4 @@ projects[pdfpreview][patch][2490766] = https://www.drupal.org/files/issues/pdfpr
 
 ; PDF.js library
 libraries[pdf.js][download][type] = file
-libraries[pdf.js][download][url] = https://github.com/mozilla/pdf.js/releases/download/v1.1.469/pdfjs-1.1.469-dist.zip
+libraries[pdf.js][download][url] = https://github.com/mozilla/pdf.js/releases/download/v1.2.109/pdfjs-1.2.109-dist.zip
