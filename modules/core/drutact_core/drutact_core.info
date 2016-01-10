@@ -157,6 +157,7 @@ features_banish[variable][] = features_semaphore
 features_banish[variable][] = install_profile
 features_banish[variable][] = install_task
 features_banish[variable][] = install_time
+features_banish[variable][] = node_cron_last
 features_banish[variable][] = page_compression
 features_banish[variable][] = preprocess_css
 features_banish[variable][] = preprocess_js
