@@ -1,6 +1,9 @@
 api = 2
 core = 7.x
 
+; Block export
+projects[blockexport][type] = module
+
 ; CTools
 projects[ctools][type] = module
 
