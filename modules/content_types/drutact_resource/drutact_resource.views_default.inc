@@ -1,28 +1,28 @@
 <?php
 /**
  * @file
- * drutact_event.views_default.inc
+ * drutact_resource.views_default.inc
  */
 
 /**
  * Implements hook_views_default_views().
  */
-function drutact_event_views_default_views() {
+function drutact_resource_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'administration_events';
+  $view->name = 'administration_resources';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Administration - Events';
+  $view->human_name = 'Administration - Resources';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Events';
+  $handler->display->display_options['title'] = 'Resources';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['access']['perm'] = 'administer nodes';
@@ -115,7 +115,7 @@ function drutact_event_views_default_views() {
   $handler->display->display_options['empty']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['empty']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['empty']['area_text_custom']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area_text_custom']['content'] = 'No event found matching the search criteria.';
+  $handler->display->display_options['empty']['area_text_custom']['content'] = 'No resource found matching the search criteria.';
   /* Relationship: Content: Author */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
   $handler->display->display_options['relationships']['uid']['table'] = 'node';
@@ -203,21 +203,6 @@ function drutact_event_views_default_views() {
   $handler->display->display_options['fields']['timestamp']['field'] = 'timestamp';
   $handler->display->display_options['fields']['timestamp']['label'] = '';
   $handler->display->display_options['fields']['timestamp']['element_label_colon'] = FALSE;
-  /* Field: Content: Event date */
-  $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_event_date']['settings'] = array(
-    'format_type' => 'short',
-    'fromto' => 'both',
-    'multiple_number' => '',
-    'multiple_from' => '',
-    'multiple_to' => '',
-    'show_remaining_days' => 0,
-    'show_repeat_rule' => 'show',
-  );
-  $handler->display->display_options['fields']['field_event_date']['delta_offset'] = '0';
   /* Field: Realname: Real name */
   $handler->display->display_options['fields']['realname']['id'] = 'realname';
   $handler->display->display_options['fields']['realname']['table'] = 'realname';
@@ -277,23 +262,23 @@ function drutact_event_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'event' => 'event',
+    'resource' => 'resource',
   );
 
   /* Display: Administration */
   $handler = $view->new_display('page', 'Administration', 'admin');
-  $handler->display->display_options['display_description'] = 'Manage events.';
-  $handler->display->display_options['path'] = 'admin/content/events';
+  $handler->display->display_options['display_description'] = 'Manage resources.';
+  $handler->display->display_options['path'] = 'admin/content/resources';
   $handler->display->display_options['menu']['type'] = 'tab';
-  $handler->display->display_options['menu']['title'] = 'Events';
-  $handler->display->display_options['menu']['description'] = 'Manage events.';
+  $handler->display->display_options['menu']['title'] = 'Resources';
+  $handler->display->display_options['menu']['description'] = 'Manage resources.';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
 
   /* Display: Export (CSV) */
   $handler = $view->new_display('views_data_export', 'Export (CSV)', 'export_csv');
-  $handler->display->display_options['display_description'] = 'Export events to CSV file.';
+  $handler->display->display_options['display_description'] = 'Export resources to CSV file.';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'views_data_export_csv';
@@ -311,40 +296,6 @@ function drutact_event_views_default_views() {
   $handler->display->display_options['fields']['title_field_et']['field'] = 'title_field_et';
   $handler->display->display_options['fields']['title_field_et']['label'] = 'title';
   $handler->display->display_options['fields']['title_field_et']['element_label_colon'] = FALSE;
-  /* Field: Content: Event date */
-  $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['label'] = 'event_date_start';
-  $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_event_date']['settings'] = array(
-    'format_type' => 'short',
-    'fromto' => 'value',
-    'multiple_number' => '',
-    'multiple_from' => '',
-    'multiple_to' => '',
-    'show_remaining_days' => 0,
-    'show_repeat_rule' => 'hide',
-  );
-  $handler->display->display_options['fields']['field_event_date']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_event_date']['separator'] = '|';
-  /* Field: Content: Event date */
-  $handler->display->display_options['fields']['field_event_date_1']['id'] = 'field_event_date_1';
-  $handler->display->display_options['fields']['field_event_date_1']['table'] = 'field_data_field_event_date';
-  $handler->display->display_options['fields']['field_event_date_1']['field'] = 'field_event_date';
-  $handler->display->display_options['fields']['field_event_date_1']['label'] = 'event_date_end';
-  $handler->display->display_options['fields']['field_event_date_1']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_event_date_1']['settings'] = array(
-    'format_type' => 'short',
-    'fromto' => 'value2',
-    'multiple_number' => '',
-    'multiple_from' => '',
-    'multiple_to' => '',
-    'show_remaining_days' => 0,
-    'show_repeat_rule' => 'hide',
-  );
-  $handler->display->display_options['fields']['field_event_date_1']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_event_date_1']['separator'] = '|';
   /* Field: Content: Language */
   $handler->display->display_options['fields']['language_1']['id'] = 'language_1';
   $handler->display->display_options['fields']['language_1']['table'] = 'node';
@@ -417,13 +368,13 @@ function drutact_event_views_default_views() {
   $handler->display->display_options['fields']['field_tags']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_tags']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_tags']['separator'] = '|';
-  /* Field: Entity translation: Description: translated */
+  /* Field: Entity translation: Body: translated */
   $handler->display->display_options['fields']['body_et']['id'] = 'body_et';
   $handler->display->display_options['fields']['body_et']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body_et']['field'] = 'body_et';
   $handler->display->display_options['fields']['body_et']['label'] = 'description';
   $handler->display->display_options['fields']['body_et']['element_label_colon'] = FALSE;
-  /* Field: Entity translation: Description: translated */
+  /* Field: Entity translation: Body: translated */
   $handler->display->display_options['fields']['body_et_1']['id'] = 'body_et_1';
   $handler->display->display_options['fields']['body_et_1']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body_et_1']['field'] = 'body_et';
@@ -433,14 +384,14 @@ function drutact_event_views_default_views() {
   $handler->display->display_options['fields']['body_et_1']['settings'] = array(
     'trim_length' => '600',
   );
-  $handler->display->display_options['path'] = 'admin/content/events/export_events';
+  $handler->display->display_options['path'] = 'admin/content/resources/export_resources';
   $handler->display->display_options['displays'] = array(
     'admin' => 'admin',
     'default' => 0,
   );
-  $translatables['administration_events'] = array(
+  $translatables['administration_resources'] = array(
     t('Master'),
-    t('Events'),
+    t('Resources'),
     t('more'),
     t('Filter'),
     t('Reset'),
@@ -454,7 +405,7 @@ function drutact_event_views_default_views() {
     t('‹ previous'),
     t('next ›'),
     t('last »'),
-    t('No event found matching the search criteria.'),
+    t('No resource found matching the search criteria.'),
     t('author'),
     t('image from field_image'),
     t('- Choose an operation -'),
@@ -465,19 +416,16 @@ function drutact_event_views_default_views() {
     t('Publish'),
     t('Unpublish'),
     t('Published'),
-    t('Event date'),
     t('Author'),
     t('([language])'),
     t('Updated'),
     t('Operations'),
     t('Administration'),
-    t('Manage events.'),
+    t('Manage resources.'),
     t('Export (CSV)'),
-    t('Export events to CSV file.'),
+    t('Export resources to CSV file.'),
     t('id'),
     t('title'),
-    t('event_date_start'),
-    t('event_date_end'),
     t('language'),
     t('date_created'),
     t('published'),
@@ -489,7 +437,7 @@ function drutact_event_views_default_views() {
     t('description'),
     t('summary'),
   );
-  $export['administration_events'] = $view;
+  $export['administration_resources'] = $view;
 
   return $export;
 }

@@ -17,7 +17,7 @@ function drutact_page_import_feeds_tamper_default() {
   $feeds_tamper->importer = 'import_pages_csv';
   $feeds_tamper->source = 'date_created';
   $feeds_tamper->plugin_id = 'strtotime';
-  $feeds_tamper->settings = '';
+  $feeds_tamper->settings = array();
   $feeds_tamper->weight = 1;
   $feeds_tamper->description = 'String to Unix timestamp - Created';
   $export['import_pages_csv-date_created-strtotime_created'] = $feeds_tamper;

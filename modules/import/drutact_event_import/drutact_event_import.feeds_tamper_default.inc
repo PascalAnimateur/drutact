@@ -45,7 +45,7 @@ function drutact_event_import_feeds_tamper_default() {
   $feeds_tamper->importer = 'import_events_csv';
   $feeds_tamper->source = 'event_date_end';
   $feeds_tamper->plugin_id = 'strtotime';
-  $feeds_tamper->settings = '';
+  $feeds_tamper->settings = array();
   $feeds_tamper->weight = 1;
   $feeds_tamper->description = 'String to Unix timestamp - Event date (end)';
   $export['import_events_csv-event_date_end-strtotime_event_date_end'] = $feeds_tamper;
@@ -73,7 +73,7 @@ function drutact_event_import_feeds_tamper_default() {
   $feeds_tamper->importer = 'import_events_csv';
   $feeds_tamper->source = 'event_date_start';
   $feeds_tamper->plugin_id = 'strtotime';
-  $feeds_tamper->settings = '';
+  $feeds_tamper->settings = array();
   $feeds_tamper->weight = 1;
   $feeds_tamper->description = 'String to Unix timestamp - Event date (start)';
   $export['import_events_csv-event_date_start-strtotime_event_date_start'] = $feeds_tamper;

@@ -331,7 +331,7 @@ function drutact_webform_views_default_views() {
     200153887 => 0,
     30037204 => 0,
   );
-  /* Filter criterion: Realname: Real name */
+  /* Filter criterion: Realname: Name */
   $handler->display->display_options['filters']['realname']['id'] = 'realname';
   $handler->display->display_options['filters']['realname']['table'] = 'realname';
   $handler->display->display_options['filters']['realname']['field'] = 'realname';
