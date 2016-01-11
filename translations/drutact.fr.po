@@ -81,10 +81,12 @@
 #  profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.features.field_instance.inc: n/a
 #  profiles/drutact/modules/extra/drutact_idul_login/drutact_idul_login.module: n/a
 #  profiles/drutact/modules/import/drutact_article_import/drutact_article_import.info: n/a
+#  profiles/drutact/modules/import/drutact_event_import/drutact_event_import.info: n/a
 #  profiles/drutact/modules/import/drutact_group_import/drutact_group_import.info: n/a
 #  profiles/drutact/modules/import/drutact_page_import/drutact_page_import.info: n/a
 #  profiles/drutact/modules/import/drutact_user_import/drutact_user_import.info: n/a
 #  profiles/drutact/modules/import/drutact_article_import/drutact_article_import.module: n/a
+#  profiles/drutact/modules/import/drutact_event_import/drutact_event_import.module: n/a
 #  profiles/drutact/modules/import/drutact_group_import/drutact_group_import.module: n/a
 #  profiles/drutact/modules/import/drutact_page_import/drutact_page_import.module: n/a
 #  profiles/drutact/modules/import/drutact_user_import/drutact_user_import.module: n/a
@@ -95,8 +97,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-01-11 12:50-0500\n"
-"PO-Revision-Date: 2016-01-11 12:50-0500\n"
+"POT-Creation-Date: 2016-01-11 13:02-0500\n"
+"PO-Revision-Date: 2016-01-11 13:02-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -628,7 +630,7 @@ msgstr "Le titre ou le nom de cet événement."
 
 #: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.inc:29 profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc:39
 msgid "Event"
-msgstr "Évènement"
+msgstr "Événement"
 
 #: profiles/drutact/modules/content_types/drutact_event/drutact_event.features.inc:31
 msgid "Use <em>events</em> for time-specific content that should appear in the calendar, such as meetings."
@@ -2113,7 +2115,7 @@ msgstr ""
 msgid "Provides IDUL authentication support to DruTACT installation profile."
 msgstr ""
 
-#: profiles/drutact/modules/extra/drutact_import/drutact_import.info:0 profiles/drutact/modules/import/drutact_article_import/drutact_article_import.info:0 profiles/drutact/modules/import/drutact_group_import/drutact_group_import.info:0 profiles/drutact/modules/import/drutact_page_import/drutact_page_import.info:0 profiles/drutact/modules/import/drutact_user_import/drutact_user_import.info:0
+#: profiles/drutact/modules/extra/drutact_import/drutact_import.info:0 profiles/drutact/modules/import/drutact_article_import/drutact_article_import.info:0 profiles/drutact/modules/import/drutact_event_import/drutact_event_import.info:0 profiles/drutact/modules/import/drutact_group_import/drutact_group_import.info:0 profiles/drutact/modules/import/drutact_page_import/drutact_page_import.info:0 profiles/drutact/modules/import/drutact_user_import/drutact_user_import.info:0
 msgid "DruTACT Import"
 msgstr ""
 
@@ -2147,6 +2149,18 @@ msgstr ""
 
 #: profiles/drutact/modules/import/drutact_article_import/drutact_article_import.info:0
 msgid "Import articles from CSV file."
+msgstr ""
+
+#: profiles/drutact/modules/import/drutact_event_import/drutact_event_import.module:19
+msgid "Import Events"
+msgstr "Importer Événements"
+
+#: profiles/drutact/modules/import/drutact_event_import/drutact_event_import.info:0
+msgid "DruTACT Event Import"
+msgstr ""
+
+#: profiles/drutact/modules/import/drutact_event_import/drutact_event_import.info:0
+msgid "Import events from CSV file."
 msgstr ""
 
 #: profiles/drutact/modules/import/drutact_group_import/drutact_group_import.module:19
