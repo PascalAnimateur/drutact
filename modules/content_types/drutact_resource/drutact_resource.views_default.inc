@@ -264,6 +264,55 @@ function drutact_resource_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'resource' => 'resource',
   );
+  /* Filter criterion: Content: Title */
+  $handler->display->display_options['filters']['title']['id'] = 'title';
+  $handler->display->display_options['filters']['title']['table'] = 'node';
+  $handler->display->display_options['filters']['title']['field'] = 'title';
+  $handler->display->display_options['filters']['title']['operator'] = 'contains';
+  $handler->display->display_options['filters']['title']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
+  $handler->display->display_options['filters']['title']['expose']['label'] = 'Title';
+  $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
+  $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
+  $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    200153887 => 0,
+    30037204 => 0,
+  );
+  /* Filter criterion: Realname: Name */
+  $handler->display->display_options['filters']['realname']['id'] = 'realname';
+  $handler->display->display_options['filters']['realname']['table'] = 'realname';
+  $handler->display->display_options['filters']['realname']['field'] = 'realname';
+  $handler->display->display_options['filters']['realname']['relationship'] = 'uid';
+  $handler->display->display_options['filters']['realname']['operator'] = 'contains';
+  $handler->display->display_options['filters']['realname']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['realname']['expose']['operator_id'] = 'realname_op';
+  $handler->display->display_options['filters']['realname']['expose']['label'] = 'Author';
+  $handler->display->display_options['filters']['realname']['expose']['operator'] = 'realname_op';
+  $handler->display->display_options['filters']['realname']['expose']['identifier'] = 'realname';
+  $handler->display->display_options['filters']['realname']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    200153887 => 0,
+    30037204 => 0,
+  );
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status_1']['id'] = 'status_1';
+  $handler->display->display_options['filters']['status_1']['table'] = 'node';
+  $handler->display->display_options['filters']['status_1']['field'] = 'status';
+  $handler->display->display_options['filters']['status_1']['value'] = '1';
+  $handler->display->display_options['filters']['status_1']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['status_1']['expose']['operator_id'] = '';
+  $handler->display->display_options['filters']['status_1']['expose']['label'] = 'Published';
+  $handler->display->display_options['filters']['status_1']['expose']['operator'] = 'status_1_op';
+  $handler->display->display_options['filters']['status_1']['expose']['identifier'] = 'status_1';
+  $handler->display->display_options['filters']['status_1']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    200153887 => 0,
+    30037204 => 0,
+  );
 
   /* Display: Administration */
   $handler = $view->new_display('page', 'Administration', 'admin');
@@ -296,6 +345,26 @@ function drutact_resource_views_default_views() {
   $handler->display->display_options['fields']['title_field_et']['field'] = 'title_field_et';
   $handler->display->display_options['fields']['title_field_et']['label'] = 'title';
   $handler->display->display_options['fields']['title_field_et']['element_label_colon'] = FALSE;
+  /* Field: Content: Web link(s) */
+  $handler->display->display_options['fields']['field_web_links']['id'] = 'field_web_links';
+  $handler->display->display_options['fields']['field_web_links']['table'] = 'field_data_field_web_links';
+  $handler->display->display_options['fields']['field_web_links']['field'] = 'field_web_links';
+  $handler->display->display_options['fields']['field_web_links']['label'] = 'web_links_title';
+  $handler->display->display_options['fields']['field_web_links']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_web_links']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_web_links']['type'] = 'link_title_plain';
+  $handler->display->display_options['fields']['field_web_links']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_web_links']['separator'] = '|';
+  /* Field: Content: Web link(s) */
+  $handler->display->display_options['fields']['field_web_links_1']['id'] = 'field_web_links_1';
+  $handler->display->display_options['fields']['field_web_links_1']['table'] = 'field_data_field_web_links';
+  $handler->display->display_options['fields']['field_web_links_1']['field'] = 'field_web_links';
+  $handler->display->display_options['fields']['field_web_links_1']['label'] = 'web_links_url';
+  $handler->display->display_options['fields']['field_web_links_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_web_links_1']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_web_links_1']['type'] = 'link_plain';
+  $handler->display->display_options['fields']['field_web_links_1']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_web_links_1']['separator'] = '|';
   /* Field: Content: Language */
   $handler->display->display_options['fields']['language_1']['id'] = 'language_1';
   $handler->display->display_options['fields']['language_1']['table'] = 'node';
@@ -420,12 +489,15 @@ function drutact_resource_views_default_views() {
     t('([language])'),
     t('Updated'),
     t('Operations'),
+    t('Title'),
     t('Administration'),
     t('Manage resources.'),
     t('Export (CSV)'),
     t('Export resources to CSV file.'),
     t('id'),
     t('title'),
+    t('web_links_title'),
+    t('web_links_url'),
     t('language'),
     t('date_created'),
     t('published'),

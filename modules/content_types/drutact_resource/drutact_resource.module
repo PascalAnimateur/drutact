@@ -7,6 +7,25 @@
 include_once 'drutact_resource.features.inc';
 
 /**
+ * Implements hook_menu_local_tasks_alter().
+ *
+ * Default action links (Add Resource).
+ */
+function drutact_resource_menu_local_tasks_alter(&$data, $router_item, $root_path) {
+  switch ($root_path) {
+    case 'admin/content/resources':
+      // Default action links (Add Resource).
+      $item = menu_get_item('node/add/resource');
+      $item['title'] = t('Add Resource');
+      $data['actions']['output'][] = array(
+        '#theme' => 'menu_local_action',
+        '#link' => $item,
+      );
+      break;
+  }
+}
+
+/**
  * Implements hook_post_features_rebuild().
  *
  * Default content permissions (resource).
@@ -32,3 +51,8 @@ function drutact_resource_theme_registry_alter(&$registry) {
   }
   $registry += $templates;
 }
+
+// Translatables
+// Included for use with string extractors like potx.
+
+t('Resources');
