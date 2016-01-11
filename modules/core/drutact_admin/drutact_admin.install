@@ -80,7 +80,6 @@ function drutact_admin_install() {
       'access contextual links',
       // Menu
       'administer menu',
-      'administer features menu items',
       'administer main-menu menu items',
       'administer management menu items',
       'administer navigation menu items',
