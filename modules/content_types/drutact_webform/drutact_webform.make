@@ -24,6 +24,9 @@ projects[webform_references][patch][2537912] = https://www.drupal.org/files/issu
 ; Scheduler
 projects[webform_scheduler][type] = module
 
+; Share
+projects[webform_share][type] = module
+
 ; Webform
 projects[webform][type] = module
 projects[webform][patch][2358425] = https://www.drupal.org/files/issues/webform-fix_illegal_string_offset_0.patch

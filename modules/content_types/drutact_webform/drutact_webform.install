@@ -31,6 +31,8 @@ function drutact_webform_install() {
       'edit webform components',
       // Webform scheduler
       'schedule webforms',
+      // Webform share
+      'access webform share functionality',
     ),
     DRUTACT_ADMINISTRATOR_RID => array(
       // Webform
@@ -44,6 +46,8 @@ function drutact_webform_install() {
       'edit webform components',
       // Webform scheduler
       'schedule webforms',
+      // Webform share
+      'access webform share functionality',
     ),
   ));
 

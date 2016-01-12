@@ -17,6 +17,7 @@ dependencies[] = webform_import
 dependencies[] = webform_multiple_file
 dependencies[] = webform_references
 dependencies[] = webform_scheduler
+dependencies[] = webform_share
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
