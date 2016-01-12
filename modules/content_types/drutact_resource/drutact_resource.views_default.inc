@@ -331,6 +331,14 @@ function drutact_resource_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'views_data_export_csv';
+  $handler->display->display_options['style_options']['provide_file'] = 0;
+  $handler->display->display_options['style_options']['parent_sort'] = 0;
+  $handler->display->display_options['style_options']['quote'] = 1;
+  $handler->display->display_options['style_options']['trim'] = 0;
+  $handler->display->display_options['style_options']['replace_newlines'] = 0;
+  $handler->display->display_options['style_options']['newline_token'] = '1';
+  $handler->display->display_options['style_options']['header'] = 1;
+  $handler->display->display_options['style_options']['keep_html'] = 1;
   $handler->display->display_options['defaults']['empty'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Nid */
@@ -437,17 +445,18 @@ function drutact_resource_views_default_views() {
   $handler->display->display_options['fields']['field_tags']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_tags']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_tags']['separator'] = '|';
-  /* Field: Entity translation: Description: translated */
+  /* Field: Entity translation: Body: translated */
   $handler->display->display_options['fields']['body_et']['id'] = 'body_et';
   $handler->display->display_options['fields']['body_et']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body_et']['field'] = 'body_et';
   $handler->display->display_options['fields']['body_et']['label'] = 'body';
   $handler->display->display_options['fields']['body_et']['element_label_colon'] = FALSE;
-  /* Field: Entity translation: Description: translated */
+  /* Field: Entity translation: Body: translated */
   $handler->display->display_options['fields']['body_et_1']['id'] = 'body_et_1';
   $handler->display->display_options['fields']['body_et_1']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body_et_1']['field'] = 'body_et';
   $handler->display->display_options['fields']['body_et_1']['label'] = 'summary';
+  $handler->display->display_options['fields']['body_et_1']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['body_et_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body_et_1']['type'] = 'text_summary_or_trimmed';
   $handler->display->display_options['fields']['body_et_1']['settings'] = array(
