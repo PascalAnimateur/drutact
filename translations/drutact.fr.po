@@ -88,12 +88,14 @@
 #  profiles/drutact/modules/import/drutact_page_import/drutact_page_import.info: n/a
 #  profiles/drutact/modules/import/drutact_resource_import/drutact_resource_import.info: n/a
 #  profiles/drutact/modules/import/drutact_user_import/drutact_user_import.info: n/a
+#  profiles/drutact/modules/import/drutact_webform_import/drutact_webform_import.info: n/a
 #  profiles/drutact/modules/import/drutact_article_import/drutact_article_import.module: n/a
 #  profiles/drutact/modules/import/drutact_event_import/drutact_event_import.module: n/a
 #  profiles/drutact/modules/import/drutact_group_import/drutact_group_import.module: n/a
 #  profiles/drutact/modules/import/drutact_page_import/drutact_page_import.module: n/a
 #  profiles/drutact/modules/import/drutact_resource_import/drutact_resource_import.module: n/a
 #  profiles/drutact/modules/import/drutact_user_import/drutact_user_import.module: n/a
+#  profiles/drutact/modules/import/drutact_webform_import/drutact_webform_import.module: n/a
 #  profiles/drutact/modules/languages/drutact_en/drutact_en.info: n/a
 #  profiles/drutact/modules/languages/drutact_fr/drutact_fr.info: n/a
 #
@@ -101,8 +103,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-01-11 21:23-0500\n"
-"PO-Revision-Date: 2016-01-11 21:23-0500\n"
+"POT-Creation-Date: 2016-01-12 12:14-0500\n"
+"PO-Revision-Date: 2016-01-12 12:14-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -511,7 +513,7 @@ msgctxt "field_instance:article-title_field:label"
 msgid "Title"
 msgstr "Titre"
 
-#: profiles/drutact/modules/content_types/drutact_article/drutact_article.features.inc:26 profiles/drutact/modules/content_types/drutact_event/drutact_event.features.inc:33 profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:531 profiles/drutact/modules/content_types/drutact_group/drutact_group.features.inc:26 profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.features.inc:26 profiles/drutact/modules/content_types/drutact_page/drutact_page.features.inc:26 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.inc:33 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:511 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.inc:33 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:402 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:404;1103;1653
+#: profiles/drutact/modules/content_types/drutact_article/drutact_article.features.inc:26 profiles/drutact/modules/content_types/drutact_event/drutact_event.features.inc:33 profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:531 profiles/drutact/modules/content_types/drutact_group/drutact_group.features.inc:26 profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.features.inc:26 profiles/drutact/modules/content_types/drutact_page/drutact_page.features.inc:26 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.inc:33 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:511 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.inc:33 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:516 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:404;1103;1653
 msgid "Title"
 msgstr "Titre"
 
@@ -642,7 +644,7 @@ msgstr ""
 "Utilisez les <em>événements</em> pour les contenus apparaissant à "
 "date fixe dans le calendrier, tels que les réunions."
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:500 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:481 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:380 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:381;706;1084 profiles/drutact/modules/extra/drutact_event_calendar/drutact_event_calendar.views_default.inc:367 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:242
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:500 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:481 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:493 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:381;706;1084 profiles/drutact/modules/extra/drutact_event_calendar/drutact_event_calendar.views_default.inc:367 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:242
 msgid "Master"
 msgstr "Maître"
 
@@ -650,55 +652,55 @@ msgstr "Maître"
 msgid "Events"
 msgstr "Événements"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:502 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:483 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:382 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:383;739;1112;1631;2033 profiles/drutact/modules/extra/drutact_event_calendar/drutact_event_calendar.views_default.inc:375 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:243
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:502 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:483 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:495 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:383;739;1112;1631;2033 profiles/drutact/modules/extra/drutact_event_calendar/drutact_event_calendar.views_default.inc:375 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:243
 msgid "more"
 msgstr "plus"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:503 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:484 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:383 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:384;708;1086;1632;2034 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:244
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:503 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:484 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:496 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:384;708;1086;1632;2034 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:244
 msgid "Filter"
 msgstr "Filtrer"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:504 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:485 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:384 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:385;709;1087;1633;2035 profiles/drutact/modules/extra/drutact_event_calendar/drutact_event_calendar.views_default.inc:370 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:245
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:504 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:485 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:497 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:385;709;1087;1633;2035 profiles/drutact/modules/extra/drutact_event_calendar/drutact_event_calendar.views_default.inc:370 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:245
 msgid "Reset"
 msgstr "Réinitialiser"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:505 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:486 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:385 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:386;710;1088;1634;2036 profiles/drutact/modules/extra/drutact_event_calendar/drutact_event_calendar.views_default.inc:371 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:246
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:505 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:486 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:498 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:386;710;1088;1634;2036 profiles/drutact/modules/extra/drutact_event_calendar/drutact_event_calendar.views_default.inc:371 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:246
 msgid "Sort by"
 msgstr "Trier par"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:506 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:487 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:386 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:387;711;1089;1635;2037 profiles/drutact/modules/extra/drutact_event_calendar/drutact_event_calendar.views_default.inc:372 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:247
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:506 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:487 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:499 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:387;711;1089;1635;2037 profiles/drutact/modules/extra/drutact_event_calendar/drutact_event_calendar.views_default.inc:372 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:247
 msgid "Asc"
 msgstr "Asc"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:507 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:488 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:387 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:388;712;1090;1636;2038 profiles/drutact/modules/extra/drutact_event_calendar/drutact_event_calendar.views_default.inc:373 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:248
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:507 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:488 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:500 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:388;712;1090;1636;2038 profiles/drutact/modules/extra/drutact_event_calendar/drutact_event_calendar.views_default.inc:373 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:248
 msgid "Desc"
 msgstr "Desc"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:508 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:489 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:388 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:389;713;1091;1637;2039 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:249
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:508 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:489 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:501 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:389;713;1091;1637;2039 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:249
 msgid "Items per page"
 msgstr "Éléments par page"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:509 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:490 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:389 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:390;714;1092;1638;2040 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:250
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:509 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:490 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:502 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:390;714;1092;1638;2040 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:250
 msgid "- All -"
 msgstr "- Tout -"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:510 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:491 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:390 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:391;715;1093;1639;2041 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:251
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:510 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:491 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:503 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:391;715;1093;1639;2041 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:251
 msgid "Offset"
 msgstr "Décalage"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:511 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:492 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:391 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:392;716;1094;1640;2042 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:252
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:511 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:492 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:504 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:392;716;1094;1640;2042 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:252
 msgid "« first"
 msgstr "« premier"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:512 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:493 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:392 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:393;717;1095;1641;2043 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:253
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:512 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:493 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:505 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:393;717;1095;1641;2043 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:253
 msgid "‹ previous"
 msgstr "‹ précédent"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:513 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:494 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:393 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:394;718;1096;1642;2044 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:254
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:513 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:494 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:506 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:394;718;1096;1642;2044 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:254
 msgid "next ›"
 msgstr "suivant ›"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:514 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:495 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:394 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:395;719;1097;1643;2045 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:255
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:514 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:495 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:507 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:395;719;1097;1643;2045 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:255
 msgid "last »"
 msgstr "dernier »"
 
@@ -706,15 +708,15 @@ msgstr "dernier »"
 msgid "No event found matching the search criteria."
 msgstr "Aucun événement trouvé ne correspondant aux critères de recherche."
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:516 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:497 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:396 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1099;1645
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:516 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:497 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:509 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1099;1645
 msgid "author"
 msgstr "auteur"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:517 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:498 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1115;1670
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:517 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:498 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:510 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1115;1670
 msgid "image from field_image"
 msgstr ""
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:518 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:499 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:397 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:398;723;1100;1646;2047 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:258
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:518 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:499 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:511 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:398;723;1100;1646;2047 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:258
 msgid "- Choose an operation -"
 msgstr "- Choisir une opération -"
 
@@ -722,11 +724,11 @@ msgstr "- Choisir une opération -"
 msgid "Change author"
 msgstr "Modifier l'auteur"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:520 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:501 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:398 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:400;1101;1648 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:259
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:520 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:501 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:512 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:400;1101;1648 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:259
 msgid "Delete"
 msgstr "Supprimer"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:521 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:502 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:399 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:403;1102;1649;2049
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:521 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:502 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:513 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:403;1102;1649;2049
 msgid "Change value"
 msgstr "Modifier une valeur"
 
@@ -734,35 +736,35 @@ msgstr "Modifier une valeur"
 msgid "Assign to group"
 msgstr "Assigner au groupe"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:523 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:504 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:400 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1651
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:523 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:504 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:514 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1651
 msgid "Publish"
 msgstr "Publier"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:524 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:505 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:401 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1652
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:524 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:505 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:515 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1652
 msgid "Unpublish"
 msgstr "Dépublier"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:525 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:506 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:405 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1656
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:525 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:506 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:519 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1656
 msgid "Published"
 msgstr "Publié"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:527 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:507 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:404 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1105;1655
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:527 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:507 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:518 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1105;1655
 msgid "Author"
 msgstr "Auteur"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:528 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:508 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:406 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1657
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:528 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:508 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:520 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1657
 msgid "([language])"
 msgstr ""
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:529 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:509 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:407 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:411;1658 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:266
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:529 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:509 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:521 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:411;1658 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:266
 msgid "Updated"
 msgstr "Mis à jour"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:530 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:510 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:412 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:413;732;1107;1659;2058 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:268
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:530 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:510 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:526 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:413;732;1107;1659;2058 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:268
 msgid "Operations"
 msgstr "Actions"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:532 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:512 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1110;1661;2062
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:532 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:512 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:528 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1110;1661;2062
 msgid "Administration"
 msgstr "Administration"
 
@@ -770,7 +772,7 @@ msgstr "Administration"
 msgid "Manage events."
 msgstr ""
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:534 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:514 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1113;1668;2064
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:534 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:514 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:530 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1113;1668;2064
 msgid "Export (CSV)"
 msgstr ""
 
@@ -782,7 +784,7 @@ msgstr ""
 msgid "id"
 msgstr ""
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:537 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:517 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1116;1672
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:537 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:517 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:533 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1116;1672
 msgid "title"
 msgstr ""
 
@@ -794,35 +796,35 @@ msgstr ""
 msgid "event_date_end"
 msgstr ""
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:540 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:521 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1119;1673;2073
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:540 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:521 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:534 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1119;1673;2073
 msgid "language"
 msgstr "langue"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:541 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:522 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1674
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:541 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:522 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:535 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1674
 msgid "date_created"
 msgstr ""
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:542 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:523 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1675
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:542 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:523 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:536 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1675
 msgid "published"
 msgstr "publié"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:543 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:524 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1676
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:543 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:524 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:537 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1676
 msgid "front_page"
 msgstr ""
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:544 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:525 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1677
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:544 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:525 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:538 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1677
 msgid "sticky"
 msgstr "épinglé"
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:545 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:526 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1678
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:545 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:526 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:539 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1678
 msgid "vignette_image"
 msgstr ""
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:546 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:527 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1120;1679
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:546 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:527 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:540 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1120;1679
 msgid "sections"
 msgstr ""
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:547 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:528 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1121;1680
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:547 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:528 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:541 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1121;1680
 msgid "tags"
 msgstr ""
 
@@ -1016,7 +1018,7 @@ msgctxt "field_instance:simplenews-simplenews_issue_status:label"
 msgid "Status"
 msgstr "Statut"
 
-#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:403 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:414
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:517 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:414
 msgid "Status"
 msgstr "Statut"
 
@@ -1090,7 +1092,7 @@ msgctxt "field_instance:page-title_field:description"
 msgid "The title of this page."
 msgstr "Le titre de cette page."
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.inc:22 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:414 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:738 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:272
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.inc:22 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:738 profiles/drutact/modules/extra/drutact_event_registration/drutact_event_registration.views_default.inc:272
 msgid "Page"
 msgstr "Page"
 
@@ -1227,33 +1229,45 @@ msgstr ""
 "description optionnelle avant de pouvoir y ajouter des composants "
 "(questions, instructions, etc.)"
 
-#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:381 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.module:67
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:494 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.module:67
 msgid "Webforms"
 msgstr "Formulaires"
 
-#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:395
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:508
 msgid "No webform found matching the search criteria."
 msgstr "Aucun formulaire trouvé ne correspondant aux critères de recherche"
 
-#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:408
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:522
 msgid "Results"
 msgstr "Résultats"
 
-#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:409
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:523
 msgid "Analysis"
 msgstr "Analyse"
 
-#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:410
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:524
 msgid "([webform_submission_count_node])"
 msgstr ""
 
-#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:411
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:525
 msgid "clear"
 msgstr "effacer"
 
-#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:413
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:527
 msgid "components"
 msgstr "composants"
+
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:529
+msgid "Manage webforms."
+msgstr ""
+
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:531
+msgid "Export webforms to CSV file."
+msgstr ""
+
+#: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:532
+msgid "nid"
+msgstr ""
 
 #: profiles/drutact/modules/content_types/drutact_webform/drutact_webform.module:34
 msgid "Add Webform"
@@ -2147,7 +2161,7 @@ msgstr ""
 msgid "Provides IDUL authentication support to DruTACT installation profile."
 msgstr ""
 
-#: profiles/drutact/modules/extra/drutact_import/drutact_import.info:0 profiles/drutact/modules/import/drutact_article_import/drutact_article_import.info:0 profiles/drutact/modules/import/drutact_event_import/drutact_event_import.info:0 profiles/drutact/modules/import/drutact_group_import/drutact_group_import.info:0 profiles/drutact/modules/import/drutact_page_import/drutact_page_import.info:0 profiles/drutact/modules/import/drutact_resource_import/drutact_resource_import.info:0 profiles/drutact/modules/import/drutact_user_import/drutact_user_import.info:0
+#: profiles/drutact/modules/extra/drutact_import/drutact_import.info:0 profiles/drutact/modules/import/drutact_article_import/drutact_article_import.info:0 profiles/drutact/modules/import/drutact_event_import/drutact_event_import.info:0 profiles/drutact/modules/import/drutact_group_import/drutact_group_import.info:0 profiles/drutact/modules/import/drutact_page_import/drutact_page_import.info:0 profiles/drutact/modules/import/drutact_resource_import/drutact_resource_import.info:0 profiles/drutact/modules/import/drutact_user_import/drutact_user_import.info:0 profiles/drutact/modules/import/drutact_webform_import/drutact_webform_import.info:0
 msgid "DruTACT Import"
 msgstr ""
 
@@ -2242,6 +2256,18 @@ msgstr ""
 #: profiles/drutact/modules/import/drutact_user_import/drutact_user_import.info:0
 msgid "Import users."
 msgstr "Importer des utilisateurs."
+
+#: profiles/drutact/modules/import/drutact_webform_import/drutact_webform_import.module:19
+msgid "Import Webforms"
+msgstr "Importer Formulaires"
+
+#: profiles/drutact/modules/import/drutact_webform_import/drutact_webform_import.info:0
+msgid "DruTACT Webform Import"
+msgstr ""
+
+#: profiles/drutact/modules/import/drutact_webform_import/drutact_webform_import.info:0
+msgid "Import webforms from CSV file."
+msgstr ""
 
 #: profiles/drutact/modules/languages/drutact_en/drutact_en.info:0
 msgid "DruTACT English"

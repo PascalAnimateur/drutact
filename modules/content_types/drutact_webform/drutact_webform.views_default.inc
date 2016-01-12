@@ -25,6 +25,7 @@ function drutact_webform_views_default_views() {
   $handler->display->display_options['title'] = 'Webforms';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['perm'] = 'administer nodes';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -145,6 +146,10 @@ function drutact_webform_views_default_views() {
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
   $handler->display->display_options['relationships']['uid']['table'] = 'node';
   $handler->display->display_options['relationships']['uid']['field'] = 'uid';
+  /* Relationship: Field: Image (field_image:fid) */
+  $handler->display->display_options['relationships']['field_image_fid']['id'] = 'field_image_fid';
+  $handler->display->display_options['relationships']['field_image_fid']['table'] = 'field_data_field_image';
+  $handler->display->display_options['relationships']['field_image_fid']['field'] = 'field_image_fid';
   /* Field: Bulk operations: Content */
   $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
   $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'node';
@@ -367,8 +372,9 @@ function drutact_webform_views_default_views() {
     30037204 => 0,
   );
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
+  /* Display: Administration */
+  $handler = $view->new_display('page', 'Administration', 'admin');
+  $handler->display->display_options['display_description'] = 'Manage webforms.';
   $handler->display->display_options['path'] = 'admin/content/webform';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Webforms';
@@ -376,6 +382,113 @@ function drutact_webform_views_default_views() {
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Export (CSV) */
+  $handler = $view->new_display('views_data_export', 'Export (CSV)', 'export_csv');
+  $handler->display->display_options['display_description'] = 'Export webforms to CSV file.';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'views_data_export_csv';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Author */
+  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['table'] = 'node';
+  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
+  /* Relationship: Field: Image (field_image:fid) */
+  $handler->display->display_options['relationships']['field_image_fid']['id'] = 'field_image_fid';
+  $handler->display->display_options['relationships']['field_image_fid']['table'] = 'field_data_field_image';
+  $handler->display->display_options['relationships']['field_image_fid']['field'] = 'field_image_fid';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = 'nid';
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'title';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Language */
+  $handler->display->display_options['fields']['language']['id'] = 'language';
+  $handler->display->display_options['fields']['language']['table'] = 'node';
+  $handler->display->display_options['fields']['language']['field'] = 'language';
+  $handler->display->display_options['fields']['language']['label'] = 'language';
+  $handler->display->display_options['fields']['language']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['language']['language_display'] = 'langcode';
+  /* Field: User: Username */
+  $handler->display->display_options['fields']['username']['id'] = 'username';
+  $handler->display->display_options['fields']['username']['table'] = 'users';
+  $handler->display->display_options['fields']['username']['field'] = 'username';
+  $handler->display->display_options['fields']['username']['relationship'] = 'uid';
+  $handler->display->display_options['fields']['username']['label'] = 'author';
+  $handler->display->display_options['fields']['username']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['username']['link_to_user'] = FALSE;
+  /* Field: Content: Post date */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = 'date_created';
+  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created']['date_format'] = 'short';
+  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Field: Content: Published */
+  $handler->display->display_options['fields']['status']['id'] = 'status';
+  $handler->display->display_options['fields']['status']['table'] = 'node';
+  $handler->display->display_options['fields']['status']['field'] = 'status';
+  $handler->display->display_options['fields']['status']['label'] = 'published';
+  $handler->display->display_options['fields']['status']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['status']['type'] = 'boolean';
+  $handler->display->display_options['fields']['status']['not'] = 0;
+  /* Field: Content: Promoted to front page */
+  $handler->display->display_options['fields']['promote']['id'] = 'promote';
+  $handler->display->display_options['fields']['promote']['table'] = 'node';
+  $handler->display->display_options['fields']['promote']['field'] = 'promote';
+  $handler->display->display_options['fields']['promote']['label'] = 'front_page';
+  $handler->display->display_options['fields']['promote']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['promote']['type'] = 'boolean';
+  $handler->display->display_options['fields']['promote']['not'] = 0;
+  /* Field: Content: Sticky */
+  $handler->display->display_options['fields']['sticky']['id'] = 'sticky';
+  $handler->display->display_options['fields']['sticky']['table'] = 'node';
+  $handler->display->display_options['fields']['sticky']['field'] = 'sticky';
+  $handler->display->display_options['fields']['sticky']['label'] = 'sticky';
+  $handler->display->display_options['fields']['sticky']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['sticky']['type'] = 'boolean';
+  $handler->display->display_options['fields']['sticky']['not'] = 0;
+  /* Field: File: Path */
+  $handler->display->display_options['fields']['uri']['id'] = 'uri';
+  $handler->display->display_options['fields']['uri']['table'] = 'file_managed';
+  $handler->display->display_options['fields']['uri']['field'] = 'uri';
+  $handler->display->display_options['fields']['uri']['relationship'] = 'field_image_fid';
+  $handler->display->display_options['fields']['uri']['label'] = 'vignette_image';
+  $handler->display->display_options['fields']['uri']['element_label_colon'] = FALSE;
+  /* Field: Field: Section(s) */
+  $handler->display->display_options['fields']['field_sections']['id'] = 'field_sections';
+  $handler->display->display_options['fields']['field_sections']['table'] = 'field_data_field_sections';
+  $handler->display->display_options['fields']['field_sections']['field'] = 'field_sections';
+  $handler->display->display_options['fields']['field_sections']['label'] = 'sections';
+  $handler->display->display_options['fields']['field_sections']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_sections']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_sections']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_sections']['separator'] = '|';
+  /* Field: Field: Tags */
+  $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
+  $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
+  $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
+  $handler->display->display_options['fields']['field_tags']['label'] = 'tags';
+  $handler->display->display_options['fields']['field_tags']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_tags']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_tags']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_tags']['separator'] = '|';
+  $handler->display->display_options['path'] = 'admin/content/webforms/export_webforms';
+  $handler->display->display_options['displays'] = array(
+    'admin' => 'admin',
+    'default' => 0,
+  );
   $translatables['administration_webforms'] = array(
     t('Master'),
     t('Webforms'),
@@ -394,6 +507,7 @@ function drutact_webform_views_default_views() {
     t('last »'),
     t('No webform found matching the search criteria.'),
     t('author'),
+    t('image from field_image'),
     t('- Choose an operation -'),
     t('Delete'),
     t('Change value'),
@@ -411,7 +525,20 @@ function drutact_webform_views_default_views() {
     t('clear'),
     t('Operations'),
     t('components'),
-    t('Page'),
+    t('Administration'),
+    t('Manage webforms.'),
+    t('Export (CSV)'),
+    t('Export webforms to CSV file.'),
+    t('nid'),
+    t('title'),
+    t('language'),
+    t('date_created'),
+    t('published'),
+    t('front_page'),
+    t('sticky'),
+    t('vignette_image'),
+    t('sections'),
+    t('tags'),
   );
   $export['administration_webforms'] = $view;
 
