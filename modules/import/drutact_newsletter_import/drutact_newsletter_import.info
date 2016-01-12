@@ -1,0 +1,17 @@
+name = DruTACT Newsletter Import
+description = Import newsletter issues from CSV file.
+core = 7.x
+package = DruTACT Import
+version = 7.x-1.3-alpha19
+dependencies[] = ctools
+dependencies[] = drutact_import
+dependencies[] = drutact_newsletter
+dependencies[] = feeds
+dependencies[] = feeds_tamper
+features[ctools][] = feeds:feeds_importer_default:1
+features[ctools][] = feeds_tamper:feeds_tamper_default:2
+features[features_api][] = api:2
+features[feeds_importer][] = import_newsletter_issues_csv
+features[feeds_tamper][] = import_newsletter_issues_csv-date_created-strtotime_created
+features[feeds_tamper][] = import_newsletter_issues_csv-subscription_lists-explode_subscription_lists
+project path = profiles/drutact/modules/import
