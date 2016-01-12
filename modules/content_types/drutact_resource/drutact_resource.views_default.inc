@@ -353,6 +353,16 @@ function drutact_resource_views_default_views() {
   $handler->display->display_options['fields']['title_field_et']['field'] = 'title_field_et';
   $handler->display->display_options['fields']['title_field_et']['label'] = 'title';
   $handler->display->display_options['fields']['title_field_et']['element_label_colon'] = FALSE;
+  /* Field: Content: Attached file(s) */
+  $handler->display->display_options['fields']['field_attached_files']['id'] = 'field_attached_files';
+  $handler->display->display_options['fields']['field_attached_files']['table'] = 'field_data_field_attached_files';
+  $handler->display->display_options['fields']['field_attached_files']['field'] = 'field_attached_files';
+  $handler->display->display_options['fields']['field_attached_files']['label'] = 'attached_files';
+  $handler->display->display_options['fields']['field_attached_files']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_attached_files']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_attached_files']['type'] = 'file_uri';
+  $handler->display->display_options['fields']['field_attached_files']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_attached_files']['separator'] = '|';
   /* Field: Content: Web link(s) */
   $handler->display->display_options['fields']['field_web_links']['id'] = 'field_web_links';
   $handler->display->display_options['fields']['field_web_links']['table'] = 'field_data_field_web_links';
@@ -505,6 +515,7 @@ function drutact_resource_views_default_views() {
     t('Export resources to CSV file.'),
     t('id'),
     t('title'),
+    t('attached_files'),
     t('web_links_title'),
     t('web_links_url'),
     t('language'),
