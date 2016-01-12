@@ -86,11 +86,13 @@
 #  profiles/drutact/modules/import/drutact_event_import/drutact_event_import.info: n/a
 #  profiles/drutact/modules/import/drutact_group_import/drutact_group_import.info: n/a
 #  profiles/drutact/modules/import/drutact_page_import/drutact_page_import.info: n/a
+#  profiles/drutact/modules/import/drutact_resource_import/drutact_resource_import.info: n/a
 #  profiles/drutact/modules/import/drutact_user_import/drutact_user_import.info: n/a
 #  profiles/drutact/modules/import/drutact_article_import/drutact_article_import.module: n/a
 #  profiles/drutact/modules/import/drutact_event_import/drutact_event_import.module: n/a
 #  profiles/drutact/modules/import/drutact_group_import/drutact_group_import.module: n/a
 #  profiles/drutact/modules/import/drutact_page_import/drutact_page_import.module: n/a
+#  profiles/drutact/modules/import/drutact_resource_import/drutact_resource_import.module: n/a
 #  profiles/drutact/modules/import/drutact_user_import/drutact_user_import.module: n/a
 #  profiles/drutact/modules/languages/drutact_en/drutact_en.info: n/a
 #  profiles/drutact/modules/languages/drutact_fr/drutact_fr.info: n/a
@@ -99,8 +101,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-01-11 13:56-0500\n"
-"PO-Revision-Date: 2016-01-11 13:56-0500\n"
+"POT-Creation-Date: 2016-01-11 20:39-0500\n"
+"PO-Revision-Date: 2016-01-11 20:39-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -824,8 +826,8 @@ msgstr ""
 msgid "tags"
 msgstr ""
 
-#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:539 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:509
-msgid "description"
+#: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:539 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:509 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1123;1681
+msgid "body"
 msgstr ""
 
 #: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:540 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:510 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1122;1682
@@ -1441,10 +1443,6 @@ msgstr "image"
 
 #: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1118
 msgid "group_visibility"
-msgstr ""
-
-#: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1123;1681
-msgid "body"
 msgstr ""
 
 #: profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1629;2031
@@ -2145,7 +2143,7 @@ msgstr ""
 msgid "Provides IDUL authentication support to DruTACT installation profile."
 msgstr ""
 
-#: profiles/drutact/modules/extra/drutact_import/drutact_import.info:0 profiles/drutact/modules/import/drutact_article_import/drutact_article_import.info:0 profiles/drutact/modules/import/drutact_event_import/drutact_event_import.info:0 profiles/drutact/modules/import/drutact_group_import/drutact_group_import.info:0 profiles/drutact/modules/import/drutact_page_import/drutact_page_import.info:0 profiles/drutact/modules/import/drutact_user_import/drutact_user_import.info:0
+#: profiles/drutact/modules/extra/drutact_import/drutact_import.info:0 profiles/drutact/modules/import/drutact_article_import/drutact_article_import.info:0 profiles/drutact/modules/import/drutact_event_import/drutact_event_import.info:0 profiles/drutact/modules/import/drutact_group_import/drutact_group_import.info:0 profiles/drutact/modules/import/drutact_page_import/drutact_page_import.info:0 profiles/drutact/modules/import/drutact_resource_import/drutact_resource_import.info:0 profiles/drutact/modules/import/drutact_user_import/drutact_user_import.info:0
 msgid "DruTACT Import"
 msgstr ""
 
@@ -2215,6 +2213,18 @@ msgstr ""
 
 #: profiles/drutact/modules/import/drutact_page_import/drutact_page_import.info:0
 msgid "Import pages from CSV file."
+msgstr ""
+
+#: profiles/drutact/modules/import/drutact_resource_import/drutact_resource_import.module:19
+msgid "Import Resources"
+msgstr "Importer Ressources"
+
+#: profiles/drutact/modules/import/drutact_resource_import/drutact_resource_import.info:0
+msgid "DruTACT Resource Import"
+msgstr ""
+
+#: profiles/drutact/modules/import/drutact_resource_import/drutact_resource_import.info:0
+msgid "Import resources from CSV file."
 msgstr ""
 
 #: profiles/drutact/modules/import/drutact_user_import/drutact_user_import.module:19

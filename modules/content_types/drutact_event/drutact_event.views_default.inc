@@ -466,13 +466,13 @@ function drutact_event_views_default_views() {
   $handler->display->display_options['fields']['field_tags']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_tags']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_tags']['separator'] = '|';
-  /* Field: Entity translation: Body: translated */
+  /* Field: Entity translation: Description: translated */
   $handler->display->display_options['fields']['body_et']['id'] = 'body_et';
   $handler->display->display_options['fields']['body_et']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body_et']['field'] = 'body_et';
-  $handler->display->display_options['fields']['body_et']['label'] = 'description';
+  $handler->display->display_options['fields']['body_et']['label'] = 'body';
   $handler->display->display_options['fields']['body_et']['element_label_colon'] = FALSE;
-  /* Field: Entity translation: Body: translated */
+  /* Field: Entity translation: Description: translated */
   $handler->display->display_options['fields']['body_et_1']['id'] = 'body_et_1';
   $handler->display->display_options['fields']['body_et_1']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body_et_1']['field'] = 'body_et';
@@ -536,7 +536,7 @@ function drutact_event_views_default_views() {
     t('vignette_image'),
     t('sections'),
     t('tags'),
-    t('description'),
+    t('body'),
     t('summary'),
   );
   $export['administration_events'] = $view;
