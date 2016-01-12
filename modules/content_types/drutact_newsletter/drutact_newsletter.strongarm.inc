@@ -289,7 +289,7 @@ No confirmation necessary because all requested changes equal the current state.
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'simplenews_content_type_simplenews';
-  $strongarm->value = 1;
+  $strongarm->value = TRUE;
   $export['simplenews_content_type_simplenews'] = $strongarm;
 
   $strongarm = new stdClass();
