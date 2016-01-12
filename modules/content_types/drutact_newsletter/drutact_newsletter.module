@@ -38,6 +38,25 @@ function drutact_newsletter_form_simplenews_node_tab_send_form_alter(&$form, &$f
 }
 
 /**
+ * Implements hook_menu_local_tasks_alter().
+ *
+ * Default action links (Add Newsletter issues).
+ */
+function drutact_newsletter_menu_local_tasks_alter(&$data, $router_item, $root_path) {
+  switch ($root_path) {
+    case 'admin/content/simplenews':
+      // 'Add Newsletter issue' action link.
+      $item = menu_get_item('node/add/simplenews');
+      $item['title'] = t('Add Newsletter issue');
+      $data['actions']['output'][] = array(
+        '#theme' => 'menu_local_action',
+        '#link' => $item,
+      );
+      break;
+  }
+}
+
+/**
  * Helper function to mark newsletter as not sent.
  */
 function _drutact_newsletter_submit_simplenews_form_send_not($form, &$form_state) {
