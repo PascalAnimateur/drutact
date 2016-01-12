@@ -106,8 +106,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-01-12 13:59-0500\n"
-"PO-Revision-Date: 2016-01-12 13:59-0500\n"
+"POT-Creation-Date: 2016-01-12 14:31-0500\n"
+"PO-Revision-Date: 2016-01-12 14:31-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -1081,11 +1081,15 @@ msgstr "Marquer comme n'étant pas envoyée"
 msgid "Mark as sent"
 msgstr "Marquer comme étant envoyée"
 
-#: profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.module:54
+#: profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.module:50
+msgid "Add Newsletter issue"
+msgstr "Ajouter Parution d'infolettre"
+
+#: profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.module:73
 msgid "You are now able to resend this newsletter."
 msgstr "Vous pouvez désormais envoyer la parution d'infolettre à nouveau."
 
-#: profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.module:75
+#: profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.module:94
 msgid "This newsletter is marked as sent."
 msgstr "Cette parution d'infolettre a été marquée comme étant envoyée."
 
