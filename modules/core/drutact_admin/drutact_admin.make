@@ -87,6 +87,7 @@ projects[title][version] = 1.x-dev
 projects[top_description][type] = module
 projects[top_description][download][type] = git
 projects[top_description][download][url] = http://git.drupal.org/sandbox/jrb/top_description.git
+projects[top_description][patch][2648970] = https://www.drupal.org/files/issues/top_description-undefined_type_index-2648970-2.patch
 
 ; Vertical tabs
 projects[vertical_tabs_responsive][type] = module
