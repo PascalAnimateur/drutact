@@ -1,4 +1,8 @@
-drutact 7.x-1.3-alpha18 (2016-01-13)
+drutact 7.x-1.3-alpha20 (2016-01-13)
+====================================
+UUID Features integration.
+
+drutact 7.x-1.3-alpha19 (2016-01-13)
 ====================================
 CSV export/import.
 
