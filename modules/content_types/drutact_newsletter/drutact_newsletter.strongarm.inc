@@ -289,7 +289,7 @@ No confirmation necessary because all requested changes equal the current state.
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'simplenews_content_type_simplenews';
-  $strongarm->value = TRUE;
+  $strongarm->value = 1;
   $export['simplenews_content_type_simplenews'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -375,6 +375,27 @@ No confirmation necessary because all requested changes equal the current state.
   $strongarm->name = 'simplenews_use_cron';
   $strongarm->value = 0;
   $export['simplenews_use_cron'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_entity_node_simplenews';
+  $strongarm->value = 'simplenews';
+  $export['uuid_features_entity_node_simplenews'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_file_node_simplenews';
+  $strongarm->value = 'simplenews';
+  $export['uuid_features_file_node_simplenews'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'webform_node_simplenews';
+  $strongarm->value = 0;
+  $export['webform_node_simplenews'] = $strongarm;
 
   return $export;
 }

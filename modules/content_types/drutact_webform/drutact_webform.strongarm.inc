@@ -232,6 +232,27 @@ function drutact_webform_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'simplenews_content_type_webform';
+  $strongarm->value = 0;
+  $export['simplenews_content_type_webform'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_entity_node_webform';
+  $strongarm->value = 'webform';
+  $export['uuid_features_entity_node_webform'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_file_node_webform';
+  $strongarm->value = 'webform';
+  $export['uuid_features_file_node_webform'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'webform_node_webform';
   $strongarm->value = 1;
   $export['webform_node_webform'] = $strongarm;
