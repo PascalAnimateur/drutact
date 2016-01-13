@@ -7,6 +7,7 @@ dependencies[] = ctools
 dependencies[] = drutact_core
 dependencies[] = entityreference
 dependencies[] = features
+dependencies[] = fences
 dependencies[] = field_library
 dependencies[] = hierarchical_term_formatter
 dependencies[] = image
