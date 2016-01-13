@@ -42,6 +42,8 @@ function drutact_core_install() {
       // Tadaa
       'access tadaa toolbar',
       'use tadaa',
+      // UUID
+      'administer uuid',
       // Views
       'administer views',
       'access all views',
