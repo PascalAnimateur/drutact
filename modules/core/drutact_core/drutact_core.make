@@ -37,6 +37,11 @@ projects[tadaa][patch][2434949] = https://www.drupal.org/files/issues/tadaa-left
 ; Token
 projects[token][type] = module
 
+; UUID
+projects[uuid][type] = module
+projects[uuid_features][version] = 1.x-dev
+projects[uuid_features][patch][1229670] = https://www.drupal.org/files/issues/uuid_features-support_packaged_file_entities-1229670-33.patch
+
 ; Views
 projects[views][type] = module
 projects[views][patch][1222204] = https://www.drupal.org/files/issues/views.1222204-22.patch

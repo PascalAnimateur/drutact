@@ -549,5 +549,61 @@ function drutact_media_strongarm() {
   $strongarm->value = 1;
   $export['transliteration_file_uploads_display_name'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_entity_file_audio';
+  $strongarm->value = 'audio';
+  $export['uuid_features_entity_file_audio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_entity_file_document';
+  $strongarm->value = 'document';
+  $export['uuid_features_entity_file_document'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_entity_file_image';
+  $strongarm->value = 'image';
+  $export['uuid_features_entity_file_image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_entity_file_video';
+  $strongarm->value = 'video';
+  $export['uuid_features_entity_file_video'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_file_file_audio';
+  $strongarm->value = 'audio';
+  $export['uuid_features_file_file_audio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_file_file_document';
+  $strongarm->value = 'document';
+  $export['uuid_features_file_file_document'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_file_file_image';
+  $strongarm->value = 'image';
+  $export['uuid_features_file_file_image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_file_file_video';
+  $strongarm->value = 'video';
+  $export['uuid_features_file_file_video'] = $strongarm;
+
   return $export;
 }

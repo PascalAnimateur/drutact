@@ -95,4 +95,6 @@ features[variable][] = user_picture_path
 features[variable][] = user_picture_style
 features[variable][] = user_pictures
 features[variable][] = user_signatures
+features[variable][] = uuid_features_entity_user_user
+features[variable][] = uuid_features_file_user_user
 project path = profiles/drutact/modules/core
