@@ -25,12 +25,18 @@ projects[smart_dates][patch][1954666] = https://www.drupal.org/files/smart_dates
 libraries[wvega-timepicker][download][type] = file
 libraries[wvega-timepicker][download][url] = https://github.com/wvega/timepicker/archive/master.zip
 
+; Elements
+projects[elements][type] = module
+
 ; Entity reference
 projects[entityreference][type] = module
 projects[entityreference_prepopulate][type] = module
 
 ; Fast Permissions Administration
 projects[fpa][type] = module
+
+; HTML5 Tools
+projects[html5_tools][type] = module
 
 ; Link
 projects[advanced_link][type] = module
