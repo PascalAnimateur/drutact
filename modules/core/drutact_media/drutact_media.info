@@ -178,6 +178,7 @@ features[variable][] = file_entity_max_filesize
 features[variable][] = file_entity_title
 features[variable][] = focal_point_default_method
 features[variable][] = focal_point_enabled_for
+features[variable][] = fontawesome_use_cdn
 features[variable][] = image_jpeg_quality
 features[variable][] = image_toolkit
 features[variable][] = imagemagick_convert
