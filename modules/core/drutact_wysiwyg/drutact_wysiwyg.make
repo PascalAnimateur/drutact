@@ -19,10 +19,10 @@ libraries[widget][destination] = libraries/ckeditor/plugins
 ; Linkit
 projects[linkit][type] = module
 projects[linkit][patch][2395651] = https://www.drupal.org/files/issues/linkit-display_user_picture-2395651-9.patch
-projects[linkit][patch][1793896] = https://www.drupal.org/files/issues/linkit-fix_language_prefix-1793896-24.patch
 
 ; Pathologic
 projects[pathologic][type] = module
+projects[pathologic][patch][2628348] = https://www.drupal.org/files/issues/language_prefix_is_not_2628348_4.patch
 
 ; WYSIWYG
 projects[wysiwyg][version] = 2.x-dev
