@@ -2,7 +2,7 @@ api = 2
 core = 7.x
 
 ; Add existing components
-projects[webform_add_existing][type] = module
+projects[webform_add_existing][version] = 2.0
 projects[webform_add_existing][patch][2447717] = https://www.drupal.org/files/issues/webform_add_existing-compatible_webform4-2447717-3.patch
 
 ; Charts
