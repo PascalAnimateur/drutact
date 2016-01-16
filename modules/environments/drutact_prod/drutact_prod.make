@@ -8,3 +8,6 @@ projects[hidden_captcha][type] = module
 ; Flood control
 projects[flood_control][type] = module
 projects[flood_unblock][type] = module
+
+; Minify
+projects[minify][type] = module

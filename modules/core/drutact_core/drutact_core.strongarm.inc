@@ -603,6 +603,7 @@ function drutact_core_strongarm() {
     'potx' => 1,
     'flood_control' => 0,
     'flood_unblock' => 0,
+    'minify' => 0,
     'captcha' => 0,
     'hidden_captcha' => 0,
     'xmlsitemap_engines' => 0,
@@ -621,6 +622,8 @@ function drutact_core_strongarm() {
     'preprocess_js' => 0,
     'preprocess_css' => 0,
     'views_ui_show_sql_query' => 1,
+    'minify_html' => 0,
+    'minify_js' => 0,
   );
   $export['tadaa_dev_variables'] = $strongarm;
 
@@ -647,6 +650,7 @@ function drutact_core_strongarm() {
     'potx' => 0,
     'flood_control' => 1,
     'flood_unblock' => 1,
+    'minify' => 1,
     'captcha' => 1,
     'hidden_captcha' => 1,
     'xmlsitemap_engines' => 1,
@@ -665,6 +669,8 @@ function drutact_core_strongarm() {
     'preprocess_js' => 1,
     'preprocess_css' => 1,
     'views_ui_show_sql_query' => 0,
+    'minify_html' => 1,
+    'minify_js' => 1,
   );
   $export['tadaa_prod_variables'] = $strongarm;
 

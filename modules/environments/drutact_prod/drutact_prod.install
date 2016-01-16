@@ -47,6 +47,7 @@ function drutact_prod_disable() {
     'flood_control',
     'flood_unblock',
     'drutact_prod',
+    'minify',
     'xmlsitemap_engines',
   ));
 
@@ -66,6 +67,8 @@ function drutact_prod_disable() {
     'contact_threshold_limit',
     'contact_threshold_window',
     'hidden_captcha_label',
+    'minify_html',
+    'minify_js',
     'user_failed_login_ip_limit',
     'user_failed_login_ip_window',
     'user_failed_login_user_limit',
