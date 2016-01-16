@@ -18,7 +18,6 @@ function drutact_charts_install() {
     DRUTACT_EDITOR_RID => array(),
     DRUTACT_ADMINISTRATOR_RID => array(
       // Charts
-      'access example charts',
       'administer charts',
     ),
   ));
