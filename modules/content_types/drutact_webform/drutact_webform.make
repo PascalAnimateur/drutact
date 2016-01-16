@@ -2,7 +2,8 @@ api = 2
 core = 7.x
 
 ; Add existing components
-projects[webform_add_existing][version] = 2.x-dev
+projects[webform_add_existing][type] = module
+projects[webform_add_existing][patch][2447717] = https://www.drupal.org/files/issues/webform_add_existing-compatible_webform4-2447717-3.patch
 
 ; Charts
 projects[webform_charts][type] = module
@@ -29,4 +30,4 @@ projects[webform_share][type] = module
 
 ; Webform
 projects[webform][type] = module
-projects[webform][patch][2358425] = https://www.drupal.org/files/issues/webform-fix_illegal_string_offset_0.patch
+projects[webform][patch][2649042] = https://www.drupal.org/files/issues/webform-missing_required_column-2649042-5.patch
