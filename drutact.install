@@ -10,8 +10,10 @@
  * Default blocks on default theme (content, login, navigation, help).
  */
 function drutact_install() {
+  // Default theme (drutact_bartik).
+  $default_theme = 'drutact_bartik';
+  variable_set('theme_default', $default_theme);
   // Default blocks on default theme (content, login, navigation, help).
-  $default_theme = variable_get('theme_default', 'drupal_bartik');
   $blocks = array(
     array(
       'module' => 'system',
