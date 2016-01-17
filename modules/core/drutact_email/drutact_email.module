@@ -41,25 +41,3 @@ function drutact_email_form_user_profile_form_alter(&$form, &$form_state) {
   $form['mimemail']['#access'] = FALSE;
 }
 
-/**
- * Implements hook_preprocess_mimemail_message().
- *
- * Expose base_url variable to Mime Mail message template.
- */
-function drutact_email_preprocess_mimemail_message(&$variables) {
-  // Expose base_url variable to Mime Mail message template.
-  global $base_url;
-  $variables['base_url'] = $base_url;
-}
-
-/**
- * Implements hook_theme_registry_alter().
- *
- * Specify custom template (mimemail_message).
- */
-function drutact_email_theme_registry_alter(&$registry) {
-  // Specify custom template (mimemail_message).
-  if ($registry['mimemail_message']['type'] == 'module') {
-    $registry['mimemail_message']['path'] = drupal_get_path('module', 'drutact_email') . '/templates';
-  }
-}

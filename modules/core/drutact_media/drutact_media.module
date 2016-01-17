@@ -44,15 +44,3 @@ function drutact_media_post_features_rebuild($component) {
     features_revert(array('drutact_media' => array('file_display')));
   }
 }
-
-/**
- * Implements hook_theme_registry_alter().
- *
- * Specify custom template (file_entity).
- */
-function drutact_media_theme_registry_alter(&$registry) {
-  // Specify custom template (file_entity).
-  if ($registry['file_entity']['type'] == 'module') {
-    $registry['file_entity']['template'] = drupal_get_path('module', 'drutact_media') . '/templates/file_entity';
-  }
-}
