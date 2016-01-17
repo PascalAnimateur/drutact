@@ -48,11 +48,11 @@ function drutact_media_post_features_rebuild($component) {
 /**
  * Implements hook_theme_registry_alter().
  *
- * Default templates folder (file_entity).
+ * Specify custom template (file_entity).
  */
-function drutact_media_theme_registry_alter(&$theme_registry) {
-  // Default templates folder (file_entity).
-  $module_path = drupal_get_path('module', 'drutact_media');
-  $theme_registry['file_entity']['theme_path'] = $module_path;
-  $theme_registry['file_entity']['template'] = $module_path . '/templates/file_entity';
+function drutact_media_theme_registry_alter(&$registry) {
+  // Specify custom template (file_entity).
+  if ($registry['file_entity']['type'] == 'module') {
+    $registry['file_entity']['template'] = drupal_get_path('module', 'drutact_media') . '/templates/file_entity';
+  }
 }

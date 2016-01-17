@@ -55,9 +55,11 @@ function drutact_email_preprocess_mimemail_message(&$variables) {
 /**
  * Implements hook_theme_registry_alter().
  *
- * Default templates folder (mimemail_message).
+ * Specify custom template (mimemail_message).
  */
-function drutact_email_theme_registry_alter(&$theme_registry) {
-  // Default templates folder (mimemail_message).
-  $theme_registry['mimemail_message']['path'] = drupal_get_path('module', 'drutact_email') . '/templates';
+function drutact_email_theme_registry_alter(&$registry) {
+  // Specify custom template (mimemail_message).
+  if ($registry['mimemail_message']['type'] == 'module') {
+    $registry['mimemail_message']['path'] = drupal_get_path('module', 'drutact_email') . '/templates';
+  }
 }
