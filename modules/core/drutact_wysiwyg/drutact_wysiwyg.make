@@ -20,6 +20,7 @@ libraries[widget][destination] = libraries/ckeditor/plugins
 projects[linkit][type] = module
 projects[linkit][patch][2395651] = https://www.drupal.org/files/issues/linkit-display_user_picture-2395651-9.patch
 projects[linkit][patch][1793896] = https://www.drupal.org/files/issues/linkit-fix_language_prefix-1793896-24.patch
+projects[linkit][patch][2652300] = https://www.drupal.org/files/issues/linkit-private_files_direct_link-2652300-2.patch
 
 ; Pathologic
 projects[pathologic][type] = module
