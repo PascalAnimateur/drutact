@@ -1,0 +1,14 @@
+name = DruTACT Diaporama
+description = Provides a diaporama of content images in a block.
+core = 7.x
+package = DruTACT Extra
+version = 7.x-1.3-alpha21
+dependencies[] = image
+dependencies[] = views
+dependencies[] = views_bootstrap
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[image][] = diaporama
+features[views_view][] = diaporama
+features_exclude[dependencies][ctools] = ctools
+project path = profiles/drutact/modules/extra
