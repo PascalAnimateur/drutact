@@ -11,6 +11,7 @@
  * - $module: The sending module
  * - $key: The message identifier
  * - $base_url: The base URL of the site
+ * - $logo_url: The base URL of the site logo
  *
  * @see template_preprocess_mimemail_message()
  */
@@ -20,12 +21,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style type="text/css">
-      #main {
-        margin-top: 20px;
-        margin-bottom: 40px;
+      #main, #logo {
+        margin: 10px auto 20px;
         width: 960px;
-        margin-left: auto;
-        margin-right: auto;
       }
       p {
         margin: 0px 0px 1.2em;
@@ -34,6 +32,9 @@
   </head>
   <body id="mimemail-body" <?php if ($module && $key): print 'class="'. $module .'-'. $key .'"'; endif; ?>>
     <div id="center">
+      <div id="logo">
+        <a href="<?php print $base_url ?>"><img src="<?php print $logo_url ?>" /></a>
+      </div>
       <div id="main">
         <?php print $body ?>
       </div>
