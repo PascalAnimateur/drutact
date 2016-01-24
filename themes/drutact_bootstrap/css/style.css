@@ -7531,3 +7531,103 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 #navbar-administration.navbar-oriented .navbar-tray-vertical {
   width: 24rem;
 }
+@media screen and (max-width: 1024px) {
+  body.adminimal-menu .navbar-fixed-top {
+    top: 0px;
+  }
+  body.adminimal-menu.navbar-is-fixed-top {
+    padding-top: 50px !important;
+  }
+}
+@media screen and (min-width: 1025px) {
+  body.adminimal-menu {
+    margin-top: 28px !important;
+  }
+  body.adminimal-menu.navbar-is-fixed-top {
+    padding-top: 64px !important;
+  }
+  body.adminimal-menu .navbar-is-fixed-top {
+    margin-top: 0px !important;
+    margin-bottom: 47px !important;
+  }
+}
+.tooltip {
+  z-index: 2000;
+}
+.captcha {
+  display: none;
+}
+figure {
+  margin: 20px;
+}
+img.media-element {
+  margin: 20px;
+}
+.node {
+  margin: 20px 0px;
+  padding-bottom: 20px;
+}
+.node h2 {
+  margin-top: 10px;
+  padding-bottom: 9px;
+}
+.node .user-picture img {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  float: left;
+  margin: -5px 5px 0px 0px;
+}
+.node-footer {
+  clear: both;
+  margin-top: 20px;
+}
+.field-type-taxonomy-term-reference,
+.field-name-og-group-ref,
+.field-name-group-access,
+.field-name-group-content-access {
+  display: inline-block;
+  margin: 10px 5px 10px 5px;
+  vertical-align: bottom;
+}
+ul.links {
+  display: inline-block;
+  float: right;
+}
+.label a {
+  color: #fff;
+}
+.field-label i.fa {
+  color: #777777;
+}
+nav #block-search-form #edit-actions {
+  margin-bottom: 0px;
+}
+#search-block-form .input-group-btn {
+  width: auto;
+}
+#search-block-form {
+  padding-top: 2px;
+}
+#search-block-form .form-group {
+  margin-bottom: 0px;
+}
+#search-form .criterion {
+  margin-bottom: 15px;
+}
+.profile .user-picture {
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+form.webform-client-form {
+  margin-top: 20px;
+}

@@ -1,0 +1,27 @@
+// DruTACT Administration
+
+// Responsive adminimal_admin_menu
+@media screen and (max-width: @admin-menu-breakpoint) {
+  body.adminimal-menu .navbar-fixed-top {
+    top: 0px;
+  }
+  body.adminimal-menu.navbar-is-fixed-top {
+    padding-top: 50px !important;
+  }
+}
+@media screen and (min-width: (@admin-menu-breakpoint + 1)) {
+  body.adminimal-menu {
+    margin-top: 28px !important;
+  }
+  body.adminimal-menu.navbar-is-fixed-top {
+    padding-top: 64px !important;
+  }
+  body.adminimal-menu .navbar-is-fixed-top {
+    margin-top: 0px !important;
+    margin-bottom: 47px !important;
+  }
+}
+
+// Bootstrap Login Modal tooltip and captcha
+.tooltip { z-index: 2000; }
+.captcha { display: none; }
