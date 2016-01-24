@@ -112,3 +112,20 @@ function _drutact_disable_views($views) {
   }
   variable_set('views_defaults', $status);
 }
+
+/**
+ * Implements hook_update_projects_alter().
+ *
+ * Disable updates for sandbox modules.
+ */
+function drutact_update_projects_alter(&$projects)
+{
+  // Disable updates for sandbox modules.
+  unset($projects['admin_menu_language']);
+  unset($projects['multilingual_content_type']);
+  unset($projects['multilingual_taxonomy']);
+  unset($projects['og_file_entity']);
+  unset($projects['og_role_access']);
+  unset($projects['roles_simple_translate']);
+  unset($projects['top_description']);
+}
