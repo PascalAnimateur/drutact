@@ -3,6 +3,7 @@ core = 7.x
 
 ; Bootstrap
 projects[bootstrap][type] = theme
+projects[bootstrap][patch][2261189] = https://www.drupal.org/files/issues/add_drush_support_for-2261189-15.patch
 projects[bootstrap][patch][2495743] = https://www.drupal.org/files/issues/bootstrap-webform_inline_elements-2495743.patch
 
 ; Bootstrap library
