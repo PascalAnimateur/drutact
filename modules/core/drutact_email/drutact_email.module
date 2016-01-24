@@ -39,27 +39,24 @@ function drutact_email_form_alter(&$form, &$form_state, $form_id) {
 function drutact_email_form_mimemail_admin_settings_alter(&$form, &$form_state, $form_id) {
   // Add 'Email logo' file component to MIME Mail settings form.
   $form['drutact_email_logo'] = array(
-    '#title' => t('Email logo'),
-    '#type' => 'managed_file',
+    '#title' => t('Path to Email logo file'),
+    '#type' => 'textfield',
     '#default_value' => variable_get('drutact_email_logo', ''),
-    '#upload_location' => 'public://',
-    '#theme' => 'image_multifield_multitype',
     '#weight' => -10,
   );
-  $form['#submit'][] = '_drutact_email_permanent_email_logo_file';
+  $form['#validate'][] = '_drutact_email_logo_file_validate';
 }
 
 /**
- * Custom submit handler for mimemail-admin-settings form.
+ * Custom validation handler for mimemail-admin-settings form.
  *
- * Make sure email logo file is permanent.
+ * Make sure email logo file exists.
  */
-function _drutact_email_permanent_email_logo_file($form, &$form_state) {
-  // Make sure email logo file is permanent.
-  if ($fid = $form_state['values']['drutact_email_logo']) {
-    $file = file_load($fid);
-    $file->status = FILE_STATUS_PERMANENT;
-    file_save($file);
+function _drutact_email_logo_file_validate($form, &$form_state) {
+  // Make sure email logo file exists.
+  $email_logo_uri = 'public://' . $form_state['values']['drutact_email_logo'];
+  if (!file_exists(drupal_realpath($email_logo_uri))) {
+    form_set_error('drutact_email_logo', t('Logo file does not exist.'));
   }
 }
 
@@ -79,12 +76,14 @@ function drutact_email_form_user_profile_form_alter(&$form, &$form_state) {
  * Provide $base_url and $logo_url values to mimemail-message template.
  */
 function drutact_email_preprocess_mimemail_message(&$variables) {
+  // Provide $base_url value.
   global $base_url;
-  // Provide $base_url and $logo_url to mimemail message template.
   $variables['base_url'] = $base_url;
-  if ($logo_file = file_load(variable_get('drutact_email_logo', 0))) {
-    $logo_url = file_create_url($logo_file->uri);
-    $variables['logo_url'] = $logo_url;
+
+  // Provide $logo_url if file exists.
+  $logo_uri = 'public://' . variable_get('drutact_email_logo', '');
+  if (file_exists(drupal_realpath($logo_uri))) {
+    $variables['logo_url'] = file_create_url($logo_uri);
   }
   else {
     $variables['logo_url'] = $base_url . '/themes/bartik/logo.png';
