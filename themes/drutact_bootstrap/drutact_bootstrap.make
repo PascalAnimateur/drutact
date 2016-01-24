@@ -10,6 +10,9 @@ libraries[bootstrap][download][type] = file
 libraries[bootstrap][download][url] = https://github.com/twbs/bootstrap/archive/v3.3.5.zip
 libraries[bootstrap][destination] = ../../profiles/drutact/themes/drutact_bootstrap
 
+; Bootstrap Login Modal
+projects[bootstrap_login_modal][type] = module
+
 ; Smartmenus library
 libraries[smartmenus][download][type] = file
 libraries[smartmenus][download][url] = https://github.com/vadikom/smartmenus/archive/master.zip
