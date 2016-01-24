@@ -7557,6 +7557,9 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 .captcha {
   display: none;
 }
+.region-header {
+  margin-bottom: 20px;
+}
 figure {
   margin: 20px;
 }
