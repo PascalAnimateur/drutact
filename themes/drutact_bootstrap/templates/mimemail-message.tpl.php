@@ -25,9 +25,17 @@
         margin: 10px auto 20px;
         width: 960px;
       }
-      p {
-        margin: 0px 0px 1.2em;
+      body {
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        line-height: 1.42857;
+        color: #666;
       }
+      p { font-size: 14px; margin: 0px 0px 10px; }
+      h1 { font-size: 36px; margin: 20px 0px 10px; }
+      h2 { font-size: 30px; margin: 20px 0px 10px; }
+      h3 { font-size: 24px; margin: 20px 0px 10px; }
+      h4 { font-size: 18px; margin: 10px 0px 10px;}
     </style>
   </head>
   <body id="mimemail-body" <?php if ($module && $key): print 'class="'. $module .'-'. $key .'"'; endif; ?>>
