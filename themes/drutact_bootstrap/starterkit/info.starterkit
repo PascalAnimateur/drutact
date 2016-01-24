@@ -1,0 +1,32 @@
+name = Starterkit
+description = Starterkit subtheme of DruTACT Bootstrap.
+core = 7.x
+base theme = drutact_bootstrap
+
+; ========================================
+; Regions
+; ========================================
+regions[navigation] = Navigation
+regions[header] = Top Bar
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
+regions[sidebar_first] = Primary
+regions[sidebar_second] = Secondary
+regions[footer] = Footer
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+
+; ========================================
+; Stylesheets
+; ========================================
+stylesheets[all][] = css/style.css
+
+; ========================================
+; Scripts
+; ========================================
+
+; ========================================
+; Settings
+; ========================================
+settings[bootstrap_cdn] = ""
