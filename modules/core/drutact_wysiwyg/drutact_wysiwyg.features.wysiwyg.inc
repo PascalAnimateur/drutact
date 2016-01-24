@@ -35,10 +35,12 @@ function drutact_wysiwyg_wysiwyg_default_profiles() {
           'Indent' => 1,
           'Link' => 1,
           'Unlink' => 1,
+          'Anchor' => 1,
           'Blockquote' => 1,
           'Source' => 1,
           'RemoveFormat' => 1,
           'Format' => 1,
+          'Table' => 1,
           'Maximize' => 1,
         ),
         'linkit' => array(
@@ -59,7 +61,7 @@ function drutact_wysiwyg_wysiwyg_default_profiles() {
       'css_path' => '%b%t/css/style.css',
       'stylesSet' => '',
       'block_formats' => 'p,h2,h3,h4',
-      'advanced__active_tab' => 'edit-paste',
+      'advanced__active_tab' => 'edit-basic',
       'forcePasteAsPlainText' => 0,
     ),
   );
