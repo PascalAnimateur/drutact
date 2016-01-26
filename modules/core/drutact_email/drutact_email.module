@@ -82,7 +82,7 @@ function drutact_email_preprocess_mimemail_message(&$variables) {
 
   // Provide $logo_url if file exists.
   $logo_uri = 'public://' . variable_get('drutact_email_logo', '');
-  if (file_exists(drupal_realpath($logo_uri))) {
+  if ($logo_uri != 'public://' && drupal_realpath($logo_uri)) {
     $variables['logo_url'] = file_create_url($logo_uri);
   }
   else {
