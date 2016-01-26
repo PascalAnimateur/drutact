@@ -85,7 +85,7 @@ function drutact_l10n_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'l10n_update_check_frequency';
-  $strongarm->value = '7';
+  $strongarm->value = '0';
   $export['l10n_update_check_frequency'] = $strongarm;
 
   $strongarm = new stdClass();
