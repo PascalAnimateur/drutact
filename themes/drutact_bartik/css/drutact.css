@@ -1,1 +1,6 @@
 /* DruTACT custom css styles */
+
+/* Search form height.  */
+#search-form input#edit-keys, #block-search-form .form-item-search-block-form input {
+  height: auto;
+}
