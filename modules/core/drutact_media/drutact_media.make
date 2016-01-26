@@ -19,11 +19,11 @@ projects[fontawesome][type] = module
 libraries[fontawesome][download][type] = file
 libraries[fontawesome][download][url] = https://fortawesome.github.io/Font-Awesome/assets/font-awesome-4.5.0.zip
 
-; Image cache token
-projects[imagecache_token][type] = module
-
 ; Image dimensions
 projects[image_dimensions][type] = module
+
+; Imagecache token
+projects[imagecache_token][type] = module
 
 ; ImageMagick
 projects[imagemagick][type] = module
