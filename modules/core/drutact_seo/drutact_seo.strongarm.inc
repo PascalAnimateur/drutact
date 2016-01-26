@@ -59,6 +59,34 @@ function drutact_seo_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'metatag_i18n_disabled';
+  $strongarm->value = 0;
+  $export['metatag_i18n_disabled'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'metatag_i18n_enable_watchdog';
+  $strongarm->value = 0;
+  $export['metatag_i18n_enable_watchdog'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'metatag_i18n_translate_output';
+  $strongarm->value = 0;
+  $export['metatag_i18n_translate_output'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'metatag_leave_core_tags';
+  $strongarm->value = 0;
+  $export['metatag_leave_core_tags'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'metatag_load_all_pages';
   $strongarm->value = 1;
   $export['metatag_load_all_pages'] = $strongarm;
@@ -69,6 +97,13 @@ function drutact_seo_strongarm() {
   $strongarm->name = 'metatag_load_defaults';
   $strongarm->value = 1;
   $export['metatag_load_defaults'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'metatag_pager_string';
+  $strongarm->value = 'Page PAGER | ';
+  $export['metatag_pager_string'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

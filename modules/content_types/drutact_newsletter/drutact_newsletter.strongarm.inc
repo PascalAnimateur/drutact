@@ -160,6 +160,20 @@ function drutact_newsletter_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'metatag_enable_simplenews_newsletter';
+  $strongarm->value = TRUE;
+  $export['metatag_enable_simplenews_newsletter'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'metatag_enable_simplenews_subscriber';
+  $strongarm->value = FALSE;
+  $export['metatag_enable_simplenews_subscriber'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_simplenews';
   $strongarm->value = array(
     0 => 'status',

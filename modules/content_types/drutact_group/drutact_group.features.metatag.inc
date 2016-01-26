@@ -18,13 +18,10 @@ function drutact_group_metatag_export_default() {
         'value' => '[node:field-tags]',
       ),
       'image_src' => array(
-        'value' => '[node:field-image:large]',
+        'value' => '[node:field-image]',
       ),
       'og:image' => array(
         'value' => '[node:field-image]',
-      ),
-      'video:tag' => array(
-        'value' => '[node:field-tags]',
       ),
     ),
   );

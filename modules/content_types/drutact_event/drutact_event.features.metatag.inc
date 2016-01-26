@@ -13,7 +13,17 @@ function drutact_event_metatag_export_default() {
   // Exported Metatag config instance: node:event.
   $config['node:event'] = array(
     'instance' => 'node:event',
-    'config' => array(),
+    'config' => array(
+      'keywords' => array(
+        'value' => '[node:field-tags]',
+      ),
+      'image_src' => array(
+        'value' => '[node:field-image]',
+      ),
+      'og:image' => array(
+        'value' => '[node:field-image]',
+      ),
+    ),
   );
 
   return $config;
