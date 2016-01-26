@@ -39,7 +39,7 @@ function drutact_seo_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'metatag_entity_no_lang_default';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['metatag_entity_no_lang_default'] = $strongarm;
 
   $strongarm = new stdClass();

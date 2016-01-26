@@ -13,7 +13,20 @@ function drutact_group_metatag_export_default() {
   // Exported Metatag config instance: node:group.
   $config['node:group'] = array(
     'instance' => 'node:group',
-    'config' => array(),
+    'config' => array(
+      'keywords' => array(
+        'value' => '[node:field-tags]',
+      ),
+      'image_src' => array(
+        'value' => '[node:field-image:large]',
+      ),
+      'og:image' => array(
+        'value' => '[node:field-image]',
+      ),
+      'video:tag' => array(
+        'value' => '[node:field-tags]',
+      ),
+    ),
   );
 
   return $config;
