@@ -43,6 +43,7 @@ dependencies[] = term_depth
 dependencies[] = term_reference_tree
 dependencies[] = title
 dependencies[] = top_description
+dependencies[] = update
 dependencies[] = vertical_tabs_responsive
 dependencies[] = views
 dependencies[] = views_data_export
