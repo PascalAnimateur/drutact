@@ -1,6 +1,9 @@
 api = 2
 core = 7.x
 
+; Alternate hreflang
+projects[hreflang][type] = module
+
 ; Metatag
 projects[metatag][type] = module
 
