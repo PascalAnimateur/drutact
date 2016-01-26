@@ -9,6 +9,7 @@ projects[metatag][type] = module
 
 ; Pathauto
 projects[pathauto][type] = module
+projects[pathauto_entity][type] = module
 projects[transliteration][type] = module
 
 ; Redirection

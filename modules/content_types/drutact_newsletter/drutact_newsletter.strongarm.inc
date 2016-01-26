@@ -197,9 +197,37 @@ function drutact_newsletter_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_simplenews_en_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_simplenews_en_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_simplenews_pattern';
-  $strongarm->value = 'newsletters/[node:title-field]';
+  $strongarm->value = 'newsletter-issues/[node:title-field]';
   $export['pathauto_node_simplenews_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_simplenews_und_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_simplenews_und_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_simplenews_newsletter_pattern';
+  $strongarm->value = 'newsletters/[simplenews_newsletter:name]';
+  $export['pathauto_simplenews_newsletter_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_simplenews_newsletter_simplenews_newsletter_pattern';
+  $strongarm->value = '';
+  $export['pathauto_simplenews_newsletter_simplenews_newsletter_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
