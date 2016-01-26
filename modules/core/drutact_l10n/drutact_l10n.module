@@ -139,6 +139,42 @@ function drutact_l10n_form_node_type_form_alter(&$form, &$form_state, $form_id) 
 }
 
 /**
+ * Implements hook_node_view().
+ *
+ * Display a warning concerning untranslated content to privileged users.
+ */
+function drutact_l10n_node_view($node, $view_mode, $langcode) {
+  if (user_access('translate node entities') && node_access('update', $node)) {
+    if (isset($node->translations) && isset($node->translations->original) && $node->translations->original != LANGUAGE_NONE && !isset($node->translations->data[$langcode])) {
+      drupal_set_message(t('Untranslated content: %title (!translate here).',
+        array(
+          '%title' => $node->title,
+          '!translate' => l(t('translate'), 'node/' . $node->nid . '/edit/add/' . $node->translations->original . '/' . $langcode)
+        )),
+        'warning');
+    }
+  }
+}
+
+/**
+ * Implements hook_taxonomy_term_view().
+ *
+ * Display a warning concerning untranslated term to privileged users.
+ */
+function drutact_l10n_taxonomy_term_view($term, $view_mode, $langcode) {
+  if (user_access('translate taxonomy_term entities') && taxonomy_term_edit_access($term)) {
+    if (isset($term->translations) && $term->translations->original != LANGUAGE_NONE && !isset($term->translations->data[$langcode])) {
+      drupal_set_message(t('Untranslated term: %name (!translate here).',
+        array(
+          '%name' => $term->name,
+          '!translate' => l(t('translate'), 'taxonomy/term/' . $term->tid . '/edit/add/' . $term->translations->original . '/' . $langcode)
+        )),
+        'warning');
+    }
+  }
+}
+
+/**
  * Implements hook_post_features_rebuild().
  *
  * Default module permissions (entity_translation, i18n, locale).
