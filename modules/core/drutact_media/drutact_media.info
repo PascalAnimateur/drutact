@@ -13,6 +13,7 @@ dependencies[] = file_entity
 dependencies[] = focal_point
 dependencies[] = fontawesome
 dependencies[] = image
+dependencies[] = imagecache_token
 dependencies[] = image_dimensions
 dependencies[] = imagemagick
 dependencies[] = media
