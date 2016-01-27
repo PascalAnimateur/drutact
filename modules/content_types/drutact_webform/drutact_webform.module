@@ -22,6 +22,20 @@ function drutact_webform_form_webform_components_form_alter(&$form, $form_state,
 }
 
 /**
+ * Implements hook_form_alter().
+ *
+ * Cheat translation of webform components' titles using t().
+ */
+function drutact_webform_form_alter(&$form, $form_state, $form_id) {
+  if (strrpos($form_id, 'webform_client_form_', -strlen($form_id)) !== FALSE) {
+    foreach (element_children($form['submitted']) as $element) {
+      // Cheat translation of webform components' titles using t().
+      $form['submitted'][$element]['#title'] = t($form['submitted'][$element]['#title']);
+    }
+  }
+}
+
+/**
  * Implements hook_menu_local_tasks_alter().
  *
  * Default action links (Add Webform).
