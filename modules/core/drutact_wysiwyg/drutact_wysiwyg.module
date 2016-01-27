@@ -7,6 +7,29 @@
 include_once 'drutact_wysiwyg.features.inc';
 
 /**
+ * Implements of hook_element_info_alter().
+ */
+function drutact_wysiwyg_element_info_alter(&$type) {
+  // Our process callback must run immediately after filter_process_format().
+  $type['text_format']['#process'][] = 'drutact_wysiwyg_filter_process_format';
+}
+
+/**
+ * Process callback for form elements that have a text format selector attached.
+ *
+ * Hide the text format options and guidelines.
+ */
+function drutact_wysiwyg_filter_process_format($element) {
+  // Hide the text format options and guidelines.
+  $element['format']['#access'] = FALSE;
+  $element['format']['format']['#access'] = FALSE;
+  $element['format']['guidelines']['#access'] = FALSE;
+  $element['format']['help']['#access'] = FALSE;
+
+  return $element;
+}
+
+/**
  * Implements hook_form_FORM_ID_alter().
  *
  * Disable fields on Media WYSIWYG view mode selection form.

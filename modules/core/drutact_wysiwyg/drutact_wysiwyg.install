@@ -22,4 +22,7 @@ function drutact_wysiwyg_install() {
       'administer linkit',
     ),
   ));
+
+  // Default module weight (drutact_wysiwyg).
+  _drutact_default_module_weight('drutact_wysiwyg', 20);
 }
