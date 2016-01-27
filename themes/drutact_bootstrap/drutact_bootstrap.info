@@ -8,12 +8,12 @@ version = 7.x-1.3-alpha21
 ; Regions
 ; ========================================
 regions[navigation] = Navigation
-regions[header] = Top Bar
+regions[header] = Header
 regions[highlighted] = Highlighted
 regions[help] = Help
 regions[content] = Content
-regions[sidebar_first] = Primary
-regions[sidebar_second] = Secondary
+regions[sidebar_first] = Left sidebar
+regions[sidebar_second] = Right sidebar
 regions[footer] = Footer
 regions[page_top] = Page top
 regions[page_bottom] = Page bottom
