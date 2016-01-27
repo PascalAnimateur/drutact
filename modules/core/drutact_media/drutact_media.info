@@ -193,7 +193,6 @@ features[variable][] = media_position
 features[variable][] = media_resizable
 features[variable][] = media_width
 features[variable][] = media_zindex
-features[variable][] = menu_expanded
 features[variable][] = metatag_enable_file
 features[variable][] = metatag_enable_file__audio
 features[variable][] = metatag_enable_file__document
