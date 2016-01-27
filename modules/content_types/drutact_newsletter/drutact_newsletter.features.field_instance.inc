@@ -61,6 +61,52 @@ function drutact_newsletter_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-simplenews-field_tags'.
+  $field_instances['node-simplenews-field_tags'] = array(
+    'bundle' => 'simplenews',
+    'deleted' => 0,
+    'description' => 'Enter individual keywords to describe this content\'s topic.',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
+      'teaser' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 11,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_tags',
+    'label' => 'Tags',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'select2widget',
+      'settings' => array(
+        'select2widgetajax' => array(
+          'allow_new' => 1,
+          'match_operator' => 'STARTS_WITH',
+          'min_char' => 1,
+          'separator' => '|',
+          'set_level' => 0,
+          'width' => '100%',
+        ),
+      ),
+      'type' => 'select2widgetajax',
+      'weight' => 11,
+    ),
+  );
+
   // Exported field_instance: 'node-simplenews-simplenews_handler'.
   $field_instances['node-simplenews-simplenews_handler'] = array(
     'bundle' => 'simplenews',
@@ -385,6 +431,8 @@ function drutact_newsletter_field_default_field_instances() {
   // Translatables created/updated by the Localize Fields (localize_fields) module.
   t('Body', array(), array('context' => 'field_instance:simplenews-body:label'));
   t('The body of this newsletter issue. Use the \'Edit summary\' link above to set a shorter, text-only version that will be used to describe the content when it\'s displayed as a teaser (i.e. in a list on the front page).', array(), array('context' => 'field_instance:simplenews-body:description'));
+  t('Tags', array(), array('context' => 'field_instance:simplenews-field_tags:label'));
+  t('Enter individual keywords to describe this content\'s topic.', array(), array('context' => 'field_instance:simplenews-field_tags:description'));
   t('Recipient Handler', array(), array('context' => 'field_instance:simplenews-simplenews_handler:label'));
   t('Recipient Handle Settings', array(), array('context' => 'field_instance:simplenews-simplenews_handler_settings:label'));
   t('Status', array(), array('context' => 'field_instance:simplenews-simplenews_issue_status:label'));

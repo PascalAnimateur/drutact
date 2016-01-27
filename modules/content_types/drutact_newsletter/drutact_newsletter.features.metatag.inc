@@ -13,7 +13,11 @@ function drutact_newsletter_metatag_export_default() {
   // Exported Metatag config instance: node:simplenews.
   $config['node:simplenews'] = array(
     'instance' => 'node:simplenews',
-    'config' => array(),
+    'config' => array(
+      'keywords' => array(
+        'value' => '[node:field-tags]',
+      ),
+    ),
   );
 
   // Exported Metatag config instance: simplenews_newsletter.

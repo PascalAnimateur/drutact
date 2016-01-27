@@ -10,6 +10,57 @@
 function drutact_webform_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-webform-body'.
+  $field_instances['node-webform-body'] = array(
+    'bundle' => 'webform',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'The description of this webform. Use the \'Edit summary\' link above to set a shorter, text-only version that will be used to describe the webform when it\'s displayed as a teaser (i.e. in a list on the front page).',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'body',
+    'label' => 'Description',
+    'required' => 0,
+    'settings' => array(
+      'display_summary' => 1,
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 0,
+    ),
+  );
+
   // Exported field_instance: 'node-webform-field_image'.
   $field_instances['node-webform-field_image'] = array(
     'bundle' => 'webform',
@@ -339,6 +390,8 @@ function drutact_webform_field_default_field_instances() {
   // Included for use with string extractors like potx.
 
   // Translatables created/updated by the Localize Fields (localize_fields) module.
+  t('Description', array(), array('context' => 'field_instance:webform-body:label'));
+  t('The description of this webform. Use the \'Edit summary\' link above to set a shorter, text-only version that will be used to describe the webform when it\'s displayed as a teaser (i.e. in a list on the front page).', array(), array('context' => 'field_instance:webform-body:description'));
   t('Image', array(), array('context' => 'field_instance:webform-field_image:label'));
   t('Image accompanying the content.', array(), array('context' => 'field_instance:webform-field_image:description'));
   t('Section(s)', array(), array('context' => 'field_instance:webform-field_sections:label'));
