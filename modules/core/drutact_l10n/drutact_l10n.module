@@ -103,7 +103,7 @@ function _drutact_l10n_translate_role($rid, $langcode, $translation) {
 function _drutact_l10n_translate_vocabulary($vocabulary, $langcode, $name, $description = '') {
   if (module_exists('i18n_string')) {
     $vocabulary = taxonomy_vocabulary_machine_name_load($vocabulary);
-    if (!isset($vocabulary)) {
+    if ($vocabulary !== FALSE) {
       return;
     }
     $vid = $vocabulary->vid;

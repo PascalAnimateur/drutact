@@ -20,10 +20,15 @@ function drutact_fr_post_features_rebuild($component) {
     _drutact_l10n_translate_role(DRUTACT_ADMINISTRATOR_RID, 'fr', 'Administrateur');
 
     // Translate vocabularies (sections, tags).
-    _drutact_l10n_translate_vocabulary('sections', 'fr', 'Sections',
-      'Utiliser les sections pour organiser le site en zones de contenu ou départements.');
-    _drutact_l10n_translate_vocabulary('tags', 'fr', 'Mots-clés',
-      'Utiliser les mots-clés pour regrouper le contenu en catégories par sujets similaires.');
+    if (module_exists('drutact_sections')) {
+      _drutact_l10n_translate_vocabulary('sections', 'fr', 'Sections',
+        'Utiliser les sections pour organiser le site en zones de contenu ou départements.');
+    }
+    if (module_exists('drutact_tags')) {
+      _drutact_l10n_translate_vocabulary('tags', 'fr', 'Mots-clés',
+        'Utiliser les mots-clés pour regrouper le contenu en catégories par sujets similaires.');
+
+    }
 
     // Update translations from code.
     _potx_exportables_import_data();
