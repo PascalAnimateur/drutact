@@ -40,7 +40,6 @@ features[field_instance][] = field_library-group_content-group_content_access
 features[field_instance][] = field_library-group_content-og_group_ref
 features[field_instance][] = node-group-body
 features[field_instance][] = node-group-field_image
-features[field_instance][] = node-group-field_sections
 features[field_instance][] = node-group-field_tags
 features[field_instance][] = node-group-group_access
 features[field_instance][] = node-group-group_group
