@@ -28,6 +28,7 @@ features[variable][] = devel_xhprof_url
 features[variable][] = l10n_client_disabled_paths
 features[variable][] = l10n_client_server
 features[variable][] = l10n_client_use_server
+features_banish[menu_custom][] = devel
 features_banish[user_permission][] = access devel information
 features_banish[user_permission][] = administer devel menu items
 features_banish[user_permission][] = execute php code
