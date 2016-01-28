@@ -456,15 +456,6 @@ function drutact_event_views_default_views() {
   $handler->display->display_options['fields']['uri']['relationship'] = 'field_image_fid';
   $handler->display->display_options['fields']['uri']['label'] = 'vignette_image';
   $handler->display->display_options['fields']['uri']['element_label_colon'] = FALSE;
-  /* Field: Field: Section(s) */
-  $handler->display->display_options['fields']['field_sections']['id'] = 'field_sections';
-  $handler->display->display_options['fields']['field_sections']['table'] = 'field_data_field_sections';
-  $handler->display->display_options['fields']['field_sections']['field'] = 'field_sections';
-  $handler->display->display_options['fields']['field_sections']['label'] = 'sections';
-  $handler->display->display_options['fields']['field_sections']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_sections']['type'] = 'taxonomy_term_reference_plain';
-  $handler->display->display_options['fields']['field_sections']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_sections']['separator'] = '|';
   /* Field: Field: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
@@ -474,13 +465,13 @@ function drutact_event_views_default_views() {
   $handler->display->display_options['fields']['field_tags']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_tags']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_tags']['separator'] = '|';
-  /* Field: Entity translation: Body: translated */
+  /* Field: Entity translation: Description: translated */
   $handler->display->display_options['fields']['body_et']['id'] = 'body_et';
   $handler->display->display_options['fields']['body_et']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body_et']['field'] = 'body_et';
   $handler->display->display_options['fields']['body_et']['label'] = 'body';
   $handler->display->display_options['fields']['body_et']['element_label_colon'] = FALSE;
-  /* Field: Entity translation: Body: translated */
+  /* Field: Entity translation: Description: translated */
   $handler->display->display_options['fields']['body_et_1']['id'] = 'body_et_1';
   $handler->display->display_options['fields']['body_et_1']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body_et_1']['field'] = 'body_et';
@@ -543,7 +534,6 @@ function drutact_event_views_default_views() {
     t('front_page'),
     t('sticky'),
     t('vignette_image'),
-    t('sections'),
     t('tags'),
     t('body'),
     t('summary'),

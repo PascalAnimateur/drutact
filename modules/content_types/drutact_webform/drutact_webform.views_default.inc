@@ -466,15 +466,6 @@ function drutact_webform_views_default_views() {
   $handler->display->display_options['fields']['uri']['relationship'] = 'field_image_fid';
   $handler->display->display_options['fields']['uri']['label'] = 'vignette_image';
   $handler->display->display_options['fields']['uri']['element_label_colon'] = FALSE;
-  /* Field: Field: Section(s) */
-  $handler->display->display_options['fields']['field_sections']['id'] = 'field_sections';
-  $handler->display->display_options['fields']['field_sections']['table'] = 'field_data_field_sections';
-  $handler->display->display_options['fields']['field_sections']['field'] = 'field_sections';
-  $handler->display->display_options['fields']['field_sections']['label'] = 'sections';
-  $handler->display->display_options['fields']['field_sections']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_sections']['type'] = 'taxonomy_term_reference_plain';
-  $handler->display->display_options['fields']['field_sections']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_sections']['separator'] = '|';
   /* Field: Field: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
@@ -537,7 +528,6 @@ function drutact_webform_views_default_views() {
     t('front_page'),
     t('sticky'),
     t('vignette_image'),
-    t('sections'),
     t('tags'),
   );
   $export['administration_webforms'] = $view;

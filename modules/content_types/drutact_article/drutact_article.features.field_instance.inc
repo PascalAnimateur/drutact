@@ -129,65 +129,6 @@ function drutact_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_sections'.
-  $field_instances['node-article-field_sections'] = array(
-    'bundle' => 'article',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Assign this content to specific section(s) of the site.',
-    'display' => array(
-      'default' => array(
-        'label' => 'inline',
-        'module' => 'hierarchical_term_formatter',
-        'settings' => array(
-          'display' => 'all',
-          'link' => 1,
-          'separator' => ' » ',
-          'wrap' => 'none',
-        ),
-        'type' => 'hierarchical_term_formatter',
-        'weight' => 10,
-      ),
-      'teaser' => array(
-        'label' => 'inline',
-        'module' => 'hierarchical_term_formatter',
-        'settings' => array(
-          'display' => 'all',
-          'link' => 1,
-          'separator' => ' » ',
-          'wrap' => 'none',
-        ),
-        'type' => 'hierarchical_term_formatter',
-        'weight' => 10,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_sections',
-    'label' => 'Section(s)',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'term_reference_tree',
-      'settings' => array(
-        'cascading_selection' => 0,
-        'filter_view' => '',
-        'leaves_only' => 1,
-        'max_depth' => '',
-        'parent_term_id' => '',
-        'select_parents' => 0,
-        'start_minimized' => 1,
-        'token_display' => '',
-        'track_list' => 0,
-      ),
-      'type' => 'term_reference_tree',
-      'weight' => 10,
-    ),
-  );
-
   // Exported field_instance: 'node-article-field_tags'.
   $field_instances['node-article-field_tags'] = array(
     'bundle' => 'article',
@@ -414,8 +355,6 @@ function drutact_article_field_default_field_instances() {
   t('The body of this article. Use the \'Edit summary\' link above to set a shorter, text-only version that will be used to describe the content when it\'s displayed as a teaser (i.e. in a list on the front page).', array(), array('context' => 'field_instance:article-body:description'));
   t('Image', array(), array('context' => 'field_instance:article-field_image:label'));
   t('Image accompanying the content.', array(), array('context' => 'field_instance:article-field_image:description'));
-  t('Section(s)', array(), array('context' => 'field_instance:article-field_sections:label'));
-  t('Assign this content to specific section(s) of the site.', array(), array('context' => 'field_instance:article-field_sections:description'));
   t('Tags', array(), array('context' => 'field_instance:article-field_tags:label'));
   t('Enter individual keywords to describe this content\'s topic.', array(), array('context' => 'field_instance:article-field_tags:description'));
   t('Group content visibility', array(), array('context' => 'field_instance:article-group_content_access:label'));
