@@ -67,7 +67,7 @@ function drutact_sections_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'metatag_enable_taxonomy_term__sections';
-  $strongarm->value = 1;
+  $strongarm->value = TRUE;
   $export['metatag_enable_taxonomy_term__sections'] = $strongarm;
 
   $strongarm = new stdClass();

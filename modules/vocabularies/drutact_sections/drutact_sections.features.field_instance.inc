@@ -15,7 +15,7 @@ function drutact_sections_field_default_field_instances() {
     'bundle' => 'sections',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Assign this content to specific section(s) of the site.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -141,6 +141,7 @@ function drutact_sections_field_default_field_instances() {
 
   // Translatables created/updated by the Localize Fields (localize_fields) module.
   t('Section(s)', array(), array('context' => 'field_instance:sections-field_sections:label'));
+  t('Assign this content to specific section(s) of the site.', array(), array('context' => 'field_instance:sections-field_sections:description'));
   t('Description', array(), array('context' => 'field_instance:sections-description_field:label'));
   t('Describe what this section is about.', array(), array('context' => 'field_instance:sections-description_field:description'));
   t('Name', array(), array('context' => 'field_instance:sections-name_field:label'));

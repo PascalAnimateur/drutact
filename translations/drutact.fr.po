@@ -128,8 +128,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-01-28 00:22-0500\n"
-"PO-Revision-Date: 2016-01-28 00:22-0500\n"
+"POT-Creation-Date: 2016-01-28 09:27-0500\n"
+"PO-Revision-Date: 2016-01-28 09:27-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -554,7 +554,7 @@ msgctxt "field_instance:webform-body:label"
 msgid "Description"
 msgstr "Description"
 
-#: profiles/drutact/modules/vocabularies/drutact_sections/drutact_sections.features.field_instance.inc:144
+#: profiles/drutact/modules/vocabularies/drutact_sections/drutact_sections.features.field_instance.inc:145
 msgctxt "field_instance:sections-description_field:label"
 msgid "Description"
 msgstr "Description"
@@ -1381,7 +1381,7 @@ msgstr "Contacter par courriel"
 msgid "Name"
 msgstr "Nom"
 
-#: profiles/drutact/modules/vocabularies/drutact_sections/drutact_sections.features.field_instance.inc:146
+#: profiles/drutact/modules/vocabularies/drutact_sections/drutact_sections.features.field_instance.inc:147
 msgctxt "field_instance:sections-name_field:label"
 msgid "Name"
 msgstr "Nom"
@@ -2287,12 +2287,17 @@ msgstr "Section(s)"
 msgid "Section(s)"
 msgstr "Section(s)"
 
-#: profiles/drutact/modules/vocabularies/drutact_sections/drutact_sections.features.field_instance.inc:145
+#: profiles/drutact/modules/vocabularies/drutact_sections/drutact_sections.features.field_instance.inc:144
+msgctxt "field_instance:sections-field_sections:description"
+msgid "Assign this content to specific section(s) of the site."
+msgstr "Assigner ce contenu à une(des) section(s) spécifique(s) du site."
+
+#: profiles/drutact/modules/vocabularies/drutact_sections/drutact_sections.features.field_instance.inc:146
 msgctxt "field_instance:sections-description_field:description"
 msgid "Describe what this section is about."
 msgstr "Décrire ce sur quoi porte cette section."
 
-#: profiles/drutact/modules/vocabularies/drutact_sections/drutact_sections.features.field_instance.inc:147
+#: profiles/drutact/modules/vocabularies/drutact_sections/drutact_sections.features.field_instance.inc:148
 msgctxt "field_instance:sections-name_field:description"
 msgid "The name or title of this section."
 msgstr "Le nom ou le titre de cette section."
