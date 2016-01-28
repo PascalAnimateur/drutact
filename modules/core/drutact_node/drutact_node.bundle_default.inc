@@ -19,13 +19,6 @@ function drutact_node_field_library_bundle_defaults() {
 
   $field_library_bundle = new stdClass();
   $field_library_bundle->api_version = 1;
-  $field_library_bundle->name = 'group_content';
-  $field_library_bundle->title = 'Group content';
-  $field_library_bundle->description = 'Group audience and visibility.';
-  $export['group_content'] = $field_library_bundle;
-
-  $field_library_bundle = new stdClass();
-  $field_library_bundle->api_version = 1;
   $field_library_bundle->name = 'node_title';
   $field_library_bundle->title = 'Node - Title';
   $field_library_bundle->description = 'Title field.';

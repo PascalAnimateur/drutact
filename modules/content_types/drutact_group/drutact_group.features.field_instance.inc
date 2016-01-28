@@ -10,6 +10,101 @@
 function drutact_group_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance:
+  // 'field_library-group_content-group_content_access'.
+  $field_instances['field_library-group_content-group_content_access'] = array(
+    'bundle' => 'group_content',
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_key',
+        'weight' => 21,
+      ),
+    ),
+    'entity_type' => 'field_library',
+    'field_name' => 'group_content_access',
+    'label' => 'Group content visibility',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 21,
+    ),
+  );
+
+  // Exported field_instance: 'field_library-group_content-og_group_ref'.
+  $field_instances['field_library-group_content-og_group_ref'] = array(
+    'bundle' => 'group_content',
+    'default_value' => NULL,
+    'default_value_function' => 'entityreference_prepopulate_field_default_value',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 20,
+      ),
+    ),
+    'entity_type' => 'field_library',
+    'field_name' => 'og_group_ref',
+    'label' => 'Groups audience',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'og_widget' => array(
+          'access_override' => 0,
+          'admin' => array(
+            'widget_type' => 'select2widgetajax',
+          ),
+          'default' => array(
+            'widget_type' => 'options_buttons',
+          ),
+          'status' => TRUE,
+        ),
+        'prepopulate' => array(
+          'action' => 'disable',
+          'action_on_edit' => 1,
+          'fallback' => 'none',
+          'providers' => array(
+            'og_context' => 0,
+            'url' => 1,
+          ),
+          'skip_perm' => 0,
+          'status' => 1,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'og',
+      'settings' => array(),
+      'type' => 'og_complex',
+      'weight' => 20,
+    ),
+  );
+
   // Exported field_instance: 'node-group-body'.
   $field_instances['node-group-body'] = array(
     'bundle' => 'group',
@@ -398,6 +493,8 @@ function drutact_group_field_default_field_instances() {
   // Included for use with string extractors like potx.
 
   // Translatables created/updated by the Localize Fields (localize_fields) module.
+  t('Group content visibility', array(), array('context' => 'field_instance:group_content-group_content_access:label'));
+  t('Groups audience', array(), array('context' => 'field_instance:group_content-og_group_ref:label'));
   t('Description', array(), array('context' => 'field_instance:group-body:label'));
   t('The description of this group. Use the \'Edit summary\' link above to set a shorter, text-only version that will be used to describe the content when it\'s displayed as a teaser (i.e. in a list on the front page).', array(), array('context' => 'field_instance:group-body:description'));
   t('Image', array(), array('context' => 'field_instance:group-field_image:label'));
