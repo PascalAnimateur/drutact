@@ -235,14 +235,14 @@ function drutact_group_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 11,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 11,
+        'weight' => 10,
       ),
     ),
     'entity_type' => 'node',
@@ -267,7 +267,7 @@ function drutact_group_field_default_field_instances() {
         ),
       ),
       'type' => 'select2widgetajax',
-      'weight' => 11,
+      'weight' => 10,
     ),
   );
 

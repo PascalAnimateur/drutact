@@ -14,7 +14,7 @@ function drutact_fr_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'features_admin_show_component_translations_fr';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['features_admin_show_component_translations_fr'] = $strongarm;
 
   $strongarm = new stdClass();

@@ -125,19 +125,6 @@ function drutact_core_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'features_admin_menu_links_menus';
-  $strongarm->value = array(
-    'main-menu' => 'main-menu',
-    'features' => 0,
-    'management' => 0,
-    'navigation' => 0,
-    'user-menu' => 0,
-  );
-  $export['features_admin_menu_links_menus'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'features_admin_show_component_captcha_points';
   $strongarm->value = 1;
   $export['features_admin_show_component_captcha_points'] = $strongarm;
@@ -272,14 +259,14 @@ function drutact_core_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'features_admin_show_component_translations';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['features_admin_show_component_translations'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'features_admin_show_component_translations_en';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['features_admin_show_component_translations_en'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -307,7 +294,7 @@ function drutact_core_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'features_admin_show_component_variable_realm';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['features_admin_show_component_variable_realm'] = $strongarm;
 
   $strongarm = new stdClass();
