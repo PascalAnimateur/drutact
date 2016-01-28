@@ -196,7 +196,7 @@ function drutact_core_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'features_admin_show_component_language';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['features_admin_show_component_language'] = $strongarm;
 
   $strongarm = new stdClass();
