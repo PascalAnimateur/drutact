@@ -38,6 +38,7 @@ dependencies[] = sticky_edit_actions
 dependencies[] = strongarm
 dependencies[] = taxonomy_access_fix
 dependencies[] = taxonomy_delete_link_views
+dependencies[] = taxonomy_image
 dependencies[] = term_depth
 dependencies[] = term_reference_tree
 dependencies[] = title

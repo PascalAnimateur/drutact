@@ -83,6 +83,7 @@ projects[hierarchical_term_formatter][type] = module
 projects[taxonomy_access_fix][type] = module
 projects[taxonomy_delete_link][type] = module
 projects[taxonomy_delete_link][patch][2635638] = https://www.drupal.org/files/issues/taxonomy_term_delete-add_translation_action-2635638-3.patch
+projects[taxonomy_image][type] = module
 projects[term_reference_tree][type] = module
 
 ; Title
