@@ -29,6 +29,7 @@ function drutact_wysiwyg_wysiwyg_default_profiles() {
           'JustifyLeft' => 1,
           'JustifyCenter' => 1,
           'JustifyRight' => 1,
+          'JustifyBlock' => 1,
           'BulletedList' => 1,
           'NumberedList' => 1,
           'Outdent' => 1,
