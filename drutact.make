@@ -35,5 +35,8 @@ includes[] = modules/extra/drutact_import/drutact_import.make
 includes[] = modules/extra/drutact_print_pdf/drutact_print_pdf.make
 includes[] = modules/extra/drutact_social_login/drutact_social_login.make
 
+; DruTACT Vocabularies
+includes[] = modules/vocabularies/drutact_tags/drutact_tags.make
+
 ; DruTACT Themes
 includes[] = themes/drutact_bootstrap/drutact_bootstrap.make
