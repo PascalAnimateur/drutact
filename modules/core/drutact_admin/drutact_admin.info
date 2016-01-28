@@ -139,6 +139,7 @@ features_banish[variable][] = date_db_tz_support
 features_banish[variable][] = entityreference:base-tables
 features_banish[variable][] = maintenance_mode
 features_banish[variable][] = menu_default_active_menus
+features_banish[variable][] = menu_expanded
 features_banish[variable][] = menu_masks
 features_banish[variable][] = module_filter_recent_modules
 features_banish[variable][] = update_last_check
