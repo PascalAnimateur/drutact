@@ -8,43 +8,16 @@ include_once 'drutact_node.features.inc';
 
 /**
  * Implements hook_form().
- *
- * Move Sections / Tags to Classification vertical tab.
- * Move Image to Vignette vertical tab.
+ * 
+ * Move Image field to vertical tab.
  */
 function drutact_node_form_alter(&$form, &$form_state, $form_id) {
-  // Move Sections / Tags to Classification vertical tab.
-  if (isset($form['field_sections']) || isset($form['field_tags'])) {
-    $form['classification_tab'] = array(
-      '#type' => 'fieldset',
-      '#title' => t('Classification'),
-      '#collapsible' => TRUE,
-      '#collapsed' => TRUE,
-      '#tree' => TRUE,
-      '#group' => 'additional_settings',
-      '#weight' => -5,
-    );
-    if (isset($form['field_sections'])) {
-      $form['classification_tab']['field_sections'] = $form['field_sections'];
-      $form['field_sections']['#access'] = FALSE;
-    }
-    if (isset($form['field_tags'])) {
-      $form['classification_tab']['field_tags'] = $form['field_tags'];
-      $form['field_tags']['#access'] = FALSE;
-    }
-    // Add custom validation callback needed to fix form values.
-    if (isset($form['#node_edit_form']) || $form_id == 'file_entity_add_upload') {
-      array_unshift($form['#validate'], '_drutact_node_classification_tab_form_validate');
-    } else if($form_id == 'file_entity_edit') {
-      array_unshift($form['actions']['submit']['#validate'], '_drutact_node_classification_tab_form_validate');
-    }
-  }
-
-  // Move Image to Vignette vertical tab.
+  // Move Image field to vertical tab.
   if (isset($form['field_image'])) {
-    $form['vignette_tab'] = array(
+    unset($form['field_image']['und'][0]['#title']);
+    $form['image_tab'] = array(
       '#type' => 'fieldset',
-      '#title' => t('Vignette'),
+      '#title' => t('Image'),
       '#collapsible' => TRUE,
       '#collapsed' => TRUE,
       '#tree' => TRUE,
@@ -53,54 +26,23 @@ function drutact_node_form_alter(&$form, &$form_state, $form_id) {
       'field_image' => $form['field_image'],
     );
     $form['field_image']['#access'] = FALSE;
+
     // Add custom validation callback needed to fix form values
     if (isset($form['#node_edit_form'])) {
-      array_unshift($form['#validate'], '_drutact_node_vignette_tab_form_validate');
+      array_unshift($form['#validate'], '_drutact_node_image_tab_form_validate');
     }
   }
 }
 
 /**
- * Validation callback needed for Classification tab in node add/edit form.
- */
-function _drutact_node_classification_tab_form_validate($form, &$form_state) {
-  // Copy field_sections value from classification_tab to its original location.
-  if (isset($form_state['values']['classification_tab']['field_sections'])) {
-    $form_state['values']['field_sections'] = $form_state['values']['classification_tab']['field_sections'];
-    unset($form_state['values']['classification_tab']['field_sections']);
-  }
-
-  // Copy field_tags value from classification_tab to its original location
-  if (isset($form_state['values']['classification_tab']['field_tags'])) {
-    $form_state['values']['field_tags'] = $form_state['values']['classification_tab']['field_tags'];
-    unset($form_state['values']['classification_tab']['field_tags']);
-  }
-
-  return $form;
-}
-
-/**
  * Validation callback needed for Vignette tab on node add/edit form.
  */
-function _drutact_node_vignette_tab_form_validate($form, &$form_state) {
-  // Copy field_image value from vignette_tab to its original location.
-  if (isset($form_state['values']['vignette_tab']['field_image'])) {
-    $form_state['values']['field_image'] = $form_state['values']['vignette_tab']['field_image'];
-    unset($form_state['values']['vignette_tab']['field_image']);
+function _drutact_node_image_tab_form_validate($form, &$form_state) {
+  // Copy field_image value from image_tab to its original location.
+  if (isset($form_state['values']['image_tab']['field_image'])) {
+    $form_state['values']['field_image'] = $form_state['values']['image_tab']['field_image'];
+    unset($form_state['values']['image_tab']['field_image']);
   }
 
   return $form;
-}
-
-/**
- * Implements hook_post_features_rebuild().
- *
- * Default vocabulary permissions (sections, tags).
- */
-function drutact_node_post_features_rebuild($component) {
-  if ($component == 'taxonomy') {
-    // Default vocabulary permissions (sections, tags).
-    _drutact_default_vocabulary_permissions('sections');
-    _drutact_default_vocabulary_permissions('tags');
-  }
 }

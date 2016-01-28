@@ -1,0 +1,63 @@
+<?php
+/**
+ * @file
+ * Code for the DruTACT Tags feature.
+ */
+
+include_once 'drutact_tags.features.inc';
+
+/**
+ * Implements hook_form().
+ *
+ * Move Tags field to vertical tab.
+ */
+function drutact_tags_form_alter(&$form, &$form_state, $form_id) {
+  // Move Tags field to vertical tab.
+  if (isset($form['field_tags'])) {
+    if (!isset($form['classification_tab'])) {
+      $form['classification_tab'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Classification'),
+        '#collapsible' => TRUE,
+        '#collapsed' => TRUE,
+        '#tree' => TRUE,
+        '#group' => 'additional_settings',
+        '#weight' => -5,
+      );
+    }
+    $form['classification_tab']['field_tags'] = $form['field_tags'];
+    $form['field_tags']['#access'] = FALSE;
+
+    // Add custom validation callback needed to fix form values.
+    if (isset($form['#node_edit_form']) || $form_id == 'file_entity_add_upload') {
+      array_unshift($form['#validate'], '_drutact_tags_classification_tab_form_validate');
+    } else if($form_id == 'file_entity_edit') {
+      array_unshift($form['actions']['submit']['#validate'], '_drutact_tags_classification_tab_form_validate');
+    }
+  }
+}
+
+/**
+ * Validation callback needed for Classification tab in node add/edit form.
+ */
+function _drutact_tags_classification_tab_form_validate($form, &$form_state) {
+  // Copy field_tags value from classification_tab to its original location
+  if (isset($form_state['values']['classification_tab']['field_tags'])) {
+    $form_state['values']['field_tags'] = $form_state['values']['classification_tab']['field_tags'];
+    unset($form_state['values']['classification_tab']['field_tags']);
+  }
+
+  return $form;
+}
+
+/**
+ * Implements hook_post_features_rebuild().
+ *
+ * Default vocabulary permissions (tags).
+ */
+function drutact_tags_post_features_rebuild($component) {
+  if ($component == 'taxonomy') {
+    // Default vocabulary permissions (tags).
+    _drutact_default_vocabulary_permissions('tags');
+  }
+}

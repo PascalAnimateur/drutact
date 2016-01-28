@@ -171,6 +171,7 @@ features_banish[variable][] = rules_debug_region_bartik
 features_banish[variable][] = rules_debug_region_shiny
 features_banish[variable][] = tadaa_environment
 features_banish[variable][] = user_permission
+features_banish[variable][] = uuid_features_vocabulary_terms
 features_banish[variable][] = variable
 features_banish[variable][] = views_defaults
 features_banish[variable][] = views_ui_show_sql_query

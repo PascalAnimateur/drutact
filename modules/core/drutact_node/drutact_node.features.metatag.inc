@@ -38,36 +38,5 @@ function drutact_node_metatag_export_default() {
     ),
   );
 
-  // Exported Metatag config instance: taxonomy_term.
-  $config['taxonomy_term'] = array(
-    'instance' => 'taxonomy_term',
-    'config' => array(
-      'title' => array(
-        'value' => '[term:name] | [site:name]',
-      ),
-      'description' => array(
-        'value' => '[term:description]',
-      ),
-      'og:description' => array(
-        'value' => '[term:description]',
-      ),
-      'og:title' => array(
-        'value' => '[term:name]',
-      ),
-    ),
-  );
-
-  // Exported Metatag config instance: taxonomy_term:sections.
-  $config['taxonomy_term:sections'] = array(
-    'instance' => 'taxonomy_term:sections',
-    'config' => array(),
-  );
-
-  // Exported Metatag config instance: taxonomy_term:tags.
-  $config['taxonomy_term:tags'] = array(
-    'instance' => 'taxonomy_term:tags',
-    'config' => array(),
-  );
-
   return $config;
 }
