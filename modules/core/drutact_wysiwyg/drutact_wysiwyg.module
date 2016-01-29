@@ -140,6 +140,7 @@ function drutact_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
       'video[controls,height,width,data-fid,data-media-element](media-element,file-*)',
       'source[src,type,data-cke-saved-src]',
       'iframe[allowfullscreen,mozallowfullscreen,webkitallowfullscreen,src,data-src,data-media-element,data-fid,frameborder,width,height](pdf,media-element)',
+      'span(fa,fa-*)',
     );
 
     // Custom CKEditor config file.
