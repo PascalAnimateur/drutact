@@ -5,3 +5,46 @@
  */
 
 include_once 'drutact_diaporama.features.inc';
+
+/**
+ * Implements hook_form().
+ *
+ * Move Image field to vertical tab.
+ */
+function drutact_diaporama_form_alter(&$form, &$form_state, $form_id) {
+  // Move Diaporama field to vertical tab.
+  if (isset($form['field_diaporama'])) {
+    unset($form['field_diaporama']['und'][0]['#title']);
+    if (!isset($form['image_tab'])) {
+      $form['image_tab'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Image'),
+        '#collapsible' => TRUE,
+        '#collapsed' => TRUE,
+        '#tree' => TRUE,
+        '#group' => 'additional_settings',
+        '#weight' => -10,
+      );
+    }
+    $form['image_tab']['field_diaporama'] = $form['field_diaporama'];
+    $form['field_diaporama']['#access'] = FALSE;
+
+    // Add custom validation callback needed to fix form values
+    if (isset($form['#node_edit_form'])) {
+      array_unshift($form['#validate'], '_drutact_diaporama_image_tab_form_validate');
+    }
+  }
+}
+
+/**
+ * Validation callback needed for Vignette tab on node add/edit form.
+ */
+function _drutact_diaporama_image_tab_form_validate($form, &$form_state) {
+  // Copy field_image value from image_tab to its original location.
+  if (isset($form_state['values']['image_tab']['field_diaporama'])) {
+    $form_state['values']['field_diaporama'] = $form_state['values']['image_tab']['field_diaporama'];
+    unset($form_state['values']['image_tab']['field_diaporama']);
+  }
+
+  return $form;
+}

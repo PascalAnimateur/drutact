@@ -15,16 +15,18 @@ function drutact_node_form_alter(&$form, &$form_state, $form_id) {
   // Move Image field to vertical tab.
   if (isset($form['field_image'])) {
     unset($form['field_image']['und'][0]['#title']);
-    $form['image_tab'] = array(
-      '#type' => 'fieldset',
-      '#title' => t('Image'),
-      '#collapsible' => TRUE,
-      '#collapsed' => TRUE,
-      '#tree' => TRUE,
-      '#group' => 'additional_settings',
-      '#weight' => -10,
-      'field_image' => $form['field_image'],
-    );
+    if (!isset($form['image_tab'])) {
+      $form['image_tab'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Image'),
+        '#collapsible' => TRUE,
+        '#collapsed' => TRUE,
+        '#tree' => TRUE,
+        '#group' => 'additional_settings',
+        '#weight' => -10,
+      );
+    }
+    $form['image_tab']['field_image'] = $form['field_image'];
     $form['field_image']['#access'] = FALSE;
 
     // Add custom validation callback needed to fix form values

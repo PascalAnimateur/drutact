@@ -87,6 +87,13 @@ function drutact_diaporama_views_default_views() {
   $handler->display->display_options['filters']['field_image_fid']['table'] = 'field_data_field_image';
   $handler->display->display_options['filters']['field_image_fid']['field'] = 'field_image_fid';
   $handler->display->display_options['filters']['field_image_fid']['operator'] = 'not empty';
+  /* Filter criterion: Field: Diaporama (field_diaporama) */
+  $handler->display->display_options['filters']['field_diaporama_value']['id'] = 'field_diaporama_value';
+  $handler->display->display_options['filters']['field_diaporama_value']['table'] = 'field_data_field_diaporama';
+  $handler->display->display_options['filters']['field_diaporama_value']['field'] = 'field_diaporama_value';
+  $handler->display->display_options['filters']['field_diaporama_value']['value'] = array(
+    1 => '1',
+  );
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block_1');
