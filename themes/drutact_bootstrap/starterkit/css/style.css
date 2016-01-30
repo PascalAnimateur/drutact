@@ -7558,6 +7558,9 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 .captcha {
   display: none;
 }
+.region-header {
+  margin-bottom: 20px;
+}
 figure {
   margin: 20px;
 }
@@ -7629,8 +7632,67 @@ nav #block-search-form #edit-actions {
   max-width: 100%;
   height: auto;
 }
-form.webform-client-form {
+.webform-client-form {
   margin-top: 20px;
+}
+.webform-component-name {
+  margin-bottom: 15px !important;
+}
+.form-managed-file .form-file {
+  width: auto;
+  height: auto;
+  float: left;
+  margin-right: 10px;
+}
+.webform-component-file {
+  margin-bottom: 15px !important;
+}
+.webform-component-multiple-file .form-file {
+  width: 100%;
+}
+.webform-component-multiple-file .btn {
+  height: 48px;
+  margin-top: -1px;
+}
+.webform-client-form .form-actions {
+  margin-top: 10px;
+}
+.carousel-caption {
+  background-color: rgba(60, 60, 60, 0.5);
+}
+.carousel-caption a {
+  color: #fff;
+  text-decoration: none;
+}
+/* Event Calendar */
+#block-views-calendrier-block-1 {
+  margin-top: 0px;
+}
+#block-views-calendrier-block-1 .date-heading {
+  top: 10px;
+}
+.date-nav {
+  padding-bottom: 1em !important;
+}
+.date-nav .pager {
+  margin: 0px;
+}
+.view .date-nav-wrapper .pager li > a {
+  border-radius: 4px;
+}
+.view .date-nav-wrapper .date-nav {
+  margin-bottom: 0px;
+}
+.view .date-nav-wrapper .date-next a,
+.view .date-nav-wrapper .date-prev a {
+  margin: 0px;
+}
+.view .date-nav-wrapper .date-prev,
+.view .date-nav-wrapper .date-next {
+  background: none;
+}
+.view .date-nav-wrapper .date-prev {
+  right: 70px;
 }
 .navbar {
   background-image: -webkit-linear-gradient(#ffffff, #eee 50%, #e4e4e4);
@@ -7805,7 +7867,4 @@ form.webform-client-form {
 }
 .panel-primary .panel-title {
   color: #fff;
-}
-h2 {
-  font-color: #f00;
 }
