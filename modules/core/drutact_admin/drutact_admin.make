@@ -56,6 +56,9 @@ projects[simplified_menu_admin][type] = module
 ; Module filter
 projects[module_filter][type] = module
 
+; OptimizeDB
+projects[optimizedb][type] = module
+
 ; Options
 projects[options_element][type] = module
 projects[select_or_other][type] = module

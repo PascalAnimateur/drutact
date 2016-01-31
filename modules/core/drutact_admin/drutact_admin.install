@@ -86,6 +86,8 @@ function drutact_admin_install() {
       'administer user-menu menu items',
       // Module filter
       'administer module filter',
+      // OptimizeDB
+      'administer optimizedb settings',
       // System
       'access administration pages',
       'access site in maintenance mode',

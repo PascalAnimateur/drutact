@@ -426,6 +426,34 @@ function drutact_admin_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'optimizedb_clear_period';
+  $strongarm->value = '0';
+  $export['optimizedb_clear_period'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'optimizedb_clear_type';
+  $strongarm->value = '0';
+  $export['optimizedb_clear_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'optimizedb_notify_optimize';
+  $strongarm->value = FALSE;
+  $export['optimizedb_notify_optimize'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'optimizedb_optimization_period';
+  $strongarm->value = '0';
+  $export['optimizedb_optimization_period'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'title_file';
   $strongarm->value = array(
     'auto_attach' => array(
