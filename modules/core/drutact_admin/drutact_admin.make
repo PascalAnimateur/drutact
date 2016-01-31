@@ -12,6 +12,9 @@ projects[admin_menu_language][download][branch] = 7.x-1.x
 ; Administration views
 projects[admin_views][type] = module
 
+; Backup and Migrate
+projects[backup_migrate][type] = module
+
 ; Date
 projects[date][type] = module
 projects[date][patch][2186191] = https://www.drupal.org/files/issues/date_repeat_removes_the-2186191-22.patch

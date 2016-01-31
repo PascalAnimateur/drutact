@@ -74,6 +74,13 @@ function drutact_admin_install() {
       // Administration menu
       'access administration menu',
       'flush caches',
+      // Backup and Migrate
+      'access backup and migrate',
+      'perform backup',
+      'access backup files',
+      'delete backup files',
+      'restore from backup',
+      'administer backup and migrate',
       // Block
       'administer blocks',
       // Contextual links
