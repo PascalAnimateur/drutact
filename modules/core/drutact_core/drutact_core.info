@@ -121,6 +121,7 @@ features[variable][] = ultimate_cron_plugin_launcher_serial_settings
 features[variable][] = ultimate_cron_plugin_logger_cache_settings
 features[variable][] = ultimate_cron_plugin_logger_database_settings
 features[variable][] = ultimate_cron_plugin_logger_default
+features[variable][] = ultimate_cron_plugin_scheduler_crontab_settings
 features[variable][] = ultimate_cron_plugin_settings_general_settings
 features[variable][] = ultimate_cron_plugin_settings_poorman_settings
 features[variable][] = ultimate_cron_plugin_settings_queue_settings

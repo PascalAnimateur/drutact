@@ -706,6 +706,18 @@ function drutact_core_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'ultimate_cron_plugin_scheduler_crontab_settings';
+  $strongarm->value = array(
+    'rules' => array(
+      0 => '*/2+@ * * * *',
+    ),
+    'catch_up' => '86400',
+  );
+  $export['ultimate_cron_plugin_scheduler_crontab_settings'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'ultimate_cron_plugin_settings_general_settings';
   $strongarm->value = array(
     'nodejs' => 0,
