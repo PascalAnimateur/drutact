@@ -27,13 +27,6 @@ function drutact_core_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'cron_safe_threshold';
-  $strongarm->value = '3600';
-  $export['cron_safe_threshold'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'date_api_use_iso8601';
   $strongarm->value = 0;
   $export['date_api_use_iso8601'] = $strongarm;
@@ -662,6 +655,94 @@ function drutact_core_strongarm() {
     'minify_js' => 1,
   );
   $export['tadaa_prod_variables'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ultimate_cron_plugin_launcher_default';
+  $strongarm->value = 'serial';
+  $export['ultimate_cron_plugin_launcher_default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ultimate_cron_plugin_launcher_serial_settings';
+  $strongarm->value = array(
+    'lock_timeout' => '3600',
+    'max_threads' => '1',
+    'poorman_keepalive' => 0,
+    'thread' => 'any',
+  );
+  $export['ultimate_cron_plugin_launcher_serial_settings'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ultimate_cron_plugin_logger_cache_settings';
+  $strongarm->value = array(
+    'bin' => 'cache_ultimate_cron',
+    'timeout' => '0',
+  );
+  $export['ultimate_cron_plugin_logger_cache_settings'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ultimate_cron_plugin_logger_database_settings';
+  $strongarm->value = array(
+    'method' => '3',
+    'expire' => '1209600',
+    'retain' => '1000',
+  );
+  $export['ultimate_cron_plugin_logger_database_settings'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ultimate_cron_plugin_logger_default';
+  $strongarm->value = 'database';
+  $export['ultimate_cron_plugin_logger_default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ultimate_cron_plugin_settings_general_settings';
+  $strongarm->value = array(
+    'nodejs' => 0,
+  );
+  $export['ultimate_cron_plugin_settings_general_settings'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ultimate_cron_plugin_settings_poorman_settings';
+  $strongarm->value = array(
+    'launcher' => 'serial',
+    'early_page_flush' => 1,
+    'user_agent' => 'Ultimate Cron',
+  );
+  $export['ultimate_cron_plugin_settings_poorman_settings'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ultimate_cron_plugin_settings_queue_settings';
+  $strongarm->value = array(
+    'lease_time' => '30',
+    'time' => '15',
+    'empty_delay' => '0',
+    'item_delay' => '0',
+    'threads' => '4',
+    'threshold' => '10',
+  );
+  $export['ultimate_cron_plugin_settings_queue_settings'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ultimate_cron_plugin_settings_queue_settings_enabled';
+  $strongarm->value = 1;
+  $export['ultimate_cron_plugin_settings_queue_settings_enabled'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

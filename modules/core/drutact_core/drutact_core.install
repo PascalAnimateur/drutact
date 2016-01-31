@@ -24,6 +24,9 @@ function drutact_core_install() {
     DRUTACT_EDITOR_RID => array(
       // Date
       'view date repeats',
+      // Ultimate cron
+      'run cron jobs',
+      'view cron jobs',
     ),
     DRUTACT_ADMINISTRATOR_RID => array(
       // CTools
@@ -42,6 +45,10 @@ function drutact_core_install() {
       // Tadaa
       'access tadaa toolbar',
       'use tadaa',
+      // Ultimate cron
+      'administer ultimate cron',
+      'run cron jobs',
+      'view cron jobs',
       // UUID
       'administer uuid',
       // Views

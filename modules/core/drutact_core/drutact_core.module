@@ -5,3 +5,21 @@
  */
 
 include_once 'drutact_core.features.inc';
+
+/**
+ * Implements hook_features_banish_alter().
+ *
+ * Banish all uc-progress:* variables.
+ */
+function drutact_core_features_banish_alter(&$banished) {
+  global $conf;
+  $keys = array_keys($conf);
+  $banished['variable'] = is_array($banished['variable']) ? $banished['variable'] : array();
+
+  foreach ($keys as $key) {
+    // Banish all uc-progress:* variables.
+    if (strpos($key, 'uc-progress:') !== FALSE) {
+      $banished['variable'][] = $key;
+    }
+  }
+}

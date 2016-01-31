@@ -37,6 +37,9 @@ projects[tadaa][patch][2434949] = https://www.drupal.org/files/issues/tadaa-left
 ; Token
 projects[token][type] = module
 
+; Ultimate Cron
+projects[ultimate_cron][type] = module
+
 ; UUID
 projects[uuid][type] = module
 projects[uuid][patch][2649716] = https://www.drupal.org/files/issues/uuid-delete_uuid_services_example_0.patch
