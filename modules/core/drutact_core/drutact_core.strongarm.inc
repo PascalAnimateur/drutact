@@ -582,6 +582,7 @@ function drutact_core_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'tadaa_dev_modules';
   $strongarm->value = array(
+    'schema' => 1,
     'devel' => 1,
     'search_krumo' => 1,
     'drutact_dev' => 1,
@@ -629,6 +630,7 @@ function drutact_core_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'tadaa_prod_modules';
   $strongarm->value = array(
+    'schema' => 0,
     'devel' => 0,
     'search_krumo' => 0,
     'drutact_dev' => 0,
