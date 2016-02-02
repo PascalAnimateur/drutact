@@ -14,6 +14,7 @@ projects[feeds_et][download][branch] = 7.x-1.x
 
 ; Feeds profile2
 projects[feeds_profile2][type] = module
+projects[feeds_profile2][patch][2423193] = https://www.drupal.org/files/issues/feeds_profile2_addressfield_generic-2423193-21.patch
 
 ; Feeds tamper
 projects[feeds_tamper][type] = module
