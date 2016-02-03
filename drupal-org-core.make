@@ -2,7 +2,7 @@ api = 2
 core = 7.x
 
 ; Drupal 7.41
-projects[drupal][version] = 7.41
+projects[drupal][version] = 7.42
 
 ; Partial word search
 projects[drupal][patch][498752] = https://drupal.org/files/search-partial_words_hack-498752-19.patch
