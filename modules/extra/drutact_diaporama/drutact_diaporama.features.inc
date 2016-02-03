@@ -36,7 +36,7 @@ function drutact_diaporama_image_default_styles() {
       1 => array(
         'name' => 'focal_point_scale_and_crop',
         'data' => array(
-          'width' => 1140,
+          'width' => 1400,
           'height' => 300,
           'focal_point_advanced' => array(
             'shift_x' => '',
