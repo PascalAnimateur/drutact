@@ -554,6 +554,106 @@ function drutact_media_file_default_displays() {
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
+  $file_display->name = 'document__responsive__file_field_file_default';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = '';
+  $export['document__responsive__file_field_file_default'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'document__responsive__file_field_file_download_link';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'text' => 'Télécharger [file:name]',
+  );
+  $export['document__responsive__file_field_file_download_link'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'document__responsive__file_field_file_table';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['document__responsive__file_field_file_table'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'document__responsive__file_field_file_uri';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['document__responsive__file_field_file_uri'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'document__responsive__file_field_file_url_plain';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['document__responsive__file_field_file_url_plain'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'document__responsive__file_field_media_large_icon';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'image_style' => '',
+  );
+  $export['document__responsive__file_field_media_large_icon'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'document__responsive__file_field_pdf_default';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'keep_pdfjs' => 1,
+    'width' => '100%',
+    'height' => '600px',
+  );
+  $export['document__responsive__file_field_pdf_default'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'document__responsive__file_field_pdf_pages';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'scale' => '1',
+  );
+  $export['document__responsive__file_field_pdf_pages'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'document__responsive__file_field_pdf_thumbnail';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'scale' => '1',
+    'width' => '100%',
+    'height' => '',
+  );
+  $export['document__responsive__file_field_pdf_thumbnail'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'document__responsive__file_field_pdfpreview';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'image_style' => 'responsive',
+    'image_link' => 'file',
+    'show_description' => 0,
+    'tag' => 'span',
+    'fallback_formatter' => 'file_default',
+  );
+  $export['document__responsive__file_field_pdfpreview'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
   $file_display->name = 'document__teaser__file_field_file_default';
   $file_display->weight = 0;
   $file_display->status = TRUE;
@@ -876,6 +976,117 @@ function drutact_media_file_default_displays() {
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
+  $file_display->name = 'image__responsive__file_field_file_default';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['image__responsive__file_field_file_default'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__responsive__file_field_file_download_link';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'text' => 'Télécharger [file:name]',
+  );
+  $export['image__responsive__file_field_file_download_link'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__responsive__file_field_file_table';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['image__responsive__file_field_file_table'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__responsive__file_field_file_uri';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['image__responsive__file_field_file_uri'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__responsive__file_field_file_url_plain';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['image__responsive__file_field_file_url_plain'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__responsive__file_field_image';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'responsive',
+    'image_link' => '',
+  );
+  $export['image__responsive__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__responsive__file_field_media_large_icon';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'image_style' => '',
+  );
+  $export['image__responsive__file_field_media_large_icon'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__responsive__file_field_pdf_default';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'keep_pdfjs' => 1,
+    'width' => '100%',
+    'height' => '600px',
+  );
+  $export['image__responsive__file_field_pdf_default'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__responsive__file_field_pdf_pages';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'scale' => '1',
+  );
+  $export['image__responsive__file_field_pdf_pages'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__responsive__file_field_pdf_thumbnail';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'scale' => '1',
+    'width' => '100%',
+    'height' => '',
+  );
+  $export['image__responsive__file_field_pdf_thumbnail'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__responsive__file_field_pdfpreview';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'image_style' => '',
+    'image_link' => '',
+    'show_description' => 0,
+    'tag' => 'span',
+    'fallback_formatter' => 'file_default',
+  );
+  $export['image__responsive__file_field_pdfpreview'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
   $file_display->name = 'image__teaser__file_field_file_default';
   $file_display->weight = 0;
   $file_display->status = TRUE;
@@ -1037,8 +1248,8 @@ function drutact_media_file_default_displays() {
     'autoplay' => 0,
     'loop' => 0,
     'muted' => 0,
-    'width' => '',
-    'height' => '',
+    'width' => '640',
+    'height' => '400',
     'preload' => 'auto',
     'multiple_file_behavior' => 'tags',
   );
@@ -1218,6 +1429,123 @@ function drutact_media_file_default_displays() {
     'fallback_formatter' => 'file_default',
   );
   $export['video__preview__file_field_pdfpreview'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__responsive__file_field_file_default';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['video__responsive__file_field_file_default'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__responsive__file_field_file_download_link';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'text' => 'Télécharger [file:name]',
+  );
+  $export['video__responsive__file_field_file_download_link'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__responsive__file_field_file_table';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['video__responsive__file_field_file_table'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__responsive__file_field_file_uri';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['video__responsive__file_field_file_uri'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__responsive__file_field_file_url_plain';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['video__responsive__file_field_file_url_plain'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__responsive__file_field_file_video';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'controls' => 1,
+    'autoplay' => 0,
+    'loop' => 0,
+    'muted' => 0,
+    'width' => '640',
+    'height' => '400',
+    'preload' => 'auto',
+    'multiple_file_behavior' => 'tags',
+  );
+  $export['video__responsive__file_field_file_video'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__responsive__file_field_media_large_icon';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'image_style' => '',
+  );
+  $export['video__responsive__file_field_media_large_icon'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__responsive__file_field_pdf_default';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'keep_pdfjs' => 1,
+    'width' => '100%',
+    'height' => '600px',
+  );
+  $export['video__responsive__file_field_pdf_default'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__responsive__file_field_pdf_pages';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'scale' => '1',
+  );
+  $export['video__responsive__file_field_pdf_pages'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__responsive__file_field_pdf_thumbnail';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'scale' => '1',
+    'width' => '100%',
+    'height' => '',
+  );
+  $export['video__responsive__file_field_pdf_thumbnail'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__responsive__file_field_pdfpreview';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'image_style' => '',
+    'image_link' => '',
+    'show_description' => 0,
+    'tag' => 'span',
+    'fallback_formatter' => 'file_default',
+  );
+  $export['video__responsive__file_field_pdfpreview'] = $file_display;
 
   $file_display = new stdClass();
   $file_display->api_version = 1;

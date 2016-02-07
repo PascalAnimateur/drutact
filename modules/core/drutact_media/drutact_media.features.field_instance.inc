@@ -174,6 +174,12 @@ function drutact_media_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => -50,
       ),
+      'responsive' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -229,6 +235,15 @@ function drutact_media_field_default_field_instances() {
         'weight' => 20,
       ),
       'preview' => array(
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 20,
+      ),
+      'responsive' => array(
         'label' => 'inline',
         'module' => 'entityreference',
         'settings' => array(
@@ -325,6 +340,12 @@ function drutact_media_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'responsive' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -378,6 +399,12 @@ function drutact_media_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 11,
       ),
+      'responsive' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -424,6 +451,12 @@ function drutact_media_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => -50,
+      ),
+      'responsive' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -480,6 +513,15 @@ function drutact_media_field_default_field_instances() {
         'weight' => 20,
       ),
       'preview' => array(
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 20,
+      ),
+      'responsive' => array(
         'label' => 'inline',
         'module' => 'entityreference',
         'settings' => array(
@@ -570,6 +612,12 @@ function drutact_media_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => -50,
       ),
+      'responsive' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -625,6 +673,15 @@ function drutact_media_field_default_field_instances() {
         'weight' => 20,
       ),
       'preview' => array(
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 20,
+      ),
+      'responsive' => array(
         'label' => 'inline',
         'module' => 'entityreference',
         'settings' => array(

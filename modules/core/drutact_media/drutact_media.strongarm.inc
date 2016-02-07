@@ -31,6 +31,15 @@ function drutact_media_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'responsive' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -106,6 +115,10 @@ function drutact_media_strongarm() {
             'weight' => '0',
             'visible' => TRUE,
           ),
+          'responsive' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
         ),
       ),
     ),
@@ -160,6 +173,10 @@ function drutact_media_strongarm() {
             'weight' => '0',
             'visible' => TRUE,
           ),
+          'responsive' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
         ),
       ),
     ),
@@ -208,6 +225,10 @@ function drutact_media_strongarm() {
             'visible' => TRUE,
           ),
           'preview' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'responsive' => array(
             'weight' => '0',
             'visible' => TRUE,
           ),

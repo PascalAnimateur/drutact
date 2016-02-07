@@ -7,6 +7,19 @@
 include_once 'drutact_media.features.inc';
 
 /**
+ * Implements hook_entity_info_alter().
+ *
+ * Add custom file_entity view mode (responsive).
+ */
+function drutact_media_entity_info_alter(&$entity_info) {
+  // Add custom file_entity view mode (responsive).
+  $entity_info['file']['view modes']['responsive'] = array(
+    'label' => t('Responsive'),
+    'custom settings' => TRUE,
+  );
+}
+
+/**
  * Implements hook_form_FORM_ID_alter().
  *
  * Custom display of file destination options (add file).
