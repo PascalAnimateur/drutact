@@ -52,6 +52,14 @@ function drutact_media_file_default_displays() {
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
+  $file_display->name = 'audio__default__file_field_file_uri';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['audio__default__file_field_file_uri'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
   $file_display->name = 'audio__default__file_field_file_url_plain';
   $file_display->weight = 0;
   $file_display->status = FALSE;
@@ -95,7 +103,11 @@ function drutact_media_file_default_displays() {
   $file_display->name = 'audio__default__file_field_pdf_thumbnail';
   $file_display->weight = 0;
   $file_display->status = FALSE;
-  $file_display->settings = '';
+  $file_display->settings = array(
+    'scale' => '1',
+    'width' => '100%',
+    'height' => '',
+  );
   $export['audio__default__file_field_pdf_thumbnail'] = $file_display;
 
   $file_display = new stdClass();
@@ -154,6 +166,14 @@ function drutact_media_file_default_displays() {
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
+  $file_display->name = 'audio__preview__file_field_file_uri';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['audio__preview__file_field_file_uri'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
   $file_display->name = 'audio__preview__file_field_file_url_plain';
   $file_display->weight = -47;
   $file_display->status = FALSE;
@@ -197,7 +217,11 @@ function drutact_media_file_default_displays() {
   $file_display->name = 'audio__preview__file_field_pdf_thumbnail';
   $file_display->weight = -49;
   $file_display->status = FALSE;
-  $file_display->settings = '';
+  $file_display->settings = array(
+    'scale' => '1',
+    'width' => '100%',
+    'height' => '',
+  );
   $export['audio__preview__file_field_pdf_thumbnail'] = $file_display;
 
   $file_display = new stdClass();
@@ -256,6 +280,14 @@ function drutact_media_file_default_displays() {
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
+  $file_display->name = 'audio__teaser__file_field_file_uri';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['audio__teaser__file_field_file_uri'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
   $file_display->name = 'audio__teaser__file_field_file_url_plain';
   $file_display->weight = 0;
   $file_display->status = FALSE;
@@ -299,7 +331,11 @@ function drutact_media_file_default_displays() {
   $file_display->name = 'audio__teaser__file_field_pdf_thumbnail';
   $file_display->weight = 0;
   $file_display->status = FALSE;
-  $file_display->settings = '';
+  $file_display->settings = array(
+    'scale' => '1',
+    'width' => '100%',
+    'height' => '',
+  );
   $export['audio__teaser__file_field_pdf_thumbnail'] = $file_display;
 
   $file_display = new stdClass();
@@ -341,6 +377,14 @@ function drutact_media_file_default_displays() {
   $file_display->status = FALSE;
   $file_display->settings = '';
   $export['document__default__file_field_file_table'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'document__default__file_field_file_uri';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['document__default__file_field_file_uri'] = $file_display;
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
@@ -387,7 +431,11 @@ function drutact_media_file_default_displays() {
   $file_display->name = 'document__default__file_field_pdf_thumbnail';
   $file_display->weight = -50;
   $file_display->status = FALSE;
-  $file_display->settings = '';
+  $file_display->settings = array(
+    'scale' => '1',
+    'width' => '100%',
+    'height' => '',
+  );
   $export['document__default__file_field_pdf_thumbnail'] = $file_display;
 
   $file_display = new stdClass();
@@ -429,6 +477,14 @@ function drutact_media_file_default_displays() {
   $file_display->status = FALSE;
   $file_display->settings = '';
   $export['document__preview__file_field_file_table'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'document__preview__file_field_file_uri';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['document__preview__file_field_file_uri'] = $file_display;
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
@@ -475,7 +531,11 @@ function drutact_media_file_default_displays() {
   $file_display->name = 'document__preview__file_field_pdf_thumbnail';
   $file_display->weight = -50;
   $file_display->status = FALSE;
-  $file_display->settings = '';
+  $file_display->settings = array(
+    'scale' => '1',
+    'width' => '100%',
+    'height' => '',
+  );
   $export['document__preview__file_field_pdf_thumbnail'] = $file_display;
 
   $file_display = new stdClass();
@@ -517,6 +577,14 @@ function drutact_media_file_default_displays() {
   $file_display->status = FALSE;
   $file_display->settings = '';
   $export['document__teaser__file_field_file_table'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'document__teaser__file_field_file_uri';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['document__teaser__file_field_file_uri'] = $file_display;
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
@@ -563,7 +631,11 @@ function drutact_media_file_default_displays() {
   $file_display->name = 'document__teaser__file_field_pdf_thumbnail';
   $file_display->weight = 0;
   $file_display->status = FALSE;
-  $file_display->settings = '';
+  $file_display->settings = array(
+    'scale' => '1',
+    'width' => '100%',
+    'height' => '',
+  );
   $export['document__teaser__file_field_pdf_thumbnail'] = $file_display;
 
   $file_display = new stdClass();
@@ -608,6 +680,14 @@ function drutact_media_file_default_displays() {
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
+  $file_display->name = 'image__default__file_field_file_uri';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['image__default__file_field_file_uri'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
   $file_display->name = 'image__default__file_field_file_url_plain';
   $file_display->weight = 0;
   $file_display->status = FALSE;
@@ -620,7 +700,7 @@ function drutact_media_file_default_displays() {
   $file_display->weight = 0;
   $file_display->status = TRUE;
   $file_display->settings = array(
-    'image_style' => 'responsive',
+    'image_style' => '',
     'image_link' => '',
   );
   $export['image__default__file_field_image'] = $file_display;
@@ -662,7 +742,11 @@ function drutact_media_file_default_displays() {
   $file_display->name = 'image__default__file_field_pdf_thumbnail';
   $file_display->weight = 0;
   $file_display->status = FALSE;
-  $file_display->settings = '';
+  $file_display->settings = array(
+    'scale' => '1',
+    'width' => '100%',
+    'height' => '',
+  );
   $export['image__default__file_field_pdf_thumbnail'] = $file_display;
 
   $file_display = new stdClass();
@@ -704,6 +788,14 @@ function drutact_media_file_default_displays() {
   $file_display->status = FALSE;
   $file_display->settings = '';
   $export['image__preview__file_field_file_table'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__preview__file_field_file_uri';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['image__preview__file_field_file_uri'] = $file_display;
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
@@ -761,7 +853,11 @@ function drutact_media_file_default_displays() {
   $file_display->name = 'image__preview__file_field_pdf_thumbnail';
   $file_display->weight = -49;
   $file_display->status = FALSE;
-  $file_display->settings = '';
+  $file_display->settings = array(
+    'scale' => '1',
+    'width' => '100%',
+    'height' => '',
+  );
   $export['image__preview__file_field_pdf_thumbnail'] = $file_display;
 
   $file_display = new stdClass();
@@ -803,6 +899,14 @@ function drutact_media_file_default_displays() {
   $file_display->status = FALSE;
   $file_display->settings = '';
   $export['image__teaser__file_field_file_table'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__teaser__file_field_file_uri';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['image__teaser__file_field_file_uri'] = $file_display;
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
@@ -860,7 +964,11 @@ function drutact_media_file_default_displays() {
   $file_display->name = 'image__teaser__file_field_pdf_thumbnail';
   $file_display->weight = 0;
   $file_display->status = FALSE;
-  $file_display->settings = '';
+  $file_display->settings = array(
+    'scale' => '1',
+    'width' => '100%',
+    'height' => '',
+  );
   $export['image__teaser__file_field_pdf_thumbnail'] = $file_display;
 
   $file_display = new stdClass();
@@ -902,6 +1010,14 @@ function drutact_media_file_default_displays() {
   $file_display->status = FALSE;
   $file_display->settings = '';
   $export['video__default__file_field_file_table'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__default__file_field_file_uri';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['video__default__file_field_file_uri'] = $file_display;
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
@@ -965,7 +1081,11 @@ function drutact_media_file_default_displays() {
   $file_display->name = 'video__default__file_field_pdf_thumbnail';
   $file_display->weight = 0;
   $file_display->status = FALSE;
-  $file_display->settings = '';
+  $file_display->settings = array(
+    'scale' => '1',
+    'width' => '100%',
+    'height' => '',
+  );
   $export['video__default__file_field_pdf_thumbnail'] = $file_display;
 
   $file_display = new stdClass();
@@ -1007,6 +1127,14 @@ function drutact_media_file_default_displays() {
   $file_display->status = FALSE;
   $file_display->settings = '';
   $export['video__preview__file_field_file_table'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__preview__file_field_file_uri';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['video__preview__file_field_file_uri'] = $file_display;
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
@@ -1070,7 +1198,11 @@ function drutact_media_file_default_displays() {
   $file_display->name = 'video__preview__file_field_pdf_thumbnail';
   $file_display->weight = -50;
   $file_display->status = FALSE;
-  $file_display->settings = '';
+  $file_display->settings = array(
+    'scale' => '1',
+    'width' => '100%',
+    'height' => '',
+  );
   $export['video__preview__file_field_pdf_thumbnail'] = $file_display;
 
   $file_display = new stdClass();
@@ -1112,6 +1244,14 @@ function drutact_media_file_default_displays() {
   $file_display->status = FALSE;
   $file_display->settings = '';
   $export['video__teaser__file_field_file_table'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__teaser__file_field_file_uri';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['video__teaser__file_field_file_uri'] = $file_display;
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
@@ -1175,7 +1315,11 @@ function drutact_media_file_default_displays() {
   $file_display->name = 'video__teaser__file_field_pdf_thumbnail';
   $file_display->weight = 0;
   $file_display->status = FALSE;
-  $file_display->settings = '';
+  $file_display->settings = array(
+    'scale' => '1',
+    'width' => '100%',
+    'height' => '',
+  );
   $export['video__teaser__file_field_pdf_thumbnail'] = $file_display;
 
   $file_display = new stdClass();
