@@ -47,6 +47,6 @@ libraries[pdf.js][download][url] = https://github.com/mozilla/pdf.js/releases/do
 
 ; Video.js
 projects[videojs][version] = 3.x-dev
-projects[videojs][patch][2664232] = https://www.drupal.org/files/issues/videojs-support_version570-2664232-2.patch
+projects[videojs][patch][2664232] = https://www.drupal.org/files/issues/videojs-support_version570-2664232-4.patch
 libraries[video-js][download][type] = file
 libraries[video-js][download][url] = https://github.com/videojs/video.js/releases/download/v5.7.0/video-js-5.7.0.zip
