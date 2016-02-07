@@ -1,3 +1,7 @@
+drutact-7.x-1.3-alpha23 (2016-02-07)
+====================================
+Backup, Cron and Responsive file displays.
+
 drutact 7.x-1.3-alpha22 (2016-01-30)
 ====================================
 Various enhancements and bug fixes.

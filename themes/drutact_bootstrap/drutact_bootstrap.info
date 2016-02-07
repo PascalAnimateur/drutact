@@ -2,7 +2,7 @@ name = DruTACT Bootstrap
 description = Bootstrap subtheme of DruTACT installation profile.
 base theme = bootstrap
 core = 7.x
-version = 7.x-1.3-alpha22
+version = 7.x-1.3-alpha23
 
 ; ========================================
 ; Regions
