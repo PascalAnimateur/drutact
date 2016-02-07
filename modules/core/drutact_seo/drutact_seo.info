@@ -113,6 +113,7 @@ features[variable][] = xmlsitemap_prefetch_aliases
 features[variable][] = xmlsitemap_xsl
 features_banish[variable][] = metatag_schema_installed
 features_banish[variable][] = pathauto_blog_pattern
+features_banish[variable][] = pathauto_entity_available_entity_types
 features_banish[variable][] = pathauto_forum_pattern
 features_banish[variable][] = path_alias_whitelist
 features_banish[variable][] = xmlsitemap_generated_last
