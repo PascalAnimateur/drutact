@@ -12,7 +12,7 @@ projects[file_entity][patch][2112491] = https://www.drupal.org/files/issues/file
 
 ; Focal point
 projects[focal_point][type] = module
-projects[focal_point][patch][2626882] = https://www.drupal.org/files/issues/focal_point-remove_test_drive_images-2626882-5.patch
+projects[focal_point][patch][2626882] = https://www.drupal.org/files/issues/focal_point-test_drive_separate_module-2626882-8.patch
 
 ; Font Awesome
 projects[fontawesome][type] = module
