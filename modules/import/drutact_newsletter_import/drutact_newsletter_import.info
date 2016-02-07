@@ -13,5 +13,7 @@ features[ctools][] = feeds_tamper:feeds_tamper_default:2
 features[features_api][] = api:2
 features[feeds_importer][] = import_newsletter_issues_csv
 features[feeds_tamper][] = import_newsletter_issues_csv-date_created-strtotime_created
+features[feeds_tamper][] = import_newsletter_issues_csv-language-default_value_language
 features[feeds_tamper][] = import_newsletter_issues_csv-subscription_lists-explode_subscription_lists
+features[feeds_tamper][] = import_newsletter_issues_csv-tags-explode_tags
 project path = profiles/drutact/modules/import

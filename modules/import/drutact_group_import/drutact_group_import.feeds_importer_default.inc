@@ -44,50 +44,74 @@ function drutact_group_import_feeds_importer_default() {
         'authorize' => 0,
         'mappings' => array(
           0 => array(
-            'source' => 'title',
-            'target' => 'title',
-            'unique' => FALSE,
+            'source' => 'id',
+            'target' => 'nid',
+            'unique' => 1,
           ),
           1 => array(
-            'source' => 'image',
-            'target' => 'field_image:uri',
+            'source' => 'language',
+            'target' => 'language',
             'unique' => FALSE,
           ),
           2 => array(
-            'source' => 'group_visibility',
-            'target' => 'group_access',
-            'unique' => FALSE,
-          ),
-          3 => array(
             'source' => 'author',
             'target' => 'user_name',
             'unique' => FALSE,
           ),
+          3 => array(
+            'source' => 'date_created',
+            'target' => 'created',
+            'unique' => FALSE,
+          ),
           4 => array(
-            'source' => 'sections',
-            'target' => 'field_sections',
-            'term_search' => '0',
-            'autocreate' => 1,
+            'source' => 'published',
+            'target' => 'status',
+            'unique' => FALSE,
           ),
           5 => array(
+            'source' => 'front_page',
+            'target' => 'promote',
+            'unique' => FALSE,
+          ),
+          6 => array(
+            'source' => 'sticky',
+            'target' => 'sticky',
+            'unique' => FALSE,
+          ),
+          7 => array(
+            'source' => 'vignette_image',
+            'target' => 'field_image:uri',
+            'unique' => FALSE,
+          ),
+          8 => array(
+            'source' => 'title_en',
+            'target' => 'title_field:et:en',
+            'unique' => FALSE,
+          ),
+          9 => array(
+            'source' => 'title_fr',
+            'target' => 'title_field:et:fr',
+            'unique' => FALSE,
+          ),
+          10 => array(
+            'source' => 'body_en',
+            'target' => 'body:et:en',
+            'unique' => FALSE,
+          ),
+          11 => array(
+            'source' => 'body_fr',
+            'target' => 'body:et:fr',
+            'unique' => FALSE,
+          ),
+          12 => array(
             'source' => 'tags',
             'target' => 'field_tags',
             'term_search' => '0',
             'autocreate' => 1,
           ),
-          6 => array(
-            'source' => 'language',
-            'target' => 'language',
-            'unique' => FALSE,
-          ),
-          7 => array(
-            'source' => 'summary',
-            'target' => 'body:summary',
-            'unique' => FALSE,
-          ),
-          8 => array(
-            'source' => 'body',
-            'target' => 'body:et:und',
+          13 => array(
+            'source' => 'group_visibility',
+            'target' => 'group_access',
             'unique' => FALSE,
           ),
         ),

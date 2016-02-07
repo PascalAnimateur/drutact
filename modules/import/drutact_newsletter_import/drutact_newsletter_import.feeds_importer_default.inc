@@ -49,43 +49,64 @@ function drutact_newsletter_import_feeds_importer_default() {
             'unique' => 1,
           ),
           1 => array(
-            'source' => 'title',
-            'target' => 'title',
-            'unique' => FALSE,
-          ),
-          2 => array(
-            'source' => 'subscription_lists',
-            'target' => 'simplenews_newsletter:label',
-            'unique' => FALSE,
-          ),
-          3 => array(
             'source' => 'language',
             'target' => 'language',
             'unique' => FALSE,
           ),
-          4 => array(
+          2 => array(
             'source' => 'author',
             'target' => 'user_name',
             'unique' => FALSE,
           ),
-          5 => array(
+          3 => array(
             'source' => 'date_created',
             'target' => 'created',
             'unique' => FALSE,
           ),
-          6 => array(
+          4 => array(
             'source' => 'published',
             'target' => 'status',
             'unique' => FALSE,
           ),
-          7 => array(
+          5 => array(
             'source' => 'front_page',
             'target' => 'promote',
             'unique' => FALSE,
           ),
-          8 => array(
+          6 => array(
             'source' => 'sticky',
             'target' => 'sticky',
+            'unique' => FALSE,
+          ),
+          7 => array(
+            'source' => 'title_en',
+            'target' => 'title_field:et:en',
+            'unique' => FALSE,
+          ),
+          8 => array(
+            'source' => 'title_fr',
+            'target' => 'title_field:et:fr',
+            'unique' => FALSE,
+          ),
+          9 => array(
+            'source' => 'body_en',
+            'target' => 'body:et:en',
+            'unique' => FALSE,
+          ),
+          10 => array(
+            'source' => 'body_fr',
+            'target' => 'body:et:fr',
+            'unique' => FALSE,
+          ),
+          11 => array(
+            'source' => 'tags',
+            'target' => 'field_tags',
+            'term_search' => '0',
+            'autocreate' => 1,
+          ),
+          12 => array(
+            'source' => 'subscription_lists',
+            'target' => 'simplenews_newsletter:label',
             'unique' => FALSE,
           ),
         ),

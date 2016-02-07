@@ -49,80 +49,79 @@ function drutact_resource_import_feeds_importer_default() {
             'unique' => 1,
           ),
           1 => array(
-            'source' => 'title',
-            'target' => 'title',
-            'unique' => FALSE,
-          ),
-          2 => array(
-            'source' => 'attached_files',
-            'target' => 'field_attached_files:uri',
-            'unique' => FALSE,
-          ),
-          3 => array(
-            'source' => 'web_links_title',
-            'target' => 'field_web_links:title',
-            'unique' => FALSE,
-          ),
-          4 => array(
-            'source' => 'web_links_url',
-            'target' => 'field_web_links:url',
-            'unique' => FALSE,
-          ),
-          5 => array(
             'source' => 'language',
             'target' => 'language',
             'unique' => FALSE,
           ),
-          6 => array(
+          2 => array(
             'source' => 'author',
             'target' => 'user_name',
             'unique' => FALSE,
           ),
-          7 => array(
+          3 => array(
             'source' => 'date_created',
             'target' => 'created',
             'unique' => FALSE,
           ),
-          8 => array(
+          4 => array(
             'source' => 'published',
             'target' => 'status',
             'unique' => FALSE,
           ),
-          9 => array(
+          5 => array(
             'source' => 'front_page',
             'target' => 'promote',
             'unique' => FALSE,
           ),
-          10 => array(
+          6 => array(
             'source' => 'sticky',
             'target' => 'sticky',
             'unique' => FALSE,
           ),
-          11 => array(
+          7 => array(
             'source' => 'vignette_image',
             'target' => 'field_image:uri',
             'unique' => FALSE,
           ),
-          12 => array(
-            'source' => 'sections',
-            'target' => 'field_sections',
-            'term_search' => '0',
-            'autocreate' => 1,
+          8 => array(
+            'source' => 'title_en',
+            'target' => 'title_field:et:en',
+            'unique' => FALSE,
           ),
-          13 => array(
+          9 => array(
+            'source' => 'title_fr',
+            'target' => 'title_field:et:fr',
+            'unique' => FALSE,
+          ),
+          10 => array(
+            'source' => 'body_en',
+            'target' => 'body:et:en',
+            'unique' => FALSE,
+          ),
+          11 => array(
+            'source' => 'body_fr',
+            'target' => 'body:et:fr',
+            'unique' => FALSE,
+          ),
+          12 => array(
             'source' => 'tags',
             'target' => 'field_tags',
             'term_search' => '0',
             'autocreate' => 1,
           ),
           14 => array(
-            'source' => 'body',
-            'target' => 'body:et:und',
+            'source' => 'attached_files',
+            'target' => 'field_attached_files:uri',
             'unique' => FALSE,
           ),
           15 => array(
-            'source' => 'summary',
-            'target' => 'body:summary',
+            'source' => 'web_links_title',
+            'target' => 'field_web_links:title',
+            'unique' => FALSE,
+          ),
+          16 => array(
+            'source' => 'web_links_url',
+            'target' => 'field_web_links:url',
             'unique' => FALSE,
           ),
         ),

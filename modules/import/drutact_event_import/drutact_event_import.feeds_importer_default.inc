@@ -49,76 +49,75 @@ function drutact_event_import_feeds_importer_default() {
             'unique' => 1,
           ),
           1 => array(
-            'source' => 'title',
-            'target' => 'title',
-            'unique' => FALSE,
-          ),
-          2 => array(
             'source' => 'event_date_start',
             'target' => 'field_event_date:start',
             'unique' => FALSE,
           ),
-          3 => array(
+          2 => array(
             'source' => 'event_date_end',
             'target' => 'field_event_date:end',
             'unique' => FALSE,
           ),
-          4 => array(
+          3 => array(
             'source' => 'language',
             'target' => 'language',
             'unique' => FALSE,
           ),
-          5 => array(
+          4 => array(
             'source' => 'author',
             'target' => 'user_name',
             'unique' => FALSE,
           ),
-          6 => array(
+          5 => array(
             'source' => 'date_created',
             'target' => 'created',
             'unique' => FALSE,
           ),
-          7 => array(
+          6 => array(
             'source' => 'published',
             'target' => 'status',
             'unique' => FALSE,
           ),
-          8 => array(
+          7 => array(
             'source' => 'front_page',
             'target' => 'promote',
             'unique' => FALSE,
           ),
-          9 => array(
+          8 => array(
             'source' => 'sticky',
             'target' => 'sticky',
             'unique' => FALSE,
           ),
-          10 => array(
+          9 => array(
             'source' => 'vignette_image',
             'target' => 'field_image:uri',
             'unique' => FALSE,
           ),
+          10 => array(
+            'source' => 'title_en',
+            'target' => 'title_field:et:en',
+            'unique' => FALSE,
+          ),
           11 => array(
-            'source' => 'sections',
-            'target' => 'field_sections',
-            'term_search' => '0',
-            'autocreate' => 1,
+            'source' => 'title_fr',
+            'target' => 'title_field:et:fr',
+            'unique' => FALSE,
           ),
           12 => array(
+            'source' => 'body_en',
+            'target' => 'body:et:en',
+            'unique' => FALSE,
+          ),
+          13 => array(
+            'source' => 'body_fr',
+            'target' => 'body:et:fr',
+            'unique' => FALSE,
+          ),
+          14 => array(
             'source' => 'tags',
             'target' => 'field_tags',
             'term_search' => '0',
             'autocreate' => 1,
-          ),
-          13 => array(
-            'source' => 'body',
-            'target' => 'body:et:und',
-            'unique' => FALSE,
-          ),
-          14 => array(
-            'source' => 'summary',
-            'target' => 'body:summary',
-            'unique' => FALSE,
           ),
         ),
         'update_existing' => '2',

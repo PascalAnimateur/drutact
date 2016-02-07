@@ -17,6 +17,6 @@ features[feeds_tamper][] = import_events_csv-event_date_end-explode_event_date_e
 features[feeds_tamper][] = import_events_csv-event_date_end-strtotime_event_date_end
 features[feeds_tamper][] = import_events_csv-event_date_start-explode_event_date_start
 features[feeds_tamper][] = import_events_csv-event_date_start-strtotime_event_date_start
-features[feeds_tamper][] = import_events_csv-sections-explode_sections
+features[feeds_tamper][] = import_events_csv-language-default_value_language
 features[feeds_tamper][] = import_events_csv-tags-explode_tags
 project path = profiles/drutact/modules/import

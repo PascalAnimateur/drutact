@@ -14,6 +14,6 @@ features[features_api][] = api:2
 features[feeds_importer][] = import_groups_csv
 features[feeds_tamper][] = import_groups_csv-group_visibility-find_replace_public
 features[feeds_tamper][] = import_groups_csv-group_visibility-find_replace_secret
-features[feeds_tamper][] = import_groups_csv-sections-explode_sections
+features[feeds_tamper][] = import_groups_csv-language-default_value_language
 features[feeds_tamper][] = import_groups_csv-tags-explode_tags
 project path = profiles/drutact/modules/import
