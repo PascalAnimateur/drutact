@@ -61,3 +61,8 @@ function drutact_sections_post_features_rebuild($component) {
     _drutact_default_vocabulary_permissions('sections');
   }
 }
+
+// Translatables
+// Included for use with string extractors like potx.
+
+t('Sections');

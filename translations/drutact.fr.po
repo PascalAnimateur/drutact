@@ -15,6 +15,7 @@
 #  profiles/drutact/modules/core/drutact_node/drutact_node.module: n/a
 #  profiles/drutact/modules/extra/drutact_diaporama/drutact_diaporama.module: n/a
 #  profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc: n/a
+#  profiles/drutact/modules/vocabularies/drutact_tags/drutact_tags.module: n/a
 #  profiles/drutact/modules/vocabularies/drutact_tags/drutact_tags.features.field_instance.inc: n/a
 #  profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc: n/a
 #  profiles/drutact/themes/drutact_bartik/templates/field--og-group-ref.tpl.php: n/a
@@ -113,7 +114,6 @@
 #  profiles/drutact/themes/drutact_bartik/templates/field--field-sections.tpl.php: n/a
 #  profiles/drutact/themes/drutact_bootstrap/templates/field--field-sections.tpl.php: n/a
 #  profiles/drutact/modules/vocabularies/drutact_sections/drutact_sections.module: n/a
-#  profiles/drutact/modules/vocabularies/drutact_tags/drutact_tags.module: n/a
 #  profiles/drutact/modules/vocabularies/drutact_sections/drutact_sections.info: n/a
 #  profiles/drutact/modules/vocabularies/drutact_tags/drutact_tags.info: n/a
 #  profiles/drutact/themes/drutact_bartik/templates/field--field-tags.tpl.php: n/a
@@ -131,8 +131,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-01-30 20:13-0500\n"
-"PO-Revision-Date: 2016-01-30 20:13-0500\n"
+"POT-Creation-Date: 2016-02-07 15:58-0500\n"
+"PO-Revision-Date: 2016-02-07 15:58-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -158,7 +158,7 @@ msgctxt "field_instance:simplenews-body:label"
 msgid "Body"
 msgstr "Corps"
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:365
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:357
 msgctxt "field_instance:page-body:label"
 msgid "Body"
 msgstr "Corps"
@@ -187,7 +187,7 @@ msgctxt "field_instance:group-field_image:label"
 msgid "Image"
 msgstr "Image"
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:367
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:359
 msgctxt "field_instance:page-field_image:label"
 msgid "Image"
 msgstr "Image"
@@ -226,7 +226,7 @@ msgctxt "field_instance:group-field_image:description"
 msgid "Image accompanying the content."
 msgstr "Image accompagnant le contenu."
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:368
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:360
 msgctxt "field_instance:page-field_image:description"
 msgid "Image accompanying the content."
 msgstr "Image accompagnant le contenu."
@@ -261,7 +261,7 @@ msgctxt "field_instance:simplenews-field_tags:label"
 msgid "Tags"
 msgstr "Mots-clés"
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:369
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:361
 msgctxt "field_instance:page-field_tags:label"
 msgid "Tags"
 msgstr "Mots-clés"
@@ -276,7 +276,7 @@ msgctxt "field_instance:webform-field_tags:label"
 msgid "Tags"
 msgstr "Mots-clés"
 
-#: profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc:30
+#: profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc:30 profiles/drutact/modules/vocabularies/drutact_tags/drutact_tags.module:68
 msgid "Tags"
 msgstr "Mots-clés"
 
@@ -313,7 +313,7 @@ msgstr ""
 "Saisir des mots-clés individuels pour décrire le sujet de ce "
 "contenu."
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:370
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:362
 msgctxt "field_instance:page-field_tags:description"
 msgid "Enter individual keywords to describe this content's topic."
 msgstr ""
@@ -349,7 +349,7 @@ msgctxt "field_instance:group_content-group_content_access:label"
 msgid "Group content visibility"
 msgstr "Visibilité du contenu de groupe"
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:371
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:363
 msgctxt "field_instance:page-group_content_access:label"
 msgid "Group content visibility"
 msgstr "Visibilité du contenu de groupe"
@@ -407,7 +407,7 @@ msgctxt "field_instance:group_content-og_group_ref:label"
 msgid "Groups audience"
 msgstr "Audience de groupes"
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:372
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:364
 msgctxt "field_instance:page-og_group_ref:label"
 msgid "Groups audience"
 msgstr "Audience de groupes"
@@ -422,22 +422,22 @@ msgctxt "field_instance:webform-og_group_ref:label"
 msgid "Groups audience"
 msgstr "Audience de groupes"
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:705
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:762
 msgctxt "field_instance:audio-og_group_ref:label"
 msgid "Groups audience"
 msgstr "Audience de groupes"
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:708
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:765
 msgctxt "field_instance:document-og_group_ref:label"
 msgid "Groups audience"
 msgstr "Audience de groupes"
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:715
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:772
 msgctxt "field_instance:image-og_group_ref:label"
 msgid "Groups audience"
 msgstr "Audience de groupes"
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:718
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:775
 msgctxt "field_instance:video-og_group_ref:label"
 msgid "Groups audience"
 msgstr "Audience de groupes"
@@ -471,7 +471,7 @@ msgctxt "field_instance:article-title_field:label"
 msgid "Title"
 msgstr "Titre"
 
-#: profiles/drutact/modules/content_types/drutact_article/drutact_article.features.inc:26 profiles/drutact/modules/content_types/drutact_event/drutact_event.features.inc:33 profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:522 profiles/drutact/modules/content_types/drutact_group/drutact_group.features.inc:29 profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.features.inc:33 profiles/drutact/modules/content_types/drutact_page/drutact_page.features.inc:26 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.inc:33 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:502 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.inc:33 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:507 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:404;1094;1628
+#: profiles/drutact/modules/content_types/drutact_article/drutact_article.features.inc:26 profiles/drutact/modules/content_types/drutact_event/drutact_event.features.inc:33 profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:522 profiles/drutact/modules/content_types/drutact_group/drutact_group.features.inc:29 profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.features.inc:36 profiles/drutact/modules/content_types/drutact_page/drutact_page.features.inc:26 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.features.inc:33 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:502 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.features.inc:33 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:507 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:404;1094;1628
 msgid "Title"
 msgstr "Titre"
 
@@ -490,7 +490,7 @@ msgctxt "field_instance:simplenews-title_field:label"
 msgid "Title"
 msgstr "Titre"
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:373
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:365
 msgctxt "field_instance:page-title_field:label"
 msgid "Title"
 msgstr "Titre"
@@ -1014,11 +1014,11 @@ msgctxt "field_instance:simplenews-title_field:description"
 msgid "The title of this newsletter issue."
 msgstr "Le titre de cette parution d'infolettre."
 
-#: profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.features.inc:29
+#: profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.features.inc:32
 msgid "Newsletter issue"
 msgstr "Parution d’infolettre"
 
-#: profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.features.inc:31
+#: profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.features.inc:34
 msgid "Use <em>newsletter issues</em> to send out information to subscribed email addresses."
 msgstr ""
 "Utiliser les <em>parutions d'infolettre</em> afin d'envoyer de "
@@ -1068,7 +1068,7 @@ msgstr ""
 msgid "Newsletter content type of DruTACT installation profile."
 msgstr ""
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:366
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:358
 msgctxt "field_instance:page-body:description"
 msgid "The body of this page. Use the 'Edit summary' link above to set a shorter, text-only version that will be used to describe the page when it's displayed as a teaser (i.e. in a list on the front page)."
 msgstr ""
@@ -1077,7 +1077,7 @@ msgstr ""
 "utilisée pour décrire cette page lorsqu'elle sera affichée en "
 "accroche (i.e. dans une liste sur la page d'accueil)."
 
-#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:374
+#: profiles/drutact/modules/content_types/drutact_page/drutact_page.features.field_instance.inc:366
 msgctxt "field_instance:page-title_field:description"
 msgid "The title of this page."
 msgstr "Le titre de cette page."
@@ -1590,6 +1590,14 @@ msgstr ""
 "Sélectionner le groupe auquel le(s) utilisateur(s) sera(seront) "
 "abonnée(s)."
 
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.module:184 profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc:21
+msgid "Searching..."
+msgstr "Recherche en cours..."
+
+#: profiles/drutact/modules/core/drutact_admin/drutact_admin.module:185 profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc:48
+msgid "Please enter one more character"
+msgstr "Veuillez saisir un caractère additionnel"
+
 #: profiles/drutact/modules/core/drutact_admin/drutact_admin.info:0
 msgid "DruTACT Administration"
 msgstr ""
@@ -1658,12 +1666,12 @@ msgstr ""
 msgid "Multilingual components of DruTACT installation profile."
 msgstr ""
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:703
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:760
 msgctxt "field_instance:audio-filename_field:label"
 msgid "Audio title"
 msgstr "Titre de l'audio"
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:704
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:761
 msgctxt "field_instance:audio-filename_field:description"
 msgid "The internal file name can be overridden to display a title allowing the use of special characters and no file extension."
 msgstr ""
@@ -1671,7 +1679,7 @@ msgstr ""
 "titre permettant l'usage de caractères spéciaux et l'absence "
 "d'extension de fichier."
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:707
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:764
 msgctxt "field_instance:document-filename_field:description"
 msgid "The internal file name can be overridden to display a title allowing the use of special characters and no file extension."
 msgstr ""
@@ -1679,7 +1687,7 @@ msgstr ""
 "titre permettant l'usage de caractères spéciaux et l'absence "
 "d'extension de fichier."
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:714
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:771
 msgctxt "field_instance:image-filename_field:description"
 msgid "The internal file name can be overridden to display a title allowing the use of special characters and no file extension."
 msgstr ""
@@ -1687,7 +1695,7 @@ msgstr ""
 "titre permettant l'usage de caractères spéciaux et l'absence "
 "d'extension de fichier."
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:717
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:774
 msgctxt "field_instance:video-filename_field:description"
 msgid "The internal file name can be overridden to display a title allowing the use of special characters and no file extension."
 msgstr ""
@@ -1695,17 +1703,17 @@ msgstr ""
 "titre permettant l'usage de caractères spéciaux et l'absence "
 "d'extension de fichier."
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:706
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:763
 msgctxt "field_instance:document-filename_field:label"
 msgid "Document title"
 msgstr "Titre du document"
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:709
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:766
 msgctxt "field_instance:image-field_file_image_alt_text:label"
 msgid "Alternative text"
 msgstr "Texte alternatif"
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:710
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:767
 msgctxt "field_instance:image-field_file_image_alt_text:description"
 msgid "Alternative text is used by screen readers, search engines, and when the image cannot be loaded. By adding alt text you improve accessibility and search engine optimization."
 msgstr ""
@@ -1714,35 +1722,39 @@ msgstr ""
 "ajoutant un texte alternatif, vous améliorez l'accessibilité et "
 "l'optimisation pour les moteurs de recherche."
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:711
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:768
 msgctxt "field_instance:image-field_file_image_title_text:label"
 msgid "Image description"
 msgstr "Description de l'image"
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:712
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:769
 msgctxt "field_instance:image-field_file_image_title_text:description"
 msgid "This text is used in the tool tip when a user hovers their mouse over the image. Adding an image description makes it easier to understand the context of an image and improves usability."
 msgstr "Ce texte est affiché au-dessus de l'image au passage de la souris."
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:713
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:770
 msgctxt "field_instance:image-filename_field:label"
 msgid "Image title"
 msgstr "Titre de l'image"
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:716
+#: profiles/drutact/modules/core/drutact_media/drutact_media.features.field_instance.inc:773
 msgctxt "field_instance:video-filename_field:label"
 msgid "Video title"
 msgstr "Titre de la vidéo"
 
 #: profiles/drutact/modules/core/drutact_media/drutact_media.module:17
+msgid "Responsive"
+msgstr "Pleine largeur"
+
+#: profiles/drutact/modules/core/drutact_media/drutact_media.module:30
 msgid "Public files"
 msgstr "Fichiers publics"
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.module:18
+#: profiles/drutact/modules/core/drutact_media/drutact_media.module:31
 msgid "Private files"
 msgstr "Fichiers privés"
 
-#: profiles/drutact/modules/core/drutact_media/drutact_media.module:19;31
+#: profiles/drutact/modules/core/drutact_media/drutact_media.module:32;44
 msgid "Public files are accessible to everyone, while access to private files must be explicitly granted (i.e. through group access)."
 msgstr ""
 "Les fichiers publics sont accessibles en tout temps, tandis que "
@@ -2276,14 +2288,6 @@ msgstr ""
 msgid "DruTACT Languages"
 msgstr ""
 
-#: profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc:21
-msgid "Searching..."
-msgstr "Recherche en cours..."
-
-#: profiles/drutact/modules/languages/drutact_fr/drutact_fr.features.translations_fr.inc:48
-msgid "Please enter one more character"
-msgstr "Veuillez saisir un caractère additionnel"
-
 #: profiles/drutact/modules/languages/drutact_fr/drutact_fr.info:0
 msgid "DruTACT Français"
 msgstr ""
@@ -2319,6 +2323,10 @@ msgstr "Le nom ou le titre de cette section."
 #: profiles/drutact/modules/vocabularies/drutact_sections/drutact_sections.module:20 profiles/drutact/modules/vocabularies/drutact_tags/drutact_tags.module:20
 msgid "Classification"
 msgstr "Classification"
+
+#: profiles/drutact/modules/vocabularies/drutact_sections/drutact_sections.module:68
+msgid "Sections"
+msgstr "Sections"
 
 #: profiles/drutact/modules/vocabularies/drutact_sections/drutact_sections.info:0
 msgid "DruTACT Sections"

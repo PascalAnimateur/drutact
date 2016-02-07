@@ -61,3 +61,8 @@ function drutact_tags_post_features_rebuild($component) {
     _drutact_default_vocabulary_permissions('tags');
   }
 }
+
+// Translatables
+// Included for use with string extractors like potx.
+
+t('Tags');

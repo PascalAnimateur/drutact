@@ -177,3 +177,9 @@ function drutact_admin_update_projects_alter(&$projects)
     }
   }
 }
+
+// Translatables
+// Included for use with string extractors like potx.
+
+t('Searching...');
+t('Please enter one more character');
