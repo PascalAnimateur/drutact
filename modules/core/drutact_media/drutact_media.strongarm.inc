@@ -204,6 +204,9 @@ function drutact_media_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'responsive' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -625,6 +628,20 @@ function drutact_media_strongarm() {
   $strongarm->name = 'uuid_features_file_file_video';
   $strongarm->value = 'video';
   $export['uuid_features_file_file_video'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'videojs_directory';
+  $strongarm->value = 'profiles/drutact/libraries/video-js';
+  $export['videojs_directory'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'videojs_location';
+  $strongarm->value = 'libraries';
+  $export['videojs_location'] = $strongarm;
 
   return $export;
 }

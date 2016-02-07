@@ -126,6 +126,22 @@ function drutact_media_file_default_displays() {
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
+  $file_display->name = 'audio__default__file_field_videojs';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'width' => NULL,
+    'height' => NULL,
+    'autoplay' => FALSE,
+    'loop' => FALSE,
+    'hidecontrols' => FALSE,
+    'defaulttrack' => NULL,
+    'preload' => 'auto',
+  );
+  $export['audio__default__file_field_videojs'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
   $file_display->name = 'audio__preview__file_field_file_audio';
   $file_display->weight = -42;
   $file_display->status = FALSE;
@@ -237,6 +253,22 @@ function drutact_media_file_default_displays() {
     'fallback_formatter' => 'file_default',
   );
   $export['audio__preview__file_field_pdfpreview'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'audio__preview__file_field_videojs';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'width' => NULL,
+    'height' => NULL,
+    'autoplay' => FALSE,
+    'loop' => FALSE,
+    'hidecontrols' => FALSE,
+    'defaulttrack' => NULL,
+    'preload' => 'auto',
+  );
+  $export['audio__preview__file_field_videojs'] = $file_display;
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
@@ -354,6 +386,22 @@ function drutact_media_file_default_displays() {
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
+  $file_display->name = 'audio__teaser__file_field_videojs';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'width' => NULL,
+    'height' => NULL,
+    'autoplay' => FALSE,
+    'loop' => FALSE,
+    'hidecontrols' => FALSE,
+    'defaulttrack' => NULL,
+    'preload' => 'auto',
+  );
+  $export['audio__teaser__file_field_videojs'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
   $file_display->name = 'document__default__file_field_file_default';
   $file_display->weight = 0;
   $file_display->status = TRUE;
@@ -451,6 +499,22 @@ function drutact_media_file_default_displays() {
     'fallback_formatter' => 0,
   );
   $export['document__default__file_field_pdfpreview'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'document__default__file_field_videojs';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'width' => NULL,
+    'height' => NULL,
+    'autoplay' => FALSE,
+    'loop' => FALSE,
+    'hidecontrols' => FALSE,
+    'defaulttrack' => NULL,
+    'preload' => 'auto',
+  );
+  $export['document__default__file_field_videojs'] = $file_display;
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
@@ -554,6 +618,22 @@ function drutact_media_file_default_displays() {
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
+  $file_display->name = 'document__preview__file_field_videojs';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'width' => NULL,
+    'height' => NULL,
+    'autoplay' => FALSE,
+    'loop' => FALSE,
+    'hidecontrols' => FALSE,
+    'defaulttrack' => NULL,
+    'preload' => 'auto',
+  );
+  $export['document__preview__file_field_videojs'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
   $file_display->name = 'document__responsive__file_field_file_default';
   $file_display->weight = 0;
   $file_display->status = TRUE;
@@ -654,6 +734,22 @@ function drutact_media_file_default_displays() {
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
+  $file_display->name = 'document__responsive__file_field_videojs';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'width' => NULL,
+    'height' => NULL,
+    'autoplay' => FALSE,
+    'loop' => FALSE,
+    'hidecontrols' => FALSE,
+    'defaulttrack' => NULL,
+    'preload' => 'auto',
+  );
+  $export['document__responsive__file_field_videojs'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
   $file_display->name = 'document__teaser__file_field_file_default';
   $file_display->weight = 0;
   $file_display->status = TRUE;
@@ -751,6 +847,22 @@ function drutact_media_file_default_displays() {
     'fallback_formatter' => 'file_default',
   );
   $export['document__teaser__file_field_pdfpreview'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'document__teaser__file_field_videojs';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'width' => NULL,
+    'height' => NULL,
+    'autoplay' => FALSE,
+    'loop' => FALSE,
+    'hidecontrols' => FALSE,
+    'defaulttrack' => NULL,
+    'preload' => 'auto',
+  );
+  $export['document__teaser__file_field_videojs'] = $file_display;
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
@@ -865,6 +977,22 @@ function drutact_media_file_default_displays() {
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
+  $file_display->name = 'image__default__file_field_videojs';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'width' => NULL,
+    'height' => NULL,
+    'autoplay' => FALSE,
+    'loop' => FALSE,
+    'hidecontrols' => FALSE,
+    'defaulttrack' => NULL,
+    'preload' => 'auto',
+  );
+  $export['image__default__file_field_videojs'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
   $file_display->name = 'image__preview__file_field_file_default';
   $file_display->weight = 0;
   $file_display->status = FALSE;
@@ -973,6 +1101,22 @@ function drutact_media_file_default_displays() {
     'fallback_formatter' => 'file_default',
   );
   $export['image__preview__file_field_pdfpreview'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__preview__file_field_videojs';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'width' => NULL,
+    'height' => NULL,
+    'autoplay' => FALSE,
+    'loop' => FALSE,
+    'hidecontrols' => FALSE,
+    'defaulttrack' => NULL,
+    'preload' => 'auto',
+  );
+  $export['image__preview__file_field_videojs'] = $file_display;
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
@@ -1087,6 +1231,22 @@ function drutact_media_file_default_displays() {
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
+  $file_display->name = 'image__responsive__file_field_videojs';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'width' => NULL,
+    'height' => NULL,
+    'autoplay' => FALSE,
+    'loop' => FALSE,
+    'hidecontrols' => FALSE,
+    'defaulttrack' => NULL,
+    'preload' => 'auto',
+  );
+  $export['image__responsive__file_field_videojs'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
   $file_display->name = 'image__teaser__file_field_file_default';
   $file_display->weight = 0;
   $file_display->status = TRUE;
@@ -1198,6 +1358,22 @@ function drutact_media_file_default_displays() {
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
+  $file_display->name = 'image__teaser__file_field_videojs';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'width' => NULL,
+    'height' => NULL,
+    'autoplay' => FALSE,
+    'loop' => FALSE,
+    'hidecontrols' => FALSE,
+    'defaulttrack' => NULL,
+    'preload' => 'auto',
+  );
+  $export['image__teaser__file_field_videojs'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
   $file_display->name = 'video__default__file_field_file_default';
   $file_display->weight = 0;
   $file_display->status = FALSE;
@@ -1242,7 +1418,7 @@ function drutact_media_file_default_displays() {
   $file_display->api_version = 1;
   $file_display->name = 'video__default__file_field_file_video';
   $file_display->weight = 0;
-  $file_display->status = TRUE;
+  $file_display->status = FALSE;
   $file_display->settings = array(
     'controls' => 1,
     'autoplay' => 0,
@@ -1312,6 +1488,22 @@ function drutact_media_file_default_displays() {
     'fallback_formatter' => 'file_default',
   );
   $export['video__default__file_field_pdfpreview'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__default__file_field_videojs';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'width' => NULL,
+    'height' => NULL,
+    'autoplay' => FALSE,
+    'loop' => FALSE,
+    'hidecontrols' => FALSE,
+    'defaulttrack' => NULL,
+    'preload' => 'metadata',
+  );
+  $export['video__default__file_field_videojs'] = $file_display;
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
@@ -1432,6 +1624,22 @@ function drutact_media_file_default_displays() {
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
+  $file_display->name = 'video__preview__file_field_videojs';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'width' => NULL,
+    'height' => NULL,
+    'autoplay' => FALSE,
+    'loop' => FALSE,
+    'hidecontrols' => FALSE,
+    'defaulttrack' => NULL,
+    'preload' => 'auto',
+  );
+  $export['video__preview__file_field_videojs'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
   $file_display->name = 'video__responsive__file_field_file_default';
   $file_display->weight = 0;
   $file_display->status = FALSE;
@@ -1476,7 +1684,7 @@ function drutact_media_file_default_displays() {
   $file_display->api_version = 1;
   $file_display->name = 'video__responsive__file_field_file_video';
   $file_display->weight = 0;
-  $file_display->status = TRUE;
+  $file_display->status = FALSE;
   $file_display->settings = array(
     'controls' => 1,
     'autoplay' => 0,
@@ -1546,6 +1754,22 @@ function drutact_media_file_default_displays() {
     'fallback_formatter' => 'file_default',
   );
   $export['video__responsive__file_field_pdfpreview'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__responsive__file_field_videojs';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'width' => NULL,
+    'height' => NULL,
+    'autoplay' => FALSE,
+    'loop' => FALSE,
+    'hidecontrols' => FALSE,
+    'defaulttrack' => NULL,
+    'preload' => 'auto',
+  );
+  $export['video__responsive__file_field_videojs'] = $file_display;
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
