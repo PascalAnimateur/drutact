@@ -11,6 +11,7 @@ projects[feeds][patch][1611554] = https://www.drupal.org/files/issues/feeds-encr
 ; Feeds entity translation
 projects[feeds_et][download][type] = git
 projects[feeds_et][download][branch] = 7.x-1.x
+projects[feeds_et][patch][2652146] = https://www.drupal.org/files/issues/feeds_et-2652146-1.patch
 
 ; Feeds profile2
 projects[feeds_profile2][type] = module
