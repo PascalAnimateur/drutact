@@ -1,0 +1,34 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the DruTACT Search feature.
+ */
+
+/**
+ * Implements hook_enable().
+ */
+function drutact_search_enable() {
+  // Enable default permissions.
+  _drutact_default_module_permissions(array(
+    DRUPAL_ANONYMOUS_RID => array(
+      // Search
+      'search content',
+    ),
+    DRUPAL_AUTHENTICATED_RID => array(
+      // Search
+      'search content',
+      'use advanced search',
+    ),
+    DRUTACT_EDITOR_RID => array(
+      // Search
+      'search content',
+      'use advanced search',
+    ),
+    DRUTACT_ADMINISTRATOR_RID => array(
+      // Search
+      'administer search',
+      'search content',
+      'use advanced search',
+    ),
+  ));
+}
