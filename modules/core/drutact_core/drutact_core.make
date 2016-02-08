@@ -29,8 +29,8 @@ projects[libraries][type] = module
 
 ; Rules
 projects[rules][type] = module
-projecst[rules_batch][type] = module
-projecst[rules_batch][patch][2664962] = https://www.drupal.org/files/issues/rules_batch-name_parameter-2664962-2.patch
+projects[rules_batch][type] = module
+projects[rules_batch][patch][2664962] = https://www.drupal.org/files/issues/rules_batch-name_parameter-2664962-2.patch
 
 ; Tadaa
 projects[tadaa][type] = module
