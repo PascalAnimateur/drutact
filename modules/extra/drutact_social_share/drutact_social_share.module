@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DruTACT Social share feature.
+ */
+
+include_once 'drutact_social_share.features.inc';

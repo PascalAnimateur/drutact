@@ -1,0 +1,16 @@
+name = DruTACT Social share
+description = Social sharing for DruTACT installation profile.
+core = 7.x
+package = DruTACT Extra
+version = 7.x-1.3-alpha24
+dependencies[] = ctools
+dependencies[] = share42
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = share42_library_path
+features[variable][] = share42_margin
+features[variable][] = share42_top1
+features[variable][] = share42_top2
+features[variable][] = share42_zero_counter
+project path = profiles/drutact/modules/extra
