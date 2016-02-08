@@ -71,10 +71,23 @@ function drutact_video_default_rules_configuration() {
       "PLUGIN" : "reaction rule",
       "OWNER" : "rules",
       "TAGS" : [ "drutact", "video" ],
-      "REQUIRES" : [ "rules" ],
+      "REQUIRES" : [ "rules", "rules_batch" ],
       "ON" : { "node_insert--video" : { "bundle" : "video" } },
       "DO" : [
-        { "component_rules_drutact_video_automatic_conversion" : { "video" : [ "node" ] } }
+        { "variable_add" : {
+            "USING" : { "type" : "list\\u003Cnode\\u003E" },
+            "PROVIDE" : { "variable_added" : { "video_list" : "Video list" } }
+          }
+        },
+        { "list_add" : { "list" : [ "video-list" ], "item" : [ "node" ], "unique" : "1" } },
+        { "BATCH LOOP" : {
+            "USING" : { "list" : [ "video-list" ], "batch_name" : "Video conversion" },
+            "ITEM" : { "list_item" : "Current list item" },
+            "DO" : [
+              { "component_rules_drutact_video_automatic_conversion" : { "video" : [ "list-item" ] } }
+            ]
+          }
+        }
       ]
     }
   }');
@@ -83,7 +96,7 @@ function drutact_video_default_rules_configuration() {
       "PLUGIN" : "reaction rule",
       "OWNER" : "rules",
       "TAGS" : [ "drutact", "video" ],
-      "REQUIRES" : [ "rules" ],
+      "REQUIRES" : [ "rules", "rules_batch" ],
       "ON" : { "node_update--video" : { "bundle" : "video" } },
       "IF" : [
         { "NOT data_is" : {
@@ -93,7 +106,20 @@ function drutact_video_default_rules_configuration() {
         }
       ],
       "DO" : [
-        { "component_rules_drutact_video_automatic_conversion" : { "video" : [ "node" ] } }
+        { "variable_add" : {
+            "USING" : { "type" : "list\\u003Cnode\\u003E" },
+            "PROVIDE" : { "variable_added" : { "video_list" : "Video list" } }
+          }
+        },
+        { "list_add" : { "list" : [ "video-list" ], "item" : [ "node" ], "unique" : "1" } },
+        { "BATCH LOOP" : {
+            "USING" : { "list" : [ "video-list" ], "batch_name" : "Video conversion" },
+            "ITEM" : { "list_item" : "Current list item" },
+            "DO" : [
+              { "component_rules_drutact_video_automatic_conversion" : { "video" : [ "list-item" ] } }
+            ]
+          }
+        }
       ]
     }
   }');
