@@ -14,7 +14,7 @@ function drutact_video_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'date_popup_authored_enabled_video';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['date_popup_authored_enabled_video'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -153,9 +153,7 @@ function drutact_video_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_video';
-  $strongarm->value = array(
-    0 => 'status',
-  );
+  $strongarm->value = array();
   $export['node_options_video'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -206,6 +204,16 @@ function drutact_video_strongarm() {
   $strongarm->name = 'save_continue_video';
   $strongarm->value = 'Save and add fields';
   $export['save_continue_video'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_video';
+  $strongarm->value = array(
+    'status' => '1',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_node_video'] = $strongarm;
 
   return $export;
 }
