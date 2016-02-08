@@ -17,6 +17,9 @@ projects[globalredirect][type] = module
 projects[globalredirect][patch][2385415] = https://www.drupal.org/files/issues/globalredirect-prevent_missing_define-2385415.patch
 projects[redirect][type] = module
 
+; Shorten URLs
+projects[shorten][type] = module
+
 ; Sub-pathauto
 projects[subpathauto][type] = module
 projects[subpathauto][patch][1814516] = https://www.drupal.org/files/issues/subpathauto-not_loading_admin_theme-1814516-18.patch

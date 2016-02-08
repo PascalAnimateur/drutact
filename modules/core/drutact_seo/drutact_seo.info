@@ -12,6 +12,7 @@ dependencies[] = metatag_opengraph
 dependencies[] = path
 dependencies[] = pathauto
 dependencies[] = pathauto_entity
+dependencies[] = shorten
 dependencies[] = strongarm
 dependencies[] = subpathauto
 dependencies[] = transliteration
