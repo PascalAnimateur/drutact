@@ -20,6 +20,9 @@ function drutact_event_metatag_export_default() {
       'image_src' => array(
         'value' => '[node:field-image]',
       ),
+      'shortlink' => array(
+        'value' => '[node:url:shorten]',
+      ),
       'og:image' => array(
         'value' => '[node:field-image]',
       ),

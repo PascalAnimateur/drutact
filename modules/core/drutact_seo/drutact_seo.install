@@ -33,6 +33,9 @@ function drutact_seo_install() {
       // Pathauto
       'administer pathauto',
       'notify of path changes',
+      // Shorten URLs
+      'use Shorten URLs page',
+      'manage Shorten URLs API keys',
       // XML sitemap
       'administer xmlsitemap',
     ),

@@ -17,6 +17,9 @@ function drutact_newsletter_metatag_export_default() {
       'keywords' => array(
         'value' => '[node:field-tags]',
       ),
+      'shortlink' => array(
+        'value' => '[node:url:shorten]',
+      ),
     ),
   );
 

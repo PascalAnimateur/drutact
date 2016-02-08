@@ -20,6 +20,9 @@ function drutact_video_metatag_export_default() {
       'image_src' => array(
         'value' => '[node:field-image]',
       ),
+      'shortlink' => array(
+        'value' => '[node:url:shorten]',
+      ),
       'og:type' => array(
         'value' => 'video.other',
       ),
