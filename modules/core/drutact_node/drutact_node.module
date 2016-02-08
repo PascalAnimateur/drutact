@@ -7,7 +7,7 @@
 include_once 'drutact_node.features.inc';
 
 /**
- * Implements hook_form().
+ * Implements hook_form_alter().
  * 
  * Move Image field to vertical tab.
  */

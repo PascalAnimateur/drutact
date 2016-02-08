@@ -1,0 +1,31 @@
+<?php
+/**
+ * @file
+ * Code for the DruTACT Video feature.
+ */
+
+include_once 'drutact_video.features.inc';
+
+/**
+ * Implements hook_post_features_rebuild().
+ *
+ * Default content type permissions (video).
+ */
+function drutact_video_post_features_rebuild($component) {
+  if ($component == 'ctools') {
+    // Default content type permissions (article).
+    _drutact_default_content_type_permissions('video');
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Hide Converted video field from Video node form.
+ */
+function drutact_video_form_node_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'video_node_form') {
+    // Hide Converted video field from Video node form.
+    $form['field_converted_video']['#access'] = FALSE;
+  }
+}

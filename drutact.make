@@ -7,6 +7,7 @@ defaults[projects][subdir] = "contrib"
 ; DruTACT Content types
 includes[] = modules/content_types/drutact_group/drutact_group.make
 includes[] = modules/content_types/drutact_newsletter/drutact_newsletter.make
+includes[] = modules/content_types/drutact_video/drutact_video.make
 includes[] = modules/content_types/drutact_webform/drutact_webform.make
 
 ; DruTACT Core

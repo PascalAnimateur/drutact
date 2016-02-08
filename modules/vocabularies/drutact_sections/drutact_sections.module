@@ -7,7 +7,7 @@
 include_once 'drutact_sections.features.inc';
 
 /**
- * Implements hook_form().
+ * Implements hook_form_alter().
  *
  * Move Sections field to vertical tab.
  */
