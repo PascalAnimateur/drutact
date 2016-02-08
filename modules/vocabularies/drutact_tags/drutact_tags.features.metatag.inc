@@ -20,6 +20,9 @@ function drutact_tags_metatag_export_default() {
       'description' => array(
         'value' => '[term:description]',
       ),
+      'shortlink' => array(
+        'value' => '[term:url:shorten]',
+      ),
       'og:description' => array(
         'value' => '[term:description]',
       ),

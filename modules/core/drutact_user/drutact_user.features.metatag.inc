@@ -20,6 +20,9 @@ function drutact_user_metatag_export_default() {
       'image' => array(
         'value' => '[user:picture:url]',
       ),
+      'shortlink' => array(
+        'value' => '[user:url:shorten]',
+      ),
       'og:title' => array(
         'value' => '[user:name]',
       ),

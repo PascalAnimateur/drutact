@@ -13,7 +13,23 @@ function drutact_sections_metatag_export_default() {
   // Exported Metatag config instance: taxonomy_term:sections.
   $config['taxonomy_term:sections'] = array(
     'instance' => 'taxonomy_term:sections',
-    'config' => array(),
+    'config' => array(
+      'title' => array(
+        'value' => '[term:name] | [site:name]',
+      ),
+      'description' => array(
+        'value' => '[term:description]',
+      ),
+      'shortlink' => array(
+        'value' => '[term:url:shorten]',
+      ),
+      'og:description' => array(
+        'value' => '[term:description]',
+      ),
+      'og:title' => array(
+        'value' => '[term:name]',
+      ),
+    ),
   );
 
   return $config;
