@@ -44,5 +44,6 @@ for site in sites/* ; do
     mv ../../general.pot ../../profiles/drutact/translations/drutact.fr.po
 
     OUTDENT
+    cd ../..
   fi
 done

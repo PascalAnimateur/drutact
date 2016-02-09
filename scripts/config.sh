@@ -13,8 +13,10 @@ else
 fi
 
 ##### LOG FILE #####
-LOG_FILE="$SCRIPTS_PATH/log/`basename $0 .sh`.log"
-touch $LOG_FILE
+LOG_FILE="/dev/null"
+# Uncomment the following lines to enable logging:
+# LOG_FILE="$SCRIPTS_PATH/log/`basename $0 .sh`.log"
+# touch $LOG_FILE
 
 ##### MESSAGE / CONFIRM / WARNING / ERROR #####
 export MESSAGE_INDENT=""
