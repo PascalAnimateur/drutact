@@ -1,4 +1,4 @@
-name = DruTACT Social share
+name = DruTACT Social Share
 description = Social sharing for DruTACT installation profile.
 core = 7.x
 package = DruTACT Extra
