@@ -16,8 +16,16 @@ cd $DRUPAL_ROOT
 for site in sites/* ; do
   if [ -e $site/settings.php ] ; then
     cd $site
+
+    # Check if all features are in their default state.
+    drush fd | grep Overridden
+    if [ $? == 0 ] ; then
+      ERROR "The above features are not in their default state. Please update or revert them all before updating the platform."
+    fi
+
     MESSAGE "Enabling maintenance mode on $site..."
     drush vset --exact maintenance_mode 1 >> $LOG_FILE 2>&1
+
     cd ../..
   fi
 done
@@ -31,20 +39,29 @@ drush make http://gitlab.tesla/drupal/drutact/raw/7.x-1.x/build-platform.make . 
 # Perform database updates and disable maintenance mode on all sites
 for site in sites/* ; do
   if [ -e $site/settings.php ] ; then
-    cd $site
+    MESSAGE "Performing updates in $site..."
 
-    MESSAGE "Performing database updates in $site..."
+    cd $site
+    INDENT
+
     drush updb -y >> $LOG_FILE 2>&1
     if [ $? != 0 ] ; then
-      ERROR "Database update \e[91mFAILED\e[0m in $site"
+      ERROR "Database update \e[91mFAILED\e[0m"
     fi
 
-    MESSAGE "Updating translations in $site..."
+    MESSAGE "Updating translations..."
     drush potx-import-all -y >> $LOG_FILE 2>&1
 
-    MESSAGE "Disabling maintenance mode on $site..."
+    MESSAGE "Reverting all features..."
+    drush fra -y >> $LOG_FILE 2>&1
+
+    MESSAGE "Clearing all caches..."
+    drush cc all >> $LOG_FILE 2>&1
+
+    MESSAGE "Disabling maintenance mode..."
     drush vset --exact maintenance_mode 1 >> $LOG_FILE 2>&1
 
     cd ../..
+    OUTDENT
   fi
 done
