@@ -59,7 +59,7 @@ for site in sites/* ; do
     drush cc all >> $LOG_FILE 2>&1
 
     MESSAGE "Disabling maintenance mode..."
-    drush vset --exact maintenance_mode 1 >> $LOG_FILE 2>&1
+    drush vset --exact maintenance_mode 0 >> $LOG_FILE 2>&1
 
     cd ../..
     OUTDENT
