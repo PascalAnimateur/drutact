@@ -49,8 +49,12 @@ for site in sites/* ; do
       ERROR "Database update \e[91mFAILED\e[0m"
     fi
 
-    MESSAGE "Updating translations..."
+    MESSAGE "Updating translations from code..."
     drush potx-import-all -y >> $LOG_FILE 2>&1
+
+    MESSAGE "Updating translations from drupal.org..."
+    drush l10n-update-refresh >> $LOG_FILE 2>&1
+    drush l10n-update >> $LOG_FILE 2>&1
 
     MESSAGE "Reverting all features..."
     drush fra -y >> $LOG_FILE 2>&1
