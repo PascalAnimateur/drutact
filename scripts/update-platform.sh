@@ -33,8 +33,11 @@ done
 # Rebuild platform
 WARNING "About to rebuild platform. All changes to DruTACT and/or contrib modules will be \e[91mLOST\e[0m!"
 MESSAGE "Rebuilding DruTACT platform..."
+if [ -d profiles/drutact/.git ] ; then
+  WORKING_COPY='--working-copy'
+fi
 rm profiles/drutact -rf
-drush make http://gitlab.tesla/drupal/drutact/raw/7.x-1.x/build-platform.make . --working-copy --concurrency=8 --no-cache >> $LOG_FILE 2>&1
+drush make http://gitlab.tesla/drupal/drutact/raw/7.x-1.x/build-platform.make . $WORKING_COPY --concurrency=8 --no-cache >> $LOG_FILE 2>&1
 
 # Perform database updates and disable maintenance mode on all sites
 for site in sites/* ; do
