@@ -136,8 +136,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-02-09 11:33-0500\n"
-"PO-Revision-Date: 2016-02-09 11:33-0500\n"
+"POT-Creation-Date: 2016-02-09 16:56-0500\n"
+"PO-Revision-Date: 2016-02-09 16:56-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -765,7 +765,7 @@ msgstr ""
 
 #: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:527 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:507 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1646
 msgid "id"
-msgstr ""
+msgstr "id"
 
 #: profiles/drutact/modules/content_types/drutact_event/drutact_event.views_default.inc:528 profiles/drutact/modules/content_types/drutact_newsletter/drutact_newsletter.views_default.inc:173 profiles/drutact/modules/content_types/drutact_resource/drutact_resource.views_default.inc:508 profiles/drutact/modules/content_types/drutact_webform/drutact_webform.views_default.inc:524 profiles/drutact/modules/core/drutact_admin/drutact_admin.views_default.inc:1107;1647
 msgid "title"
@@ -2272,7 +2272,7 @@ msgid "Provides social media authentication support for DruTACT installation pro
 msgstr ""
 
 #: profiles/drutact/modules/extra/drutact_social_share/drutact_social_share.info:0
-msgid "DruTACT Social share"
+msgid "DruTACT Social Share"
 msgstr ""
 
 #: profiles/drutact/modules/extra/drutact_social_share/drutact_social_share.info:0
