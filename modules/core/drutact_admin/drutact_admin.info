@@ -32,6 +32,7 @@ dependencies[] = og
 dependencies[] = og_context
 dependencies[] = optimizedb
 dependencies[] = options_element
+dependencies[] = panels
 dependencies[] = rules
 dependencies[] = select2widget
 dependencies[] = simplified_menu_admin

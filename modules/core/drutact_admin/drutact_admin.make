@@ -64,6 +64,9 @@ projects[optimizedb][type] = module
 projects[options_element][type] = module
 projects[select_or_other][type] = module
 
+; Panels
+projects[panels][type] = module
+
 ; Select2 Field Widget
 projects[select2widget][type] = module
 projects[select2widget][patch][2575587] = https://www.drupal.org/files/issues/select2widget-hardcode_placeholder_text-2575587-3.patch
