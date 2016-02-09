@@ -18,9 +18,9 @@ fi
 cd $DRUPAL_ROOT
 for site in sites/* ; do
   if [ -e $site/settings.php ] ; then
-    cd $site
-
     MESSAGE "Extracting translations in $site..."
+
+    cd $site
     INDENT
 
     # Check if DruTACT language module is enabled

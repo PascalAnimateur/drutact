@@ -32,13 +32,19 @@ drush make http://gitlab.tesla/drupal/drutact/raw/7.x-1.x/build-platform.make . 
 for site in sites/* ; do
   if [ -e $site/settings.php ] ; then
     cd $site
+
     MESSAGE "Performing database updates in $site..."
     drush updb -y >> $LOG_FILE 2>&1
     if [ $? != 0 ] ; then
       ERROR "Database update \e[91mFAILED\e[0m in $site"
     fi
+
+    MESSAGE "Updating translations in $site..."
+    drush potx-import-all -y >> $LOG_FILE 2>&1
+
     MESSAGE "Disabling maintenance mode on $site..."
     drush vset --exact maintenance_mode 1 >> $LOG_FILE 2>&1
+
     cd ../..
   fi
 done

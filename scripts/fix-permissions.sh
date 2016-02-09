@@ -15,14 +15,17 @@ sudo chown `whoami`:`whoami` . -R
 find . -type d -exec chmod u=rwx,g=rx,o=rx '{}' \;
 find . -type f -exec chmod u=rw,g=r,o=r '{}' \;
 chmod a+x $SCRIPTS_PATH/*.sh
+
 for site in sites/* ; do
   if [ -e $site/settings.php ] ; then
     cd $site
+
     MESSAGE "Fixing permissions in $site..."
     sudo chmod 755 .
     sudo chown www-data:www-data files/ private/ -R
     sudo chmod u+w files/ private/ -R
     sudo chmod g+w files/ private/ -R
+
     cd ../..
   fi
 done
