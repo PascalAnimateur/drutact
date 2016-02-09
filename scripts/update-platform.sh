@@ -72,3 +72,5 @@ for site in sites/* ; do
     OUTDENT
   fi
 done
+
+MESSAGE "Platform successfully updated."
