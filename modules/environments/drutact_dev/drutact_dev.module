@@ -5,3 +5,14 @@
  */
 
 include_once 'drutact_dev.features.inc';
+
+/**
+ * Implements hook_block_info_alter().
+ *
+ * Disable devel blocks to prevent site configuration overrides.
+ */
+function drutact_dev_block_info_alter(&$blocks, $theme, $code_blocks) {
+  // Disable devel blocks to prevent site configuration overrides.
+  unset($blocks['menu']['devel']);
+  unset($blocks['devel']);
+}
