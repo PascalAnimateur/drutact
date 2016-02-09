@@ -34,7 +34,7 @@ for site in sites/* ; do
     drush en potx -y >> $LOG_FILE 2>&1
 
     MESSAGE "Moving contrib libraries / modules / themes out of DruTACT profile..."
-    mv ../../profiles/drutact/libraries ../all/libraries
+    mv ../../profiles/drutact/libraries ../all/libraries/contrib
     mv ../../profiles/drutact/modules/contrib ../all/modules
     mv ../../profiles/drutact/themes/contrib ../all/themes
     drush rr >> $LOG_FILE 2>&1
@@ -48,7 +48,7 @@ for site in sites/* ; do
     drush potx single --translations --language=fr --folder=profiles/drutact >> $LOG_FILE 2>&1
 
     MESSAGE "Moving contrib libraries / modules / themes back into DruTACT profile..."
-    mv ../all/libraries ../../profiles/drutact/libraries
+    mv ../all/libraries/contrib ../../profiles/drutact/libraries
     mv ../all/modules/contrib ../../profiles/drutact/modules
     mv ../all/themes/contrib ../../profiles/drutact/themes
     drush rr >> $LOG_FILE 2>&1
