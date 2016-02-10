@@ -3,19 +3,3 @@
  * @file
  * Install, update and uninstall functions for the DruTACT Social Share feature.
  */
-
-/**
- * Implements hook_enable().
- */
-function drutact_social_share_enable() {
-  // Enable default permissions.
-  _drutact_default_module_permissions(array(
-    DRUPAL_ANONYMOUS_RID => array(),
-    DRUPAL_AUTHENTICATED_RID => array(),
-    DRUTACT_EDITOR_RID => array(),
-    DRUTACT_ADMINISTRATOR_RID => array(
-      // Share42
-      'administer share42',
-    ),
-  ));
-}
