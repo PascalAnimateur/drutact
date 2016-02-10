@@ -38,6 +38,9 @@ if [ -d profiles/drutact/.git ] ; then
 fi
 rm profiles/drutact -rf
 drush make http://gitlab.tesla/drupal/drutact/raw/7.x-1.x/build-platform.make . $WORKING_COPY --concurrency=8 --no-cache >> $LOG_FILE 2>&1
+if [ $? != 0 ] ; then
+  ERROR "Drush make failed, please verify DruTACT build-platform.make."
+fi
 
 # Perform database updates and disable maintenance mode on all sites
 for site in sites/* ; do
