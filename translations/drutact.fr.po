@@ -105,6 +105,7 @@
 #  profiles/drutact/modules/import/drutact_resource_import/drutact_resource_import.info: n/a
 #  profiles/drutact/modules/import/drutact_user_import/drutact_user_import.info: n/a
 #  profiles/drutact/modules/import/drutact_webform_import/drutact_webform_import.info: n/a
+#  profiles/drutact/modules/extra/drutact_social_share/drutact_social_share.features.field_instance.inc: n/a
 #  profiles/drutact/modules/extra/drutact_social_share/share42/share42.js: n/a
 #  profiles/drutact/modules/import/drutact_article_import/drutact_article_import.module: n/a
 #  profiles/drutact/modules/import/drutact_event_import/drutact_event_import.module: n/a
@@ -136,8 +137,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-02-09 16:56-0500\n"
-"PO-Revision-Date: 2016-02-09 16:56-0500\n"
+"POT-Creation-Date: 2016-02-10 13:15-0500\n"
+"PO-Revision-Date: 2016-02-10 13:15-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -2270,6 +2271,16 @@ msgstr ""
 #: profiles/drutact/modules/extra/drutact_social_login/drutact_social_login.info:0
 msgid "Provides social media authentication support for DruTACT installation profile."
 msgstr ""
+
+#: profiles/drutact/modules/extra/drutact_social_share/drutact_social_share.features.field_instance.inc:50
+msgctxt "field_instance:social_share-field_social_share:label"
+msgid "Social share"
+msgstr "Partage sur les réseaux sociaux"
+
+#: profiles/drutact/modules/extra/drutact_social_share/drutact_social_share.features.field_instance.inc:51
+msgctxt "field_instance:social_share-field_social_share:description"
+msgid "Checking this option will display the social sharing icons for this entity."
+msgstr "Cocher cette option afin d'afficher les liens de partage sur les réseaux sociaux pour cette entité."
 
 #: profiles/drutact/modules/extra/drutact_social_share/drutact_social_share.info:0
 msgid "DruTACT Social Share"
