@@ -78,7 +78,7 @@ function drutact_tags_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'uuid_features_entity_taxonomy_term_tags';
-  $strongarm->value = 'tags';
+  $strongarm->value = 0;
   $export['uuid_features_entity_taxonomy_term_tags'] = $strongarm;
 
   $strongarm = new stdClass();
