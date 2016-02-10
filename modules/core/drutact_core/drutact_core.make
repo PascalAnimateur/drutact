@@ -41,6 +41,7 @@ projects[token][type] = module
 
 ; Ultimate Cron
 projects[ultimate_cron][type] = module
+projects[ultimate_cron][patch][2666322] = https://www.drupal.org/files/issues/ultimate_cron-do_not_rebuild_menu-2666322-2.patch
 
 ; UUID
 projects[uuid][type] = module
