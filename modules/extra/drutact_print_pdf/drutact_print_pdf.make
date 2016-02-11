@@ -5,7 +5,7 @@ core = 7.x
 projects[print][type] = module
 projects[print][patch][2633626] = https://www.drupal.org/files/issues/print-dompdf_font_dir_not_writeable-2633626.patch
 
-; dompdf with php-font-lib library
+; dompdf with php-font-lib 0.2.2 library
 libraries[dompdf][download][type] = file
 libraries[dompdf][download][url] = https://github.com/dompdf/dompdf/archive/v0.6.2.zip
 libraries[php-font-lib][download][type] = file
