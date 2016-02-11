@@ -8,6 +8,7 @@
  * Implements hook_install().
  */
 function drutact_masquerade_install() {
+  // Default module permissions (masquerade, masquerade_as_role).
   _drutact_default_module_permissions(array(
     DRUTACT_EDITOR_RID => array(
       // Masquerade
