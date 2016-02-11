@@ -16,7 +16,7 @@ projects[og_manager_change][type] = module
 
 ; Organic group
 projects[og][type] = module
-projects[og][patch][2455625] = https://www.drupal.org/files/issues/og-remove_example.patch
+projects[og][patch][2455625] = https://www.drupal.org/files/issues/og-remove_example-2455625-2.patch
 projects[og][patch][2494575] = https://www.drupal.org/files/issues/og-fix_overview-2494575-2.patch
 projects[og][patch][1473262] = https://www.drupal.org/files/issues/og-1473262-13-translate-roles.patch
 
