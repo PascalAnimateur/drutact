@@ -78,6 +78,10 @@ function drutact_user_register_form_validate($form, &$form_state) {
  * Set username from field_full_name (given.family).
  */
 function drutact_user_user_presave(&$edit, $account, $category) {
+  // Do not change usernames of existing users.
+  if ($account->uid != 0) {
+    return;
+  }
   // Set username from field_full_name (given.family).
   $given = $edit['field_full_name'][LANGUAGE_NONE][0]['given'];
   $family = $edit['field_full_name'][LANGUAGE_NONE][0]['family'];
