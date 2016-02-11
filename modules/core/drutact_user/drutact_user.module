@@ -36,10 +36,72 @@ function drutact_user_email_password_reset_link_action(&$user, $context) {
  * Implements hook_form_FORM_ID_alter().
  *
  * Notify user of new account by default.
+ * Hide username form component.
  */
 function drutact_user_form_user_register_form_alter(&$form, &$form_state, $form_id) {
   // Notify user of new account by default.
   $form['account']['notify']['#default_value'] = TRUE;
+
+  // Hide username form component.
+  if (isset($form['account']) && is_array($form['account'])) {
+    $form['account']['name']['#type'] = 'hidden';
+    $form['account']['name']['#value'] = 'unset_username';
+  }
+  else {
+    $form['name']['#type'] = 'hidden';
+    $form['name']['#value'] = 'unset_username';
+  }
+
+  // Custom validation to set username from field_full_name.
+  $form['#validate'][] = 'drutact_user_register_form_validate';
+}
+
+/**
+ * Vaildation callback to check format of given and family name.
+ */
+function drutact_user_register_form_validate($form, &$form_state) {
+  $given = $form_state['values']['field_full_name'][LANGUAGE_NONE][0]['given'];
+  $family = $form_state['values']['field_full_name'][LANGUAGE_NONE][0]['family'];
+
+  // Validate given and family name format (special characters, numbers, etc).
+  if (!preg_match("/^[\s-\pL']*$/u", $given)) {
+    form_set_error('field_full_name', t('Given name may not contain symbols or numbers.'));
+  }
+  if (!preg_match("/^[\s-\pL']*$/u", $family)) {
+    form_set_error('field_full_name', t('Family name may not contain symbols or numbers.'));
+  }
+}
+
+/**
+ * Implements hook_user_presave().
+ *
+ * Set username from field_full_name (given.family).
+ */
+function drutact_user_user_presave(&$edit, $account, $category) {
+  // Set username from field_full_name (given.family).
+  $given = $edit['field_full_name'][LANGUAGE_NONE][0]['given'];
+  $family = $edit['field_full_name'][LANGUAGE_NONE][0]['family'];
+  $username = drupal_strtolower($given . '.' . $family);
+
+  // Transliterate the username.
+  if (module_exists('transliteration')) {
+    $username = transliteration_get($username, '');
+    $username = str_replace(' ', '-', $username);
+  }
+
+  // Check if the username already exists in the database.
+  $result = db_query("SELECT name FROM {users} WHERE name = :username", array(':username' => $username));
+
+  // While the username is taken, append a number and increment it until our username is unique.
+  $i = 0;
+  while ($result->rowCount()) {
+    $result = db_query("SELECT name FROM {users} WHERE name = :username", array(':username' => $username . '.' . ++$i));
+    if (!($result->rowCount())) {
+      $username = $username . '.' . $i;
+    }
+  }
+
+  $edit['name'] = $username;
 }
 
 /**
