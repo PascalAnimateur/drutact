@@ -71,6 +71,7 @@ projects[panels][type] = module
 projects[select2widget][type] = module
 projects[select2widget][patch][2575587] = https://www.drupal.org/files/issues/select2widget-hardcode_placeholder_text-2575587-3.patch
 projects[select2widget][patch][2576387] = https://www.drupal.org/files/issues/select2widget-taxonomy_width_option-2576387-2.patch
+; Select2 3.5.4
 libraries[select2][download][type] = file
 libraries[select2][download][url] = https://github.com/select2/select2/archive/3.5.4.zip
 
