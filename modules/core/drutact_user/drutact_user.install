@@ -7,13 +7,13 @@
 /**
  * Implements hook_install().
  *
- * Default module permissions (profile2, realname, realname_registration, role_delegation, user).
+ * Default module permissions (profile2, realname, role_delegation, user).
  * Default multilingual variables (user).
  * Default user field instance (summary, timezone).
  * Default variables (realname_pattern, user_register).
  */
 function drutact_user_install() {
-  // Default module permissions (profile2, realname, realname_registration, role_delegation, user).
+  // Default module permissions (profile2, realname, role_delegation, user).
   _drutact_default_module_permissions(array(
     DRUPAL_ANONYMOUS_RID => array(),
     DRUPAL_AUTHENTICATED_RID => array(
@@ -40,8 +40,6 @@ function drutact_user_install() {
       'administer profiles',
       // Realname
       'administer realname',
-      // Realname registration
-      'administer realname registration',
       // Role delegation
       'assign all roles',
       'assign Editor role',
