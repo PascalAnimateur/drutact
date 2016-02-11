@@ -82,6 +82,10 @@ function drutact_user_user_presave(&$edit, $account, $category) {
   $given = $edit['field_full_name'][LANGUAGE_NONE][0]['given'];
   $family = $edit['field_full_name'][LANGUAGE_NONE][0]['family'];
   $username = drupal_strtolower($given . '.' . $family);
+  // Keep username if given / family names are missing.
+  if ($username == '.') {
+    return;
+  }
 
   // Transliterate the username.
   if (module_exists('transliteration')) {
