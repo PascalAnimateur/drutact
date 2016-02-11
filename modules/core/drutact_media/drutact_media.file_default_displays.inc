@@ -635,7 +635,7 @@ function drutact_media_file_default_displays() {
   $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'document__responsive__file_field_file_default';
-  $file_display->weight = 0;
+  $file_display->weight = 1;
   $file_display->status = TRUE;
   $file_display->settings = '';
   $export['document__responsive__file_field_file_default'] = $file_display;
