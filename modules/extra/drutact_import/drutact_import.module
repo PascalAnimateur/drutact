@@ -8,6 +8,9 @@
  * Helper function to set default feed permissions. 
  */
 function _drutact_import_default_feed_permissions($feed_name) {
+  // Make sure feeds_tamper is enabled.
+  module_enable(array('feeds_tamper'));
+
   // Reset features object cache.
   ctools_export_load_object_reset();
 
