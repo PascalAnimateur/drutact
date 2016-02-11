@@ -1,0 +1,29 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the DruTACT Masquerade feature.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function drutact_masquerade_install() {
+  _drutact_default_module_permissions(array(
+    DRUTACT_EDITOR_RID => array(
+      // Masquerade
+      'masquerade as user',
+      'masquerade as any user',
+      // Masquerade as role
+      'masquerade as role',
+    ),
+    DRUTACT_ADMINISTRATOR_RID => array(
+      // Masquerade
+      'masquerade as user',
+      'masquerade as any user',
+      'masquerade as admin',
+      'administer masquerade',
+      // Masquerade as role
+      'masquerade as role',
+    ),
+  ));
+}
