@@ -43,7 +43,7 @@ projects[pdfpreview][patch][2490766] = https://www.drupal.org/files/issues/pdfpr
 
 ; PDF.js library
 libraries[pdf.js][download][type] = file
-libraries[pdf.js][download][url] = https://github.com/mozilla/pdf.js/releases/download/v1.2.109/pdfjs-1.2.109-dist.zip
+libraries[pdf.js][download][url] = https://github.com/mozilla/pdf.js/releases/download/v1.3.91/pdfjs-1.3.91-dist.zip
 
 ; Video.js
 projects[videojs][version] = 3.x-dev
