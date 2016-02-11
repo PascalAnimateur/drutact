@@ -3,17 +3,17 @@ core = 7.x
 
 ; CKEditor library
 libraries[ckeditor][download][type] = file
-libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.5.6/ckeditor_4.5.6_full.zip
+libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.5.7/ckeditor_4.5.7_full.zip
 
 ; CKEditor plugins
 libraries[image2][download][type] = file
-libraries[image2][download][url] = http://download.ckeditor.com/image2/releases/image2_4.5.6.zip
+libraries[image2][download][url] = http://download.ckeditor.com/image2/releases/image2_4.5.7.zip
 libraries[image2][destination] = libraries/ckeditor/plugins
 libraries[lineutils][download][type] = file
-libraries[lineutils][download][url] = http://download.ckeditor.com/lineutils/releases/lineutils_4.5.6.zip
+libraries[lineutils][download][url] = http://download.ckeditor.com/lineutils/releases/lineutils_4.5.7.zip
 libraries[lineutils][destination] = libraries/ckeditor/plugins
 libraries[widget][download][type] = file
-libraries[widget][download][url] = http://download.ckeditor.com/widget/releases/widget_4.5.6.zip
+libraries[widget][download][url] = http://download.ckeditor.com/widget/releases/widget_4.5.7.zip
 libraries[widget][destination] = libraries/ckeditor/plugins
 
 ; Linkit
