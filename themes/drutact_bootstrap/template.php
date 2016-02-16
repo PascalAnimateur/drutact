@@ -46,3 +46,10 @@ function drutact_bootstrap_menu_link(array $variables) {
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
+
+function drutact_bootstrap_preprocess_node(&$variables, $hook) {
+  $view_mode = $variables['view_mode'];
+  $content_type = $variables['type'];
+  $variables['theme_hook_suggestions'][] = 'node__' . $view_mode;
+  $variables['theme_hook_suggestions'][] = 'node__' . $view_mode . '_' . $content_type;
+}
