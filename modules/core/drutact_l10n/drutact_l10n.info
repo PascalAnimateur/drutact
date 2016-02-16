@@ -9,6 +9,7 @@ dependencies[] = drutact_roles
 dependencies[] = entity_translation
 dependencies[] = entity_translation_i18n_menu
 dependencies[] = i18n_block
+dependencies[] = i18n_panels
 dependencies[] = i18n_variable
 dependencies[] = l10n_update
 dependencies[] = locale

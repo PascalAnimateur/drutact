@@ -14,6 +14,9 @@ libraries[bootstrap][destination] = ../../profiles/drutact/themes/drutact_bootst
 projects[bootstrap_login_modal][type] = module
 projects[bootstrap_login_modal][patch][2420977] = https://www.drupal.org/files/issues/bootstrap_login_modal-request_new_password-2420977-2.patch
 
+; Panels Bootstrap layouts
+projects[panels_bootstrap_layouts][version] = 3.x-dev
+
 ; Smartmenus library
 libraries[smartmenus][download][type] = file
 libraries[smartmenus][download][url] = https://github.com/vadikom/smartmenus/archive/master.zip
