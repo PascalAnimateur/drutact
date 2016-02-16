@@ -155,6 +155,7 @@ features_banish[variable][] = menu_masks
 features_banish[variable][] = module_filter_recent_modules
 features_banish[variable][] = update_last_check
 features_banish[variable][] = update_last_email_notification
+features_banish[variable][] = variable_module_list
 features_banish[menu_custom][] = management
 features_banish[menu_custom][] = navigation
 features_banish[menu_custom][] = user-menu
