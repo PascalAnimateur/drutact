@@ -32,7 +32,8 @@ function drutact_node_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
-  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_plugin'] = 'views_bootstrap_grid_plugin_style';
+  $handler->display->display_options['style_options']['columns'] = '4';
   $handler->display->display_options['row_plugin'] = 'views_bootstrap_thumbnail_plugin_rows';
   $handler->display->display_options['row_options']['image'] = 'field_image';
   $handler->display->display_options['row_options']['title'] = 'name_field_et';

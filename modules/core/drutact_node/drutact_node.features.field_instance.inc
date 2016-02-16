@@ -108,11 +108,8 @@ function drutact_node_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-
-  // Translatables created/updated by the Localize Fields (localize_fields) module.
-  t('Image', array(), array('context' => 'field_instance:image-field_image:label'));
-  t('Title', array(), array('context' => 'field_instance:title-title_field:label'));
-
+  t('Image');
+  t('Title');
 
   return $field_instances;
 }
