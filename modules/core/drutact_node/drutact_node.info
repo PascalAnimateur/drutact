@@ -39,5 +39,6 @@ features[variable][] = field_bundle_settings_field_library__image
 features[variable][] = field_bundle_settings_field_library__title
 features[variable][] = metatag_enable_node
 features[variable][] = pathauto_node_pattern
+features[views_view][] = public_content
 features[views_view][] = public_terms
 project path = profiles/drutact/modules/core
