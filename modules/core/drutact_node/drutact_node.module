@@ -48,3 +48,15 @@ function _drutact_node_image_tab_form_validate($form, &$form_state) {
 
   return $form;
 }
+
+/**
+ * Implements hook_entity_info_alter().
+ *
+ * Custom node view mode for Newsletter items.
+ */
+function drutact_node_entity_info_alter(&$entity_info){
+  $entity_info['node']['view modes']['newsletter_item'] = array(
+    'label' => t('Newsletter item'),
+    'custom settings' => TRUE,
+  );
+}
