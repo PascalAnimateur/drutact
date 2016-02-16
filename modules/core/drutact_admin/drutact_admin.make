@@ -81,6 +81,7 @@ projects[shiny][patch][2362771] = https://www.drupal.org/files/issues/shiny-edit
 projects[shiny][patch][2505485] = https://www.drupal.org/files/issues/shiny-fix_input_form_submit_padding-2505485-2.patch
 projects[shiny][patch][2555575] = https://www.drupal.org/files/issues/shiny-fix_ckeditor_border_right-2555575-1.patch
 projects[shiny][patch][2568239] = https://www.drupal.org/files/issues/shiny-date_repeat_radio_button-2568239-6.patch
+projects[shiny][patch][2670122] = https://www.drupal.org/files/issues/shiny-newsletter_item_template.patch
 
 ; Sticky edit actions
 projects[sticky_edit_actions][type] = module
