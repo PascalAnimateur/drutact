@@ -95,6 +95,21 @@ function drutact_admin_install() {
       'administer module filter',
       // OptimizeDB
       'administer optimizedb settings',
+      // Page manager
+      'use page manager',
+      'administer page manager',
+      // Panels
+      'use panels dashboard',
+      'view pane admin links',
+      'administer pane access',
+      'use panels in place editing',
+      'change layouts in place editing',
+      'administer advanced pane settings',
+      'administer panels layouts',
+      'administer panels styles',
+      'use panels caching features',
+      'use panels locks',
+      'use ipe with page manager',
       // System
       'access administration pages',
       'access site in maintenance mode',
