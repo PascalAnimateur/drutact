@@ -54,4 +54,5 @@ projects[views][type] = module
 projects[views][patch][1222204] = https://www.drupal.org/files/issues/views.1222204-22.patch
 projects[views_bulk_operations][type] = module
 projects[views_bulk_operations][patch][2318273] = https://www.drupal.org/files/issues/views_bulk_operations-fix_hide_action_links-2318273-9.patch
+projects[views_contextual_filters_or][version] = 1.x-dev
 projects[views_data_export][type] = module
