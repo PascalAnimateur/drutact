@@ -116,11 +116,42 @@ function drutact_user_user_presave(&$edit, $account, $category) {
  * Implements hook_menu_alter().
  *
  * Rename people administration tab from List to Users.
+ * Localize Profile2 tabs on the user form.
  */
 function drutact_user_menu_alter(&$items) {
   // Rename people administration tab from List to Users.
   $items['admin/people/people']['title'] = 'Users';
+  // Localize Profile2 tabs on the user form.
+  if (($categories = _user_categories()) && (count($categories) > 1)) {
+    foreach ($categories as $key => $category) {
+      // 'account' is already handled by the MENU_DEFAULT_LOCAL_TASK.
+      if ($category['name'] != 'account') {
+        $arguments = array(
+          $category['name'],
+          $items['user/%user_category/edit/' . $category['name']]['title callback'],
+          $items['user/%user_category/edit/' . $category['name']]['title arguments'],
+        );
+        $items['user/%user_category/edit/' . $category['name']]['title callback'] = '_drutact_user_user_category_title';
+        $items['user/%user_category/edit/' . $category['name']]['title arguments'] = $arguments;
+      }
+    }
+  }
 }
+
+/**
+ * Title callback to translate Profile2 tab title on the user form.
+ * @see https://www.drupal.org/node/1891600#comment-7467484
+ */
+function _drutact_user_user_category_title($category_name, $function = '', $arguments = array()) {
+  $categories = _user_categories();
+  foreach ($categories as $key => $category) {
+    if ($category['name'] == $category_name) {
+      return $category['title'];
+    }
+  }
+  return call_user_func_array($function, $arguments);
+}
+
 
 /**
  * Implements hook_views_data_alter().
