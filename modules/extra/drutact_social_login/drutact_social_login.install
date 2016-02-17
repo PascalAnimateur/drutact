@@ -8,6 +8,23 @@
  * Implements hook_install().
  */
 function drutact_social_login_install() {
+  // Default permissions (hybridauth).
+  _drutact_default_module_permissions(array(
+    DRUPAL_ANONYMOUS_RID => array(
+      // HybridAuth
+      'use hybridauth',    ),
+    DRUPAL_AUTHENTICATED_RID => array(
+      // HybridAuth
+      'use hybridauth',    ),
+    DRUTACT_EDITOR_RID => array(
+      // HybridAuth
+      'use hybridauth',    ),
+    DRUTACT_ADMINISTRATOR_RID => array(
+      // HybridAuth
+      'use hybridauth',
+    ),
+  ));
+
   // Default multilingual variables (hybridauth).
   _drutact_l10n_default_i18n_variables(array(
     'hybridauth_widget_link_text',

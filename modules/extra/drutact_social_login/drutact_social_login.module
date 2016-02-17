@@ -5,3 +5,23 @@
  */
 
 include_once 'drutact_social_login.features.inc';
+
+/**
+ * Implements hook_user_presave().
+ *
+ * Determine given and family name from HybrydAuth if available.
+ */
+function drutact_social_login_user_presave(&$edit, $account, $category) {
+  // Do not change usernames of existing users.
+  if ($account->uid != 0) {
+    return;
+  }
+
+  // Determine given and family name from HybrydAuth if available.
+  if (isset($edit['data']['hybridauth'])) {
+    $edit['field_full_name'][LANGUAGE_NONE][0]['given'] = $edit['data']['hybridauth']['firstName'];
+    $edit['field_full_name'][LANGUAGE_NONE][0]['family'] = $edit['data']['hybridauth']['lastName'];
+
+  }
+
+}

@@ -106,14 +106,14 @@ After that, you will be able to log in at [site:login-url] using your [user:hybr
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_register';
-  $strongarm->value = '0';
+  $strongarm->value = '1';
   $export['hybridauth_register'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_registration_password';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['hybridauth_registration_password'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -146,7 +146,7 @@ After that, you will be able to log in at [site:login-url] using your [user:hybr
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_username';
-  $strongarm->value = '[user:hybridauth:firstName] [user:hybridauth:lastName]';
+  $strongarm->value = '[user:hybridauth:firstName].[user:hybridauth:lastName]';
   $export['hybridauth_username'] = $strongarm;
 
   $strongarm = new stdClass();
