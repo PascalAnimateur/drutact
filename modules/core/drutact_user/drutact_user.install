@@ -69,15 +69,15 @@ function drutact_user_install() {
     'user_mail_status_canceled_[mail_part]',
   ));
 
-
-  // Default user field instance (summary, timezone).
+  // Default user extra field settings (summary, timezone).
   $field_bundle_setting = variable_get('field_bundle_settings_user__user', array());
   $field_bundle_setting['extra_fields']['display']['summary']['default']['visible'] = TRUE;
   $field_bundle_setting['extra_fields']['display']['summary']['default']['weight'] = 30;
   $field_bundle_setting['extra_fields']['form']['timezone']['weight'] = 30;
   variable_set('field_bundle_settings_user__user', $field_bundle_setting);
 
-  // Default variables (realname_pattern, user_register).
+  // Default variables (pathauto_user_pattern, realname_pattern, user_register).
+  variable_set('pathauto_user_pattern', 'users/[user:name]');
   variable_set('realname_pattern', '[user:name-field-full-name]');
   variable_set('user_register', USER_REGISTER_ADMINISTRATORS_ONLY);
 }
