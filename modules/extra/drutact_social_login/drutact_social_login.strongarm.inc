@@ -127,7 +127,7 @@ After that, you will be able to log in at [site:login-url] using your [user:hybr
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_remove_password_fields';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['hybridauth_remove_password_fields'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -181,7 +181,7 @@ After that, you will be able to log in at [site:login-url] using your [user:hybr
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_widget_title';
-  $strongarm->value = 'Or log in with...';
+  $strongarm->value = 'Se connecter avec...';
   $export['hybridauth_widget_title'] = $strongarm;
 
   $strongarm = new stdClass();
