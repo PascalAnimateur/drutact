@@ -121,6 +121,10 @@ function drutact_webform_strongarm() {
             'weight' => '25',
             'visible' => FALSE,
           ),
+          'newsletter_item' => array(
+            'weight' => '',
+            'visible' => FALSE,
+          ),
         ),
       ),
     ),

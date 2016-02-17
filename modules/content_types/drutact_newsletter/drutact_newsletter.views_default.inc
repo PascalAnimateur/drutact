@@ -108,13 +108,13 @@ function drutact_newsletter_views_default_views() {
   $handler->display->display_options['fields']['sticky']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['sticky']['type'] = 'boolean';
   $handler->display->display_options['fields']['sticky']['not'] = 0;
-  /* Field: Entity translation: Description: translated */
+  /* Field: Entity translation: Body: translated */
   $handler->display->display_options['fields']['body_et']['id'] = 'body_et';
   $handler->display->display_options['fields']['body_et']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body_et']['field'] = 'body_et';
   $handler->display->display_options['fields']['body_et']['label'] = 'body';
   $handler->display->display_options['fields']['body_et']['element_label_colon'] = FALSE;
-  /* Field: Entity translation: Description: translated */
+  /* Field: Entity translation: Body: translated */
   $handler->display->display_options['fields']['body_et_1']['id'] = 'body_et_1';
   $handler->display->display_options['fields']['body_et_1']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body_et_1']['field'] = 'body_et';

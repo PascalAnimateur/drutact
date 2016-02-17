@@ -88,6 +88,9 @@ function drutact_newsletter_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'newsletter_item' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

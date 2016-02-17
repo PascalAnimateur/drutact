@@ -70,6 +70,66 @@ function drutact_newsletter_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-simplenews-field_newsletter_items'.
+  $field_instances['node-simplenews-field_newsletter_items'] = array(
+    'bundle' => 'simplenews',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'deleted' => 0,
+    'description' => 'Display content from the site as a teaser list in the newsletter issue.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 1,
+          'view_mode' => 'newsletter_item',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 5,
+      ),
+      'newsletter_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 5,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_newsletter_items',
+    'label' => 'Newsletter items',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'node-simplenews-field_tags'.
   $field_instances['node-simplenews-field_tags'] = array(
     'bundle' => 'simplenews',
@@ -482,6 +542,8 @@ function drutact_newsletter_field_default_field_instances() {
   // Translatables created/updated by the Localize Fields (localize_fields) module.
   t('Body', array(), array('context' => 'field_instance:simplenews-body:label'));
   t('The body of this newsletter issue. Use the \'Edit summary\' link above to set a shorter, text-only version that will be used to describe the content when it\'s displayed as a teaser (i.e. in a list on the front page).', array(), array('context' => 'field_instance:simplenews-body:description'));
+  t('Newsletter items', array(), array('context' => 'field_instance:simplenews-field_newsletter_items:label'));
+  t('Display content from the site as a teaser list in the newsletter issue.', array(), array('context' => 'field_instance:simplenews-field_newsletter_items:description'));
   t('Tags', array(), array('context' => 'field_instance:simplenews-field_tags:label'));
   t('Enter individual keywords to describe this content\'s topic.', array(), array('context' => 'field_instance:simplenews-field_tags:description'));
   t('Recipient Handler', array(), array('context' => 'field_instance:simplenews-simplenews_handler:label'));

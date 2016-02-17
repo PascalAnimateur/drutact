@@ -24,6 +24,15 @@ function drutact_webform_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 0,
       ),
+      'newsletter_item' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -76,6 +85,16 @@ function drutact_webform_field_default_field_instances() {
         ),
         'type' => 'image',
         'weight' => -5,
+      ),
+      'newsletter_item' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => 'content',
+          'image_style' => 'thumbnail',
+        ),
+        'type' => 'image',
+        'weight' => -10,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -142,6 +161,13 @@ function drutact_webform_field_default_field_instances() {
         'type' => 'taxonomy_term_reference_link',
         'weight' => 10,
       ),
+      'newsletter_item' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 10,
+      ),
       'teaser' => array(
         'label' => 'inline',
         'module' => 'taxonomy',
@@ -194,6 +220,12 @@ function drutact_webform_field_default_field_instances() {
         'type' => 'list_key',
         'weight' => 21,
       ),
+      'newsletter_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'list',
@@ -234,6 +266,12 @@ function drutact_webform_field_default_field_instances() {
         ),
         'type' => 'entityreference_label',
         'weight' => 20,
+      ),
+      'newsletter_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'inline',
@@ -296,6 +334,12 @@ function drutact_webform_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => -50,
+      ),
+      'newsletter_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
