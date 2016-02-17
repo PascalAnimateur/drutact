@@ -441,7 +441,7 @@ Your account on [site:name] has been canceled.
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'uuid_features_file_user_user';
-  $strongarm->value = 'user';
+  $strongarm->value = 0;
   $export['uuid_features_file_user_user'] = $strongarm;
 
   return $export;
