@@ -47,7 +47,7 @@ projects[link][patch][2568981] = https://www.drupal.org/files/issues/link-add_ur
 
 ; Menu
 projects[menu_admin_per_menu][type] = module
-projects[menu_attributes][version] = 1.x-dev
+projects[menu_attributes][type] = module
 projects[menu_expanded][type] = module
 projects[menu_select][version] = 1.x-dev
 projects[menu_select][patch][2557241] = https://www.drupal.org/files/issues/menu_select-allow_disabling_search.patch
