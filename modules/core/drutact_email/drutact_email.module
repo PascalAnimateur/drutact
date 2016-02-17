@@ -27,8 +27,27 @@ function drutact_email_form_alter(&$form, &$form_state, $form_id) {
       $form['plaintext']['#access'] = false;
       $form['attachments']['#access'] = false;
       $form['actions']['submit']['#value'] = t('Send');
+      # Custom validation callback to process HTML text format.
+      array_unshift($form['actions']['submit']['#validate'], '_drutact_email_send_email_action_validate');
     }
   }
+}
+
+/**
+ * Validation callback to process HTML text for mimemail_send_email_action.
+ */
+function _drutact_email_send_email_action_validate(&$form, &$form_state) {
+  global $language;
+  $body = &$form_state['values']['body']['value'];
+
+  // Process media filter manually first to get the file without the label.
+  $tag_map = _media_wysiwyg_generate_tagMap($body);
+  foreach ($tag_map as $search => $replace) {
+    $body = str_replace($search, $replace, $body);
+  }
+
+  // Process HTML text format.
+  $body = check_markup($body, 'html', $language->language);
 }
 
 /**
