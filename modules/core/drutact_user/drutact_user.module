@@ -35,11 +35,13 @@ function drutact_user_email_password_reset_link_action(&$user, $context) {
 /**
  * Implements hook_form_FORM_ID_alter().
  *
- * Add 'Member since' to user profile form.
+ * Add 'Member since' component.
+ * Hide Meta tags fieldset.
  */
 function drutact_user_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
   $format = 'Y-m-d H:i';
 
+  // Add 'Member since' component to user profile form.
   $form['account']['member_since'] = array(
     '#type' => 'date_popup', // types 'date_text' and 'date_timezone' are also supported. See .inc file.
     '#title' => t('Member since'),
@@ -47,6 +49,9 @@ function drutact_user_form_user_profile_form_alter(&$form, &$form_state, $form_i
     '#date_format' => $format,
   );
   $form['#validate'][] = '_drutact_user_member_since_validate';
+
+  // Hide Meta tags fieldset
+  unset($form['#metatags']);
 }
 
 /**
@@ -61,6 +66,7 @@ function _drutact_user_member_since_validate($form, &$form_state) {
  *
  * Notify user of new account by default.
  * Hide username form component.
+ * Hide Meta tags fieldset.
  */
 function drutact_user_form_user_register_form_alter(&$form, &$form_state, $form_id) {
   // Notify user of new account by default.
@@ -75,6 +81,9 @@ function drutact_user_form_user_register_form_alter(&$form, &$form_state, $form_
     $form['name']['#type'] = 'hidden';
     $form['name']['#value'] = 'unset_username';
   }
+
+  // Hide Meta tags fieldset.
+  unset($form['#metatags']);
 
   // Custom validation to set username from field_full_name.
   $form['#validate'][] = 'drutact_user_register_form_validate';
