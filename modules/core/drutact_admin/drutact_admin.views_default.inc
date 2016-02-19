@@ -1050,7 +1050,7 @@ function drutact_admin_views_default_views() {
   $handler->display->display_options['fields']['field_tags']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_tags']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_tags']['separator'] = '|';
-  /* Field: Entity translation: Body: translated */
+  /* Field: Entity translation: Description: translated */
   $handler->display->display_options['fields']['body_et_1']['id'] = 'body_et_1';
   $handler->display->display_options['fields']['body_et_1']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body_et_1']['field'] = 'body_et';
@@ -1060,7 +1060,7 @@ function drutact_admin_views_default_views() {
   $handler->display->display_options['fields']['body_et_1']['settings'] = array(
     'trim_length' => '600',
   );
-  /* Field: Entity translation: Body: translated */
+  /* Field: Entity translation: Description: translated */
   $handler->display->display_options['fields']['body_et']['id'] = 'body_et';
   $handler->display->display_options['fields']['body_et']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body_et']['field'] = 'body_et';
@@ -1578,13 +1578,13 @@ function drutact_admin_views_default_views() {
   $handler->display->display_options['fields']['field_tags']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_tags']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_tags']['separator'] = '|';
-  /* Field: Entity translation: Body: translated */
+  /* Field: Entity translation: Description: translated */
   $handler->display->display_options['fields']['body_et']['id'] = 'body_et';
   $handler->display->display_options['fields']['body_et']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body_et']['field'] = 'body_et';
   $handler->display->display_options['fields']['body_et']['label'] = 'body';
   $handler->display->display_options['fields']['body_et']['element_label_colon'] = FALSE;
-  /* Field: Entity translation: Body: translated */
+  /* Field: Entity translation: Description: translated */
   $handler->display->display_options['fields']['body_et_1']['id'] = 'body_et_1';
   $handler->display->display_options['fields']['body_et_1']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body_et_1']['field'] = 'body_et';
@@ -1780,6 +1780,13 @@ function drutact_admin_views_default_views() {
       'skip_confirmation' => 0,
       'override_label' => 1,
       'label' => 'Cancel account',
+    ),
+    'action::drutact_user_email_password_reset_link_action' => array(
+      'selected' => 1,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 1,
+      'override_label' => 1,
+      'label' => 'Reset password',
     ),
     'action::views_bulk_operations_modify_action' => array(
       'selected' => 1,
@@ -2020,6 +2027,7 @@ function drutact_admin_views_default_views() {
     t('No users available.'),
     t('- Choose an operation -'),
     t('Cancel account'),
+    t('Reset password'),
     t('Change value'),
     t('Change roles'),
     t('Contact via email'),
