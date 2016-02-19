@@ -92,10 +92,19 @@ function drutact_event_field_default_field_instances() {
         'weight' => -10,
       ),
       'newsletter_item' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'label' => 'inline',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'medium',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => 1,
+          'multiple_to' => '',
+          'show_remaining_days' => 0,
+          'show_repeat_rule' => 'hide',
+        ),
+        'type' => 'date_default',
+        'weight' => -10,
       ),
       'teaser' => array(
         'label' => 'inline',

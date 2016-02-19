@@ -143,10 +143,11 @@ function drutact_newsletter_field_default_field_instances() {
         'weight' => 10,
       ),
       'newsletter_item' => array(
-        'label' => 'above',
+        'label' => 'inline',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'inline',
