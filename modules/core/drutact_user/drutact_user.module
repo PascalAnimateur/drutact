@@ -35,6 +35,30 @@ function drutact_user_email_password_reset_link_action(&$user, $context) {
 /**
  * Implements hook_form_FORM_ID_alter().
  *
+ * Add 'Member since' to user profile form.
+ */
+function drutact_user_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
+  $format = 'Y-m-d H:i';
+
+  $form['account']['member_since'] = array(
+    '#type' => 'date_popup', // types 'date_text' and 'date_timezone' are also supported. See .inc file.
+    '#title' => t('Member since'),
+    '#default_value' => date($format, $form['#user']->created),
+    '#date_format' => $format,
+  );
+  $form['#validate'][] = '_drutact_user_member_since_validate';
+}
+
+/**
+ * Validation callback used to set user 'created' value.
+ */
+function _drutact_user_member_since_validate($form, &$form_state) {
+  $form_state['user']->created = strtotime($form_state['values']['member_since']);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
  * Notify user of new account by default.
  * Hide username form component.
  */
