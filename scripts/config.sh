@@ -2,7 +2,7 @@
 
 ##### INCLUSION GUARD #####
 if [ ! -n "$DRUTACT_VERSION" ] ; then
-  export DRUTACT_VERSION="7.x-1.3-beta1"
+  export DRUTACT_VERSION="7.x-1.3-beta2"
   export SCRIPTS_PATH=`readlink -f $(dirname $0)`
   export DRUTACT_PATH=`readlink -f $(dirname $0)/..`
   export DRUPAL_ROOT=`readlink -f $(dirname $0)/../../..`
