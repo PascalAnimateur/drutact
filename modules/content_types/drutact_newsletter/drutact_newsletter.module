@@ -7,6 +7,26 @@
 include_once 'drutact_newsletter.features.inc';
 
 /**
+ * Implements hook_form_alter().
+ *
+ * Pre-populate drutact_newsletter_subscribe_user form.
+ */
+function drutact_newsletter_form_views_form_administration_users_admin_alter(&$form, &$form_state, $form_id) {
+  if (isset($form_state['step']) && $form_state['step'] == 'views_bulk_operations_config_form') {
+    if ($form_state['values']['operation'] == 'rules_component::rules_drutact_newsletter_subscribe_user') {
+      // Prepopulate drutact_newsletter_subscribe_user form with available newsletters.
+      $element = &$form['parameter']['newsletter']['settings']['newsletter'];
+      $newsletters = array();
+      foreach (simplenews_newsletter_get_all() as $newsletter_id => $newsletter) {
+        $newsletters[$newsletter_id] = $newsletter->name;
+      }
+      $element['#type'] = 'select';
+      $element['#options'] = $newsletters;
+    }
+  }
+}
+
+/**
  * Implements hook_form_FORM_ID_alter().
  *
  * Pre-populate newsletter test email address with current user.
