@@ -5,6 +5,12 @@ core = 7.x
 projects[bootstrap][type] = theme
 projects[bootstrap][patch][2495743] = https://www.drupal.org/files/issues/bootstrap-webform_inline_elements-2495743.patch
 
+; Bootstrap Languages
+projects[bootstrap_languages][type] = module
+projects[bootstrap_languages][download][type] = git
+projects[bootstrap_languages][download][url] = https://git.drupal.org/sandbox/PascalAnimateur/2493639.git
+projects[bootstrap_languages][download][branch] = 7.x-1.x
+
 ; Bootstrap library
 libraries[bootstrap][download][type] = file
 libraries[bootstrap][download][url] = https://github.com/twbs/bootstrap/archive/v3.3.5.zip
