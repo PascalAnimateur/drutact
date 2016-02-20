@@ -87,6 +87,11 @@ function drutact_user_import_feeds_importer_default() {
             'target' => 'language',
             'unique' => FALSE,
           ),
+          8 => array(
+            'source' => 'groups',
+            'target' => 'og_user_node:label',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '2',
         'update_non_existent' => 'skip',
