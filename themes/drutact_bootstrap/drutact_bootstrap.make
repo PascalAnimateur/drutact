@@ -10,6 +10,8 @@ projects[bootstrap_languages][type] = module
 projects[bootstrap_languages][download][type] = git
 projects[bootstrap_languages][download][url] = https://git.drupal.org/sandbox/PascalAnimateur/2493639.git
 projects[bootstrap_languages][download][branch] = 7.x-1.x
+libraries[bootstrap-languages][download][type] = file
+libraries[bootstrap-languages][download][url] = https://github.com/usrz/bootstrap-languages/archive/master.zip
 
 ; Bootstrap library
 libraries[bootstrap][download][type] = file
