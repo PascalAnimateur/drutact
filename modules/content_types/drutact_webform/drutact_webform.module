@@ -22,6 +22,19 @@ function drutact_webform_form_webform_components_form_alter(&$form, $form_state,
 }
 
 /**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Prefill webform values from GET parameters.
+ */
+function drutact_webform_form_webform_client_form_alter(&$form, &$form_state) {
+  foreach($form['submitted'] as $name => &$value) {
+    if (isset($_GET[$name])) {
+      $value['#default_value'] = $_GET[$name];
+    }
+  }
+}
+
+/**
  * Implements hook_form_alter().
  *
  * Cheat translation of webform components' titles using t().
