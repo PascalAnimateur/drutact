@@ -95,6 +95,9 @@ projects[taxonomy_delete_link][patch][2635638] = https://www.drupal.org/files/is
 projects[taxonomy_image][type] = module
 projects[term_reference_tree][type] = module
 
+; Term merge
+projects[term_merge][version] = 1.x-dev
+
 ; Title
 projects[title][version] = 1.x-dev
 
