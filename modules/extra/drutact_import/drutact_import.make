@@ -3,7 +3,7 @@ core = 7.x
 
 ; Feeds
 projects[feeds][type] = module
-projects[feeds][patch][2470876] = https://www.drupal.org/files/issues/feeds-delete_example_features-2470876-9.patch
+projects[feeds][patch][2470876] = https://www.drupal.org/files/issues/feeds-delete_example_features-2470876-10.patch
 projects[feeds][patch][608408] = https://www.drupal.org/files/issues/feeds-drush_integration-608408-103.patch
 projects[feeds][patch][1376774] = https://www.drupal.org/files/issues/feeds-user_processor_roles-1376774-37.patch
 projects[feeds][patch][1611554] = https://www.drupal.org/files/issues/feeds-encrypted_passwords-1611554-27.patch
