@@ -1,0 +1,39 @@
+@import (reference) '../bootstrap/less/variables.less';
+
+//== Layout
+#main, #logo {
+  margin: 10px auto 20px;
+  width: 960px;
+}
+
+//== Typography
+body {
+  background-color: @body-bg;
+  font-family: @font-family-base;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @text-color;
+}
+h1 { font-size: @font-size-h1; }
+h2 { font-size: @font-size-h2; }
+h3 { font-size: @font-size-h3; }
+h4 { font-size: @font-size-h4; }
+h1, h2, h3, h4 { color: @headings-color; }
+a {
+  color: @link-color;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: @link-hover-color;
+  text-decoration: @link-hover-decoration;
+}
+
+//== Newsletter item
+.newsletter-item-title {
+  margin-top: 0px;
+}
+.newsletter-footer {
+  margin-top: 10px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}

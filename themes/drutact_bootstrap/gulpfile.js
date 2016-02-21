@@ -9,9 +9,12 @@ gulp.task('less', function () {
     gulp.src('less/style.less')
         .pipe(sourcemaps.init())
         .pipe(less().on('error', gutil.log))
-        .pipe(sourcemaps.write())
         .pipe(gulp.dest('css'))
         .pipe(livereload());
+    gulp.src('less/mail.less')
+        .pipe(sourcemaps.init())
+        .pipe(less().on('error', gutil.log))
+        .pipe(gulp.dest('css'));
 });
 
 gulp.task('watch', function() {
