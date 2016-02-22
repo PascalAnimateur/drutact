@@ -702,6 +702,56 @@ function drutact_admin_views_default_views() {
   $handler->display->display_options['menu']['weight'] = '5';
   $handler->display->display_options['menu']['context'] = 1;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Export (CSV) */
+  $handler = $view->new_display('views_data_export', 'Export (CSV)', 'export_csv');
+  $handler->display->display_options['display_description'] = 'Export group members to CSV file.';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'views_data_export_csv';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Realname: Real name */
+  $handler->display->display_options['fields']['realname']['id'] = 'realname';
+  $handler->display->display_options['fields']['realname']['table'] = 'realname';
+  $handler->display->display_options['fields']['realname']['field'] = 'realname';
+  $handler->display->display_options['fields']['realname']['relationship'] = 'og_membership_related_user';
+  $handler->display->display_options['fields']['realname']['label'] = 'Name';
+  $handler->display->display_options['fields']['realname']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['realname']['link_to_user'] = FALSE;
+  /* Field: User: E-mail */
+  $handler->display->display_options['fields']['mail']['id'] = 'mail';
+  $handler->display->display_options['fields']['mail']['table'] = 'users';
+  $handler->display->display_options['fields']['mail']['field'] = 'mail';
+  $handler->display->display_options['fields']['mail']['relationship'] = 'og_membership_related_user';
+  $handler->display->display_options['fields']['mail']['label'] = 'Email';
+  $handler->display->display_options['fields']['mail']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['mail']['link_to_user'] = '0';
+  /* Field: OG membership: State */
+  $handler->display->display_options['fields']['state']['id'] = 'state';
+  $handler->display->display_options['fields']['state']['table'] = 'og_membership';
+  $handler->display->display_options['fields']['state']['field'] = 'state';
+  $handler->display->display_options['fields']['state']['label'] = 'Membership state';
+  $handler->display->display_options['fields']['state']['element_label_colon'] = FALSE;
+  /* Field: OG membership: OG user roles in group */
+  $handler->display->display_options['fields']['og_roles']['id'] = 'og_roles';
+  $handler->display->display_options['fields']['og_roles']['table'] = 'og_membership';
+  $handler->display->display_options['fields']['og_roles']['field'] = 'og_roles';
+  $handler->display->display_options['fields']['og_roles']['label'] = 'Group roles';
+  $handler->display->display_options['fields']['og_roles']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['og_roles']['type'] = 'ul';
+  /* Field: OG membership: Created */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'og_membership';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = 'Member since';
+  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created']['date_format'] = 'short';
+  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  $handler->display->display_options['path'] = 'node/%/members.csv';
+  $handler->display->display_options['displays'] = array(
+    'page_1' => 'page_1',
+    'default' => 0,
+  );
   $translatables['administration_group_members'] = array(
     t('Master'),
     t('Group members'),
@@ -737,6 +787,9 @@ function drutact_admin_views_default_views() {
     t('E-mail'),
     t('Page'),
     t('more'),
+    t('Export (CSV)'),
+    t('Export group members to CSV file.'),
+    t('Email'),
   );
   $export['administration_group_members'] = $view;
 
