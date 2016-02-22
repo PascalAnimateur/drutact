@@ -371,6 +371,21 @@ function drutact_webform_views_default_views() {
     200153887 => 0,
     30037204 => 0,
   );
+  /* Filter criterion: Field: Groups audience (og_group_ref) */
+  $handler->display->display_options['filters']['og_group_ref_target_id']['id'] = 'og_group_ref_target_id';
+  $handler->display->display_options['filters']['og_group_ref_target_id']['table'] = 'og_membership';
+  $handler->display->display_options['filters']['og_group_ref_target_id']['field'] = 'og_group_ref_target_id';
+  $handler->display->display_options['filters']['og_group_ref_target_id']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['og_group_ref_target_id']['expose']['operator_id'] = 'og_group_ref_target_id_op';
+  $handler->display->display_options['filters']['og_group_ref_target_id']['expose']['label'] = 'Group';
+  $handler->display->display_options['filters']['og_group_ref_target_id']['expose']['operator'] = 'og_group_ref_target_id_op';
+  $handler->display->display_options['filters']['og_group_ref_target_id']['expose']['identifier'] = 'og_group_ref_target_id';
+  $handler->display->display_options['filters']['og_group_ref_target_id']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    200153887 => 0,
+    30037204 => 0,
+  );
 
   /* Display: Administration */
   $handler = $view->new_display('page', 'Administration', 'admin');
@@ -516,6 +531,7 @@ function drutact_webform_views_default_views() {
     t('clear'),
     t('Operations'),
     t('components'),
+    t('Group'),
     t('Administration'),
     t('Manage webforms.'),
     t('Export (CSV)'),
