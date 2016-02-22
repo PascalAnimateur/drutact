@@ -118,7 +118,7 @@ function drutact_group_field_default_field_bases() {
             'status' => TRUE,
           ),
           'views-select-list' => array(
-            'status' => 0,
+            'status' => 1,
           ),
         ),
         'membership_type' => 'og_membership_type_default',
