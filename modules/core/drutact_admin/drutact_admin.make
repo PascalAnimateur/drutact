@@ -83,6 +83,9 @@ projects[shiny][patch][2555575] = https://www.drupal.org/files/issues/shiny-fix_
 projects[shiny][patch][2568239] = https://www.drupal.org/files/issues/shiny-date_repeat_radio_button-2568239-6.patch
 projects[shiny][patch][2670122] = https://www.drupal.org/files/issues/shiny-newsletter_item_template.patch
 
+; Special menu items
+projects[special_menu_items][version] = 2.x-dev
+
 ; Sticky edit actions
 projects[sticky_edit_actions][type] = module
 projects[sticky_edit_actions][patch][2320309] = https://www.drupal.org/files/issues/2320309-Fix_shiny_admin_theme.patch

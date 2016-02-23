@@ -38,6 +38,7 @@ dependencies[] = rules
 dependencies[] = select2widget
 dependencies[] = simplified_menu_admin
 dependencies[] = smart_dates
+dependencies[] = special_menu_items
 dependencies[] = sticky_edit_actions
 dependencies[] = strongarm
 dependencies[] = taxonomy_access_fix
