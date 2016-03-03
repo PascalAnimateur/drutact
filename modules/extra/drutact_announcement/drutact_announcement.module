@@ -1,0 +1,34 @@
+<?php
+/**
+ * @file
+ * Code for the DruTACT Announcement feature.
+ */
+
+include_once 'drutact_announcement.features.inc';
+
+/**
+ * Implements hook_form_alter().
+ *
+ * Move announcement field to Publication options tab.
+ */
+function drutact_announcement_form_alter(&$form, $form_state, $form_id) {
+  // Move Tags field to vertical tab.
+  if (isset($form['#node_edit_form']) && $form['#node_edit_form'] && isset($form['field_announcement'])) {
+    $form['options']['field_announcement'] = $form['field_announcement'];
+    $form['field_announcement']['#access'] = FALSE;
+
+    array_unshift($form['#validate'], '_drutact_announcement_form_validate');
+  }
+}
+
+/**
+ * Validation callback needed for announcement field in node add/edit form.
+ */
+function _drutact_announcement_form_validate($form, &$form_state) {
+  // Copy field_tags value from options to its original location
+  if (isset($form_state['input']['field_announcement'][LANGUAGE_NONE])) {
+    $form_state['values']['field_announcement'][LANGUAGE_NONE][0]['value'] = $form_state['input']['field_announcement'][LANGUAGE_NONE];
+  }
+
+  return $form;
+}
