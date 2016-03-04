@@ -42,6 +42,7 @@ projects[token][type] = module
 ; Ultimate Cron
 projects[ultimate_cron][type] = module
 projects[ultimate_cron][patch][2666322] = https://www.drupal.org/files/issues/ultimate_cron-do_not_rebuild_menu-2666322-2.patch
+projects[ultimate_cron][patch][2603610] = https://www.drupal.org/files/issues/ultimate_cron-php_7_throwing_error-2603610-5.patch
 
 ; UUID
 projects[uuid][type] = module
