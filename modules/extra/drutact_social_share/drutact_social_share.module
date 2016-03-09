@@ -5,3 +5,30 @@
  */
 
 include_once 'drutact_social_share.features.inc';
+
+/**
+ * Implements hook_form_alter().
+ *
+ * Move Social share field to Publication options tab.
+ */
+function drutact_social_share_form_alter(&$form, $form_state, $form_id) {
+  // Move Social share field to vertical tab.
+  if (isset($form['#node_edit_form']) && $form['#node_edit_form'] && isset($form['field_social_share'])) {
+    $form['options']['field_social_share'] = $form['field_social_share'];
+    $form['field_social_share']['#access'] = FALSE;
+
+    array_unshift($form['#validate'], '_drutact_social_share_form_validate');
+  }
+}
+
+/**
+ * Validation callback needed for Social share field in node add/edit form.
+ */
+function _drutact_social_share_form_validate($form, &$form_state) {
+  // Copy field_social_share value from options to its original location
+  if (isset($form_state['input']['field_social_share'][LANGUAGE_NONE])) {
+    $form_state['values']['field_social_share'][LANGUAGE_NONE][0]['value'] = $form_state['input']['field_social_share'][LANGUAGE_NONE];
+  }
+
+  return $form;
+}
