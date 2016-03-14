@@ -48,7 +48,7 @@ projects[ultimate_cron][patch][2603610] = https://www.drupal.org/files/issues/ul
 projects[uuid][type] = module
 projects[uuid][patch][2649716] = https://www.drupal.org/files/issues/uuid-delete_uuid_services_example_0.patch
 projects[uuid_features][version] = 1.x-dev
-projects[uuid_features][patch][1229670] = https://www.drupal.org/files/issues/uuid_features-support_packaged_file_entities-1229670-33.patch
+projects[uuid_features][patch][1229670] = https://www.drupal.org/files/issues/uuid_features-support_packaged_file_entities-1229670-36.patch
 projects[uuid_features][patch][2296095] = https://www.drupal.org/files/issues/uuid_features-autodetect-features-respect-export-config-2296095-10.patch
 
 ; Views
