@@ -8,6 +8,7 @@ projects[simplenews][patch][2567067] = https://www.drupal.org/files/issues/simpl
 projects[simplenews][patch][2153579] = https://www.drupal.org/files/issues/simplenews-7.x-2.x-dev-2153579-8.patch
 projects[simplenews][patch][2567145] = https://www.drupal.org/files/issues/simplenews-entity_translation_support-2567145-2.patch
 projects[simplenews][patch][2580581] = https://www.drupal.org/files/issues/simplenews-remove_token_help-2580581-2.patch
+projects[simplenews][patch][2687895] = https://www.drupal.org/files/issues/simplenews-confirm_send_issue.patch
 
 ; Simplenews Roles
 projects[simplenews_roles][version] = 1.x-dev
