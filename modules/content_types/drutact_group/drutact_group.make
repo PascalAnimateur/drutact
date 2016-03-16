@@ -13,6 +13,7 @@ projects[og_file_entity][patch][2112373] = https://www.drupal.org/files/issues/o
 
 ; Manager change
 projects[og_manager_change][type] = module
+projects[og][patch][2159741] = https://www.drupal.org/files/issues/og_manager_change-allow_permission_administer_group-2159741-4.patch
 
 ; Organic group
 projects[og][type] = module
