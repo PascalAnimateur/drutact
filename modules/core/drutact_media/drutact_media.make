@@ -50,4 +50,4 @@ projects[videojs][version] = 3.x-dev
 projects[videojs][patch][2664232] = https://www.drupal.org/files/issues/videojs-support_version570-2664232-4.patch
 projects[videojs][patch][2288533] = https://www.drupal.org/files/issues/videojs-enable_sitewide_option-2288533-5.patch
 libraries[video-js][download][type] = file
-libraries[video-js][download][url] = https://github.com/videojs/video.js/releases/download/v5.7.0/video-js-5.7.0.zip
+libraries[video-js][download][url] = https://github.com/videojs/video.js/archive/v5.8.8.zip
