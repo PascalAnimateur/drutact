@@ -102,7 +102,7 @@ projects[term_reference_tree][type] = module
 projects[term_merge][version] = 1.x-dev
 
 ; Title
-projects[title][version] = 1.x-dev
+projects[title][type] = module
 
 ; Top description
 projects[top_description][type] = module
