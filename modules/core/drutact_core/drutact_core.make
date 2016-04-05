@@ -10,7 +10,6 @@ projects[ctools][type] = module
 ; Features
 projects[diff][type] = module
 projects[features][type] = module
-projects[features][patch][2564979] = https://www.drupal.org/files/issues/features-delete_tests-2564979-2.patch
 projects[features][patch][2334409] = https://www.drupal.org/files/issues/features-user_permission_reset_cache-2334409-6.patch
 projects[features_banish][type] = module
 projects[features_translations][type] = module

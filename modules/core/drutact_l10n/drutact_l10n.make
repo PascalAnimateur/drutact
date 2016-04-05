@@ -35,8 +35,6 @@ projects[roles_simple_translate][type] = module
 projects[roles_simple_translate][download][type] = git
 projects[roles_simple_translate][download][url] = http://git.drupal.org/sandbox/wangjiaqi/2222171.git
 projects[roles_simple_translate][download][branch] = 7.x-1.x
-projects[roles_simple_translate][patch][2496557] = https://www.drupal.org/files/issues/roles_simple_translate-english_default_language-2496557-3.patch
-projects[roles_simple_translate][patch][2559409] = https://www.drupal.org/files/issues/roles_simple_translate-redirect_after_save.patch
 
 ; Variable
 projects[variable][type] = module
