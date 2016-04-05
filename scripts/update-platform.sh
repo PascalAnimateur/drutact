@@ -37,7 +37,7 @@ if [ -d profiles/drutact/.git ] ; then
   WORKING_COPY='--working-copy'
 fi
 rm profiles/drutact -rf
-drush make http://gitlab.tesla/drupal/drutact/raw/7.x-1.x/build-platform.make . $WORKING_COPY --concurrency=8 --no-cache >> $LOG_FILE 2>&1
+drush make https://git.tact.fse.ulaval.ca/drupal/drutact/raw/7.x-1.x/build-platform.make . $WORKING_COPY --concurrency=8 --no-cache >> $LOG_FILE 2>&1
 if [ $? != 0 ] ; then
   ERROR "Drush make failed, please verify DruTACT build-platform.make."
 fi
